@@ -12,6 +12,7 @@ in
     packages = with pkgs; [
       docker
       libreoffice-qt6-fresh
+      firefox
     ];
     GREETING = "Hello, Nix!";
     shellHook = ''

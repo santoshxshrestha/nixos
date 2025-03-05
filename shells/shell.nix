@@ -11,6 +11,7 @@ in
   pkgs.mkShellNoCC {
     packages = with pkgs; [
       docker
+      libreoffice-qt6-fresh
     ];
     GREETING = "Hello, Nix!";
     shellHook = ''

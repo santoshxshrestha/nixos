@@ -13,6 +13,7 @@ in
       docker
       libreoffice-qt6-fresh
       firefox
+      vscode
     ];
     GREETING = "Hello, Nix!";
     shellHook = ''

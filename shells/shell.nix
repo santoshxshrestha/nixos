@@ -15,7 +15,7 @@ in
       firefox
       vscode
     ];
-    GREETING = "Hello, Nix!";
+    GREETING = "Hello, Santosh!";
     shellHook = ''
     echo "Welcome to the development environment!"
     echo $GREETING 

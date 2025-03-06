@@ -17,7 +17,7 @@ in
     ];
     GREETING = "Hello, Santosh!";
     shellHook = ''
-    echo "Welcome to the development environment!"
+    echo "Welcome to the experimental environment!"
     echo $GREETING 
     '';
   }

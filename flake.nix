@@ -2,25 +2,30 @@
   description = "Reproducible Dev Environment";
 
   inputs = {
-    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
-
-  nixpkgs = fetchTarball "https://github.com/NixOS/nixpkgs/tarball/nixos-24.05";
+    # Pinning nixpkgs to a specific version via the GitHub URL
+    nixpkgs = {
+      url = "github:NixOS/nixpkgs/nixos-24.05";  # Using the stable version from GitHub
+      flake = true;  # Indicate that this is a flake-based input
+    };
+    
     neovim-config = {
-      # make the reop public for clone 
+      # Make the repo is public for clone
       url = "https://github.com/SantoshShrestha11/dotfiles";
-
       flake = false;
     };
   };
 
-  outputs = { self, nixpkgs, neovim-config }: {
-    devShells.default = nixpkgs.legacyPackages.x86_64-linux.mkShell {
+  outputs = { self, nixpkgs, neovim-config }: let
+    # Import nixpkgs directly from the GitHub URL input
+    pkgs = nixpkgs.legacyPackages.x86_64-linux;
+  in {
+    devShells.default = pkgs.mkShell {
       buildInputs = [
-        nixpkgs.nodejs_23
-        nixpkgs.neovim
-        nixpkgs.git
-        nixpkgs.curl
-        nixpkgs.wget
+        pkgs.nodejs_23
+        pkgs.neovim
+        pkgs.git
+        pkgs.curl
+        pkgs.wget
       ];
 
       shellHook = ''
@@ -36,7 +41,7 @@
 
         npm install -g --prefix=/usr/lib corepack@0.31.0 live-server@1.2.2 \
           node-gyp@11.1.0 nopt@7.2.1 npm@11.1.0 semver@7.7.1 sql-language-server@1.7.1
-        echo "cloning Neovim config ..."
+        echo "Cloning Neovim config ..."
 
         echo "Linking Neovim config..."
 
@@ -44,7 +49,7 @@
         # deleting the existing config file to reduce the conflicts
         rm -rf ~/nix-nvim/.config/nvim
 
-        # here the line below will just creates the seam link but not download the whole directory
+        # Creates the symbolic link to the Neovim config
         ln -s ${neovim-config}/nvim/.config/nvim $HOME/nix-nvim/.config/nvim
 
         export XDG_CONFIG_HOME="$HOME/nix-nvim/.config"

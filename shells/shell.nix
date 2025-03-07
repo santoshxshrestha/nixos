@@ -9,13 +9,14 @@ let
 in
   pkgs.mkShellNoCC {
     packages = with pkgs; [
-      docker
+      neofetch
     ];
 
     GREETING = "Hello, Santosh!";
     shellHook = ''
 
-    echo "Welcome to the experimental environment!"
+    echo "Welcome to the your environment!"
     echo $GREETING 
+    neofetch
     '';
-  }
+  } 

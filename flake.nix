@@ -2,11 +2,13 @@
   description = "Reproducible Dev Environment";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+  nixpkgs = fetchTarball "https://github.com/NixOS/nixpkgs/tarball/nixos-24.05";
     neovim-config = {
       # make the reop public for clone 
       url = "https://github.com/SantoshShrestha11/dotfiles";
+
       flake = false;
     };
   };

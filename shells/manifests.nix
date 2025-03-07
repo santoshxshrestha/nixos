@@ -4,18 +4,27 @@ let
     config = {
       allowUnfree = true; 
     };
-    overlays = []; 
+    overlays = [
+
+    ]; 
+
   };
 in
   pkgs.mkShellNoCC {
+
     packages = with pkgs; [
+      neofetch
       docker
+      colima
     ];
 
     GREETING = "Hello, Santosh!";
+
     shellHook = ''
 
+      neofetch
     echo "Welcome to the experimental environment!"
     echo $GREETING 
+    
     '';
   }

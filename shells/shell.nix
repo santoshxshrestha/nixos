@@ -1,5 +1,5 @@
 let
-  nixpkgs = fetchTarball "https://github.com/NixOS/nixpkgs/tarball/nixos-24.05";
+  nixpkgs = fetchTarball "https://github.com/NixOS/nixpkgs/tarball/nixpkgs-unstable";
   pkgs = import nixpkgs { 
     config = {
       allowUnfree = true; 
@@ -10,8 +10,6 @@ in
   pkgs.mkShellNoCC {
     packages = with pkgs; [
       firefox
-      docker-compose
-      docker
       neofetch
       vscode
     ];

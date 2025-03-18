@@ -10,7 +10,6 @@ in
   pkgs.mkShellNoCC {
     packages = with pkgs; [
       firefox
-      neofetch
       vscode
     ];
 

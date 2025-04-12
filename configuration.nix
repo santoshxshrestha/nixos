@@ -31,54 +31,20 @@
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
 
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
-
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
     variant = "";
   };
 
-  # Enable CUPS to print documents.
-  services.printing.enable = true;
-
-  # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
-  security.rtkit.enable = true;
-  services.pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-    # If you want to use JACK applications, uncomment this
-    #jack.enable = true;
-
-    # use the example session manager (no others are packaged yet so this is enabled by default,
-    # no need to redefine it in your config for now)
-    #media-session.enable = true;
-  };
-
-  # Enable touchpad support (enabled default in most desktopManager).
-  # services.xserver.libinput.enable = true;
-
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.santosh = {
     isNormalUser = true;
     description = "Santosh Shrestha";
-    extraGroups = [ "networkmanager" "wheel" ];
-	
-    packages = with pkgs; [
-    #  thunderbird
-    ];
+    extraGroups = [ "networkmanager" "wheel" "video"];
+    shell = pkgs.zsh;
+    packages = with pkgs; [];
   };
-
-  # Install firefox.
-  programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -87,10 +53,64 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    neovim
+    wget
     git
-  #  wget
+    neovim
+    firefox
+    hyprland
+    starship
+    hyprpaper
+    kitty
+    tmux
+    zsh
+    stow
+    rofi-wayland
+    waybar
+    networkmanagerapplet
+    pavucontrol
+    wl-clipboard
+    brightnessctl
+    hyprlock
+    fzf
+    unzip
+
   ];
+
+  services.xserver.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
+
+  programs.hyprland.enable = true;
+  programs.hyprland.package = pkgs.hyprland;
+  programs.hyprland.xwayland.enable = true;
+
+  hardware.graphics.enable = true;
+
+  services.pipewire = {
+  enable = true;
+  alsa.enable = true;
+  pulse.enable = true;
+  };
+  xdg.portal.enable = true;
+  #xdg.portal.extraPortal = 
+  #[xdg-desktop-portal-gtk-1.15.1];
+  #xdg.portal.config.common.default = "gtk";
+
+  services.dbus.enable = true;
+
+  security.polkit.enable = true;
+
+  #i18n.inputMethod.enable = "fcitx5";
+  #i18n.inputMethod.fcitx5.addons= with pkgs;
+  #[fcitx5-mozc];
+
+  programs.zsh.enable = true;
+
+  #services.logind = {
+  #enable = true;
+  #lidSwitch = "ignore";
+  #lidSwitchDocked = "ignore";
+  #};
+
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

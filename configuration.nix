@@ -73,15 +73,32 @@
     hyprlock
     fzf
     unzip
+    hyprcursor
+    rose-pine-hyprcursor
 
   ];
+  fonts.packages = with pkgs; [
+  noto-fonts
+  noto-fonts-cjk-sans
+  noto-fonts-emoji
+  liberation_ttf
+  fira-code
+  fira-code-symbols
+  mplus-outline-fonts.githubRelease
+  dina-font
+  proggyfonts
+];
 
   services.xserver.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.sddm.enable = true;
 
-  programs.hyprland.enable = true;
-  programs.hyprland.package = pkgs.hyprland;
-  programs.hyprland.xwayland.enable = true;
+
+  programs.hyprland = {
+  	enable = true;
+	withUWSM = true;
+	package = pkgs.hyprland;
+	xwayland.enable = true;
+  };
 
   hardware.graphics.enable = true;
 
@@ -91,9 +108,7 @@
   pulse.enable = true;
   };
   xdg.portal.enable = true;
-  #xdg.portal.extraPortal = 
-  #[xdg-desktop-portal-gtk-1.15.1];
-  #xdg.portal.config.common.default = "gtk";
+  xdg.portal.extraPortals = [pkgs.xdg-desktop-portal-gtk];
 
   services.dbus.enable = true;
 
@@ -111,7 +126,6 @@
   #lidSwitchDocked = "ignore";
   #};
 
-
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
@@ -124,6 +138,7 @@
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
+
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

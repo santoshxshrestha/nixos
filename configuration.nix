@@ -43,7 +43,6 @@
     description = "Santosh Shrestha";
     extraGroups = [ "networkmanager" "wheel" "video"];
     shell = pkgs.zsh;
-    packages = with pkgs; [];
   };
 
   # Allow unfree packages

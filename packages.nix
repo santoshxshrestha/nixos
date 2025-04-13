@@ -25,7 +25,10 @@
     fzf
     unzip
     hyprcursor
-    rose-pine-hyprcursor
-
+  
   ];
+  users.users.santosh.packages = with pkgs; [
+  rose-pine-hyprcursor
+  ];
+
   }

@@ -1,4 +1,5 @@
-
+  # List packages installed in system profile. To search, run:
+  # $ nix search wget
   {pkgs, ...} :
   {
   environment.systemPackages = with pkgs; [

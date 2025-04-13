@@ -12,13 +12,13 @@
 	outputs = { self, nixpkgs, home-manager, ... }:
 		let 
 		lib = nixpkgs.lib ;
-		system = "x86_64-linux";
-	pkgs = nixpkgs.legacyPackages.${system}";
+	system = "x86_64-linux";
+	pkgs = nixpkgs.legacyPackages.${system};
 	in{
 
 		nixosConfigurations = {
 			santosh = nixpkgs.lib.nixosSystem {
-			inherit system;
+				inherit system;
 				modules = [
 					./configuration.nix
 				];

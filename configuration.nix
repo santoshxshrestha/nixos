@@ -38,13 +38,7 @@
     variant = "";
   };
 
-  nix = {
-	  package = pkgs.nixFlakes;
-	  extraOptions = ''
-		  experimental-features = nix-command flakes
-		  '';
-  };
-
+ nix.settings.experimental-features = [ "nix-command" "flakes" ];
 # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.santosh = {
     isNormalUser = true;

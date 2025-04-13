@@ -10,7 +10,6 @@
     firefox
     hyprland
     starship
-    hyprpaper
     kitty
     tmux
     zsh
@@ -29,6 +28,8 @@
   ];
   users.users.santosh.packages = with pkgs; [
   rose-pine-hyprcursor
+  mpvpaper
+  hyprpaper
   ];
 
   }

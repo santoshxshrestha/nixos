@@ -30,6 +30,7 @@
   rose-pine-hyprcursor
   mpvpaper
   hyprpaper
+  btop
   ];
 
   nixpkgs.config.allowUnfree = true;

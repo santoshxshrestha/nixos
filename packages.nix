@@ -31,6 +31,7 @@
   mpvpaper
   hyprpaper
   btop
+  fastfetch
   ];
 
   nixpkgs.config.allowUnfree = true;

@@ -80,6 +80,7 @@
   #[fcitx5-mozc];
 
   programs.zsh.enable = true;
+  users.defaultUserShell = pkgs.zsh;
 
   #services.logind = {
   #enable = true;

@@ -44,8 +44,6 @@
 # plain files is through 'home.file'.
 	home.file = {
 		".config/hypr/hyprland.conf".source = ./hyprland/hyprland.conf;
-#		".config/kitty/current-theme.conf".source = ./kitty/current-theme.conf;
-#		".config/kitty/kitty.conf".source = ./kitty/kitty.conf;
 		".config/kitty".source = ./kitty;
 		".tmux.conf".source = ./tmux/.tmux.conf;
 

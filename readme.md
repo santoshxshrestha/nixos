@@ -10,7 +10,7 @@ This repository contains my personal NixOS configuration, which is currently bei
 
 ## Structure
 
-nixos-config/ ├── flake.nix # Flake configuration for system and user environment ├── configuration.nix # NixOS system configuration (system-wide) ├── home-manager/ │ ├── home.nix # Home Manager user-specific settings │ └── modules/ # Custom Home Manager modules (if any) └── modules/ # Custom NixOS modules (if any)
+nixos/ ├── flake.nix # Flake configuration for system and user environment ├── configuration.nix # NixOS system configuration (system-wide) ├── home/ │ ├── home.nix # Home Manager user-specific settings │ └── modules/ # Custom Home Manager modules (if any) └── modules/ # Custom NixOS modules (if any)
 
 ## Purpose
 

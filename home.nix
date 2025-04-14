@@ -44,6 +44,7 @@
 # plain files is through 'home.file'.
 	home.file = {
 		".config/hypr/hyprland.conf".source = ./hyprland/hyprland_aesthetics.conf;
+		# ".config/hypr/hyprland.conf".source = ./hyprland/hyprland_performance.conf.conf;
 		".config/hypr/hypridle.conf".source = ./hypridle/hypridle.conf;
 		".config/hypr/hyprpaper.conf".source = ./hyprpaper/hyprpaper.conf;
 		".config/kitty".source = ./kitty;

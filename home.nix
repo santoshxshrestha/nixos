@@ -48,6 +48,7 @@
 		".config/hypr/hyprpaper.conf".source = ./hyprpaper/hyprpaper.conf;
 		".config/kitty".source = ./kitty;
 		".tmux.conf".source = ./tmux/.tmux.conf;
+		".zshrc".source = ./zsh/.zshrc;
 		".config/hypr/hyprlock.conf".source = ./hyprlock/hyprlock.conf;
 		".config/hypr/hyprsunset.conf".source = ./hyprsunset/hyprsunset.conf;
 		".config/rofi".source = ./rofi;

@@ -6,7 +6,7 @@
 
 	hyprland-plugins = {
 		url = "github:hyprwm/hyprland-plugins";
-		inputs.hyprland.follows = "hyprland";
+		hyprland.follows = "hyprland";
 	};
 		nixpkgs = {
 			url = "github:NixOS/nixpkgs/nixos-unstable";

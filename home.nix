@@ -47,6 +47,7 @@
 		".config/kitty".source = ./kitty;
 		".tmux.conf".source = ./tmux/.tmux.conf;
 		".config/hypr/hyprlock.conf".source = ./hyprlock/hyprlock.conf;
+		".config/hypr/hyprsunset.conf".source = ./hyprsunset.conf;
 
 # # Building this configuration will create a copy of 'dotfiles/screenrc' in
 # # the Nix store. Activating the configuration will then make '~/.screenrc' a

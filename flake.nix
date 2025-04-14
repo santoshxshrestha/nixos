@@ -8,6 +8,7 @@
 #		url = "github:hyprwm/hyprland-plugins";
 #		follows = "hyprland";
 #	};
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
 		nixpkgs = {
 			url = "github:NixOS/nixpkgs/nixos-unstable";
 		};
@@ -16,7 +17,7 @@
 			home-manager.inputs.nixpkgs.follows = "nixpkgs"; 
 	};
 
-	outputs = { self, nixpkgs, home-manager, ... }:
+	outputs = inputs@{ self, nixpkgs, home-manager, ... }:
 		let 
 		lib = nixpkgs.lib ;
 	system = "x86_64-linux";

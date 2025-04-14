@@ -4,10 +4,10 @@
 	inputs = {
 	hypland.url = "github:hyprwm/Hyprland";
 
-	hyprland-plugins = {
-		url = "github:hyprwm/hyprland-plugins";
-		follows = "hyprland";
-	};
+#	hyprland-plugins = {
+#		url = "github:hyprwm/hyprland-plugins";
+#		follows = "hyprland";
+#	};
 		nixpkgs = {
 			url = "github:NixOS/nixpkgs/nixos-unstable";
 		};

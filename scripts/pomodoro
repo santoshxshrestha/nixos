@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+WORK_TIME=1500 # 25 minutes
+BREAK_TIME=300 # 5 minutes
+
+ALERT_SOUND="/usr/share/sounds/freedesktop/stereo/complete.oga"
+
+notify-send "Pomodoro Started" "25 minutes of focus time!"
+sleep $WORK_TIME
+
+paplay "$ALERT_SOUND" # Play sound
+notify-send "Time's Up!" "Take a 5-minute break!"
+sleep $BREAK_TIME
+
+paplay "$ALERT_SOUND"
+notify-send "Break Over!" "Ready for another session?" --icon=dialog-information

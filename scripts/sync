@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# Check if a session named 'sync' already exists
+tmux has-session -t sync 2>/dev/null
+
+# If the session doesn't exist, create it
+if [ $? != 0 ]; then
+    # Create a new session named 'sync'
+    tmux new-session -s sync -d -c ~/Music/Haven/ #name sync:1.1 or 1 because I made it to start form 1
+
+    # First split horizontally
+    tmux split-window -h -t sync:1.1 -c ~/Music/Eternal-Haven/ #name sync:1.2 after nxt command name changes to sync:1.3
+
+    # Another window
+    tmux new-window -t sync:2 -c ~/Music/Instrumental-Haven
+
+    # First split horizontally
+    tmux split-window -h -t sync:2.1 -c ~/Music/Instrumental-Haven #name sync:1.3 after nxt command name changes to sync:1.2
+
+    tmux send-keys -t sync1.1 'source ./source/bin/activate' C-m
+    tmux send-keys -t sync1.2 'source ./source/bin/activate' C-m
+    tmux send-keys -t sync2.1 'source ./source/bin/activate' C-m
+    tmux send-keys -t sync2.2 'source ./source/bin/activate' C-m
+    sleep 1
+
+    tmux send-keys -t sync 'source ./sc/bin/activate' C-m
+    tmux send-keys -t sync:1.1 'yt-dlp -x "https://youtube.com/playlist?list=PLBBcaljFGSiSz8czPRv3tX3C4nKo4On4j&si=YCIbnJX6xgvrvmlV"' C-m
+    tmux send-keys -t sync:1.2 'yt-dlp -x "https://youtube.com/playlist?list=PLBBcaljFGSiSZ5enBdlyxcqu0RZtpuuoq&si=xHGIPd-Uw-7DeBZE"' C-m
+    tmux send-keys -t sync:2.1 'yt-dlp -x "https://youtube.com/playlist?list=PLBBcaljFGSiQb-vXx89JDd9QXoa_iQjGA&si=yIH54ZTJQtO4vzsF"' C-m
+    tmux send-keys -t sync:2.2 'yt-dlp -x "https://youtube.com/playlist?list=PLBBcaljFGSiSMYqaq-Vs-1hmnMyCvzW7D&si=8af86RAPfGnFQ5fE"' C-m
+
+    # Attach to the session
+    tmux attach-session -t sync
+else
+    # If the session exists, just attach to it
+    tmux attach-session -t sync
+fi

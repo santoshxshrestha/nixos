@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+for file in *"-moewalls-com.mp4"; do
+  if [[ -f "$file" ]]; then
+    new_file="${file%-moewalls-com.mp4}.mp4"
+    mv "$file" "$new_file"
+    echo "Renamed: $file to $new_file"
+  fi
+done

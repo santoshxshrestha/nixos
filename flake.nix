@@ -6,7 +6,7 @@
 
 	hyprland-plugins = {
 		url = "github:hyprwm/hyprland-plugins";
-		hyprland.follows = "hyprland";
+		follows = "hyprland";
 	};
 		nixpkgs = {
 			url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -36,7 +36,7 @@
 			santosh = home-manager.lib.homeManagerConfiguration{
 				inherit pkgs;
 				modules = [
-					./home.nix
+					./home
 				];
 			};
 		};

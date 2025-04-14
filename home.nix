@@ -44,6 +44,7 @@
 # plain files is through 'home.file'.
 	home.file = {
 		".config/hypr/hyprland.conf".source = ./hyprland/hyprland.conf;
+		".config/hypr/hypridle.conf".source = ./hypridle/hypridle.conf;
 		".config/kitty".source = ./kitty;
 		".tmux.conf".source = ./tmux/.tmux.conf;
 		".config/hypr/hyprlock.conf".source = ./hyprlock/hyprlock.conf;
@@ -51,6 +52,7 @@
 		".config/rofi".source = ./rofi;
 		".config/nvim".source = ./nvim;
 		".local/bin".source = ./scripts;
+		
 
 # # Building this configuration will create a copy of 'dotfiles/screenrc' in
 # # the Nix store. Activating the configuration will then make '~/.screenrc' a

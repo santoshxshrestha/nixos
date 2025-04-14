@@ -2,7 +2,7 @@
 	description = "flake for santosh";
 
 	inputs = {
-	hypland.url = "github:hyprwm/Hyprland";
+#	hypland.url = "github:hyprwm/Hyprland";
 
 #	hyprland-plugins = {
 #		url = "github:hyprwm/hyprland-plugins";

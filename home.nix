@@ -47,6 +47,7 @@
 		".config/hypr/hypridle.conf".source = ./hypridle/hypridle.conf;
 		".config/hypr/hyprpaper.conf".source = ./hyprpaper/hyprpaper.conf;
 		".config/kitty".source = ./kitty;
+		".config/alacritty/alacritty.toml".source = ./alacritty/alacritty.toml;
 		".tmux.conf".source = ./tmux/.tmux.conf;
 		".zshrc".source = ./zsh/.zshrc;
 		".config/hypr/hyprlock.conf".source = ./hyprlock/hyprlock.conf;

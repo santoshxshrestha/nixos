@@ -11,6 +11,7 @@
     hyprland
     starship
     kitty
+    alacritty
     tmux
     zsh
     stow

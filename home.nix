@@ -45,6 +45,7 @@
 	home.file = {
 		".config/hypr/hyprland.conf".source = ./hyprland/hyprland.conf;
 		".config/hypr/hypridle.conf".source = ./hypridle/hypridle.conf;
+		".config/hypr/hyprpaper.conf".source = ./hyprpaper/hyprpaper.conf;
 		".config/kitty".source = ./kitty;
 		".tmux.conf".source = ./tmux/.tmux.conf;
 		".config/hypr/hyprlock.conf".source = ./hyprlock/hyprlock.conf;

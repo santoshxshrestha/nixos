@@ -43,7 +43,7 @@
 # Home Manager is pretty good at managing dotfiles. The primary way to manage
 # plain files is through 'home.file'.
 	home.file = {
-		".config/hypr/hyprland.conf".source = ./hyprland/hyprland.conf;
+		".config/hypr/hyprland.conf".source = ./hyprland/hyprland_aesthetics.conf;
 		".config/hypr/hypridle.conf".source = ./hypridle/hypridle.conf;
 		".config/hypr/hyprpaper.conf".source = ./hyprpaper/hyprpaper.conf;
 		".config/kitty".source = ./kitty;

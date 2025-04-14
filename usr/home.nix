@@ -83,6 +83,7 @@
 #		home-rebuild = "home-manager switch --flake /home/santosh/nixos/#santosh";
 #	};
 # };
+	home.file.".config/hypr/hyprland.conf".source = ./hyprland/hyprland.conf;
 
 # Let Home Manager install and manage itself.
 	programs.home-manager.enable = true;

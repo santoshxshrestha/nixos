@@ -1,0 +1,121 @@
+/**
+ * Rose Pine Dark theme for Rofi
+ * Created to match Hyprland setup
+ */
+
+configuration {
+    modi: "drun,run,window,ssh";
+    icon-theme: "Papirus-Dark";
+    show-icons: true;
+    terminal: "kitty";
+    drun-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "   Apps ";
+    display-run: "   Run ";
+    display-window: "   Window";
+    display-Network: " 󰤨  Network";
+    sidebar-mode: true;
+}
+
+* {
+    bg: #191724;
+    bg-alt: #1f1d2e;
+    fg: #e0def4;
+    fg-alt: #908caa;
+    
+    border: 0;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+    
+    background-color: @bg;
+    text-color: @fg;
+}
+
+window {
+    width: 30%;
+    border: 3px;
+    border-color: #524f67;
+    border-radius: 12px;
+    background-color: @bg;
+}
+
+mainbox {
+    children: [inputbar, listview];
+    background-color: @bg;
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: @bg-alt;
+    border-radius: 8px;
+    margin: 12px;
+    padding: 8px 12px;
+}
+
+prompt {
+    background-color: inherit;
+    padding: 0px 8px 0px 0px;
+}
+
+entry {
+    background-color: inherit;
+    placeholder: "Search...";
+    placeholder-color: @fg-alt;
+    padding: 0px 0px;
+}
+
+listview {
+    lines: 8;
+    margin: 0px 12px 12px 12px;
+    background-color: @bg;
+    border-radius: 8px;
+}
+
+element {
+    padding: 8px;
+    margin: 4px 0px;
+    border-radius: 8px;
+}
+
+element normal.normal, element alternate.normal {
+    background-color: @bg;
+}
+
+element selected.normal {
+    background-color: @bg-alt;
+    border: 1px;
+    border-color: #c4a7e7;
+}
+
+element-icon {
+    size: 24px;
+    padding: 0px 10px 0px 0px;
+}
+
+element-text {
+    text-color: @fg;
+    vertical-align: 0.5;
+}
+
+element-text selected {
+    text-color: #c4a7e7;
+}
+
+button {
+    text-color: @fg;
+    border-radius: 8px;
+    background-color: @bg-alt;
+    margin: 5px;
+    padding: 5px 10px;
+    horizontal-align: 0.5;
+}
+
+button selected {
+    background-color: @bg;
+    text-color: #c4a7e7;
+    border: 1px;
+    border-color: #c4a7e7;
+}

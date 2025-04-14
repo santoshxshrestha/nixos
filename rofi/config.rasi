@@ -1,0 +1,13 @@
+/* Rofi config file */
+configuration {
+    font: "Source Sans Pro 12";
+    show-icons: true;
+    display-window: "Window";
+    display-drun: "Search";
+}
+
+@theme "rose-pine"
+
+listview {
+    lines: 9;
+}

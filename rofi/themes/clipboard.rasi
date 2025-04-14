@@ -1,0 +1,191 @@
+configuration {
+    modi: "clipboard";
+    show-icons: true;
+    icon-theme: "Papirus";
+    terminal: "kitty";
+    
+    /* Enhanced clipboard management */
+    display-clipboard: "  Clipboard ";
+    
+    /* Advanced keyboard shortcuts */
+    kb-row-up: "Up,Control+p,Control+k";
+    kb-row-down: "Down,Control+n,Control+j";
+    kb-accept-entry: "Return,KP_Enter,Control+y";
+    kb-delete-entry: "Shift+Delete";
+    kb-custom-1: "Alt+p";      // Pin entry
+    kb-custom-2: "Alt+c";      // Clear history
+    kb-mode-next: "Shift+Right,Control+Tab";
+    kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";
+}
+
+* {
+    font: "JetBrainsMono Nerd Font Mono 11";
+    
+    /* Enhanced color palette with more depth */
+    bg-primary:     #1a1b26;       /* Deep dark background */
+    bg-secondary:   #24283b;       /* Slightly lighter background */
+    bg-accent:      #414868;       /* Accent background */
+    
+    fg-primary:     #c0caf5;       /* Primary text color */
+    fg-secondary:   #a9b1d6;       /* Secondary text color */
+    fg-dim:         #565f89;       /* Dimmed text color */
+    
+    accent-color:   #7aa2f7;       /* Primary accent - soft blue */
+    accent-alt:     #bb9af7;       /* Secondary accent - soft purple */
+    
+    urgent-color:   #f7768e;       /* Urgent/error color - soft red */
+    success-color:  #9ece6a;       /* Success color - soft green */
+    
+    background-color: @bg-primary;
+    text-color: @fg-primary;
+    
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 55%;
+    height: 60%;
+    transparency: "real";
+    background-color: @bg-primary;
+    border-radius: 12px;
+    padding: 15px;
+}
+
+mainbox {
+    children: [inputbar, listview, mode-switcher];
+    background-color: transparent;
+    spacing: 10px;
+}
+
+inputbar {
+    children: [textbox-prompt-colon, entry, num-filtered-rows];
+    background-color: @bg-secondary;
+    border-radius: 8px;
+    padding: 10px;
+    spacing: 10px;
+}
+
+textbox-prompt-colon {
+    expand: false;
+    str: " 󰅌  ";
+    text-color: @accent-color;
+    font: "JetBrainsMono Nerd Font Bold 12";
+}
+
+entry {
+    placeholder: "Search clipboard...";
+    placeholder-color: @fg-dim;
+    text-color: @fg-primary;
+    background-color: transparent;
+}
+
+num-filtered-rows {
+    text-color: @fg-secondary;
+    expand: false;
+}
+
+listview {
+    lines: 15;
+    columns: 1;
+    fixed-height: false;
+    dynamic: true;
+    scrollbar: true;
+    background-color: @bg-secondary;
+    border-radius: 8px;
+    spacing: 4px;
+    padding: 8px;
+}
+
+scrollbar {
+    handle-width: 4px;
+    handle-color: @accent-color;
+    background-color: @bg-accent;
+    border-radius: 4px;
+}
+
+element {
+    padding: 8px 12px;
+    margin: 2px 0;
+    border-radius: 6px;
+    spacing: 10px;
+    cursor: pointer;
+}
+
+element normal.normal {
+    background-color: @bg-secondary;
+    text-color: @fg-primary;
+}
+
+element selected.normal {
+    background-color: @bg-accent;
+    text-color: @accent-color;
+}
+
+element-icon {
+    size: 24px;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+    text-overflow: "…";
+}
+
+/* Special entry type styling */
+element.text {
+    text-color: @fg-primary;
+}
+
+element.image {
+    text-color: @accent-alt;
+}
+
+element.code {
+    text-color: @success-color;
+}
+
+element.url {
+    text-color: @accent-color;
+}
+
+mode-switcher {
+    background-color: @bg-secondary;
+    border-radius: 8px;
+    padding: 5px;
+    spacing: 5px;
+}
+
+button {
+    padding: 8px;
+    background-color: @bg-accent;
+    text-color: @fg-secondary;
+    border-radius: 6px;
+    horizontal-align: 0.5;
+}
+
+button selected {
+    background-color: @accent-color;
+    text-color: @bg-primary;
+}
+
+error-message {
+    background-color: @urgent-color;
+    text-color: @bg-primary;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Special states */
+element.urgent {
+    background-color: rgba(247, 118, 142, 0.2);
+    text-color: @urgent-color;
+}
+
+element.active {
+    background-color: rgba(122, 162, 247, 0.2);
+    text-color: @accent-color;
+}

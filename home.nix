@@ -50,6 +50,7 @@
 		".config/hypr/hyprsunset.conf".source = ./hyprsunset/hyprsunset.conf;
 		".config/rofi".source = ./rofi;
 		".config/nvim".source = ./nvim;
+		".local/bin".source = ./scripts;
 
 # # Building this configuration will create a copy of 'dotfiles/screenrc' in
 # # the Nix store. Activating the configuration will then make '~/.screenrc' a

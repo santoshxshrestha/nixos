@@ -46,6 +46,7 @@
 		".config/hypr/hyprland.conf".source = ./hyprland/hyprland.conf;
 		".config/kitty/current-theme.conf".source = ./kitty/current-theme.conf;
 		".config/kitty/kitty.conf".source = ./kitty/kitty.conf;
+		".tmux.conf".source = ./tmux/.tmux.conf;
 
 # # Building this configuration will create a copy of 'dotfiles/screenrc' in
 # # the Nix store. Activating the configuration will then make '~/.screenrc' a

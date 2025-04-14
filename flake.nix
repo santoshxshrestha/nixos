@@ -2,7 +2,12 @@
 	description = "flake for santosh";
 
 	inputs = {
-	hypland.url = "github:hyprwm/Hyprland/Hyprland";
+	hypland.url = "github:hyprwm/Hyprland";
+
+	hyprland-plugins = {
+		url = "github:hyprwm/hyprland-plugins";
+		inputs.hyprland.follows = "hyprland";
+	};
 		nixpkgs = {
 			url = "github:NixOS/nixpkgs/nixos-unstable";
 		};

@@ -50,6 +50,7 @@
 		".config/hypr/hyprlock.conf".source = ./hyprlock/hyprlock.conf;
 		".config/hypr/hyprsunset.conf".source = ./hyprsunset/hyprsunset.conf;
 		".config/rofi".source = ./rofi;
+		".config/starship.toml".source = ./starship/starship.toml;
 		".config/nvim".source = ./nvim;
 		".local/bin".source = ./scripts;
 		

@@ -1,0 +1,123 @@
+# Ultra Cool Starship Configuration with Neon Cyberpunk Theme
+
+format = """
+$os\
+$username\
+$hostname\
+$directory\
+$git_branch\
+$git_status\
+$cmd_duration\
+$character"""
+
+# Cool prompt character with neon effect
+[character]
+success_symbol = "[->](bold bright-green)"
+error_symbol = "[✖](bold bright-red)"
+vimcmd_symbol = "[➤](bold bright-cyan)"
+
+# OS detection with custom icons
+[os]
+format = "[$symbol](bold bright-purple) "
+disabled = false
+
+[os.symbols]
+Linux = "󰌽"
+Arch = "󰣇"
+
+# Username with cool styling
+[username]
+style_user = "bold bright-cyan"
+style_root = "bold bright-red"
+format = "[$user ](bright-green)"
+disabled = false
+show_always = true
+
+# Hostname styling
+[hostname]
+ssh_only = false
+format = "[$hostname](bold bright-magenta) "
+disabled = true
+
+# Directory with neon styling
+[directory]
+truncation_length = 2
+home_symbol = "󱂵 "
+read_only = " "
+read_only_style = "bright-red"
+format = "in [](bright-white)[$path](bold bright-cyan) "
+style = "bold bright-cyan"
+
+# Git branch with cool styling
+[git_branch]
+symbol = "󰘬 "
+truncation_length = 16
+truncation_symbol = "…"
+format = "[$symbol$branch](bold bright-green) "
+style = "bold bright-green"
+
+# Git status with neon indicators
+[git_status]
+format = '([$all_status$ahead_behind](bold bright-red) )'
+style = "bold bright-red"
+conflicted = "⚡"
+ahead = "↑"
+behind = "↓"
+diverged = "↕"
+up_to_date = "✓"
+untracked = "?"
+stashed = "⚑"
+modified = "!"
+staged = "+"
+renamed = "→"
+deleted = "✘"
+
+# Command duration in cyberpunk style
+[cmd_duration]
+min_time = 1000
+format = "took [$duration](bold bright-yellow) "
+style = "bold bright-yellow"
+
+# Custom module styles for programming languages
+[nodejs]
+symbol = "󰎙 "
+format = "[${symbol}${version}](bold bright-green) "
+
+[python]
+symbol = "󰌠 "
+format = "[${symbol}${version}](bold bright-blue) "
+
+[rust]
+symbol = "󱘗 "
+format = "[${symbol}${version}](bold bright-red) "
+
+[java]
+symbol = "󰬷 "
+format = "[${symbol}${version}](bold bright-red) "
+
+[golang]
+symbol = "󰟓 "
+format = "[${symbol}${version}](bold bright-cyan) "
+
+[docker_context]
+symbol = "󰡨 "
+format = "[${symbol}${context}](bold bright-blue) "
+
+# Battery display with cool icons
+[battery]
+full_symbol = "󰁹 "
+charging_symbol = "󰂄 "
+discharging_symbol = "󰂃 "
+format = "[$symbol$percentage]($style) "
+
+[[battery.display]]
+threshold = 10
+style = "bold bright-red"
+
+[[battery.display]]
+threshold = 30
+style = "bold bright-yellow"
+
+[[battery.display]]
+threshold = 100
+style = "bold bright-green"

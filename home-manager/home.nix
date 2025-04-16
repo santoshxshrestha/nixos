@@ -59,7 +59,7 @@
 		# ".config/starship.toml".source = ./starship/starship_aesthetics.toml;
 		".config/starship.toml".source = ./starship/starship_performance.toml;
 		".config/nvim".source = ./nvim;
-		".local/bin".source = ./scripts;
+		".local/scripts".source = ./scripts;
 		
 
 # # Building this configuration will create a copy of 'dotfiles/screenrc' in

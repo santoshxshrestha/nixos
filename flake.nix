@@ -18,7 +18,7 @@
 		home-manager.inputs.nixpkgs.follows = "nixpkgs"; 
 	};
 
-	outputs = inputs@{ self, nixpkgs, home-manager, hyprpanel, ... }:
+	outputs = inputs@{ self, nixpkgs, home-manager, ... }:
 		let 
 		lib = nixpkgs.lib ;
 	system = "x86_64-linux";
@@ -37,12 +37,6 @@
 					modules = [
 						./home-manager/home.nix
 					];
-
-					programs.hyprpanel = {
-						enable = true;
-						overwrite.enable = true;
-						overlay.enable = true;
-					};
 				};
 			};
 		};

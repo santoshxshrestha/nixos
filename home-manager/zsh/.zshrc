@@ -86,3 +86,4 @@ eval "$(starship init zsh)"
 #PATHS here
 export PATH=~/bin:$PATH
 export PATH=~/.local/scripts/:$PATH
+fastfetch

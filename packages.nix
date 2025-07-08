@@ -14,7 +14,7 @@
 #    alacritty
     tmux
     zsh
-#    stow
+    stow
     rofi-wayland
     waybar
 #    networkmanagerapplet

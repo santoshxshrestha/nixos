@@ -9,30 +9,30 @@
     neovim
     firefox
     hyprland
-#    starship
+    starship
     kitty
 #    alacritty
-#    tmux
-#    zsh
+    tmux
+    zsh
 #    stow
-#    rofi-wayland
-#    waybar
+    rofi-wayland
+    waybar
 #    networkmanagerapplet
 #    pavucontrol
-#    wl-clipboard
-#    brightnessctl
-#    hyprlock
-#    fzf
+    wl-clipboard
+    brightnessctl
+    hyprlock
+    fzf
 #    unzip
-#    hyprcursor
+    hyprcursor
   
   ];
   users.users.santosh.packages = with pkgs; [
-#  rose-pine-hyprcursor
+  rose-pine-hyprcursor
 #  mpvpaper
-#  hyprpaper
-#  btop
-#  fastfetch
+  hyprpaper
+  btop
+  fastfetch
   ];
 
   fonts.packages = with pkgs; [

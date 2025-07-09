@@ -2,9 +2,9 @@
 
 {
 
-	# imports = [
-		# ./hyprland.nix
-	# ];
+# imports = [
+# ./hyprland.nix
+# ];
 # Home Manager needs a bit of information about you and the paths it should
 # manage.
 	home.username = "santosh";
@@ -44,23 +44,23 @@
 # plain files is through 'home.file'.
 	home.file = {
 		".config/hypr/hyprland.conf".source = ./hyprland/hyprland_aesthetics.conf;
-		# ".config/hypr/hyprland.conf".source = ./hyprland/hyprland_performance.conf.conf;
+# ".config/hypr/hyprland.conf".source = ./hyprland/hyprland_performance.conf.conf;
 		".config/hypr/hypridle.conf".source = ./hypridle/hypridle.conf;
 		".config/hypr/hyprpaper.conf".source = ./hyprpaper/hyprpaper.conf;
 		".config/kitty".source = ./kitty;
-		#".config/alacritty/alacritty.toml".source = ./alacritty/alacritty.toml;
-		 ".tmux.conf".source = ./tmux/.tmux_aesthetics.conf;
-		#".tmux.conf".source = ./tmux/.tmux_performance.conf;
+#".config/alacritty/alacritty.toml".source = ./alacritty/alacritty.toml;
+		".tmux.conf".source = ./tmux/.tmux_aesthetics.conf;
+#".tmux.conf".source = ./tmux/.tmux_performance.conf;
 		".zshrc".source = ./zsh/.zshrc;
 		".config/hypr/hyprlock.conf".source = ./hyprlock/hyprlock.conf;
 		".config/hypr/hyprsunset.conf".source = ./hyprsunset/hyprsunset.conf;
 		".config/rofi".source = ./rofi;
-		 ".config/starship.toml".source = ./starship/starship_main.toml;
-		 #".config/starship.toml".source = ./starship/starship_aesthetics.toml;
-		#".config/starship.toml".source = ./starship/starship_performance.toml;
+		".config/starship.toml".source = ./starship/starship_main.toml;
+#".config/starship.toml".source = ./starship/starship_aesthetics.toml;
+#".config/starship.toml".source = ./starship/starship_performance.toml;
 		".local/scripts".source = ./scripts;
 		".config/waybar".source = ./waybar;
-		
+
 
 # # Building this configuration will create a copy of 'dotfiles/screenrc' in
 # # the Nix store. Activating the configuration will then make '~/.screenrc' a

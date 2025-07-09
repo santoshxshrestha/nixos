@@ -25,6 +25,7 @@
 		pkgs.cargo
 		pkgs.rustc
 		pkgs.ripgrep
+		pkgs.libgcc
 
 		
 

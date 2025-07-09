@@ -75,6 +75,7 @@ alias asdf='~/.local/scripts/sessionizer'
 
 # Load Rust environment variables to include Cargo and Rust binaries in PATH
 # . "$HOME/.cargo/env"
+export PATH="$HOME/.cargo/bin:$PATH"
 
 # Add tmuxifier to PATH
 # export PATH="$HOME/.tmuxifier/bin:$PATH"
@@ -86,4 +87,3 @@ eval "$(starship init zsh)"
 #PATHS here
 export PATH=~/bin:$PATH
 export PATH=~/.local/scripts/:$PATH
-fastfetch

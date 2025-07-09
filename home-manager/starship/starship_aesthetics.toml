@@ -23,7 +23,7 @@ disabled = false
 
 [os.symbols]
 Linux = "󰌽"
-Arch = "󰣇"
+Arch = " 󰣇"
 
 # Username with cool styling
 [username]
@@ -64,7 +64,7 @@ conflicted = "⚡"
 ahead = "↑"
 behind = "↓"
 diverged = "↕"
-up_to_date = "✓"
+up_to_date = ""
 untracked = "?"
 stashed = "⚑"
 modified = "!"

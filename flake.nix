@@ -1,46 +1,35 @@
 {
-	description = "flake for santosh";
+  description = "flake for santosh";
 
-	inputs = {
-		hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
-#	hypland.url = "github:hyprwm/Hyprland";
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-#	hyprland-plugins = {
-#		url = "github:hyprwm/hyprland-plugins";
-#		follows = "hyprland";
-#	};
-    # zen-browser.url = "github:0xc000022070/zen-browser-flake";
-		nixpkgs = {
-			url = "github:NixOS/nixpkgs/nixos-unstable";
-		};
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-			home-manager.url = "github:nix-community/home-manager";
-			home-manager.inputs.nixpkgs.follows = "nixpkgs"; 
-	};
+    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
+  };
 
-	outputs = inputs@{ self, nixpkgs, home-manager, ... }:
-		let 
-		lib = nixpkgs.lib ;
-	system = "x86_64-linux";
-	pkgs = nixpkgs.legacyPackages.${system};
-	in{
+  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
+    let
+      system = "x86_64-linux";
+      lib = nixpkgs.lib;
+    in {
+      nixosConfigurations.santosh = lib.nixosSystem {
+        inherit system;
+        modules = [
+          ./configuration.nix
 
-		nixosConfigurations = {
-			santosh = lib.nixosSystem {
-				inherit system;
-				modules = [
-					./configuration.nix
-				];
-			};
-		};
+          home-manager.nixosModules.home-manager
 
-		homeConfigurations = {
-			santosh = home-manager.lib.homeManagerConfiguration{
-				inherit pkgs;
-				modules = [
-					./home-manager/home.nix
-				];
-			};
-		};
-	};
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+
+            home-manager.users.santosh = import ./home-manager/home.nix;
+          }
+        ];
+      };
+    };
 }
+

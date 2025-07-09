@@ -23,8 +23,11 @@
     brightnessctl
     hyprlock
     fzf
-#    unzip
+    unzip
     hyprcursor
+
+    rustc
+    cargo
   
   ];
   users.users.santosh.packages = with pkgs; [

@@ -14,10 +14,11 @@ return {
       ensure_installed = {
         'prettier', -- ts/js formatter
         'stylua', -- lua formatter
-        -- 'eslint_d', -- ts/js linter
+        'eslint_d', -- ts/js linter
         'shfmt', -- Shell formatter
+        'clang-format', -- C/C++ formatter
         -- 'checkmake', -- linter for Makefiles
-        'ruff', -- Python linter and formatter
+        -- 'ruff', -- Python linter and formatter
         'taplo', --Toml lsp
         -- 'rustfmt', -- Rust formatter
       },
@@ -25,13 +26,15 @@ return {
     }
 
     local sources = {
-      diagnostics.checkmake,
-      formatting.prettier.with { filetypes = { 'html', 'json', 'yaml', 'markdown' } },
+      -- diagnostics.checkmake,
+      formatting.prettier.with { filetypes = { 'html', 'json', 'yaml', 'markdown', 'javascript' } },
       formatting.stylua,
       formatting.shfmt.with { args = { '-i', '4' } },
-      formatting.terraform_fmt,
-      require('none-ls.formatting.ruff').with { extra_args = { '--extend-select', 'I' } },
-      require 'none-ls.formatting.ruff_format',
+      -- formatting.terraform_fmt,
+      formatting.clang_format,
+      -- formatting.rustfmt,
+      -- require('none-ls.formatting.ruff').with { extra_args = { '--extend-select', 'I' } },
+      -- require 'none-ls.formatting.ruff_format',
     }
 
     local augroup = vim.api.nvim_create_augroup('LspFormatting', {})

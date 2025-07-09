@@ -68,6 +68,7 @@ return { -- Autocompletion
       Operator = '󰆕',
       TypeParameter = '󰊄',
     }
+
     cmp.setup {
       snippet = {
         expand = function(args)
@@ -75,6 +76,17 @@ return { -- Autocompletion
         end,
       },
       completion = { completeopt = 'menu,menuone,noinsert' },
+      window = {
+        completion = {
+          border = 'single',
+          scrollbar = false,
+          winhighlight = 'Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:PmenuSel',
+        },
+        documentation = {
+          border = 'single',
+          winhighlight = 'Normal:NormalFloat,FloatBorder:FloatBorder',
+        },
+      },
 
       -- For an understanding of why these mappings were
       -- chosen, you will need to read `:help ins-completion`
@@ -129,18 +141,18 @@ return { -- Autocompletion
         --    https://github.com/L3MON4D3/LuaSnip?tab=readme-ov-file#keymaps
         -- Select next/previous item with Tab / Shift + Tab
         ['<Tab>'] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.select_next_item()
-          elseif luasnip.expand_or_locally_jumpable() then
+          -- local copilot_keys = vim.fn['copilot#Accept']()
+          -- if copilot_keys ~= '' then
+          -- vim.api.nvim_feedkeys(copilot_keys, 'i', true)
+          if luasnip.expand_or_locally_jumpable() then
             luasnip.expand_or_jump()
           else
             fallback()
           end
         end, { 'i', 's' }),
+
         ['<S-Tab>'] = cmp.mapping(function(fallback)
-          if cmp.visible() then
-            cmp.select_prev_item()
-          elseif luasnip.locally_jumpable(-1) then
+          if luasnip.locally_jumpable(-1) then
             luasnip.jump(-1)
           else
             fallback()

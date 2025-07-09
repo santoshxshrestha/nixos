@@ -1,7 +1,9 @@
-require 'core.options' -- Load general options
-require 'core.keymaps' -- Load general keymaps
-require 'core.snippets' -- Custom code snippets
+require 'core.options'                 -- Load general options
+require 'core.keymaps'                 -- Load general keymaps
+require 'core.snippets'                -- Custom code snippets
+require('core.code-runner').setup()    -- Load code-runner
 vim.opt.termguicolors = true
+vim.opt.fillchars:append { eob = ' ' } -- Remove the `~` symbol from the end of the buffer
 
 -- Set up the Lazy plugin manager
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -15,25 +17,7 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 -- Set up plugins
--- this like will do the job
 require('lazy').setup 'plugins'
--- require('lazy').setup {
---   require 'plugins.neotree',
---   require 'plugins.colortheme',
---   require 'plugins.bufferline',
---   require 'plugins.lualine',
---   require 'plugins.treesitter',
---   require 'plugins.telescope',
---   require 'plugins.lsp',
---   require 'plugins.autocompletion',
---   require 'plugins.none-ls',
---   require 'plugins.gitsigns',
---   require 'plugins.alpha',
---   require 'plugins.indent-blankline',
---   require 'plugins.misc',
---   require 'plugins.comment',
---   require 'plugins.smear_cursor',
--- }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

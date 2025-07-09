@@ -7,8 +7,8 @@ return { -- Highlight, edit, and navigate code
     ensure_installed = {
       'lua',
       -- 'python',
-      -- 'javascript',
-      -- 'typescript',
+      'javascript',
+      'typescript',
       'vimdoc',
       'vim',
       -- 'regex',
@@ -33,6 +33,7 @@ return { -- Highlight, edit, and navigate code
       'html',
       'rust',
       'ron',
+      -- 'php',
     },
     -- Autoinstall languages that are not installed
     auto_install = true,

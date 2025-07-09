@@ -9,7 +9,7 @@ return {
 
     -- Useful status updates for LSP.
     -- NOTE: `opts = {}` is the same as calling `require('fidget').setup({})`
-    { 'j-hui/fidget.nvim', opts = {} },
+    { 'j-hui/fidget.nvim',       opts = {} },
 
     -- Allows extra capabilities provided by nvim-cmp
     'hrsh7th/cmp-nvim-lsp',
@@ -17,13 +17,22 @@ return {
   config = function()
     vim.diagnostic.config {
       -- Show diagnostics while typing (in insert mode)
-      update_in_insert = true, -- You can set this to false if you don't want diagnostics while typing
-      virtual_text = false, -- Display virtual text for diagnostics directly in the code
+      update_in_insert = false, -- You can set this to false if you don't want diagnostics while typing
+      virtual_text = true,      -- Display virtual text for diagnostics directly in the code
       -- virtual_text = { current_line = true }, -- Display virtual text for diagnostics directly in the current_line
-      virtual_lines = { current_line = true }, -- Display virtual lines for diagnostics directly in the current_line
-      signs = true, -- Display signs in the gutter for diagnostics
-      underline = true, -- Underline code with errors/warnings
+      -- virtual_lines = { current_line = true }, -- Display virtual lines for diagnostics directly in the current_line
+      signs = true,         -- Display signs in the gutter for diagnostics
+      underline = false,    -- Underline code with errors/warnings
       severity_sort = true, -- Sort diagnostics by severity (e.g., errors first)
+      float = {
+        -- Configure the appearance of floating diagnostic windows.
+        border = 'rounded', -- Use rounded borders for the floating window.
+        source = 'if_many', -- Always show the source of the diagnostic (e.g., 'pyright').
+        prefix = '● ', -- Adds a prefix symbol to each diagnostic message
+        format = function(diagnostic)
+          return string.format('[%s] %s', diagnostic.code or 'NoCode', diagnostic.message)
+        end,
+      },
     }
     -- Brief aside: **What is LSP?**
     --
@@ -117,7 +126,7 @@ return {
         --
         -- When you move your cursor, the highlights will be cleared (the second autocommand).
         local client = vim.lsp.get_client_by_id(event.data.client_id)
-        if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight) then
+        if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_documentHighlight) then
           local highlight_augroup = vim.api.nvim_create_augroup('kickstart-lsp-highlight', { clear = false })
           vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
             buffer = event.buf,
@@ -144,7 +153,7 @@ return {
         -- code, if the language server you are using supports them
         --
         -- This may be unwanted, since they displace some of your code
-        if client and client.supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
+        if client and client:supports_method(vim.lsp.protocol.Methods.textDocument_inlayHint) then
           map('<leader>th', function()
             vim.lsp.inlay_hint.enable(not vim.lsp.inlay_hint.is_enabled { bufnr = event.buf })
           end, '[T]oggle Inlay [H]ints')
@@ -173,36 +182,13 @@ return {
       clangd = {},
       -- gopls = {},
       -- pyright = {},
-      rust_analyzer = {
-        capabilities = capabilities,
-        filetypes = { 'rust' },
-        settings = {
-          ['rust-analyzer'] = {
-            cargo = {
-              allFeatures = true,
-              loadOutDirsFromCheck = true,
-              buildScripts = {
-                enable = true,
-              },
-            },
-            checkOnSave = {
-              command = 'check',
-              extraArgs = { '--target-dir', 'target/rust-analyzer' },
-            },
-            procMacro = {
-              enable = false, --enable while using hte macros like serde, toki::main etc
-            },
-          },
-        },
-      },
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       --
       -- Some languages (like typescript) have entire language plugins that can be useful:
       --    https://github.com/pmizio/typescript-tools.nvim
       --
       -- But for many setups, the LSP (`tsserver`) will work just fine
-      -- ts_ls = {}, -- tsserver is deprecated
-      -- ruff = {}, --it is a linter for python i can un comment it when I want to code in python.
+      ts_ls = {}, -- tsserver is deprecated
       -- pylsp = {
       --   settings = {
       --     pylsp = {
@@ -219,15 +205,17 @@ return {
       --     },
       --   },
       -- },
-      html = { filetypes = { 'html', 'twig', 'hbs' } },
+      html = { filetypes = { 'html', 'twig', 'hbs', 'tera' } },
       cssls = {},
+      -- intelephense = {}, -- lsp of php
       tailwindcss = {
+        filetype = { 'html', 'css', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact' },
         capabilities = capabilities,
         settings = {
           tailwindCSS = {
             experimental = {
               classRegex = {
-                'class="([^"]*)"', -- matches class="...
+                'class="([^"]*)"',     -- matches class="...
                 'className="([^"]*)"', -- matches className="...
                 'classList="([^"]*)"', -- for Alpine.js
               },
@@ -235,7 +223,7 @@ return {
           },
         },
       },
-      -- dockerls = {},
+      dockerls = {},
       -- sqlls = {},
       -- terraformls = {},
       -- jsonls = {},
@@ -266,7 +254,48 @@ return {
         },
       },
     }
+    local rt = require 'rust-tools'
 
+    -- Your custom on_attach function for rust-tools
+    local function rust_on_attach(client, bufnr)
+      client.server_capabilities.documentFormattingProvider = false
+      -- Hover actions
+      vim.keymap.set('n', '<C-space>', rt.hover_actions.hover_actions, { buffer = bufnr })
+      -- Code action groups
+      vim.keymap.set('n', '<Leader>a', rt.code_action_group.code_action_group, { buffer = bufnr })
+
+      -- You can add more LSP keymaps or logic here if needed!
+    end
+
+    -- Rust tools config
+    rt.setup {
+      server = {
+        capabilities = capabilities,
+        on_attach = rust_on_attach,
+        settings = {
+          ['rust-analyzer'] = {
+            cargo = {
+              allFeatures = true,
+              loadOutDirsFromCheck = true,
+              buildScripts = { enable = true },
+            },
+            checkOnSave = {
+              command = 'clippy', -- for linting on save 'check' can also be there
+              extraArgs = { '--target-dir', 'target/rust-analyzer' },
+            },
+            procMacro = { enable = false },
+          },
+        },
+      },
+    }
+
+    -- Rust autoformat on save
+    vim.api.nvim_create_autocmd('BufWritePre', {
+      pattern = '*.rs',
+      callback = function(args)
+        vim.lsp.buf.format { bufnr = args.buf }
+      end,
+    })
     -- Ensure the servers and tools above are installed
     --  To check the current status of installed tools and/or manually install
     --  other tools, you can run
@@ -279,7 +308,8 @@ return {
     -- for you, so that they are available from within Neovim.
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
-      'stylua', -- Used to format Lua code
+      'bash-language-server', --language server for the bash
+      'stylua',               -- Used to format Lua code
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

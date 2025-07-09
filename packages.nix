@@ -25,8 +25,6 @@
     fzf
     unzip
     hyprcursor
-    interception-tools
-    interception-tools-plugins.dual-function-keys
   ];
   users.users.santosh.packages = with pkgs; [
   rose-pine-hyprcursor

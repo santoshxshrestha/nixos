@@ -22,6 +22,10 @@
 # The home.packages option allows you to install Nix packages into your
 # environment.
 		home.packages = [
+		pkgs.rustc
+
+		
+
 # # Adds the 'hello' command to your environment. It prints a friendly
 # # "Hello, world!" when run.
 # pkgs.hello
@@ -93,14 +97,20 @@
 	home.sessionVariables = {
 		EDITOR = "nvim";
 	};
+	programs.git = {
+		enable = true;
+		userName = "Santosh Shrestha";
+		userEmail = "santoshxshrestha@gmail.com";
+	};
 
-#programs.zsh = {
-#  	enable = true;
-#	shellAliases = {
-#		rebuild = "sudo nixos-rebuild switch --flake /home/santosh/nixos/#santosh";
-#		home-rebuild = "home-manager switch --flake /home/santosh/nixos/#santosh";
-#	};
-# };
+	programs.starship.enable = true;
+
+	programs.zsh = {
+		enable = true;
+		shellAliases = {
+			rebuild = "sudo nixos-rebuild switch --flake /home/santosh/nixos/#santosh";
+		};
+	};
 # Let Home Manager install and manage itself.
 	programs.home-manager.enable = true;
 }

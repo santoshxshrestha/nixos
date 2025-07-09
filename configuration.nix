@@ -81,6 +81,23 @@
 
   security.polkit.enable = true;
 
+# remap 
+services.keyd = {
+  enable = true;
+  keyboards.default = {
+    ids = ["*"];
+    settings = {
+      main = {
+        capslock = "overload(control, esc)";
+      };
+      # Optional: adjust timing (default is usually fine)
+      global = {
+        overload_tap_timeout = "200";  # milliseconds
+      };
+    };
+  };
+};
+
   #i18n.inputMethod.enable = "fcitx5";
   #i18n.inputMethod.fcitx5.addons= with pkgs;
   #[fcitx5-mozc];

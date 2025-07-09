@@ -48,9 +48,9 @@
 		".config/hypr/hypridle.conf".source = ./hypridle/hypridle.conf;
 		".config/hypr/hyprpaper.conf".source = ./hyprpaper/hyprpaper.conf;
 		".config/kitty".source = ./kitty;
-		".config/alacritty/alacritty.toml".source = ./alacritty/alacritty.toml;
-		# ".tmux.conf".source = ./tmux/.tmux_aesthetics.conf;
-		".tmux.conf".source = ./tmux/.tmux_performance.conf;
+		#".config/alacritty/alacritty.toml".source = ./alacritty/alacritty.toml;
+		 ".tmux.conf".source = ./tmux/.tmux_aesthetics.conf;
+		#".tmux.conf".source = ./tmux/.tmux_performance.conf;
 		".zshrc".source = ./zsh/.zshrc;
 		".config/hypr/hyprlock.conf".source = ./hyprlock/hyprlock.conf;
 		".config/hypr/hyprsunset.conf".source = ./hyprsunset/hyprsunset.conf;
@@ -60,6 +60,7 @@
 		".config/starship.toml".source = ./starship/starship_performance.toml;
 		".config/nvim".source = ./nvim;
 		".local/scripts".source = ./scripts;
+		".config/waybar".source = ./waybar;
 		
 
 # # Building this configuration will create a copy of 'dotfiles/screenrc' in

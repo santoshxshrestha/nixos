@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+START_SOUND="/usr/share/sounds/freedesktop/stereo/window-question.oga"
+paplay $START_SOUND
+paplay $START_SOUND
 
 WORK_TIME=1500 # 25 minutes
 BREAK_TIME=300 # 5 minutes
@@ -12,5 +15,5 @@ paplay "$ALERT_SOUND" # Play sound
 notify-send "Time's Up!" "Take a 5-minute break!"
 sleep $BREAK_TIME
 
-paplay "$ALERT_SOUND"
+paplay "/usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga"
 notify-send "Break Over!" "Ready for another session?" --icon=dialog-information

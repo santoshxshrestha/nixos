@@ -1,0 +1,229 @@
+#!/usr/bin/env bash
+# ANSI color codes
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+BLUE='\033[0;34m'
+NC='\033[0m' # No Color
+
+# Ensure the script runs with root privileges
+if [[ $EUID -ne 0 ]]; then
+    echo -e "${RED}Please run as root: sudo ${NC}"
+    exit 1
+fi
+
+echo -e "${RED}Error:${NC} Don't intrupt the process !!!"
+sleep 2
+echo -e "${GREEN}Switch the network connection to stable one.${NC}"
+sleep 2
+
+if command -v yay &>/dev/null; then
+    echo -e "${GREEN}yay is already installed.${NC}"
+    exit 0
+fi
+
+echo -e "${BLUE}yay is not installed.${NC}"
+read -rp $'\nDo you want to install yay now? (y/n): ' choice
+
+if [[ "$choice" =~ ^[Yy]$ ]]; then
+    echo -e "${GREEN}Installing yay...${NC}"
+
+    sudo pacman -S --needed --noconfirm base-devel git
+
+    # Clone yay /tmp is better place then home
+    cd /tmp || exit 1
+    git clone https://aur.archlinux.org/yay.git
+    cd yay || {
+        echo -e "${RED}Failed to enter yay directory.${NC}"
+        exit 1
+    }
+
+    # Build and install yay
+    makepkg -si --noconfirm
+
+    # Confirm installation
+    if command -v yay &>/dev/null; then
+        echo -e "${GREEN}yay installed successfully!${NC}"
+    else
+        echo -e "${RED}yay installation failed.${NC}"
+        exit 1
+    fi
+else
+    echo -e "${RED}Skipping yay installation as per user choice.${NC}"
+    exit 0
+fi
+
+pacman_tools=(
+    git
+    curl
+    fzf
+    tree
+    neovim
+    zsh
+    shellcheck
+    rust-analyzer
+    tmux
+    htop
+    ripgrep
+    rofi-wayland
+    yazi
+    gimp
+    hyprpaper
+    hypridle
+    hyprlock
+    hyprpicker
+    uwsm
+    thunar
+    btop
+    fastfetch
+    grub-customizer
+    nwg-look
+    timeshift
+    playerctl
+    lsd
+)
+aur_tools=(
+    zen-browser-bin
+    visual-studio-code-bin
+    ttf-jetbrains-mono-nerd
+    sddm-theme-greenleaf
+    hyprcursor
+    rose-pine-hyprcursor
+    mpvpaper
+    hyprpanel
+)
+
+echo "== Tools to be installed with pacman =="
+for tool in "${pacman_tools[@]}"; do
+    echo " - $tool"
+done
+
+echo -e "\n== Tools to be installed with yay (AUR) =="
+for tool in "${aur_tools[@]}"; do
+    echo " - $tool"
+done
+
+read -rp $'\nDo you want to install them? (y/n): ' choice
+
+echo -e "${BLUE}Info:${NC} Installing packages..."
+
+if [[ "$choice" == "y" ]]; then
+    echo -e "\n📦 Installing pacman tools..."
+    for tool in "${pacman_tools[@]}"; do
+        echo "Installing $tool..."
+        sudo pacman -S --noconfirm --needed "$tool"
+    done
+
+    echo -e "\n🎯 Installing AUR tools with yay..."
+    for tool in "${aur_tools[@]}"; do
+        echo "Installing $tool..."
+        yay -S --noconfirm --needed "$tool"
+    done
+
+    echo -e "\n✅ All tools installed!"
+else
+    echo "❌ Installation cancelled."
+fi
+
+cd "$HOME" || {
+    echo -e "${RED}Error:${NC} Failed to navigate to /root directory."
+    echo -e "${BLUE}Info:${NC} Aborting...\n"
+    sleep 2
+    exit 1
+}
+
+echo -e "${BLUE}Cloning:${NC} The tmux plugin manager ..." && sleep 2
+git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm"
+
+# Clone dotfiles repository
+cd "$HOME" || {
+    echo -e "${RED}Error:${NC} Failed to navigate to home directory."
+    echo -e "${BLUE}Info:${NC} Aborting...\n"
+    sleep 2
+    exit 1
+}
+if [ -d "$HOME/dotfiles" ]; then
+    echo -e "${BLUE}Info:${NC} dotfiles directory already exists. Skipping clone."
+else
+    echo -e "${BLUE}Cloning:${NC} Dotfiles ..."
+    git clone https://github.com/santoshxshrestha/dotfiles.git
+fi
+
+# Stow the dotfiles
+cd "$HOME/dotfiles" || {
+    echo -e "${RED}Error:${NC} Failed to navigate to dotfiles directory."
+    echo -e "${BLUE}Info:${NC} Aborting...\n"
+    sleep 2
+    exit 1
+}
+
+echo -e "Stowing dotfiles..."
+[ -f "$HOME/.config/hypr/hyprland.conf" ] && rm "$HOME/.config/hypr/hyprland.conf"
+if ! stow hyprlock hyprsunset nvim tmux zsh bin hypridle fastfetch hyprland hyprpaper kitty rofi starship; then
+    echo -e "${RED}Error:${NC} Dotfiles stow failed."
+    exit 1
+fi
+
+cd "$HOME" || {
+    echo -e "${RED}Error:${NC} Failed to navigate to /root directory."
+    echo -e "${BLUE}Info:${NC} Aborting...\n"
+    sleep 2
+    exit 1
+}
+
+ZSH_PATH=$(which zsh)
+if grep -q "$ZSH_PATH" /etc/shells; then
+    chsh -s "$ZSH_PATH"
+else
+    echo -e "${RED}Error:${NC} $ZSH_PATH is not listed in /etc/shells. Add it manually or reinstall zsh properly."
+fi
+
+sleep 2
+echo -e "${GREEN}Setup complete!${NC}"
+
+read -rp $'\nDo you want me to open the nvim for installing all plugins ? (y/n): ' choice
+
+if [[ "$choice" =~ ^[Yy]$ ]]; then
+    echo -e "${GREEN}Opening nvim...${NC}"
+    nvim
+else
+    echo -e "${RED}Skipping plugins installation as per user choice.${NC}"
+    exit 0
+fi
+
+echo -e "${GREEN}
+Your configuration is ready. 
+${NC}Launch Neovim in the terminal. 
+On first launch, the package manager will automatically install all plugins. 
+You may see installation progress messages. 
+Once complete, restart Neovim for all features to be fully activated.
+"
+read -rp $'\nDo you want me to clone the wallpaper-archive? (y/n): ' choice
+
+if [[ "$choice" =~ ^[Yy]$ ]]; then
+    echo -e "${BLUE}Checking for Pictures directory...${NC}"
+    if [ ! -d "$HOME/Pictures" ]; then
+        echo -e "${YELLOW}Pictures directory does not exist. Creating it now...${NC}"
+        mkdir -p "$HOME/Pictures"
+        echo -e "${GREEN}Pictures directory created successfully.${NC}"
+    fi
+
+    echo -e "${GREEN}Cloning wallpaper-archive...${NC}"
+    if git clone https://github.com/santoshxshrestha/wallpaper-archive.git "$HOME/Pictures/wallpaper-archive/"; then
+        echo -e "${GREEN}Repository cloned successfully!${NC}"
+    else
+        echo -e "${RED}Failed to clone repository. Please check your internet connection and GitHub access.${NC}"
+        exit 1
+    fi
+else
+    echo -e "${RED}Skipping the wallpaper-archive.${NC}"
+    exit 0
+fi
+
+fastfetch --logo-color-1 red
+echo -e "${GREEN}Your configuration is completely ready...${NC}"
+echo -e "${YELLOW}NOTE: If you want to push changes later using SSH:${NC}"
+echo -e "1. First add your SSH key to GitHub"
+echo -e "2. Then run the following command to update your repository:"
+echo -e "${BLUE}   cd $HOME/path/to/your/directory${NC}"
+echo -e "${BLUE}   git remote set-url origin git@github.com:user-name/repository-name.git${NC}"
+echo -e "This will allow you to push changes using SSH authentication instead of HTTPS."

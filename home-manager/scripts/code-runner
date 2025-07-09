@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+
+file=$(
+    find . -type f \
+        -not -path './target/*' \
+        -not -path './.git/*' \
+        -not -name '*.lock' \
+        -not -name '*.out' \
+        -printf "%T@ %p\n" | sort -n | tail -1 | awk '{ $1=""; sub(/^ /, ""); print }'
+    # -printf "%T@ %p\n" | sort -n | tail -1 | cut -d' ' -f2-
+)
+
+extension="${file##*.}"
+
+if [ "$file" = "./Cargo.toml" ]; then
+    echo "Detected changes in 'Cargo.toml'. Running 'cargo build' to compile the project..."
+    cargo build
+    exit 0
+fi
+
+if [[ "$file" = "./src/lib.rs" ]] ||
+    [[ "$file" = "./lib.rs" ]] ||
+    [[ "$file" = ./src/tests/* ]] ||
+    [[ "$file" = ./tests/* ]]; then
+    echo "Detected changes in 'lib.rs' or test files. Running 'cargo test' to run the test..."
+    cargo test
+    exit 0
+fi
+
+case "$extension" in
+c)
+    echo "Compiling C file: $file with 'gcc'..."
+    gcc "$file" && ./a.out
+    ;;
+cpp)
+    echo "Compiling C++ file: $file with 'g++'..."
+    g++ "$file" && ./a.out
+    ;;
+js)
+    echo "Executing JavaScript file: $file with 'node'..."
+    node "$file"
+    ;;
+rs)
+    echo "Running Rust project: $file with 'cargo run'..."
+    cargo run
+    ;;
+php)
+    echo "Running php project: $file with 'php'..."
+    php "$file"
+    ;;
+*)
+    echo "Damn it! got the wrong file in the buffer: .$file (extension: .$extension)"
+    ;;
+esac

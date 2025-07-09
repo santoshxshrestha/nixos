@@ -25,7 +25,8 @@
 		pkgs.cargo
 		pkgs.rustc
 		pkgs.ripgrep
-		pkgs.libgcc
+		pkgs.gcc
+# libgcc: Just the runtime support libraries (for linking), not the compiler so we use gcc to refrence it
 
 		
 

@@ -26,8 +26,8 @@ format = "[$symbol](bold bright-purple) "
 disabled = false
 
 [os.symbols]
-Linux = "󰌽"
-Arch = "󰣇"
+Linux = " 󰌽"
+Arch = " 󰣇"
 
 [git_branch]
 symbol = "󰘬 "

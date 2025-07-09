@@ -26,6 +26,7 @@
 		pkgs.rustc
 		pkgs.ripgrep
 		pkgs.gcc
+		pkgs.hyprshot
 # libgcc: Just the runtime support libraries (for linking), not the compiler so we use gcc to refrence it
 
 		

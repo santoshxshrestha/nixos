@@ -23,6 +23,7 @@
 # environment.
 		home.packages = [
 		pkgs.rustc
+		pkgs.ripgrep
 
 		
 

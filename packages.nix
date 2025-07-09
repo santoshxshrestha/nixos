@@ -25,10 +25,8 @@
     fzf
     unzip
     hyprcursor
-
-    rustc
-    cargo
-  
+    interception-tools
+    interception-tools-plugins.dual-function-keys
   ];
   users.users.santosh.packages = with pkgs; [
   rose-pine-hyprcursor

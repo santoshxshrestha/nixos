@@ -51,7 +51,6 @@
     isNormalUser = true;
     description = "Santosh Shrestha";
     extraGroups = [ "networkmanager" "wheel" "video"];
-    shell = pkgs.zsh;
   };
 
   # Allow unfree packages
@@ -86,8 +85,6 @@
   #i18n.inputMethod.fcitx5.addons= with pkgs;
   #[fcitx5-mozc];
 
-  programs.zsh.enable = true;
-  users.defaultUserShell = pkgs.zsh;
 
   #services.logind = {
   #enable = true;

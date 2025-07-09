@@ -13,7 +13,6 @@
     kitty
 #    alacritty
     tmux
-    zsh
     stow
     rofi-wayland
     waybar

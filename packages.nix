@@ -20,7 +20,7 @@
     # hyprcursor
   ];
   users.users.santosh.packages = with pkgs; [
-   rose-pine-hyprcursor
+   # rose-pine-hyprcursor
   ];
 
   fonts.packages = with pkgs; [

@@ -34,6 +34,9 @@
 		pkgs.nodejs
 		pkgs.rust-analyzer
 
+		pkgs.hypridle
+		pkgs.hyprlock
+
 		
 
 # # Adds the 'hello' command to your environment. It prints a friendly

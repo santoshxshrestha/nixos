@@ -36,6 +36,7 @@
 
 		pkgs.hypridle
 		pkgs.hyprlock
+		pkgs.cliphist # Clipboard manager compatible with Wayland and wl-paste
 
 		
 

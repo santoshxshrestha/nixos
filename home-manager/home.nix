@@ -38,6 +38,8 @@
 		pkgs.hyprlock
 		pkgs.cliphist # Clipboard manager compatible with Wayland and wl-paste
 
+		pkgs.vscode
+
 		
 
 # # Adds the 'hello' command to your environment. It prints a friendly

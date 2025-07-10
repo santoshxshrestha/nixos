@@ -27,9 +27,9 @@
 		pkgs.ripgrep
 		pkgs.gcc
 		pkgs.hyprshot
-
+		pkgs.clang-tools
 		pkgs.nodejs
-# libgcc: Just the runtime support libraries (for linking), not the compiler so we use gcc to refrence it
+		pkgs.rust-analyzer
 
 		
 

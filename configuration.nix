@@ -101,7 +101,13 @@
     };
   };
 
+# https://nix.dev/guides/faq#how-to-run-non-nix-executables
 programs.command-not-found.enable = true;
+  programs.nix-ld.enable = true;
+
+  programs.nix-ld.libraries = with pkgs; [
+  clang-tools
+  ];
 
 #i18n.inputMethod.enable = "fcitx5";
 #i18n.inputMethod.fcitx5.addons= with pkgs;

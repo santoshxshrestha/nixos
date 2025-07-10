@@ -17,7 +17,7 @@
     rofi-wayland
     waybar
 #    networkmanagerapplet
-#    pavucontrol
+    pavucontrol
     wl-clipboard
     brightnessctl
     hyprlock

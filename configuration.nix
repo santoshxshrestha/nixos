@@ -50,7 +50,7 @@
   users.users.santosh = {
     isNormalUser = true;
     description = "Santosh Shrestha";
-    extraGroups = [ "networkmanager" "wheel" "video"];
+    extraGroups = [ "networkmanager" "wheel" "video" "audio"];
     shell = pkgs.zsh;
   };
 

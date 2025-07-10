@@ -17,7 +17,7 @@
     pavucontrol
     fzf
     unzip
-    hyprcursor
+    # hyprcursor
   ];
   users.users.santosh.packages = with pkgs; [
    rose-pine-hyprcursor

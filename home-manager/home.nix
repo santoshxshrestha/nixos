@@ -24,10 +24,13 @@
 		home.packages = [
 		pkgs.cargo
 		pkgs.rustc
-		pkgs.ripgrep
+
 		pkgs.gcc
-		pkgs.hyprshot
 		pkgs.clang-tools
+		pkgs.llvmPackages.libcxx   
+
+		pkgs.ripgrep
+		pkgs.hyprshot
 		pkgs.nodejs
 		pkgs.rust-analyzer
 

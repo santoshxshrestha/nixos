@@ -21,26 +21,38 @@
 
 # The home.packages option allows you to install Nix packages into your
 # environment.
-		home.packages = [
-		pkgs.cargo
-		pkgs.rustc
+		home.packages =with pkgs; [
+		cargo
+			rustc
 
-		pkgs.gcc
-		pkgs.clang-tools
-		pkgs.llvmPackages.libcxx   
+			gcc
+			clang-tools
+			llvmPackages.libcxx   
 
-		pkgs.ripgrep
-		pkgs.hyprshot
-		pkgs.nodejs
-		pkgs.rust-analyzer
+			ripgrep
+			hyprshot
+			nodejs
+			rust-analyzer
 
-		pkgs.hypridle
-		pkgs.hyprlock
-		pkgs.cliphist # Clipboard manager compatible with Wayland and wl-paste
+			hypridle
+			hyprlock
+			cliphist # Clipboard manager compatible with Wayland and wl-paste
 
-		pkgs.vscode
+			vscode
+			tmux
 
-		
+			rofi-wayland
+			waybar
+			wl-clipboard
+			brightnessctl
+
+			mpvpaper
+			hyprlock
+			hyprpaper
+			btop
+			fastfetch
+
+
 
 # # Adds the 'hello' command to your environment. It prints a friendly
 # # "Hello, world!" when run.
@@ -58,7 +70,7 @@
 # (pkgs.writeShellScriptBin "my-hello" ''
 #   echo "Hello, ${config.home.username}!"
 # '')
-		];
+	];
 
 # Home Manager is pretty good at managing dotfiles. The primary way to manage
 # plain files is through 'home.file'.

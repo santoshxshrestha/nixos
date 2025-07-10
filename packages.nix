@@ -12,25 +12,15 @@
     starship
     kitty
 #    alacritty
-    tmux
     stow
-    rofi-wayland
-    waybar
 #    networkmanagerapplet
     pavucontrol
-    wl-clipboard
-    brightnessctl
-    hyprlock
     fzf
     unzip
     hyprcursor
   ];
   users.users.santosh.packages = with pkgs; [
-  rose-pine-hyprcursor
-#  mpvpaper
-  hyprpaper
-  btop
-  fastfetch
+   rose-pine-hyprcursor
   ];
 
   fonts.packages = with pkgs; [

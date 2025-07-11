@@ -38,6 +38,7 @@
 			hyprlock
 			cliphist # Clipboard manager compatible with Wayland and wl-paste
 
+			kitty
 			vscode
 			tmux
 

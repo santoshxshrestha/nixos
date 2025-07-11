@@ -1,6 +1,3 @@
-# Starship Configuration - Black and White with Nerd Fonts
-# Save this as ~/.config/starship.toml
-
 # Add a blank line between shell prompts
 add_newline = true
 
@@ -33,15 +30,15 @@ truncation_length = 3
 truncation_symbol = "…/"
 home_symbol = "~"
 read_only = " "
-style = "bold white"
-read_only_style = "bold white"
+style = "bold cyan"
+read_only_style = "bold red"
 format = "[$path]($style)[$read_only]($read_only_style) "
 
 # Git branch
 [git_branch]
 symbol = " "
 format = "[$symbol$branch]($style) "
-style = "bold white"
+style = "bold purple"
 truncation_length = 20
 truncation_symbol = "…"
 
@@ -49,7 +46,7 @@ truncation_symbol = "…"
 [git_commit]
 commit_hash_length = 7
 format = "[$hash$tag]($style) "
-style = "bold white"
+style = "bold yellow"
 only_detached = true
 tag_symbol = " "
 tag_disabled = false
@@ -57,7 +54,7 @@ tag_disabled = false
 # Git state (for operations like merge, rebase, etc.)
 [git_state]
 format = '[\($state( $progress_current of $progress_total)\)]($style) '
-style = "bold white"
+style = "bold red"
 cherry_pick = " PICKING"
 bisect = " BISECTING"
 am = " AM"
@@ -67,15 +64,15 @@ rebase = " REBASING"
 
 # Git metrics - shows insertions/deletions
 [git_metrics]
-added_style = "bold white"
-deleted_style = "bold white"
+added_style = "bold green"
+deleted_style = "bold red"
 format = '([+$added]($added_style) )([-$deleted]($deleted_style) )'
 disabled = false
 
 # Git status - shows working directory status
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style) )'
-style = "bold white"
+style = "bold yellow"
 conflicted = " "
 ahead = " ${count} "
 behind = " ${count} "
@@ -91,43 +88,64 @@ deleted = " ${count} "
 [cmd_duration]
 min_time = 500
 format = "took [$duration]($style) "
-style = "bold white"
+style = "bold blue"
 show_milliseconds = true
 
 # Character module - the prompt character
 [character]
 success_symbol = "[✦ ❯](bold white)"
-error_symbol = "[❯](bold white)"
-vicmd_symbol = "[❮](bold white)"
+error_symbol = "[❯](bold red)"
+vicmd_symbol = "[❮](bold blue)"
 
 # Language-specific modules
 [python]
 symbol = " "
 format = 'via [$symbol$pyenv_prefix($version)(\($virtualenv\))]($style) '
-style = "bold white"
+style = "bold blue"
 pyenv_version_name = true
 python_binary = ["python", "python3", "python2"]
 
 [nodejs]
 symbol = " "
 format = "via [$symbol($version)]($style) "
-style = "bold white"
+style = "bold green"
 detect_files = ["package.json", ".nvmrc"]
 
 [rust]
 symbol = " "
 format = "via [$symbol($version)]($style) "
-style = "bold white"
+style = "bold red"
 
 [golang]
 symbol = " "
 format = "via [$symbol($version)]($style) "
-style = "bold white"
+style = "bold cyan"
 
 [java]
 symbol = " "
 format = "via [$symbol($version)]($style) "
-style = "bold white"
+style = "bold yellow"
+
+# Additional useful modules
+[status]
+disabled = false
+format = '[\[$symbol$status\]]($style) '
+symbol = "✖"
+style = "bold red"
+
+[jobs]
+disabled = false
+format = '[\[$symbol$number\]]($style) '
+symbol = "⚙"
+style = "bold blue"
+
+[shell]
+disabled = true
+format = '[$indicator]($style) '
+bash_indicator = "bash"
+fish_indicator = "fish"
+zsh_indicator = "zsh"
+style = "bold dimmed white"
 
 # Disabled modules (to exclude hostname, time, etc.)
 [hostname]

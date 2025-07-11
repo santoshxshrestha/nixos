@@ -31,17 +31,33 @@ truncation_length = 3
 truncation_symbol = "…/"
 home_symbol = "~"
 read_only = " "
-style = "bold cyan"
+style = "bold white"
 read_only_style = "bold red"
 format = "[$path]($style)[$read_only]($read_only_style) "
 
-# Git branch
+# Git branch with cool styling
 [git_branch]
-symbol = " "
-format = "[$symbol$branch]($style) "
-style = "bold purple"
-truncation_length = 20
+symbol = "󰘬 "
+truncation_length = 16
 truncation_symbol = "…"
+format = "[$symbol$branch](bold #575279) "
+style = "bold #575279"
+
+# Git status with neon indicators
+[git_status]
+format = '([$all_status$ahead_behind](bold bright-red) )'
+style = "bold bright-red"
+conflicted = "⚡"
+ahead = "↑"
+behind = "↓"
+diverged = "↕"
+up_to_date = ""
+untracked = "?"
+stashed = "⚑"
+modified = "!"
+staged = "+"
+renamed = "→"
+deleted = "✘"
 
 # Git commit
 [git_commit]
@@ -69,23 +85,6 @@ added_style = "bold white"
 deleted_style = "bold white"
 format = '([+$added]($added_style) )([-$deleted]($deleted_style) )'
 disabled = true
-
-# Git status - shows working directory status
-[git_status]
-format = '(\[$all_status$ahead_behind\]($style) )'
-style = "bold white"
-conflicted = "🏳"
-ahead = "⇡${count}"
-behind = "⇣${count}"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-up_to_date = "✓"
-untracked = "?"
-stashed = "📦"
-modified = "!"
-staged = "+"
-renamed = "»"
-deleted = "✘"
-typechanged = "⚡"
 
 # Command duration - shows execution time
 [cmd_duration]

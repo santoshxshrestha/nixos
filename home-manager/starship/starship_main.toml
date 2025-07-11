@@ -96,7 +96,7 @@ show_milliseconds = true
 
 # Character module - the prompt character
 [character]
-success_symbol = "[❯](bold white)"
+success_symbol = "[✦ ❯](bold white)"
 error_symbol = "[❯](bold white)"
 vicmd_symbol = "[❮](bold white)"
 

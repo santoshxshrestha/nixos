@@ -52,6 +52,12 @@
 			btop
 			fastfetch
 
+			nerd-fonts.jetbrains-mono
+			nerd-fonts.fira-code
+			jetbrains-mono
+			fira-code
+			font-awesome
+
 
 
 # # Adds the 'hello' command to your environment. It prints a friendly

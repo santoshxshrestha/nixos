@@ -54,10 +54,10 @@
         "separate-outputs": true
     },
 
-    // Clock
+    // Clock - Changed to 12-hour format
     "clock": {
         "timezone": "Asia/Kathmandu",
-        "format": "{:%H:%M}",
+        "format": "{:%I:%M %p}",
         "format-alt": "{:%A, %B %d, %Y}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "calendar": {
@@ -83,17 +83,18 @@
         }
     },
 
-    // Network
+    // Network - Changed to show only WiFi icon, name on hover
     "network": {
-        "format-wifi": " {essid}",
-        "format-ethernet": " {ipaddr}",
+        "format-wifi": "󰤨",
+        "format-ethernet": "󰈀",
         "format-disconnected": "󰤮",
         "tooltip-format": "{ifname} via {gwaddr}",
-        "tooltip-format-wifi": "{essid} ({signalStrength}%) ",
-        "tooltip-format-ethernet": "{ifname} ",
+        "tooltip-format-wifi": "{essid} ({signalStrength}%) 󰤨\n{frequency}MHz",
+        "tooltip-format-ethernet": "{ifname} 󰈀\nIP: {ipaddr}",
         "tooltip-format-disconnected": "Disconnected",
         "max-length": 20,
-        "on-click": "nm-connection-editor"
+        "on-click": "nm-connection-editor",
+        "interval": 5
     },
 
     // Custom notification module
@@ -118,7 +119,7 @@
         "escape": true
     },
 
-    // Battery
+    // Battery - Added brightness control on scroll
     "battery": {
         "states": {
             "good": 95,
@@ -126,27 +127,37 @@
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        "format-charging": " {capacity}%",
-        "format-plugged": " {capacity}%",
+        "format-charging": "󰂄 {capacity}%",
+        "format-plugged": "󰂄 {capacity}%",
         "format-alt": "{icon} {time}",
-        "format-icons": ["", "", "", "", ""]
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "on-scroll-up": "brightnessctl set +5%",
+        "on-scroll-down": "brightnessctl set 5%-",
+        "tooltip-format": "Battery: {capacity}%\n{timeTo}\nPower: {power}W\nScroll to adjust brightness",
+        "interval": 60,
+        "max-length": 25
     },
 
-    // Audio
+    // Audio - Added proper sound icons
     "pulseaudio": {
         "format": "{icon} {volume}%",
-        "format-muted": " {volume}%",
+        "format-muted": "󰝟 {volume}%",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "headphone": "󰋋",
+            "hands-free": "󰏴",
+            "headset": "󰋎",
+            "phone": "󰏲",
+            "portable": "󰦧",
+            "car": "󰄋",
+            "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "pavucontrol",
-        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +5%",
+        "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -5%",
+        "tooltip-format": "Volume: {volume}%\nDevice: {desc}\nScroll to adjust volume",
+        "max-length": 20,
+        "smooth-scrolling-threshold": 1.0
     },
 
     // System tray

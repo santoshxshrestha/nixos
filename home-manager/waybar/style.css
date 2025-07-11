@@ -84,6 +84,8 @@ window#waybar.hidden {
     margin: 2px;
     padding: 0 10px;
     color: #b8b5c7;
+    font-size: 13px; /* Slightly larger for better icon visibility */
+    transition: all 0.3s ease;
 }
 
 #network:hover {
@@ -115,10 +117,13 @@ window#waybar.hidden {
     margin: 2px;
     padding: 0 10px;
     color: #b8b5c7;
+    font-size: 13px; /* Slightly larger for better icon visibility */
+    transition: all 0.3s ease;
 }
 
 #battery:hover {
     background: rgba(82, 79, 103, 0.3);
+    transition: all 0.3s ease;
 }
 
 #battery.charging {
@@ -150,6 +155,8 @@ window#waybar.hidden {
     margin: 2px;
     padding: 0 10px;
     color: #b8b5c7;
+    font-size: 13px; /* Slightly larger for better icon visibility */
+    transition: all 0.3s ease;
 }
 
 #pulseaudio:hover {

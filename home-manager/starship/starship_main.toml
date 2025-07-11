@@ -65,26 +65,26 @@ rebase = " REBASING"
 
 # Git metrics - shows insertions/deletions
 [git_metrics]
-added_style = "bold green"
-deleted_style = "bold red"
+added_style = "bold white"
+deleted_style = "bold white"
 format = '([+$added]($added_style) )([-$deleted]($deleted_style) )'
-disabled = false
+disabled = true
 
 # Git status - shows working directory status
 [git_status]
-format = '([\[$all_status$ahead_behind\]]($style) )'
+format = '(\[$all_status$ahead_behind\]($style) )'
 style = "bold white"
 conflicted = "🏳"
 ahead = "⇡${count}"
 behind = "⇣${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
 up_to_date = "✓"
-untracked = "?${count}"
+untracked = "?"
 stashed = "📦"
-modified = "!${count}"
-staged = "+${count}"
-renamed = "»${count}"
-deleted = "✘${count}"
+modified = "!"
+staged = "+"
+renamed = "»"
+deleted = "✘"
 typechanged = "⚡"
 
 # Command duration - shows execution time
@@ -96,7 +96,7 @@ show_milliseconds = true
 
 # Character module - the prompt character
 [character]
-success_symbol = "[✦ ❯](bold green)"
+success_symbol = "[✦ ❯](bold white)"
 error_symbol = "[❯](bold red)"
 vicmd_symbol = "[❮](bold blue)"
 
@@ -143,7 +143,7 @@ symbol = "⚙"
 style = "bold blue"
 
 [shell]
-disabled = false
+disabled = true
 format = '[$indicator]($style) '
 bash_indicator = "bash"
 fish_indicator = "fish"

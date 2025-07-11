@@ -85,9 +85,9 @@
 
     // Network - Changed to show only WiFi icon, name on hover
     "network": {
-        "format-wifi": "󰤨",
-        "format-ethernet": "󰈀",
-        "format-disconnected": "󰤮",
+        "format-wifi": " ",
+        "format-ethernet": "󰈀 ",
+        "format-disconnected": "󰤮 ",
         "tooltip-format": "{ifname} via {gwaddr}",
         "tooltip-format-wifi": "{essid} ({signalStrength}%) 󰤨\n{frequency}MHz",
         "tooltip-format-ethernet": "{ifname} 󰈀\nIP: {ipaddr}",
@@ -127,8 +127,8 @@
             "critical": 15
         },
         "format": "{icon} {capacity}%",
-        "format-charging": "󰂄 {capacity}%",
-        "format-plugged": "󰂄 {capacity}%",
+        "format-charging": "󱐋{capacity}%",
+        "format-plugged": "󱟢{capacity}%",
         "format-alt": "{icon} {time}",
         "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
         "on-scroll-up": "brightnessctl set +5%",

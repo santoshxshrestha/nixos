@@ -1,3 +1,4 @@
+
 # Add a blank line between shell prompts
 add_newline = true
 
@@ -72,17 +73,19 @@ disabled = false
 # Git status - shows working directory status
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style) )'
-style = "bold yellow"
-conflicted = " "
-ahead = " ${count} "
-behind = " ${count} "
-diverged = " ${ahead_count} ${behind_count} "
-untracked = " ${count} "
-stashed = " "
-modified = " ${count} "
-staged = " ${count} "
-renamed = " ${count} "
-deleted = " ${count} "
+style = "bold white"
+conflicted = "🏳"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+up_to_date = "✓"
+untracked = "?${count}"
+stashed = "📦"
+modified = "!${count}"
+staged = "+${count}"
+renamed = "»${count}"
+deleted = "✘${count}"
+typechanged = "⚡"
 
 # Command duration - shows execution time
 [cmd_duration]
@@ -93,7 +96,7 @@ show_milliseconds = true
 
 # Character module - the prompt character
 [character]
-success_symbol = "[✦ ❯](bold white)"
+success_symbol = "[✦ ❯](bold green)"
 error_symbol = "[❯](bold red)"
 vicmd_symbol = "[❮](bold blue)"
 
@@ -140,7 +143,7 @@ symbol = "⚙"
 style = "bold blue"
 
 [shell]
-disabled = true
+disabled = false
 format = '[$indicator]($style) '
 bash_indicator = "bash"
 fish_indicator = "fish"

@@ -45,7 +45,7 @@ style = "bold #575279"
 
 # Git status with neon indicators
 [git_status]
-format = '([$all_status$ahead_behind](bold bright-red) )'
+format = '([$all_status$ahead_behind](#e0def4 ) )'
 style = "bold bright-red"
 conflicted = "⚡"
 ahead = "↑"

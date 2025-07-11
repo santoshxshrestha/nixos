@@ -15,10 +15,10 @@
     ],
     "modules-right": [
         "network",
-        "custom/notification",
-        "battery",
         "pulseaudio",
-        "tray"
+        "battery",
+        "tray",
+        "custom/notification",
     ],
 
     // Workspaces
@@ -100,7 +100,7 @@
     // Custom notification module
     "custom/notification": {
         "tooltip": false,
-        "format": "{icon}",
+        "format": "",
         "format-icons": {
             "notification": "<span foreground='red'><sup></sup></span>",
             "none": "",
@@ -162,6 +162,6 @@
 
     // System tray
     "tray": {
-        "spacing": 10
+        "spacing": 8
     }
 }

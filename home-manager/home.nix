@@ -2,9 +2,10 @@
 
 {
 
-# imports = [
+imports = [
 # ./hyprland.nix
-# ];
+./modules/fish.nix
+];
 # Home Manager needs a bit of information about you and the paths it should
 # manage.
 	home.username = "santosh";
@@ -91,7 +92,7 @@
 #".config/alacritty/alacritty.toml".source = ./alacritty/alacritty.toml;
 		".tmux.conf".source = ./tmux/.tmux_aesthetics.conf;
 #".tmux.conf".source = ./tmux/.tmux_performance.conf;
-		".zshrc".source = ./zsh/.zshrc;
+		# ".zshrc".source = ./zsh/.zshrc;
 		".config/hypr/hyprlock.conf".source = ./hyprlock/hyprlock.conf;
 		".config/hypr/hyprsunset.conf".source = ./hyprsunset/hyprsunset.conf;
 		".config/rofi".source = ./rofi;
@@ -141,12 +142,12 @@
 
 	programs.starship.enable = true;
 
-	programs.zsh = {
-		enable = true;
-		shellAliases = {
-			rebuild = "sudo nixos-rebuild switch --flake /home/santosh/nixos/#santosh";
-		};
-	};
+	# programs.zsh = {
+	# 	enable = true;
+	# 	shellAliases = {
+	# 		rebuild = "sudo nixos-rebuild switch --flake /home/santosh/nixos/#santosh";
+	# 	};
+	# };
 # Let Home Manager install and manage itself.
 	programs.home-manager.enable = true;
 

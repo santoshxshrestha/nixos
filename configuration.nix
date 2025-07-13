@@ -60,7 +60,7 @@
   nixpkgs.config.allowUnfree = true;
 
   services.xserver.enable = true;
-  services.displayManager.sddm.enable = true;
+  # services.displayManager.sddm.enable = true;
 
 
   programs.hyprland = {

@@ -51,10 +51,10 @@
     isNormalUser = true;
     description = "Santosh Shrestha";
     extraGroups = [ "networkmanager" "wheel" "video" "audio"];
-    shell = pkgs.zsh;
+    shell = pkgs.fish;
   };
 
-  programs.zsh.enable = true;
+  programs.fish.enable = true;
 # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 

@@ -12,7 +12,7 @@
       set -gx PATH ~/.cargo/bin $PATH
       fish_vi_key_bindings
       fish_vi_cursor
-    '';
+      '';
     
     shellAbbrs = {
       ".." = "cd ..";
@@ -22,24 +22,24 @@
     };
     
     # plugins = [
-    #   {
-    #     name = "fzf-fish";
-    #     src = pkgs.fetchFromGitHub {
-    #       owner = "PatrickF1";
-    #       repo = "fzf.fish";
-    #       rev = "v10.3";
-    #       sha256 = "sha256-T8KYLA/r/gOKvALPQ4n3dKNZHFZGVYd9n6pJYzb5NjY=";
-    #     };
-    #   }
-    #   {
-    #     name = "tide";
-    #     src = pkgs.fetchFromGitHub {
-    #       owner = "IlanCosman";
-    #       repo = "tide";
-    #       rev = "v6.0.1";
-    #       sha256 = "sha256-oLD7gYFCIeIzBeAW1j62z4nQhJhGhzm8J3hLEqK8+w4=";
-    #     };
-    #   }
+      # {
+      #   name = "fzf-fish";
+      #   src = pkgs.fetchFromGitHub {
+      #     owner = "PatrickF1";
+      #     repo = "fzf.fish";
+      #     rev = "v10.3";
+      #     sha256 = "1hqqppna8iwjnm8135qdjbd093583qd2kbq8pj507zpb1wn9ihjg";
+      #   };
+      # }
+      # {
+      #   name = "tide";
+      #   src = pkgs.fetchFromGitHub {
+      #     owner = "IlanCosman";
+      #     repo = "tide";
+      #     rev = "v6.0.1";
+      #     sha256 = "sha256-oLD7gYFCIeIzBeAW1j62z4nQhJhGhzm8J3hLEqK8+w4=";
+      #   };
+      # }
     # ];
   };
 

@@ -16,6 +16,7 @@
       ".." = "cd ..";
       "ls" = "ls --color";
       "asdf" = "~/.local/scripts/sessionizer";
+      "rebuild" = "sudo nixos-rebuild switch --flake ~/nixos/#santosh";
     };
     
     # plugins = [

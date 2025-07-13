@@ -10,6 +10,8 @@
       set -gx PATH ~/bin $PATH
       set -gx PATH ~/.local/scripts $PATH
       set -gx PATH ~/.cargo/bin $PATH
+      fish_vi_key_bindings
+      fish_vi_cursor
     '';
     
     shellAbbrs = {
@@ -41,16 +43,6 @@
     # ];
   };
 
-  # environment.systemPackages = with pkgs; [
-  #   fish
-  #   fzf
-  #   bat         
-  #   fd         
-  #   ripgrep    
-  #   starship  
-  # ];
-
-  
   programs.fzf = {
     enable = true;
     # keybindings = true;

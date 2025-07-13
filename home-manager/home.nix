@@ -44,6 +44,7 @@ imports = [
 #".config/starship.toml".source = ./config/starship/starship_performance.toml;
 		".local/scripts".source = ./scripts;
 		".config/waybar".source = ./config/waybar;
+		".config/nvim".source = ./config/nvim;
 
 
 # # Building this configuration will create a copy of 'dotfiles/screenrc' in

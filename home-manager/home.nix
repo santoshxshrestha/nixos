@@ -42,7 +42,7 @@ imports = [
 		".config/starship.toml".source = ./config/starship/starship_main.toml;
 #".config/starship.toml".source = ./config/starship/starship_aesthetics.toml;
 #".config/starship.toml".source = ./config/starship/starship_performance.toml;
-		".local/scripts".source = ./config/scripts;
+		".local/scripts".source = ./scripts;
 		".config/waybar".source = ./config/waybar;
 
 

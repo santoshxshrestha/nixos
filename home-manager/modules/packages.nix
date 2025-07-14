@@ -21,6 +21,7 @@
 	  kitty
 	  vscode
 	  tmux
+	  discord
 
 	  rofi-wayland
 	  waybar

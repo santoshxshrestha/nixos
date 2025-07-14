@@ -1,12 +1,12 @@
 { config, pkgs, ... }:
 {
   home.packages =with pkgs; [
-	cargo
-	  rustc
+	# cargo
+        # rustc
 
-	  gcc
-	  clang-tools
-	  llvmPackages.libcxx   
+	  # gcc
+	  # clang-tools
+	  # llvmPackages.libcxx   
 
 	  ripgrep
 	  hyprshot

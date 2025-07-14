@@ -29,7 +29,7 @@ imports = [
 # plain files is through 'home.file'.
 	home.file = {
 		".config/hypr/hyprland.conf".source = ./config/hyprland/hyprland_aesthetics.conf;
-# ".config/hypr/hyprland.conf".source = ./config/hyprland/hyprland_performance.conf.conf;
+		# ".config/hypr/hyprland.conf".source = ./config/hyprland/hyprland_performance.conf;
 		".config/hypr/hypridle.conf".source = ./config/hypridle/hypridle.conf;
 		".config/hypr/hyprpaper.conf".source = ./config/hyprpaper/hyprpaper.conf;
 		".config/kitty".source = ./config/kitty;

@@ -103,4 +103,9 @@ imports = [
 		name = "Bibata-Original-Ice";
 		size = 20;
 	};
+
+	programs.direnv = {
+		enable = true;
+		nix-direnv.enable = true;
+	};
 }

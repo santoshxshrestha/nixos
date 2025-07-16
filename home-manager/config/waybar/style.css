@@ -168,6 +168,22 @@ window#waybar.hidden {
     color: #ff6666;
 }
 
+/* Microphone module base styling - matching your audio theme */
+#pulseaudio.microphone {
+    background: rgba(82, 79, 103, 0.2);
+    border-radius: 6px;
+    margin: 2px;
+    padding: 0 10px;
+    color: #b8b5c7;
+    font-size: 13px;
+}
+
+/* Animation for volume changes */
+#pulseaudio.microphone {
+    animation: pulse 0.3s ease-in-out;
+}
+
+
 /* System tray */
 #tray {
     background: rgba(82, 79, 103, 0.2);

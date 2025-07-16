@@ -16,6 +16,7 @@
     "modules-right": [
         "network",
         "pulseaudio",
+        "pulseaudio#microphone",
         "battery",
         "tray",
         "custom/notification",
@@ -152,12 +153,25 @@
             "default": ["󰕿", "󰖀", "󰕾"]
         },
         "on-click": "pavucontrol",
-        "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
         "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+",
         "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
         "tooltip-format": "Volume: {volume}%\nDevice: {desc}\nScroll to adjust volume",
         "max-length": 20,
         "smooth-scrolling-threshold": 1.0
+    },
+    "pulseaudio#microphone": {
+        "format": "{format_source}",
+        "format-source": "󰍬 {volume}%",
+        "format-source-muted": "󰍭",
+        "on-click": "pavucontrol --tab=4",
+        "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle ",
+        "on-scroll-up": "wpctl set-volume -l 1 @DEFAULT_SOURCE@ .05+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_SOURCE@ .05-",
+        "scroll-step": 5,
+        "smooth-scrolling-threshold": 1,
+        "tooltip": true,
+        "tooltip-format": "Microphone: {volume}%{format_source}\nScroll to adjust microphone volume"
     },
 
     // System tray

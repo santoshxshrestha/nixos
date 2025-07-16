@@ -27,6 +27,7 @@ This is the simplest fix for unpackaged binaries that don’t come from Nix pack
 
 Example config snippet in configuration.nix:
 
+```nix
 {
 programs.nix-ld.enable = true;
 
@@ -39,3 +40,5 @@ clang-tools # clangd and related libs
 }
 Rebuild system: sudo nixos-rebuild switch
 After this, running clangd (and other similar binaries) works correctly.
+
+```

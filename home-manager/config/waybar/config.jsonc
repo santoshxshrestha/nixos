@@ -87,8 +87,8 @@
 
     // Network - Changed to show only WiFi icon, name on hover
     "network": {
-        "format-wifi": " ",
-        "format-ethernet": "󰈀 ",
+        "format-wifi": "  {signalStrength}%",
+        "format-ethernet": "󰈀  {signalStrength}%",
         "format-disconnected": "󰤮 ",
         "tooltip-format": "{ifname} via {gwaddr}",
         "tooltip-format-wifi": "{essid} ({signalStrength}%) 󰤨\n{frequency}MHz",

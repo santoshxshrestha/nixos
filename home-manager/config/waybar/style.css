@@ -183,6 +183,11 @@ window#waybar.hidden {
     animation: pulse 0.3s ease-in-out;
 }
 
+#pulseaudio.microphone.source-muted{
+    background: rgba(255, 0, 0, 0.2);
+    color: #ff6666;
+}
+
 
 /* System tray */
 #tray {

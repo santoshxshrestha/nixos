@@ -15,6 +15,7 @@
     ],
     "modules-right": [
         "network",
+        "backlight",
         "pulseaudio",
         "pulseaudio#microphone",
         "battery",
@@ -132,8 +133,8 @@
         "format-plugged": "󱟢{capacity}%",
         "format-alt": "{icon} {time}",
         "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
-        "on-scroll-up": "brightnessctl set +5%",
-        "on-scroll-down": "brightnessctl set 5%-",
+        // "on-scroll-up": "brightnessctl set +5%",
+        // "on-scroll-down": "brightnessctl set 5%-",
         "tooltip-format": "Battery: {capacity}%\n{timeTo}\nPower: {power}W\nScroll to adjust brightness",
         "interval": 60,
         "max-length": 25
@@ -174,6 +175,14 @@
         "tooltip-format": "Microphone: {volume}%{format_source}\nScroll to adjust microphone volume"
     },
 
+    "backlight": {
+        "device": "intel_backlight",
+        "format": " {percent}%",
+        "on-scroll-up": "brightnessctl s 5%+",
+        "on-scroll-down": "brightnessctl s 5%-",
+        "smooth-scrolling-threshold": 1.0,
+        "tooltip-format": "Brightness: {percent}%\nScroll to adjust brightness"
+    },
     // System tray
     "tray": {
         "spacing": 8

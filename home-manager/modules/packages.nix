@@ -16,6 +16,7 @@
 	  swaynotificationcenter
 	  hypridle
 	  hyprlock
+	  hyprsunset
 	  cliphist # Clipboard manager compatible with Wayland and wl-paste
 
 	  kitty

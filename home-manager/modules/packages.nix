@@ -1,18 +1,10 @@
 { config, pkgs, ... }: {
   home.packages = with pkgs; [
-    # cargo
-    # rustc
-
-    # gcc
-    # clang-tools
-    # llvmPackages.libcxx   
-
     ripgrep
     hyprshot
-    # nodejs
-    rust-analyzer
 
-    swaynotificationcenter
+    rofi-wayland
+    waybar
     hypridle
     hyprlock
     hyprsunset
@@ -23,9 +15,9 @@
     tmux
     discord
 
-    rofi-wayland
-    waybar
+    playerctl
     wl-clipboard
+    swaynotificationcenter
     brightnessctl
 
     mpvpaper

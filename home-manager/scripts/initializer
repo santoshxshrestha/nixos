@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+echo "use flake \"github:santoshxshrestha/initflake?dir=$1\"" >>.envrc
+direnv allow

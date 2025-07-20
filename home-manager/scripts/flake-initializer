@@ -1,4 +1,31 @@
 #!/usr/bin/env bash
+if [ -z "$1" ]; then
+    echo "Usage: $0 <flake-type> [--local]"
+    echo "Example: $0 rust"
+    echo "Example: $0 rust --local"
+    exit 1
+fi
 
-echo "use flake \"github:santoshxshrestha/initflake?dir=$1\"" >>.envrc
-direnv allow
+FLAKE_TYPE="$1"
+LOCAL_FLAG="$2"
+
+if [ "$LOCAL_FLAG" = "--local" ]; then
+    echo "Setting up local flake files..."
+
+    curl -O "https://raw.githubusercontent.com/santoshxshrestha/initflake/main/$FLAKE_TYPE/flake.nix"
+    curl -O "https://raw.githubusercontent.com/santoshxshrestha/initflake/main/$FLAKE_TYPE/flake.lock"
+
+    echo "use flake" >>.envrc
+    direnv allow
+
+    echo "✓ Local flake files downloaded and configured"
+else
+    echo "Setting up remote flake reference..."
+
+    echo "use flake \"github:santoshxshrestha/initflake?dir=$FLAKE_TYPE\"" >>.envrc
+    direnv allow
+
+    echo "✓ Remote flake configured"
+fi
+
+echo "Development environment ready!"

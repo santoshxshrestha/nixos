@@ -15,7 +15,7 @@ if [ "$LOCAL_FLAG" = "--local" ]; then
     curl -O "https://raw.githubusercontent.com/santoshxshrestha/initflake/main/$FLAKE_TYPE/flake.nix"
     curl -O "https://raw.githubusercontent.com/santoshxshrestha/initflake/main/$FLAKE_TYPE/flake.lock"
 
-    echo "use flake" >>.envrc
+    echo "use flake" >.envrc
     direnv allow
 
     echo "✓ Local flake files downloaded and configured"

@@ -3,7 +3,7 @@
 {
   programs.fish = {
     enable = true;
-    
+
     shellInit = ''
       set -gx EDITOR nvim
 
@@ -21,17 +21,16 @@
       set -gx PATH ~/bin $PATH
       set -gx PATH ~/.local/scripts $PATH
       set -gx PATH ~/.cargo/bin $PATH
-      '';
-    
+    '';
+
     shellAbbrs = {
       ".." = "cd ..";
       "ls" = "ls --color";
       "asdf" = "~/.local/scripts/sessionizer";
       "rebuild" = "sudo nixos-rebuild switch --flake ~/nixos/#santosh";
+      "initialize" = "flake-initializer";
     };
   };
 
-  programs.fzf = {
-    enable = true;
-  };
+  programs.fzf = { enable = true; };
 }

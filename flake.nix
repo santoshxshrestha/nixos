@@ -7,7 +7,6 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
-    hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, ... }:
@@ -32,4 +31,3 @@
       };
     };
 }
-

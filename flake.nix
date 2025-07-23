@@ -4,8 +4,15 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    hyprland = {
+      url = "github:hyprwm/Hyprland/v0.48.1";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
   };
 
@@ -28,6 +35,7 @@
             home-manager.users.santosh = import ./home-manager/home.nix;
           }
         ];
+        specialArgs = { inherit inputs; };
       };
     };
 }

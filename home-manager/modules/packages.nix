@@ -14,6 +14,7 @@
     vscode
     tmux
     discord
+    gimp
 
     playerctl
     wl-clipboard

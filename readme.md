@@ -42,3 +42,6 @@ Rebuild system: sudo nixos-rebuild switch
 After this, running clangd (and other similar binaries) works correctly.
 
 ```
+
+there might be few bugs in the version you can just use the time maching and go back and update after few days
+also don't forget to update the channels 

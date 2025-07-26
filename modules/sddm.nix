@@ -1,9 +1,5 @@
-{
-  pkgs,
-  lib,
-  config,
-  ...
-}: let
+{ pkgs, lib, config, ... }:
+let
   # image = pkgs.fetchurl {
   #   url = "https://raw.githubusercontent.com/dharmx/walls/refs/heads/main/architecture/a_bridge_with_lights_on_it.jpg";
   #   sha256 = "465390cba5d4fa1861f2948b59fabe399bd2d7d53ddd6c896b0739bee4eca2c8";
@@ -34,9 +30,7 @@
     # };
   };
 in {
-  environment.systemPackages = [
-    sddm-astronaut
-  ];
+  environment.systemPackages = [ sddm-astronaut ];
 
   services = {
     xserver.enable = true;
@@ -49,7 +43,7 @@ in {
 
         theme = "sddm-astronaut-theme";
 
-        extraPackages = [sddm-astronaut];
+        extraPackages = [ sddm-astronaut ];
       };
       autoLogin = {
         enable = false;

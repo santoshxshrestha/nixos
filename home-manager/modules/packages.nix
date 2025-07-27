@@ -26,6 +26,7 @@
     hyprpaper
     btop
     fastfetch
+    ffmpeg
 
     nerd-fonts.jetbrains-mono
     nerd-fonts.fira-code

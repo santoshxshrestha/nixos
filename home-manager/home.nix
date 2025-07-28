@@ -37,7 +37,7 @@
     #".config/alacritty/alacritty.toml".source = ./config/alacritty/alacritty.toml;
     ".tmux.conf".source = ./config/tmux/.tmux_aesthetics.conf;
     #".tmux.conf".source = ./config/tmux/.tmux_performance.conf;
-    # ".zshrc".source = ./zsh/.zshrc;
+    # ".zshrc".source = ./config/zsh/.zshrc;
     ".config/hypr/hyprlock.conf".source = ./config/hyprlock/hyprlock.conf;
     ".config/hypr/hyprsunset.conf".source = ./config/hyprsunset/hyprsunset.conf;
     ".config/rofi".source = ./config/rofi;

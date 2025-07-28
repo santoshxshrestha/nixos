@@ -13,7 +13,7 @@
     kitty
     vscode
     tmux
-    discord
+    # discord
     gimp
 
     playerctl

@@ -29,6 +29,10 @@
       "asdf" = "~/.local/scripts/sessionizer";
       "rebuild" = "sudo nixos-rebuild switch --flake ~/nixos/#santosh";
       "initialize" = "flake-initializer";
+
+      "gs" = "git status";
+      "ga" = "git add .";
+      "gp" = "git push origin $(git branch --show-current)";
     };
   };
 

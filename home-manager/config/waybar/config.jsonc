@@ -135,7 +135,7 @@
         "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
         // "on-scroll-up": "brightnessctl set +5%",
         // "on-scroll-down": "brightnessctl set 5%-",
-        "tooltip-format": "Battery: {capacity}%\n{timeTo}\nPower: {power}W\nScroll to adjust brightness",
+        "tooltip-format": "Battery: {capacity}%\n{timeTo}\nPower: {power}W",
         "interval": 60,
         "max-length": 25
     },

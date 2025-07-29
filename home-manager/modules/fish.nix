@@ -31,6 +31,7 @@
       "initialize" = "flake-initializer";
 
       "gs" = "git status";
+      "gd" = "git diff";
       "ga" = "git add .";
       "C" = "git-commit";
       "P" = "git push origin $(git branch --show-current)";

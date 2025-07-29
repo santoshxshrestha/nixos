@@ -11,20 +11,29 @@ LOCAL_FLAG="$2"
 
 if [ "$LOCAL_FLAG" = "--local" ]; then
     echo "Setting up local flake files..."
-
     curl -O "https://raw.githubusercontent.com/santoshxshrestha/initflake/main/$FLAKE_TYPE/flake.nix"
     curl -O "https://raw.githubusercontent.com/santoshxshrestha/initflake/main/$FLAKE_TYPE/flake.lock"
 
-    echo "use flake" >.envrc
-    direnv allow
+    if [ -d ".git" ]; then
+        echo "Git repository detected, adding files to git..."
+        echo ".direnv/" >>.gitignore
+        git add .gitignore
+        git commit -m "chore: add .direnv to .gitignore"
+        echo "use flake" >.envrc
+        git add flake.nix flake.lock .envrc
+        git commit -m "chore: add initial flake.nix and flake.lock"
+    else
+        echo "No git repository found, skipping git operations"
+        echo ".direnv/" >>.gitignore
+        echo "use flake" >.envrc
+    fi
 
+    direnv allow
     echo "✓ Local flake files downloaded and configured"
 else
     echo "Setting up remote flake reference..."
-
-    echo "use flake \"github:santoshxshrestha/initflake?dir=$FLAKE_TYPE\"" >>.envrc
+    echo "use flake \"github:santoshxshrestha/initflake?dir=$FLAKE_TYPE\"" >.envrc
     direnv allow
-
     echo "✓ Remote flake configured"
 fi
 

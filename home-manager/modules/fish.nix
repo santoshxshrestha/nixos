@@ -26,7 +26,11 @@
     shellAbbrs = {
       ".." = "cd ..";
       "ls" = "ls --color";
+
       "asdf" = "~/.local/scripts/sessionizer";
+      "adsf" = "~/.local/scripts/sessionizer";
+      "adfs" = "~/.local/scripts/sessionizer";
+
       "rebuild" = "sudo nixos-rebuild switch --flake ~/nixos/#santosh";
       "initialize" = "flake-initializer";
 

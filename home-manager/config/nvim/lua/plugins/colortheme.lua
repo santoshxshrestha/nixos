@@ -21,9 +21,9 @@ return {
 			-- Function to configure and switch to Catppuccin
 			local setup_catppuccin = function()
 				require("catppuccin").setup({
-					transparent_background = false,
+					transparent_background = true,
 					show_end_of_buffer = false,
-					disable_float_background = false,
+					disable_float_background = true,
 					bold_vert_split = false,
 					-- Catppuccin-specific styling options
 					no_italic = false, -- Allow italic text

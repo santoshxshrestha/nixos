@@ -18,13 +18,13 @@ function run.open_float_term(cmd)
 
   -- Window appearance options
   local opts = {
-    relative = 'editor',
+    relative = "editor",
     width = width,
     height = height,
     col = col,
     row = row,
-    style = 'minimal',
-    border = 'rounded',
+    style = "minimal",
+    border = "rounded",
   }
   -- Open the window
   local win = vim.api.nvim_open_win(buf, true, opts)
@@ -46,10 +46,10 @@ function run.open_float_term(cmd)
   -- Executes the Vim command :startinsert
   -- which will put the neovim into insert mode, which is the natural for interacting
   -- with the terminal buffers
-  vim.cmd 'startinsert'
+  vim.cmd("startinsert")
 
   -- Close window when leaving the buffer
-  vim.api.nvim_create_autocmd('BufLeave', {
+  vim.api.nvim_create_autocmd("BufLeave", {
     buffer = buf,
     callback = function()
       vim.api.nvim_win_close(win, true)
@@ -60,10 +60,10 @@ end
 
 -- Create a command to open terminal with arguments
 function run.create_terminal_command()
-  vim.api.nvim_create_user_command('Terminal', function(opts)
-    local cmd = opts.args ~= '' and opts.args or vim.o.shell
+  vim.api.nvim_create_user_command("Terminal", function(opts)
+    local cmd = opts.args ~= "" and opts.args or vim.o.shell
     run.open_float_term(cmd)
-  end, { nargs = '?', desc = 'Open floating terminal with optional command' })
+  end, { nargs = "?", desc = "Open floating terminal with optional command" })
 end
 
 -- Set up keymappings and commands
@@ -71,9 +71,9 @@ function run.setup()
   -- Basic terminal
   -- vim.keymap.set('n', '<Leader>f', run.open_float_term, { noremap = true, silent = true })
 
-  vim.keymap.set('n', '<Leader>f', function()
-    run.open_float_term 'code-runner'
-  end, { noremap = true, silent = true, desc = 'Run the code-runner script' })
+  vim.keymap.set("n", "<Leader>f", function()
+    run.open_float_term("code-runner")
+  end, { noremap = true, silent = true, desc = "Run the code-runner script" })
 
   -- When silent is set to false,
   -- it means that Neovim will show output on the command line when the keybinding is triggered.

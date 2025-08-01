@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       logo = {
-        source = "nixos";
+        source = "arch";
         padding = {
           right = 2;
           top = 1;

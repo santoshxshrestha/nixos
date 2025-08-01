@@ -46,12 +46,12 @@
         {
           type = "datetime";
           key = "󰃭 Date";
-          format = "{1}-{3}-{11} {2}";
+          format = "{1}/{3}/{11}";
         }
         {
           type = "datetime";
           key = "󰥔 Time";
-          format = "{14}:{17}:{20}";
+          format = "{15}:{17} {21}";
         }
         {
           type = "uptime";
@@ -106,7 +106,7 @@
         }
         {
           type = "terminal";
-          key = " Terminal";
+          key = " Terminal";
         }
         {
           type = "terminalfont";
@@ -140,23 +140,6 @@
         }
         "break"
 
-        # Network & Battery
-        {
-          type = "localip";
-          key = "󰩟 Local IP";
-          showIpv4 = true;
-          showIpv6 = false;
-        }
-        {
-          type = "wifi";
-          key = "󰤨 WiFi";
-        }
-        {
-          type = "battery";
-          key = "󰁹 Battery";
-        }
-        "break"
-
         # Media & Performance
         {
           type = "player";
@@ -165,22 +148,6 @@
         {
           type = "media";
           key = "󰝚 Media";
-        }
-        {
-          type = "loadavg";
-          key = "󰾆 Load Avg";
-        }
-        {
-          type = "processes";
-          key = "󰔟 Processes";
-        }
-        "break"
-
-        # Color palette showcase
-        {
-          type = "colors";
-          symbol = "circle";
-          paddingLeft = 2;
         }
       ];
     };

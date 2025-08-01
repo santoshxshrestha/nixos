@@ -13,7 +13,7 @@
         };
         color = {
           "1" = "blue";
-          "2" = "cyan";
+          "2" = "white";
         };
       };
 
@@ -24,7 +24,7 @@
         };
         color = {
           keys = "blue";
-          output = "cyan";
+          output = "white";
         };
         separator = " ❯ ";
         key.width = 12;
@@ -37,7 +37,7 @@
           color = {
             user = "blue";
             at = "white";
-            host = "cyan";
+            host = "white";
           };
         }
         "break"

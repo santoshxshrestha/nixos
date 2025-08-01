@@ -3,7 +3,10 @@
     enable = true;
     settings = {
       logo = {
-        source = "arch";
+        source =
+          "${config.home.homeDirectory}/nixos/home-manager/assets/nixos.png";
+        height = 15;
+        width = 40;
         padding = {
           right = 2;
           top = 1;

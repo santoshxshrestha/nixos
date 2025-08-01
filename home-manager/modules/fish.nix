@@ -39,9 +39,6 @@
       "ga" = "git add .";
       "C" = "git-commit";
       "P" = "git push origin $(git branch --show-current)";
-
-      "fastfetch" =
-        "fastfetch --logo ${config.home.homeDirectory}/nixos/home-manager/assets/nixos.png --logo-type auto --logo-padding-right 2 --logo-padding-top 1 --logo-height 15 --logo-width 40";
     };
   };
 

@@ -21,7 +21,7 @@ return {
 			-- Function to configure and switch to Catppuccin
 			local setup_catppuccin = function()
 				require("catppuccin").setup({
-					transparent_background = true,
+					transparent_background = false,
 					show_end_of_buffer = false,
 					disable_float_background = false,
 					bold_vert_split = false,
@@ -153,7 +153,7 @@ return {
 			end
 
 			-- Background transparency toggle (works with both themes)
-			local bg_transparent = true
+			local bg_transparent = false
 			local original_normal_bg = nil
 			local original_float_bg = nil
 

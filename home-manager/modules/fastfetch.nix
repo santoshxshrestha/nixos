@@ -31,7 +31,6 @@
       };
 
       modules = [
-        # System Info Header
         {
           type = "title";
           color = {
@@ -42,7 +41,6 @@
         }
         "break"
 
-        # Date & Time with better formatting
         {
           type = "datetime";
           key = "󰃭 Date";
@@ -59,7 +57,6 @@
         }
         "break"
 
-        # System Information
         {
           type = "os";
           key = " OS";
@@ -114,7 +111,6 @@
         }
         "break"
 
-        # Hardware Information
         {
           type = "cpu";
           key = "󰻠 CPU";
@@ -139,7 +135,6 @@
         }
         "break"
 
-        # Media & Performance
         {
           type = "player";
           key = "󰎆 Now Playing";

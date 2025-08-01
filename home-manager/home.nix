@@ -7,6 +7,7 @@
     ./modules/fish.nix
     ./modules/packages.nix
     ./modules/gtk.nix
+    ./modules/fastfetch.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

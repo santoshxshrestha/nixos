@@ -25,7 +25,6 @@
     hyprlock
     hyprpaper
     btop
-    fastfetch
     ffmpeg
 
     nerd-fonts.jetbrains-mono

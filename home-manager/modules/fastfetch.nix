@@ -50,7 +50,7 @@
         }
         {
           type = "datetime";
-          key = "󰥔 Time";
+          key = " Time";
           format = "{15}:{17} {21}";
         }
         {
@@ -62,7 +62,7 @@
         # System Information
         {
           type = "os";
-          key = "󱄅 OS";
+          key = " OS";
         }
         {
           type = "host";
@@ -70,7 +70,7 @@
         }
         {
           type = "kernel";
-          key = "󰌽 Kernel";
+          key = " Kernel";
         }
         {
           type = "packages";
@@ -117,17 +117,16 @@
         # Hardware Information
         {
           type = "cpu";
-          key = " CPU";
+          key = "󰻠 CPU";
           showPeCoreCount = true;
         }
         {
           type = "gpu";
           key = "󰢮 GPU";
-          hideType = "integrated";
         }
         {
           type = "memory";
-          key = " Memory";
+          key = " Memory";
         }
         {
           type = "swap";
@@ -135,7 +134,7 @@
         }
         {
           type = "disk";
-          key = "󰋊 Storage";
+          key = " Storage";
           folders = "/";
         }
         "break"

@@ -29,10 +29,11 @@
           home-manager.nixosModules.home-manager
 
           {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-
-            home-manager.users.santosh = import ./home-manager/home.nix;
+            home-manager = {
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              users.santosh = import ./home-manager/home.nix;
+            };
           }
         ];
         specialArgs = { inherit inputs; };

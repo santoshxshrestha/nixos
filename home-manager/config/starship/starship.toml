@@ -26,7 +26,8 @@ right_format = """$all"""
 
 [nix_shell]
 disabled = false
-symbol= " "
+style = "bold white"
+symbol= " "
 
 # Directory module - shows current path
 [directory]

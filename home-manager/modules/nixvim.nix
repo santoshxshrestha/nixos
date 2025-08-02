@@ -1,7 +1,10 @@
-{ config, pkgs, ... }: {
-	programs.nixvim = {
-		enable = true;
-		colorschemescatppuccin.enable = true;
-		plugins.lualine.enable = true;
-	}
-		       }
+{ config, pkgs, ... }: 
+{
+  programs.nixvim = {
+    enable = true;
+
+    colorschemes.catppuccin.enable = true;
+    plugins.lualine.enable = true;
+  };
+}
+ 

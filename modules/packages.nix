@@ -6,6 +6,7 @@
     wget
     git
     vim
+    neovim
     firefox
     hyprland
     stow

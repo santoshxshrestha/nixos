@@ -8,6 +8,7 @@
     ./modules/packages.nix
     ./modules/gtk.nix
     ./modules/fastfetch.nix
+    ./modules/nixvim.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
@@ -46,7 +47,7 @@
     ".config/starship.toml".source = ./config/starship/starship.toml;
     ".local/scripts".source = ./scripts;
     ".config/waybar".source = ./config/waybar;
-    ".config/nvim".source = ./config/nvim;
+    # ".config/nvim".source = ./config/nvim;
 
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a

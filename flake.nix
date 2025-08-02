@@ -9,6 +9,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nixvim = {
+      url = "github:nix-community/nixvim";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # hyprland = {
     # url = "github:hyprwm/Hyprland/v0.48.1";
     # inputs.nixpkgs.follows = "nixpkgs";
@@ -16,7 +21,7 @@
 
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, ... }:
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
@@ -30,6 +35,7 @@
 
           {
             home-manager = {
+              sharedModules = [ nixvim.homeManagerModules.nixvim ];
               useGlobalPkgs = true;
               useUserPackages = true;
               users.santosh = import ./home-manager/home.nix;

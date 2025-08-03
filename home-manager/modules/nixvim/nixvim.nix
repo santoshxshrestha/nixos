@@ -1,4 +1,9 @@
 { config, ... }: {
+  imports = [
+    #core
+    ./core/keymaps.nix
+
+  ];
   programs.nixvim = {
     enable = true;
 
@@ -13,12 +18,6 @@
       telescope = {
         enable = true;
 
-        keymaps = {
-          "<leader>sf" = "find_files";
-          "<leader>sg" = "live_grep";
-          "<leader><leader>" = "buffers";
-          "<leader>ss" = "help_tags";
-        };
         extensions = {
           fzf-native = {
             enable = true;

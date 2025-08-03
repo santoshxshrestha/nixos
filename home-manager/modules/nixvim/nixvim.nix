@@ -13,6 +13,7 @@
     ./plugins/none-ls.nix
     ./plugins/comment.nix
     ./plugins/indent-blankline.nix
+    ./plugins/gitsigns.nix
 
   ];
   programs.nixvim = {

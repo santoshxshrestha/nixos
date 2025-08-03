@@ -42,33 +42,6 @@
       };
     };
 
-    lsp.servers = {
-
-      "*" = {
-        settings = {
-          capabilities = {
-            textDocument = {
-              semanticTokens = { multilineTokenSupport = true; };
-            };
-          };
-          root_markers = [ ".git" ];
-        };
-      };
-      nixd = {
-        enable = true;
-        settings = {
-          # Optional: configure nixd settings
-          formatting = { command = [ "nixfmt" ]; };
-        };
-      };
-
-      clangd = {
-        enable = true;
-        settings = { filetypes = [ "c" "cpp" ]; };
-      };
-
-      lua_ls.enable = true;
-    };
     lsp.inlayHints.enable = true;
 
   };

@@ -5,6 +5,7 @@
     ./core/lsp.nix
     ./core/autocompletion.nix
     ./core/opts.nix
+    ./core/code-runner.nix
 
   ];
   programs.nixvim = {

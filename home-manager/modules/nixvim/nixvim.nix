@@ -9,6 +9,7 @@
 
      #plugins
     ./plugins/harpoon.nix
+    ./plugins/surround.nix
 
   ];
   programs.nixvim = {

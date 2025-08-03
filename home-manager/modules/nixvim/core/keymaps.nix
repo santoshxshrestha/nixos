@@ -1,10 +1,43 @@
 {
   programs.nixvim.keymaps = [
+    # telescope key maps
     {
       action = "<cmd>Telescope find_files<CR>";
       key = "<leader>sf";
       mode = [ "n" ];
       options = { desc = "Search files"; };
+    }
+    # {
+    #   action.__raw = ''
+    #     function()
+    #     local buildin = require('telescope.buildin')
+    #         builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+    #            winblend = 0,
+    #            previewer = true,
+    #          })
+    #        end'';
+    #   key = "<leader>/";
+    #   mode = [ "n" ];
+    #   options = { desc = "[/] Fuzzily search in current buffer"; };
+    # }
+    # {
+    #   action.__raw = ''
+    #     function()
+    #     local buildin = require('telescope.buildin')
+    #            builtin.live_grep {
+    #             grep_open_files = true,
+    #             prompt_title = 'Live Grep in Open Files',
+    #           }
+    #         end'';
+    #   key = "<leader>s/";
+    #   mode = [ "n" ];
+    #   options = { desc = "[S]earch [/] in Open Files"; };
+    # }
+    {
+      action = "<cmd>Telescope help_tags<CR>";
+      key = "<leader>sh";
+      mode = [ "n" ];
+      options = { desc = "Help_tags"; };
     }
     {
       action = "<cmd>Telescope live_grep<CR>";

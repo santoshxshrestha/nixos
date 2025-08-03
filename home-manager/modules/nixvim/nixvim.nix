@@ -15,7 +15,6 @@
 
     plugins = {
       lualine.enable = true;
-      lspconfig.enable = true;
       telescope = {
         enable = true;
 

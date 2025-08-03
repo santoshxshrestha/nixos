@@ -27,6 +27,13 @@
         options = { desc = " help tags";
         };
     }
+    {
+        action = "<cmd>Explore<CR>";
+        key = "<leader>e";
+        mode = [ "n" ];
+        options = {desc = "open netrw ";
+        };
+    }
 
 # harpoon key maps
     { mode = "n"; key = "<leader>H"; action.__raw = "function() require'harpoon':list():add() end"; }

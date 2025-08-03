@@ -10,6 +10,7 @@
      #plugins
     ./plugins/harpoon.nix
     ./plugins/surround.nix
+    ./plugins/none-ls.nix
 
   ];
   programs.nixvim = {
@@ -38,14 +39,6 @@
         };
       };
       web-devicons.enable = true;
-      none-ls = {
-        enable = true;
-        sources = {
-          formatting.nixfmt.enable = true;
-          # You can add other formatters here
-          formatting.stylua.enable = true;
-        };
-      };
     };
 
     lsp.inlayHints.enable = true;

@@ -97,6 +97,6 @@
             run.create_terminal_command()
             end
 
-            return run
+run.setup()
             '';
 }

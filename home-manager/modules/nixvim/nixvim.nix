@@ -15,6 +15,7 @@
     ./plugins/indent-blankline.nix
     ./plugins/gitsigns.nix
     ./plugins/lualine.nix
+    ./plugins/misc.nix
 
   ];
   programs.nixvim = {

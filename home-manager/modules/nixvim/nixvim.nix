@@ -1,46 +1,47 @@
 { config, ... }: {
-    imports = [
-#core
-        ./core/keymaps.nix
-            ./core/lsp.nix
-            ./core/autocompletion.nix
-            ./core/code-runner.nix
-            ./core/opts.nix
+  imports = [
+    #core
+    ./core/keymaps.nix
+    ./core/lsp.nix
+    ./core/autocompletion.nix
+    ./core/code-runner.nix
+    ./core/opts.nix
 
-#plugins
-            ./plugins/harpoon.nix
-            ./plugins/surround.nix
-            ./plugins/none-ls.nix
+    #plugins
+    ./plugins/harpoon.nix
+    ./plugins/surround.nix
+    ./plugins/none-ls.nix
+    ./plugins/comment.nix
 
-    ];
-    programs.nixvim = {
+  ];
+  programs.nixvim = {
+    enable = true;
+
+    colorschemes.catppuccin.enable = true;
+    globals.mapleader = " ";
+
+    globals.maplocalleader = " ";
+
+    plugins = {
+      lualine.enable = true;
+      telescope = {
         enable = true;
 
-        colorschemes.catppuccin.enable = true;
-        globals.mapleader = " ";
-
-        globals.maplocalleader = " ";
-
-        plugins = {
-            lualine.enable = true;
-            telescope = {
-                enable = true;
-
-                extensions = {
-                    fzf-native = {
-                        enable = true;
-                        settings = {
-                            fuzzy = true;
-                            override_generic_sorter = true;
-                            override_file_sorter = true;
-                            case_mode = "smart_case";
-                        };
-                    };
-                };
+        extensions = {
+          fzf-native = {
+            enable = true;
+            settings = {
+              fuzzy = true;
+              override_generic_sorter = true;
+              override_file_sorter = true;
+              case_mode = "smart_case";
             };
-            web-devicons.enable = true;
+          };
         };
-
-        lsp.inlayHints.enable = true;
+      };
+      web-devicons.enable = true;
     };
-                 }
+
+    lsp.inlayHints.enable = true;
+  };
+}

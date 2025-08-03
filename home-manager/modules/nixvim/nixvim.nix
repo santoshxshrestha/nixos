@@ -14,6 +14,7 @@
     ./plugins/comment.nix
     ./plugins/indent-blankline.nix
     ./plugins/gitsigns.nix
+    ./plugins/lualine.nix
 
   ];
   programs.nixvim = {
@@ -25,7 +26,6 @@
     globals.maplocalleader = " ";
 
     plugins = {
-      lualine.enable = true;
       telescope = {
         enable = true;
 

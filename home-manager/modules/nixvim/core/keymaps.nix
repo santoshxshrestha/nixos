@@ -1,28 +1,28 @@
 {programs.nixvim.keymaps =  [
 {
-	action = "find_filies";
+	action = "<cmd>Telescope find_files<CR>";
 	key = "<leader>sf";
 	mode = [ "n" ] ;
 	options = { desc = "Search files";
 	};
 }
 {
-	action = "live_grep";
+	action = "<cmd>Telescope live_grep<CR>";
 	key = "<leader>sg";
 	mode = [ "n" ] ;
 	options = { desc = "Search using live grep";
 	};
 }
 {
+	action = "<cmd>Telescope buffers<CR>";
 	key = "<leader><leader>";
-	action = "buffers";
 	mode = [ "n" ] ;
 	options = { desc = "List buffers";
 	};
 }
 {
+	action = "<cmd>Telescope<CR>";
 	key = "<leader>ss";
-	action = "help";
 	mode = [ "n" ] ;
 	options = { desc = " help tags";
 	};

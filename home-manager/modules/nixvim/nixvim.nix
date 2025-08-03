@@ -2,6 +2,7 @@
   imports = [
     #core
     ./core/keymaps.nix
+    ./core/lsp.nix
 
   ];
   programs.nixvim = {

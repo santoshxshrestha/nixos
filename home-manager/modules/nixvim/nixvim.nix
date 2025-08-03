@@ -7,6 +7,9 @@
     ./core/code-runner.nix
     ./core/opts.nix
 
+     #plugins
+    ./plugins/harpoon.nix
+
   ];
   programs.nixvim = {
     enable = true;

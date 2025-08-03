@@ -4,6 +4,7 @@
     ./core/keymaps.nix
     ./core/lsp.nix
     ./core/autocompletion.nix
+    ./core/opts.nix
 
   ];
   programs.nixvim = {

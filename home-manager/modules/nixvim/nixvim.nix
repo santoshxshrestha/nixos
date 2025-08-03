@@ -31,7 +31,7 @@
         };
       };
       web-devicons.enable = true;
-      null-ls = {
+      none-ls = {
         enable = true;
         sources = {
           formatting.nixfmt.enable = true;
@@ -69,34 +69,6 @@
       lua_ls.enable = true;
     };
     lsp.inlayHints.enable = true;
-    lsp.keymaps =
-
-      [
-        {
-          key = "gd";
-          lspBufAction = "definition";
-        }
-        {
-          key = "gD";
-          lspBufAction = "references";
-        }
-        {
-          key = "gt";
-          lspBufAction = "type_definition";
-        }
-        {
-          key = "gi";
-          lspBufAction = "implementation";
-        }
-        {
-          key = "K";
-          lspBufAction = "hover";
-        }
-        {
-          action = "<CMD>Lspsaga hover_doc<Enter>";
-          key = "K";
-        }
-      ];
 
   };
 }

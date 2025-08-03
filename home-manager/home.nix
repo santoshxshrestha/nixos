@@ -47,7 +47,6 @@
     ".config/starship.toml".source = ./config/starship/starship.toml;
     ".local/scripts".source = ./scripts;
     ".config/waybar".source = ./config/waybar;
-    # ".config/nvim".source = ./config/nvim;
 
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a

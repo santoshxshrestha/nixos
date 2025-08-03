@@ -3,6 +3,7 @@
     #core
     ./core/keymaps.nix
     ./core/lsp.nix
+    ./core/autocompletion.nix
 
   ];
   programs.nixvim = {
@@ -42,6 +43,5 @@
     };
 
     lsp.inlayHints.enable = true;
-
   };
 }

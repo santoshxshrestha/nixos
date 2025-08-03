@@ -12,6 +12,7 @@
     ./plugins/surround.nix
     ./plugins/none-ls.nix
     ./plugins/comment.nix
+    ./plugins/indent-blankline.nix
 
   ];
   programs.nixvim = {

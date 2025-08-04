@@ -1,5 +1,42 @@
 {
   programs.nixvim.keymaps = [
+    # splits managements
+    {
+      action = "<cmd>vsplit<CR>";
+      key = "<leader>v";
+      mode = [ "n" ];
+      options = {
+        desc = "Split window vertically";
+        silent = true;
+      };
+    }
+    {
+      action = "<cmd>split<CR>";
+      key = "<leader>o";
+      mode = [ "n" ];
+      options = {
+        desc = "Split window vertically";
+        silent = true;
+      };
+    }
+    {
+      action = "<cmd>close<CR>";
+      key = "<leader>q";
+      mode = [ "n" ];
+      options = {
+        desc = "Close current split";
+        silent = true;
+      };
+    }
+    {
+      action = "<cmd>only<CR>";
+      key = "<leader>x";
+      mode = [ "n" ];
+      options = {
+        desc = "Close all other splits";
+        silent = true;
+      };
+    }
     # telescope key maps
     {
       action = "<cmd>Telescope find_files<CR>";

@@ -58,5 +58,5 @@
 
     };
   };
-  inlayHints.enable = true;
+  programs.nixvim.lsp.inlayHints.enable = true;
 }

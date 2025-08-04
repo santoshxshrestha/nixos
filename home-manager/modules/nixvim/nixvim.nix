@@ -17,7 +17,6 @@
     ./plugins/lualine.nix
     ./plugins/misc.nix
     ./plugins/treesitter.nix
-
   ];
   programs.nixvim = {
     enable = true;

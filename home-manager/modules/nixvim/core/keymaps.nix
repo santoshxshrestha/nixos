@@ -1,5 +1,12 @@
 {
   programs.nixvim.keymaps = [
+    # key maps for undoo tree
+    {
+      action = "<cmd>UndotreeToggle<CR>";
+      key = "<leader>u";
+      mode = [ "n" ];
+      options = { desc = "Toggle undo tree"; };
+    }
     # key map for treesitter-context
     {
       action.__raw = ''

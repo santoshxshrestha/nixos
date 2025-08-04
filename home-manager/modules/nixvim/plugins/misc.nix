@@ -1,5 +1,6 @@
 {
   programs.nixvim.plugins = {
+    web-devicons = { enable = true; };
     # Markdown renderer
     render-markdown = { enable = true; };
     # for docs and other feat related to lsp

@@ -57,6 +57,6 @@
       jsonls = { enable = true; };
 
     };
-    # inlayHints.enable = true;
   };
+  inlayHints.enable = true;
 }

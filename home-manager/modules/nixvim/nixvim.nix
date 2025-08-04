@@ -16,6 +16,7 @@
     ./plugins/gitsigns.nix
     ./plugins/lualine.nix
     ./plugins/misc.nix
+    ./plugins/treesitter.nix
 
   ];
   programs.nixvim = {

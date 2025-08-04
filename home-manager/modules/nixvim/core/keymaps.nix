@@ -1,5 +1,126 @@
 {
   programs.nixvim.keymaps = [
+    # stay in indent mode
+    {
+      action = ">gv";
+      key = ">";
+      mode = [ "n" ];
+      options = {
+        silent = true;
+        noremap = true;
+      };
+    }
+    {
+      action = "<gv";
+      key = "<";
+      mode = [ "n" ];
+      options = {
+        silent = true;
+        noremap = true;
+      };
+    }
+
+    # toggle line wrapping
+    {
+      action = "<cmd>set wrap!";
+      key = "<leader>lw";
+      mode = [ "n" ];
+      options = {
+        silent = true;
+        noremap = true;
+      };
+    }
+    # find and center 
+    {
+      action = "nzzzv";
+      key = "n";
+      mode = [ "n" ];
+      options = {
+        silent = true;
+        noremap = true;
+      };
+    }
+    {
+      action = "nzzzv";
+      key = "N";
+      mode = [ "n" ];
+      options = {
+        silent = true;
+        noremap = true;
+      };
+
+    }
+    # resize with arrow
+    {
+      action = "<cmd>resize -2<CR>";
+      key = "<Up>";
+      mode = [ "n" ];
+      options = {
+        silent = true;
+        noremap = true;
+      };
+    }
+    {
+      action = "<cmd>resize +2<CR>";
+      key = "<Down>";
+      mode = [ "n" ];
+      options = {
+        silent = true;
+        noremap = true;
+      };
+    }
+    {
+      action = "<cmd>Vertical resize -2<CR>";
+      key = "<Left>";
+      mode = [ "n" ];
+      options = {
+        silent = true;
+        noremap = true;
+      };
+    }
+    {
+      action = "<cmd>Vertical resize +2<CR>";
+      key = "<Right>";
+      mode = [ "n" ];
+      options = {
+        silent = true;
+        noremap = true;
+      };
+    }
+    # Vertical scroll and center cursor
+    {
+      action = "<C-u>zz";
+      key = "<C-u>";
+      mode = [ "n" ];
+      options = { silent = true; };
+    }
+    {
+      action = "<C-d>zz";
+      key = "<C-d>";
+      mode = [ "n" ];
+      options = { silent = true; };
+    }
+    # save file without auto-formatting
+    {
+      action = "<cmd>noautocmd w<CR>";
+      key = "<leader>sn";
+      mode = [ "n" ];
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "save file without auto-formatting";
+      };
+    }
+    # delete single character without copying into register
+    {
+      action = ''"_x'';
+      key = "x";
+      mode = [ "n" ];
+      options = {
+        noremap = true;
+        silent = true;
+      };
+    }
     # keymaps for fugutive
     {
       action = "<cmd>Git<CR>";

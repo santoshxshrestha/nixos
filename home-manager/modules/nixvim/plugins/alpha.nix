@@ -55,9 +55,12 @@
           {
             type = "button";
             val = "  Recent Files";
-            on_press = { __raw = "function() vim.cmd('browse oldfiles') end"; };
+            on_press = {
+              __raw =
+                "function() require('telescope.builtin').oldfiles({results = 10}) end";
+            };
             opts = {
-              keymap = [ "n" "r" ":browse oldfiles<CR>" { } ];
+              keymap = [ "n" "r" ":Telescope oldfiles<CR>" { } ];
               shortcut = "r";
               position = "center";
               cursor = 3;

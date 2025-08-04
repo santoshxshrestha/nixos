@@ -1,6 +1,6 @@
 {
   programs.nixvim.plugins.treesitter = {
-    enableTelescope = true;
+    enable = true;
 
   };
 }

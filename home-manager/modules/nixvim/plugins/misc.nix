@@ -1,10 +1,11 @@
 {
   programs.nixvim.plugins = {
+    # treesitter-context for jump to func
+    treesitter-context = { enable = true; };
+
     # Markdown renderer
-    render-markdown = {
-      enable = true;
-      settings = { };
-    };
+    render-markdown = { enable = true; };
+    # for docs and other feat related to lsp
     lspsaga = {
       enable = true;
       ui = { border = "rounded"; };

@@ -1,5 +1,17 @@
 {
   programs.nixvim.keymaps = [
+    # key map for treesitter-context
+    {
+      action.__raw = ''
+        require('treesitter-context').go_to_context
+      '';
+      key = "[c";
+      mode = [ "n" ];
+      options = {
+        desc = "Go to context";
+        silent = true;
+      };
+    }
     # splits managements
     {
       action = "<cmd>vsplit<CR>";

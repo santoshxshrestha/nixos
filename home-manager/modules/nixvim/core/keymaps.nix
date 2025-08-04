@@ -188,6 +188,7 @@
     }
   ];
 
+  # lsp with lsp saga key maps
   programs.nixvim.lsp.keymaps =
 
     [
@@ -207,13 +208,29 @@
         key = "gi";
         lspBufAction = "implementation";
       }
-      {
-        key = "K";
-        lspBufAction = "hover";
-      }
+      # {
+      #   key = "K";
+      #   lspBufAction = "hover";
+      # }
       {
         action = "<CMD>Lspsaga hover_doc<Enter>";
         key = "K";
+      }
+      {
+        action = "<CMD>Lspsaga rename<Enter>";
+        key = "<leader>rn";
+      }
+      {
+        action = "<CMD>Lspsaga code_action<Enter>";
+        key = "<leader>ca";
+      }
+      {
+        action = "<CMD>Lspsaga diagnostic_jump_next<Enter>";
+        key = "]d";
+      }
+      {
+        action = "<CMD>Lspsaga diagnostic_jump_prev<Enter>";
+        key = "[d";
       }
     ];
 }

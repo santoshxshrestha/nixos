@@ -5,6 +5,11 @@
       enable = true;
       settings = { };
     };
+    lspsaga = {
+      enable = true;
+      ui = { border = "rounded"; };
+      lightbulb = { enable = false; };
+    };
 
     # Undotree by jiaoshijie
     undotree = { enable = true; };

@@ -1,5 +1,21 @@
 {
+  programs.nixvim = {
+    # local and gglobals leader keys
+    globals.mapleader = " ";
+    globals.maplocalleader = " ";
+  };
+
   programs.nixvim.keymaps = [
+    # keep last yanked when pasting over some thing
+    {
+      action = ''"_dp'';
+      key = "p";
+      mode = [ "n" ];
+      options = {
+        silent = true;
+        noremap = true;
+      };
+    }
     # stay in indent mode
     {
       action = ">gv";

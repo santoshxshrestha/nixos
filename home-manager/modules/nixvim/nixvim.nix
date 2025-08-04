@@ -23,11 +23,6 @@
   ];
   programs.nixvim = {
     enable = true;
-
-    globals.mapleader = " ";
-
-    globals.maplocalleader = " ";
-
     plugins = { };
   };
 }

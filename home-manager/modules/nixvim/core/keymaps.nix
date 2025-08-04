@@ -1,5 +1,106 @@
 {
   programs.nixvim.keymaps = [
+    # keymaps for fugutive
+    {
+      action = "<cmd>Git<CR>";
+      key = "<leader>gs";
+      mode = [ "n" ];
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "Git Status";
+      };
+    }
+    {
+      action = "<cmd>Git commit<CR>";
+      key = "<leader>gc";
+      mode = [ "n" ];
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "Git Commit";
+      };
+    }
+    {
+      action = "<cmd>Git add .<CR>";
+      key = "<leader>ga";
+      mode = [ "n" ];
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "Git Add All changes";
+      };
+    }
+    {
+      action = "<cmd>Gwrite<CR>";
+      key = "<leader>gw";
+      mode = [ "n" ];
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "Git Write";
+      };
+    }
+    {
+      action = "<cmd>Gdiff<CR>";
+      key = "<leader>gd";
+      mode = [ "n" ];
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "Git Diff";
+      };
+    }
+    {
+      action = "<cmd>Gclog<CR>";
+      key = "<leader>gl";
+      mode = [ "n" ];
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "Git Log";
+      };
+    }
+    {
+      action = "<cmd>Git blame<CR>";
+      key = "<leader>gb";
+      mode = [ "n" ];
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "Git Blame";
+      };
+    }
+    {
+      action = "<cmd>Git push<CR>";
+      key = "<leader>gp";
+      mode = [ "n" ];
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "Git Push";
+      };
+    }
+    {
+      action = "<cmd>Git fetch<CR>";
+      key = "<leader>gf";
+      mode = [ "n" ];
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "git Fetch";
+      };
+    }
+    {
+      action = "<cmd>Gread<CR>";
+      key = "<leader>gr";
+      mode = [ "n" ];
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "Git: restore buffer to HEAD";
+      };
+    }
     # key maps for undoo tree
     {
       action = "<cmd>UndotreeToggle<CR>";

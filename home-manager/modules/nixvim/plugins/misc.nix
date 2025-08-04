@@ -15,7 +15,7 @@
     undotree = { enable = true; };
 
     # Tmux & split window navigation
-    # vim-tmux-navigator = { enable = true; };
+    tmux-navigator = { enable = true; };
 
     # Detect tabstop and shiftwidth automatically
     # vim-sleuth = { enable = true; };
@@ -27,7 +27,7 @@
     #rhubarb = { enable = true; };
 
     # Hints keybinds
-    which-key = { enable = true; };
+    which-key = { enable = false; };
 
     # Autoclose parentheses, brackets, quotes, etc.
     nvim-autopairs = { enable = true; };

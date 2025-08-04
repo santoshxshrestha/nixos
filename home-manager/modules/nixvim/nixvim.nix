@@ -19,6 +19,7 @@
     ./plugins/treesitter.nix
     ./plugins/telescope.nix
     ./plugins/colorschemes.nix
+    ./plugins/alpha.nix
   ];
   programs.nixvim = {
     enable = true;

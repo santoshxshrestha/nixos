@@ -42,7 +42,7 @@
         ];
         opts = {
           position = "center";
-          hl = "Type";
+          hl = "Directory";
         };
       }
       {
@@ -66,8 +66,8 @@
               cursor = 3;
               width = 50;
               align_shortcut = "right";
-              hl_shortcut = "Keyword";
-              hl = "Number";
+              hl_shortcut = "Directory";
+              hl = "Directory";
             };
           }
           {
@@ -81,7 +81,7 @@
               cursor = 3;
               width = 50;
               align_shortcut = "right";
-              hl_shortcut = "Keyword";
+              hl_shortcut = "Directory";
               hl = "Directory";
             };
           }
@@ -96,8 +96,8 @@
               cursor = 3;
               width = 50;
               align_shortcut = "right";
-              hl_shortcut = "Keyword";
-              hl = "String";
+              hl_shortcut = "Directory";
+              hl = "Directory";
             };
           }
           {
@@ -111,8 +111,8 @@
               cursor = 3;
               width = 50;
               align_shortcut = "right";
-              hl_shortcut = "Keyword";
-              hl = "Error";
+              hl_shortcut = "Directory";
+              hl = "Directory";
             };
           }
         ];

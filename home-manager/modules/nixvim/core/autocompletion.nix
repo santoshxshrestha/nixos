@@ -6,6 +6,17 @@
       settings = {
         sources =
           [ { name = "nvim_lsp"; } { name = "path"; } { name = "buffer"; } ];
+        window = {
+          documentation = { border = [ "┌" "─" "┐" "│" "┘" "─" "└" "│" ]; };
+          winhighlight =
+            "Normal:Pmenu,FloatBorder:Magenta,CursorLine:PmenuSel,Search:None";
+          completion = {
+            border = [ "┌" "─" "┐" "│" "┘" "─" "└" "│" ];
+            winhighlight =
+              "Normal:Pmenu,FloatBorder:Blue,CursorLine:PmenuSel,Search:None";
+          };
+        };
+
         mapping = {
           "<C-n>" = "cmp.mapping.select_next_item()";
           "<C-p>" = "cmp.mapping.select_prev_item()";

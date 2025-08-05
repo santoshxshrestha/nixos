@@ -1,10 +1,8 @@
 {
-  programs.nixvim.plugins.cmp-dictionary = { enable = true; };
   programs.nixvim.plugins.cmp-spell = { enable = true; };
   programs.nixvim.plugins.cmp-cmdline = { enable = true; };
   programs.nixvim.plugins.cmp-nvim-lsp-signature-help = { enable = true; };
   programs.nixvim.plugins.cmp-async-path = { enable = true; };
-  programs.nixvim.plugins.cmp-nvim-lsp-document-symbol = { enable = true; };
   programs.nixvim.plugins = {
     cmp = {
       enable = true;
@@ -15,11 +13,9 @@
           { name = "path"; }
           { name = "buffer"; }
           { name = "luasnip"; }
-          { name = "nvim_lsp_document_symbols"; }
           { name = "nvim_lsp_signature_help"; }
           { name = "spell"; }
           { name = "async_path"; }
-          { name = "dictionary"; }
         ];
         snippet = {
           expand =

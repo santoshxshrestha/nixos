@@ -7,15 +7,16 @@
 
   programs.nixvim.keymaps = [
     # keep last yanked when pasting over some thing
-    {
-      action = ''"_dp'';
-      key = "p";
-      mode = [ "n" ];
-      options = {
-        silent = true;
-        noremap = true;
-      };
-    }
+    # nix is messing with it because of the parenthesis 
+    # {
+    #   action = ''"_dp'';
+    #   key = "p";
+    #   mode = [ "n" ];
+    #   options = {
+    #     silent = true;
+    #     noremap = true;
+    #   };
+    # }
     # stay in indent mode
     {
       action = ">gv";

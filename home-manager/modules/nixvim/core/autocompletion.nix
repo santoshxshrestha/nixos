@@ -35,6 +35,7 @@
             border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
             winhighlight =
               "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CursorLine,Search:None";
+            scrollbar = false;
           };
         };
 

@@ -1,4 +1,10 @@
 {
+  programs.nixvim.plugins.cmp-dictionary = { enable = true; };
+  programs.nixvim.plugins.cmp-spell = { enable = true; };
+  programs.nixvim.plugins.cmp-cmdline = { enable = true; };
+  programs.nixvim.plugins.cmp-nvim-lsp-signature-help = { enable = true; };
+  programs.nixvim.plugins.cmp-async-path = { enable = true; };
+  programs.nixvim.plugins.cmp-nvim-lsp-document-symbol = { enable = true; };
   programs.nixvim.plugins = {
     cmp = {
       enable = true;
@@ -9,19 +15,26 @@
           { name = "path"; }
           { name = "buffer"; }
           { name = "luasnip"; }
+          { name = "nvim_lsp_document_symbols"; }
+          { name = "nvim_lsp_signature_help"; }
+          { name = "spell"; }
+          { name = "async_path"; }
+          { name = "dictionary"; }
         ];
         snippet = {
           expand =
             "function(args) require('luasnip').lsp_expand(args.body) end";
         };
         window = {
-          documentation = { border = [ "┌" "─" "┐" "│" "┘" "─" "└" "│" ]; };
-          winhighlight =
-            "Normal:Pmenu,FloatBorder:Magenta,CursorLine:PmenuSel,Search:None";
-          completion = {
-            border = [ "┌" "─" "┐" "│" "┘" "─" "└" "│" ];
+          documentation = {
+            border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
             winhighlight =
-              "Normal:Pmenu,FloatBorder:Blue,CursorLine:PmenuSel,Search:None";
+              "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CursorLine,Search:None";
+          };
+          completion = {
+            border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
+            winhighlight =
+              "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CursorLine,Search:None";
           };
         };
 

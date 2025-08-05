@@ -69,7 +69,7 @@
     # Decrease update time (default: 4000)
     updatetime = 250;
     # Time to wait for a mapped sequence to complete (in milliseconds) (default: 1000)
-    #timeoutlen = 300;
+    timeoutlen = 300;
     # Creates a backup file (default: false)
     backup = false;
     # If a file is being edited by another program it is not allowed to be edited (default: true)

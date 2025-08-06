@@ -3,6 +3,12 @@
   programs.nixvim.plugins.cmp-cmdline = { enable = true; };
   programs.nixvim.plugins.cmp-nvim-lsp-signature-help = { enable = true; };
   programs.nixvim.plugins.cmp-async-path = { enable = true; };
+  programs.nixvim.plugins.lspkind = {
+    enable = true;
+    mode = "symbol_text";
+    cmp.enable = true;
+    cmp.maxWidth = 50;
+  };
   programs.nixvim.plugins = {
     cmp = {
       enable = true;
@@ -26,12 +32,17 @@
             border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
             winhighlight =
               "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CursorLine,Search:None";
+
+            max_width = 50;
+            max_height = 20;
           };
           completion = {
             border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
             winhighlight =
               "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CursorLine,Search:None";
             scrollbar = false;
+            max_width = 50;
+            max_height = 20;
           };
         };
 

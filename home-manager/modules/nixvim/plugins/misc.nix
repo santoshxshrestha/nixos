@@ -1,17 +1,22 @@
 {
   programs.nixvim.plugins = {
+    noice = {
+      enable = true;
+      settings = {
+        lsp = {
+          hover.enable = true;
+          message.enable = true;
+          signature.enable = true;
+          progress.enable = true;
+        };
+      };
+    };
     # Mmarkdown-preview in browser
     markdown-preview = { enable = true; };
     # icons
     web-devicons = { enable = true; };
     # Markdown renderer
     render-markdown = { enable = true; };
-    # for docs and other feat related to lsp
-    lspsaga = {
-      enable = true;
-      ui = { border = "rounded"; };
-      lightbulb = { enable = false; };
-    };
 
     # Undotree by jiaoshijie
     undotree = { enable = true; };

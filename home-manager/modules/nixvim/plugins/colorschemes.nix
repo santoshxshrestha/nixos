@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: {
+{ pkgs, ... }: {
   programs.nixvim = {
     colorschemes = {
       catppuccin = {

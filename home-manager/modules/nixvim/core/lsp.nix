@@ -1,4 +1,14 @@
 { config, ... }: {
+  # for docs and other feat related to lsp
+  programs.nixvim.plugins.lspsaga = {
+    enable = true;
+    ui = { border = "rounded"; };
+    lightbulb = { enable = false; };
+    hover = {
+      maxWidth = 0.5;
+      maxHeight = 0.3;
+    };
+  };
   programs.nixvim.plugins.lsp = {
     enable = true;
     servers = {

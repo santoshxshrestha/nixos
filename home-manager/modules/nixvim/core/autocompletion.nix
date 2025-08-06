@@ -7,7 +7,7 @@
     enable = true;
     mode = "symbol_text";
     cmp.enable = true;
-    cmp.maxWidth = 50;
+    cmp.maxWidth = 20;
   };
   programs.nixvim.plugins = {
     cmp = {

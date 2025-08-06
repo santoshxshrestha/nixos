@@ -1,3 +1,6 @@
+<div align="center">
+    <img src="../../assets/neovim-flake-logo.svg" alt="neovim-flake Logo"  width="200">
+</div> 
 #  Snippet Expansion and Completion Setup in NixVim
 
 This configuration integrates `luasnip` (a Lua-based snippet engine) with `nvim-cmp` (a completion engine) and `nvim-lspconfig` (LSP support), all managed through Nix using `nixvim`.
@@ -15,14 +18,14 @@ This configuration integrates `luasnip` (a Lua-based snippet engine) with `nvim-
 
 ##  Plugin Integration Summary
 
-| Plugin              | Purpose                                      |
-|---------------------|----------------------------------------------|
-| `nvim-cmp`          | Completion menu engine                       |
-| `cmp-nvim-lsp`      | Source for LSP-based completion              |
-| `cmp-path`          | File path completion                         |
-| `cmp-buffer`        | Text completion from current buffer          |
-| `cmp_luasnip`       | Completion source for LuaSnip                |
-| `luasnip`           | Snippet engine                               |
+| Plugin         | Purpose                             |
+| -------------- | ----------------------------------- |
+| `nvim-cmp`     | Completion menu engine              |
+| `cmp-nvim-lsp` | Source for LSP-based completion     |
+| `cmp-path`     | File path completion                |
+| `cmp-buffer`   | Text completion from current buffer |
+| `cmp_luasnip`  | Completion source for LuaSnip       |
+| `luasnip`      | Snippet engine                      |
 
 ---
 
@@ -32,7 +35,7 @@ This configuration integrates `luasnip` (a Lua-based snippet engine) with `nvim-
 
 The following sources are configured:
 
-```nix
+````nix
 sources = [
   { name = "nvim_lsp"; }   # LSP suggestions
   { name = "path"; }       # File paths
@@ -46,5 +49,6 @@ This tells nvim-cmp to use LuaSnip as its snippet engine:
 snippet = {
   expand = "function(args) require('luasnip').lsp_expand(args.body) end";
 };
-```
+````
+
 - When a completion item includes a snippet body (like an LSP function template), this function expands it using LuaSnip.

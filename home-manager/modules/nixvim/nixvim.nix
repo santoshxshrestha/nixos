@@ -6,6 +6,7 @@
     ./core/autocompletion.nix
     ./core/code-runner.nix
     ./core/opts.nix
+    ./core/autocommands.nix
 
     #plugins
     ./plugins/harpoon.nix

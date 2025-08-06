@@ -2,16 +2,16 @@
   programs.nixvim = {
     colorschemes = {
       catppuccin = {
-        enable = false;
+        enable = true;
         settings = {
           show_end_of_buffer = false;
-          transparent_background = false;
+          transparent_background = true;
           flavor = "mocha";
         };
       };
 
       rose-pine = {
-        enable = true;
+        enable = false;
         settings = {
           show_end_of_buffer = false;
           flavor = "main";
@@ -36,27 +36,44 @@
 
     extraConfigLua = ''
       require('vague').setup({
-        transparent = true,
-        -- style = {
-        --   boolean = "italic",
-        --   number = "none",
-        --   float = "none",
-        --   error = "none",
-        --   comments = "italic",
-        --   conditionals = "none",
-        --   functions = "none",
-        --   headings = "bold",
-        --   operators = "none",
-        --   strings = "none",
-        --   variables = "none",
-        --   keywords = "none",
-        --   keyword_return = "none",
-        --   keywords_loop = "none",
-        --   keywords_label = "none",
-        --   keywords_exception = "none",
-        -- },
+          transparent = true,
+          on_highlights = function(highlights, colors)
+              -- Treesitter Context
+              highlights.TreesitterContext = { bg = "NONE", fg = colors.fg }
+              highlights.TreesitterContextLineNumber = { bg = "NONE", fg = colors.fg }
+              highlights.TreesitterContextBottom = { underline = true, sp = colors.plus }
+
+              -- GitSigns
+              highlights.GitSignsAdd = { fg = colors.plus, bg = "NONE" }
+              highlights.GitSignsChange = { fg = colors.delta, bg = "NONE" }
+              highlights.GitSignsDelete = { fg = colors.error, bg = "NONE" }
+
+              -- IndentBlankline
+              highlights.IndentBlanklineChar = { fg = "#3b3b3b", nocombine = true }
+              highlights.IndentBlanklineContextChar = { fg = colors.plus, nocombine = true }
+              highlights.IndentBlanklineSpaceChar = { fg = "#444444", nocombine = true }
+          end,
+
+          -- style = {
+          --   boolean = "italic",
+          --   number = "none",
+          --   float = "none",
+          --   error = "none",
+          --   comments = "italic",
+          --   conditionals = "none",
+          --   functions = "none",
+          --   headings = "bold",
+          --   operators = "none",
+          --   strings = "none",
+          --   variables = "none",
+          --   keywords = "none",
+          --   keyword_return = "none",
+          --   keywords_loop = "none",
+          --   keywords_label = "none",
+          --   keywords_exception = "none",
+          -- },
       })
-      -- vim.cmd('colorscheme vague')
+      vim.cmd('colorscheme vague')
     '';
   };
 }

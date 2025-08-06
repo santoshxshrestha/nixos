@@ -84,7 +84,7 @@
         val = [
           {
             type = "button";
-            val = "  Recent Files";
+            val = "➤   Recent Files";
             on_press = {
               __raw =
                 "function() require('telescope.builtin').oldfiles({results = 10}) end";
@@ -102,7 +102,7 @@
           }
           {
             type = "button";
-            val = "  File Explorer";
+            val = "➤   File Explorer";
             on_press = { __raw = "function() vim.cmd('Explore') end"; };
             opts = {
               keymap = [ "n" "e" ":Explore<CR>" { } ];
@@ -117,7 +117,7 @@
           }
           {
             type = "button";
-            val = "  New File";
+            val = "➤  New File";
             on_press = { __raw = "function() vim.cmd('enew') end"; };
             opts = {
               keymap = [ "n" "n" ":enew<CR>" { } ];
@@ -132,7 +132,7 @@
           }
           {
             type = "button";
-            val = "  Quit";
+            val = "➤  Quit";
             on_press = { __raw = "function() vim.cmd('qa') end"; };
             opts = {
               keymap = [ "n" "q" ":qa<CR>" { } ];

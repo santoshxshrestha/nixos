@@ -11,6 +11,7 @@
       #   };
       #   root_markers = [ ".git" ];
       # };
+      marksman = { enable = true; };
       rust_analyzer = {
         enable = true;
         installCargo = true;

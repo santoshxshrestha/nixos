@@ -9,7 +9,8 @@
     sources.formatting = {
       prettier = {
         enable = true;
-        settings.filetypes = [ "html" "json" "yaml" "markdown" "javascript" ];
+        settings.filetypes =
+          [ "html" "json" "yaml" "markdown" "javascript" "markdown" ];
       };
 
       stylua.enable = true;

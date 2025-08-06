@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }: {
   programs.nixvim = {
     colorschemes = {
       catppuccin = {
@@ -24,12 +24,12 @@
     extraPlugins = [
       (pkgs.vimUtils.buildVimPlugin {
         pname = "vague-nvim";
-        version = "2024-01-01";
+        version = "1.4.1";
         src = pkgs.fetchFromGitHub {
           owner = "vague2k";
           repo = "vague.nvim";
-          rev = "main";
-          sha256 = "sha256-rJe0pJu6/JKCCdhKTwPFdHlZ2CUaIJc++nlsEdYXQOY=";
+          rev = "v1.4.1";
+          sha256 = "sha256-isROQFePz8ofJg0qa3Avbwh4Ml4p9Ii2d+VAAkbeGO8=";
         };
       })
     ];

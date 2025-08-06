@@ -1,5 +1,8 @@
 {
   programs.nixvim.plugins = {
+    # Mmarkdown-preview in browser
+    markdown-preview = { enable = true; };
+    # icons
     web-devicons = { enable = true; };
     # Markdown renderer
     render-markdown = { enable = true; };

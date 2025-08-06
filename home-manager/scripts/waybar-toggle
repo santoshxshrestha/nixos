@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if pgrep -x "waybar" >/dev/null; then
+    pkill -x waybar
+    notify-send "Turning Waybar off"
+else
+    waybar &
+    notify-send "Turning Waybar on"
+fi

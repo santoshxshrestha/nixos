@@ -7,7 +7,7 @@
           hover.enable = true;
           message.enable = true;
           signature.enable = true;
-          progress.enable = true;
+          progress.enable = false;
         };
       };
     };

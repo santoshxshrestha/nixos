@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
-if pgrep -x "waybar" >/dev/null; then
-    pkill -x waybar
+PROCESS_NAME=".waybar-wrapped"
+
+if pgrep -x "$PROCESS_NAME" >/dev/null; then
+    pkill -x $PROCESS_NAME
     notify-send "Turning Waybar off"
 else
     waybar &

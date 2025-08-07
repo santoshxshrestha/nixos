@@ -43,6 +43,8 @@
           };
         };
       };
+      # htmx
+      htmx = { enable = true; };
       # nix
       nil_ls = {
         enable = true;

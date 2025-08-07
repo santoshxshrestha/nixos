@@ -2,7 +2,7 @@
   # for docs and other feat related to lsp
   programs.nixvim.plugins.lspsaga = {
     enable = true;
-    ui = { border = "rounded"; };
+    # ui = { border = "rounded"; };
     lightbulb = { enable = false; };
     # hover = {
     #   maxWidth = 0.5;
@@ -18,7 +18,6 @@
       };
       update_in_insert = true;
       severity_sort = true;
-      # virtual_lines = { current_line = true; };
       signs = true;
     };
   };

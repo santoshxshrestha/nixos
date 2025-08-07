@@ -1,24 +1,9 @@
 #!/usr/bin/env bash
 
 PROCESS_NAME=".waybar-wrapped"
-IS_FULLSCREEN=$(hyprctl activewindow | grep "fullscreen:" | tr -d ' \t' | sed 's/fullscreen:\(.*\)/\1/')
-
-if [ "$IS_FULLSCREEN" == 0 ]; then
-    IS_FULLSCREEN=true
-else
-    IS_FULLSCREEN=false
-fi
 
 if pgrep -x "$PROCESS_NAME" >/dev/null; then
     pkill -x $PROCESS_NAME
-    if $IS_FULLSCREEN >/dev/null; then
-        hyprctl dispatch fullscreen
-    fi
 else
     waybar &
-
-    if ! $IS_FULLSCREEN >/dev/null; then
-        hyprctl dispatch fullscreen
-    fi
-
 fi

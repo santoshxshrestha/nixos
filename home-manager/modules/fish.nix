@@ -37,7 +37,8 @@
       "gs" = "git status";
       "gd" = "git diff";
       "ga" = "git add .";
-      "C" = "git-commit";
+      "C" = "git-push";
+      "c" = "git-commit";
       "P" = "git push origin $(git branch --show-current)";
     };
   };

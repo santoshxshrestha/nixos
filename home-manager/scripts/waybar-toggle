@@ -1,21 +1,24 @@
 #!/usr/bin/env bash
 
 PROCESS_NAME=".waybar-wrapped"
-IS_FLOATING=$(hyprctl activewindow | grep "floating" | tr -d ' \t' | sed 's/floating:\(.*\)/\1/')
+IS_FULLSCREEN=$(hyprctl activewindow | grep "fullscreen:" | tr -d ' \t' | sed 's/fullscreen:\(.*\)/\1/')
 
-if [ "$IS_FLOATING" == 0 ]; then
-    IS_FLOATING=false
+if [ "$IS_FULLSCREEN" == 0 ]; then
+    IS_FULLSCREEN=true
 else
-    IS_FLOATING=true
+    IS_FULLSCREEN=false
 fi
 
 if pgrep -x "$PROCESS_NAME" >/dev/null; then
     pkill -x $PROCESS_NAME
-    if $IS_FLOATING >/dev/null; then
-        hyprctl dispatch togglefloating
+    if $IS_FULLSCREEN >/dev/null; then
+        hyprctl dispatch fullscreen
     fi
-    notify-send "Turning Waybar off"
 else
     waybar &
-    notify-send "Turning Waybar on"
+
+    if ! $IS_FULLSCREEN >/dev/null; then
+        hyprctl dispatch fullscreen
+    fi
+
 fi

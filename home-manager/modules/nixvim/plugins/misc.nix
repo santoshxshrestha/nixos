@@ -1,5 +1,7 @@
 {
   programs.nixvim.plugins = {
+    # neotest for running tests
+    neotest.enable = true;
     # enable copilot for autom completion
     copilot-lua = { enable = true; };
     # enable noice of cmd line and messages
@@ -49,7 +51,7 @@
     };
 
     # Sets up nvim lsp for the rust_analyzer automatically
-    # rustaceanvim = { enable = true; };
+    rustaceanvim = { enable = true; };
 
     # High-performance color highlighter
     colorizer = { enable = true; };

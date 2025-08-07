@@ -9,6 +9,20 @@
     #   maxHeight = 0.3;
     # };
   };
+
+  programs.nixvim.diagnostic = {
+    settings = {
+      virtual_text = {
+        spacing = 2;
+        prefix = "";
+      };
+      update_in_insert = true;
+      severity_sort = true;
+      # virtual_lines = { current_line = true; };
+      signs = true;
+    };
+  };
+
   programs.nixvim.plugins.lsp = {
     enable = true;
     servers = {
@@ -22,27 +36,6 @@
       #   root_markers = [ ".git" ];
       # };
       marksman = { enable = true; };
-      rust_analyzer = {
-        enable = true;
-        installCargo = true;
-        installRustc = true;
-
-        # Rust-analyzer settings
-        settings = {
-          "rust-analyzer" = {
-            cargo = {
-              allFeatures = true;
-              loadOutDirsFromCheck = true;
-              buildScripts = { enable = true; };
-            };
-            checkOnSave = {
-              command = "clippy"; # or "check"
-              extraArgs = [ "--target-dir" "target/rust-analyzer" ];
-            };
-            procMacro = { enable = false; };
-          };
-        };
-      };
       # htmx
       htmx = { enable = true; };
       # nix

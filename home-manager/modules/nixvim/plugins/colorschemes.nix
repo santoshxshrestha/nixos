@@ -73,7 +73,7 @@
           --   keywords_exception = "none",
           -- },
       })
-      vim.cmd('colorscheme vague')
+      -- vim.cmd('colorscheme vague')
     '';
   };
 }

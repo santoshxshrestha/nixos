@@ -4,10 +4,10 @@
     enable = true;
     ui = { border = "rounded"; };
     lightbulb = { enable = false; };
-    hover = {
-      maxWidth = 0.5;
-      maxHeight = 0.3;
-    };
+    # hover = {
+    #   maxWidth = 0.5;
+    #   maxHeight = 0.3;
+    # };
   };
   programs.nixvim.plugins.lsp = {
     enable = true;

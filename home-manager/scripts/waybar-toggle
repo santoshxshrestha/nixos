@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
 
 PROCESS_NAME=".waybar-wrapped"
-if_floating=$(hyprctl activewindow | grep "floating: 1")
+IS_FLOATING=$(hyprctl activewindow | grep "floating" | tr -d ' \t' | sed 's/floating:\(.*\)/\1/')
+
+if [ "$IS_FLOATING" == 0 ]; then
+    IS_FLOATING=false
+else
+    IS_FLOATING=true
+fi
 
 if pgrep -x "$PROCESS_NAME" >/dev/null; then
     pkill -x $PROCESS_NAME
-    if $if_floating >/dev/null; then
+    if $IS_FLOATING >/dev/null; then
         hyprctl dispatch togglefloating
     fi
     notify-send "Turning Waybar off"

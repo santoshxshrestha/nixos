@@ -10,17 +10,17 @@
     # };
   };
 
-  programs.nixvim.diagnostic = {
-    settings = {
-      virtual_text = {
-        spacing = 2;
-        prefix = "";
-      };
-      update_in_insert = true;
-      severity_sort = true;
-      signs = true;
-    };
-  };
+  # programs.nixvim.diagnostic = {
+  #   settings = {
+  #     virtual_text = {
+  #       spacing = 2;
+  #       prefix = "";
+  #     };
+  #     update_in_insert = true;
+  #     severity_sort = true;
+  #     signs = true;
+  #   };
+  # };
 
   programs.nixvim.plugins.lsp = {
     enable = true;

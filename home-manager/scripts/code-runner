@@ -48,6 +48,10 @@ php)
     echo "Running php project: $file with 'php'..."
     php "$file"
     ;;
+go)
+    echo "Running go project: $file with 'go'..."
+    go run "."
+    ;;
 *)
     echo "Damn it! got the wrong file in the buffer: .$file (extension: .$extension)"
     ;;

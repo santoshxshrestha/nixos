@@ -1,7 +1,7 @@
 {
   programs.nixvim.plugins = {
     # neotest for running tests
-    neotest.enable = true;
+    neotest.enable = false;
     # enable copilot for autom completion
     copilot-lua = { enable = true; };
     # enable noice of cmd line and messages

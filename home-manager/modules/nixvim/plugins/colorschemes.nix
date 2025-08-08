@@ -5,7 +5,7 @@
         enable = true;
         settings = {
           show_end_of_buffer = false;
-          transparent_background = true;
+          transparent_background = false;
           flavor = "mocha";
         };
       };

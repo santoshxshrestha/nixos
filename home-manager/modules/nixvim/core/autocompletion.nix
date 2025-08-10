@@ -5,9 +5,11 @@
   programs.nixvim.plugins.cmp-async-path = { enable = true; };
   programs.nixvim.plugins.lspkind = {
     enable = true;
-    mode = "symbol_text";
     cmp.enable = true;
-    cmp.maxWidth = 10;
+    settings = {
+      cmp = { max_width = 10; };
+      mode = "symbol_text";
+    };
   };
   programs.nixvim.plugins = {
     cmp = {

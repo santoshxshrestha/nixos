@@ -25,6 +25,7 @@
       options = {
         silent = true;
         noremap = true;
+        desc = "> without loosing indent mode";
       };
     }
     {
@@ -34,6 +35,7 @@
       options = {
         silent = true;
         noremap = true;
+        desc = "< without loosing indent mode";
       };
     }
 
@@ -45,6 +47,7 @@
       options = {
         silent = true;
         noremap = true;
+        desc = "Toggle line wrapping";
       };
     }
     # find and center 
@@ -55,6 +58,7 @@
       options = {
         silent = true;
         noremap = true;
+        desc = "Find n with cursor in center";
       };
     }
     {
@@ -64,44 +68,49 @@
       options = {
         silent = true;
         noremap = true;
+        desc = "Find N with cursor in center";
       };
 
     }
     # resize with arrow
     {
-      action = "<cmd>resize -2<CR>";
+      action = "<cmd>resize +2<CR>";
       key = "<Up>";
       mode = [ "n" ];
       options = {
         silent = true;
         noremap = true;
+        desc = "Horizontal resize +2";
       };
     }
     {
-      action = "<cmd>resize +2<CR>";
+      action = "<cmd>resize -2<CR>";
       key = "<Down>";
       mode = [ "n" ];
       options = {
         silent = true;
         noremap = true;
+        desc = "Horizontal resize -2";
       };
     }
     {
-      action = "<cmd>Vertical resize -2<CR>";
+      action = "<cmd>vertical resize -2<CR>";
       key = "<Left>";
       mode = [ "n" ];
       options = {
         silent = true;
         noremap = true;
+        desc = "Vertical resize -2";
       };
     }
     {
-      action = "<cmd>Vertical resize +2<CR>";
+      action = "<cmd>vertical resize +2<CR>";
       key = "<Right>";
       mode = [ "n" ];
       options = {
         silent = true;
         noremap = true;
+        desc = "Vertical resize +2";
       };
     }
     # Vertical scroll and center cursor
@@ -109,13 +118,19 @@
       action = "<C-u>zz";
       key = "<C-u>";
       mode = [ "n" ];
-      options = { silent = true; };
+      options = {
+        silent = true;
+        desc = "<C-u> with with cursor in center";
+      };
     }
     {
       action = "<C-d>zz";
       key = "<C-d>";
       mode = [ "n" ];
-      options = { silent = true; };
+      options = {
+        silent = true;
+        desc = "<C-d> with with cursor in center";
+      };
     }
     # save file without auto-formatting
     {
@@ -136,6 +151,7 @@
       options = {
         noremap = true;
         silent = true;
+        desc = "Delete single character with out copying into register";
       };
     }
     # keymaps for fugutive

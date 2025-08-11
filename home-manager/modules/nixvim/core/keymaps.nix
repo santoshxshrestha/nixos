@@ -436,50 +436,59 @@
     {
       mode = "n";
       key = "<leader>H";
-      action.__raw = "function() require'harpoon':list():add() end";
+      action.__raw =
+        "function() require'harpoon'.ui:toggle_quick_menu(require'harpoon':list()) end";
+      options = { desc = "Toogle harpoon ui"; };
     }
     {
       mode = "n";
       key = "<leader>h";
-      action.__raw =
-        "function() require'harpoon'.ui:toggle_quick_menu(require'harpoon':list()) end";
+      action.__raw = "function() require'harpoon':list():add() end";
+      options = { desc = "Add current buffer in harpoons list"; };
     }
 
     {
       mode = "n";
       key = "<leader>1";
       action.__raw = "function() require'harpoon':list():select(1) end";
+      options = { desc = "Select 1 ih list of harpoon"; };
     }
     {
       mode = "n";
       key = "<leader>2";
       action.__raw = "function() require'harpoon':list():select(2) end";
+      options = { desc = "Select 2 in list of harpoon"; };
     }
     {
       mode = "n";
       key = "<leader>3";
       action.__raw = "function() require'harpoon':list():select(3) end";
+      options = { desc = "Select 3 in list of harpoon"; };
     }
     {
       mode = "n";
       key = "<leader>4";
       action.__raw = "function() require'harpoon':list():select(4) end";
+      options = { desc = "Select 4 in list of harpoon"; };
     }
     {
       mode = "n";
       key = "<leader>5";
       action.__raw = "function() require'harpoon':list():select(5) end";
+      options = { desc = "Select 5 in list of harpoon"; };
     }
 
     {
       mode = "n";
       key = "<leader>j";
       action.__raw = "function() require('harpoon'):list():next() end";
+      options = { desc = "Next harpoon buffer"; };
     }
     {
       mode = "n";
       key = "<leader>k";
       action.__raw = "function() require('harpoon'):list():previous() end";
+      options = { desc = "Previous harpoon buffer"; };
     }
   ];
 

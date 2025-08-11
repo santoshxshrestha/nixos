@@ -39,7 +39,7 @@
     #rhubarb = { enable = true; };
 
     # Hints keybinds
-    which-key = { enable = false; };
+    which-key = { enable = true; };
 
     # Autoclose parentheses, brackets, quotes, etc.
     nvim-autopairs = { enable = true; };

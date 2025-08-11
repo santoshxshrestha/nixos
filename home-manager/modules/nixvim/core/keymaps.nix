@@ -490,18 +490,22 @@
       {
         key = "gd";
         lspBufAction = "definition";
+        options = { desc = "Go to defination"; };
       }
       {
         key = "gD";
         lspBufAction = "references";
+        options = { desc = "References"; };
       }
       {
         key = "gt";
         lspBufAction = "type_definition";
+        options = { desc = "Type defination"; };
       }
       {
         key = "gi";
         lspBufAction = "implementation";
+        options = { desc = "Got to implementation"; };
       }
       # {
       #   key = "K";
@@ -510,22 +514,27 @@
       {
         action = "<CMD>Lspsaga hover_doc<Enter>";
         key = "K";
+        options = { desc = "Hover docs"; };
       }
       {
         action = "<CMD>Lspsaga rename<Enter>";
         key = "<leader>rn";
+        options = { desc = "Rename the variable"; };
       }
       {
         action = "<CMD>Lspsaga code_action<Enter>";
         key = "<leader>ca";
+        options = { desc = "Code action"; };
       }
       {
         action = "<CMD>Lspsaga diagnostic_jump_next<Enter>";
         key = "]d";
+        options = { desc = "Jump to next diagnostic "; };
       }
       {
         action = "<CMD>Lspsaga diagnostic_jump_prev<Enter>";
         key = "[d";
+        options = { desc = "Jump to previous diagnostic "; };
       }
     ];
 }

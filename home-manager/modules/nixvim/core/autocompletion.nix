@@ -1,8 +1,15 @@
 {
+  programs.nixvim.plugins.cmp-latex-symbols = { enable = true; };
+  programs.nixvim.plugins.cmp-fish = { enable = true; };
+  programs.nixvim.plugins.cmp-git = { enable = true; };
   programs.nixvim.plugins.cmp-spell = { enable = true; };
+  programs.nixvim.plugins.cmp-emoji = { enable = true; };
+  programs.nixvim.plugins.cmp-calc = { enable = true; };
   programs.nixvim.plugins.cmp-cmdline = { enable = true; };
-  programs.nixvim.plugins.cmp-nvim-lsp-signature-help = { enable = true; };
   programs.nixvim.plugins.cmp-async-path = { enable = true; };
+  programs.nixvim.plugins.cmp-nvim-lsp-document-symbol = { enable = true; };
+  programs.nixvim.plugins.cmp-nvim-lsp-signature-help = { enable = true; };
+
   programs.nixvim.plugins.lspkind = {
     enable = true;
     cmp.enable = true;
@@ -17,6 +24,7 @@
       autoEnableSources = true;
       settings = {
         sources = [
+          { name = "calc"; }
           { name = "nvim_lsp"; }
           { name = "path"; }
           { name = "buffer"; }
@@ -24,6 +32,12 @@
           { name = "nvim_lsp_signature_help"; }
           { name = "spell"; }
           { name = "async_path"; }
+          { name = "emoji"; }
+          { name = "fish"; }
+          { name = "git"; }
+          { name = "latex_symbols"; }
+          { name = "nvim_lsp_document_symbols"; }
+          { name = "nvim_lsp_signature_help"; }
         ];
         snippet = {
           expand =

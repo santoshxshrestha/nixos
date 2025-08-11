@@ -35,7 +35,7 @@
 
           {
             home-manager = {
-              sharedModules = [ nixvim.homeManagerModules.nixvim ];
+              sharedModules = [ nixvim.homeModules.nixvim ];
               useGlobalPkgs = true;
               useUserPackages = true;
               users.santosh = import ./home-manager/home.nix;

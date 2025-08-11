@@ -83,6 +83,16 @@
           # "<Tab>" = "cmp.mapping(cmp.mapping.select_next_item(), {'i', 's'})";
         };
       };
+      cmdline = {
+        "/" = { sources = [{ name = "buffer"; }]; };
+        ":" = {
+          sources = [
+            { name = "async_path"; }
+            { name = "path"; }
+            { name = "cmdline"; }
+          ];
+        };
+      };
     };
 
     cmp-nvim-lsp.enable = true;

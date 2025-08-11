@@ -489,7 +489,7 @@
     {
       mode = "n";
       key = "<leader>k";
-      action.__raw = "function() require('harpoon'):list():previous() end";
+      action.__raw = "function() require('harpoon'):list():prev() end";
       options = { desc = "Previous harpoon buffer"; };
     }
   ];

@@ -6,6 +6,16 @@
   };
 
   programs.nixvim.keymaps = [
+    {
+      key = "<leader>t";
+      action = "<cmd>Terminal<CR>";
+      mode = [ "n" ];
+      options = {
+        silent = true;
+        noremap = true;
+        desc = "Opern floating terminal";
+      };
+    }
     # keep last yanked when pasting over some thing
     # nix is messing with it because of the parenthesis 
     # {

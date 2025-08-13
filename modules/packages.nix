@@ -16,6 +16,7 @@
     unzip
     bat
     fd
+    tree
   ];
   users.users.santosh.packages = with pkgs;
     [

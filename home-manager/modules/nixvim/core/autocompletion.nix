@@ -26,7 +26,6 @@
         sources = [
           { name = "calc"; }
           { name = "nvim_lsp"; }
-          { name = "path"; }
           { name = "buffer"; }
           { name = "luasnip"; }
           { name = "nvim_lsp_signature_help"; }
@@ -90,17 +89,12 @@
         };
         ":" = {
           mapping = { __raw = "cmp.mapping.preset.cmdline()"; };
-          sources = [
-            { name = "async_path"; }
-            { name = "path"; }
-            { name = "cmdline"; }
-          ];
+          sources = [ { name = "async_path"; } { name = "cmdline"; } ];
         };
       };
     };
 
     cmp-nvim-lsp.enable = true;
-    cmp-path.enable = false;
     cmp-buffer.enable = true;
     cmp_luasnip.enable = true;
     luasnip.enable = true;

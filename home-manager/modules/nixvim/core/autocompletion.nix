@@ -100,7 +100,7 @@
     };
 
     cmp-nvim-lsp.enable = true;
-    cmp-path.enable = true;
+    cmp-path.enable = false;
     cmp-buffer.enable = true;
     cmp_luasnip.enable = true;
     luasnip.enable = true;

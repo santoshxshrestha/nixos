@@ -5,10 +5,12 @@
   imports = [
     # ./hyprland.nix
     ./modules/fish/fish.nix
-    ../pkgs/user/default.nix
     ./modules/gtk/gtk.nix
     ./modules/fastfetch/fastfetch.nix
     ./modules/nixvim/nixvim.nix
+
+    # packages home
+    ../pkgs/user/default.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

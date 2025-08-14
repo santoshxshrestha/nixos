@@ -5,7 +5,7 @@
   imports = [
     # ./hyprland.nix
     ./modules/fish/fish.nix
-    ./modules/pkgs/packages.nix
+    ../pkgs/user/default.nix
     ./modules/gtk/gtk.nix
     ./modules/fastfetch/fastfetch.nix
     ./modules/nixvim/nixvim.nix

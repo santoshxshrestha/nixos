@@ -7,8 +7,8 @@
 {
   imports = [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ./modules/packages.nix
-    ./modules/sddm.nix
+    ./modules/sddm/sddm.nix
+    ./modules/pkgs/packages.nix
 
   ];
 

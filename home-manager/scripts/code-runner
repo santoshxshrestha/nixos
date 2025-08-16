@@ -10,6 +10,18 @@ file=$(
     # -printf "%T@ %p\n" | sort -n | tail -1 | cut -d' ' -f2-
 )
 
+# this is also a good idea to sue the prune but here the case is if we are not in the dir where
+# we should run the command like that is checked in teh above eval then it will be faulty
+# file=$(
+#     find . \
+#         -type d \( -name "target" -o -name ".git" \) -prune -o \
+#         -type f \
+#         -not -name '*.json' \
+#         -not -name '*.lock' \
+#         -not -name '*.out' \
+#         -printf "%T@ %p\n" | sort -n | tail -1 | awk '{ $1=""; sub(/^ /, ""); print }'
+# )
+
 extension="${file##*.}"
 
 if [ "$file" = "./Cargo.toml" ]; then

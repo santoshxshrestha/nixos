@@ -67,10 +67,6 @@
               highlights.IndentBlanklineContextChar = { fg = colors.plus, nocombine = true }
               highlights.IndentBlanklineSpaceChar = { fg = "#444444", nocombine = true }
 
-              -- Lualine transparency
-              highlights.lualine_c_normal = { bg = "NONE", fg = colors.fg }
-              highlights.lualine_x_normal = { bg = "NONE", fg = colors.fg }
-
           end,
 
           -- style = {

@@ -2,7 +2,7 @@
   programs.nixvim = {
     colorschemes = {
       catppuccin = {
-        enable = true;
+        enable = false;
         settings = {
           show_end_of_buffer = false;
           transparent_background = true;
@@ -18,12 +18,17 @@
       };
 
       rose-pine = {
-        enable = false;
+        enable = true;
         settings = {
           show_end_of_buffer = false;
           flavor = "main";
           disable_background = true;
           disable_float_background = true;
+          styles = {
+            bold = false;
+            italic = true;
+            transparency = true;
+          };
         };
       };
     };

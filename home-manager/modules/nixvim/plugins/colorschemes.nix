@@ -5,8 +5,15 @@
         enable = true;
         settings = {
           show_end_of_buffer = false;
-          transparent_background = false;
+          transparent_background = true;
           flavor = "mocha";
+          float = {
+            transparent = true;
+            solid = false;
+          };
+          no_italic = false;
+          no_bold = true;
+          no_underline = false;
         };
       };
 

@@ -49,6 +49,8 @@
     extraConfigLua = ''
       require('vague').setup({
           transparent = true,
+          bold = false,
+          italic = true,
           on_highlights = function(highlights, colors)
               -- Treesitter Context
               highlights.TreesitterContext = { bg = "NONE", fg = colors.fg }
@@ -64,6 +66,11 @@
               highlights.IndentBlanklineChar = { fg = "#3b3b3b", nocombine = true }
               highlights.IndentBlanklineContextChar = { fg = colors.plus, nocombine = true }
               highlights.IndentBlanklineSpaceChar = { fg = "#444444", nocombine = true }
+
+              -- Lualine transparency
+              highlights.lualine_c_normal = { bg = "NONE", fg = colors.fg }
+              highlights.lualine_x_normal = { bg = "NONE", fg = colors.fg }
+
           end,
 
           -- style = {
@@ -85,7 +92,7 @@
           --   keywords_exception = "none",
           -- },
       })
-      -- vim.cmd('colorscheme vague')
+       vim.cmd('colorscheme vague')
     '';
   };
 }

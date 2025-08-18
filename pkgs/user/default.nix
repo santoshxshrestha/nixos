@@ -7,7 +7,7 @@ let
 in {
   home.packages = with pkgs;
 
-    waylandPkgs ++ fontsPkgs ++ utilsPkgs ++ gamingPkgs;
+    waylandPkgs ++ fontsPkgs ++ utilsPkgs;
   # # Adds the 'hello' command to your environment. It prints a friendly
   # # "Hello, world!" when run.
   # pkgs.hello

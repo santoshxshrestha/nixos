@@ -9,7 +9,6 @@
     ./modules/fastfetch.nix
     ./modules/nixvim/nixvim.nix
     ./modules/starship.nix
-    ./modules/starship.nix
 
     # packages home
     ./modules/pkgs/default.nix

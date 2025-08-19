@@ -7,9 +7,9 @@
 {
   imports = [ # Include the results of the hardware scan.
     ./hardware-configuration.nix
-    ./modules/sddm/sddm.nix
+    ./modules/sddm.nix
+    ./modules/stylix.nix
     ./modules/packages.nix
-    ./modules/stylix/default.nix
   ];
 
   # Bootloader.

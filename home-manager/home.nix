@@ -8,6 +8,7 @@
     ./modules/gtk/gtk.nix
     ./modules/fastfetch/fastfetch.nix
     ./modules/nixvim/nixvim.nix
+    ./modules/starship/default.nix
 
     # packages home
     ./modules/pkgs/default.nix
@@ -88,7 +89,7 @@
     userEmail = "santoshxshrestha@gmail.com";
   };
 
-  programs.starship.enable = true;
+  # programs.starship.enable = true;
 
   # programs.zsh = {
   # 	enable = true;

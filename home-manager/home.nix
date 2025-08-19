@@ -10,7 +10,7 @@
     ./modules/nixvim/nixvim.nix
 
     # packages home
-    ../pkgs/user/default.nix
+    ./modules/pkgs/default.nix
 
     # wallpapers
     # ./modules/wallpaper-archive.nix

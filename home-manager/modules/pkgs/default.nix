@@ -1,9 +1,8 @@
 { config, pkgs, ... }:
 let
-  waylandPkgs = import ../user/wayland.nix { inherit pkgs; };
-  fontsPkgs = import ../user/fonts.nix { inherit pkgs; };
-  utilsPkgs = import ../user/utils.nix { inherit pkgs; };
-  gamingPkgs = import ../user/gaming.nix { inherit pkgs; };
+  waylandPkgs = import ./wayland.nix { inherit pkgs; };
+  fontsPkgs = import ./fonts.nix { inherit pkgs; };
+  utilsPkgs = import ./utils.nix { inherit pkgs; };
 in {
   home.packages = with pkgs;
 

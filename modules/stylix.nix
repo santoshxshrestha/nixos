@@ -23,15 +23,14 @@
         package = pkgs.noto-fonts-monochrome-emoji;
       };
       sizes = {
-        applications = 8;
-
-        terminal = 15;
+        applications = 10;
+        terminal = 10;
         desktop = 10;
         popups = 10;
       };
     };
 
-    image = ../home-manager/assets/nixos.png;
+    image = ../wallpapers/nix-dark.png;
     polarity = "dark";
   };
 }

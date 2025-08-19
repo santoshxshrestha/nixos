@@ -6,8 +6,8 @@
       enable = true;
       settings = {
         panel = {
-          enabled = true;
-          auto_refresh = true;
+          enabled = false;
+          auto_refresh = false;
         };
         suggestion = {
           enable = true;
@@ -30,11 +30,11 @@
           hgcommit = false;
           markdown = false;
           svn = false;
-          yaml = true;
-          rs = true;
-          js = true;
-          html = true;
-          nix = true;
+          yaml = false;
+          rs = false;
+          js = false;
+          html = false;
+          nix = false;
         };
       };
     };

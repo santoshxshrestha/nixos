@@ -1,9 +1,9 @@
 { pkgs, ... }: {
   stylix = {
-    enable = true;
-    image = ../wallpapers/anime-night-sky-illustration.jpg;
+    enable = false;
+    image = ../wallpapers/Your_Name_Night_Sky.jpg;
 
-    polarity = "dark";
+    polarity = "light";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
     # base16Scheme = {

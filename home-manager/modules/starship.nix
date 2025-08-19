@@ -162,14 +162,14 @@
       # Additional useful modules
       status = {
         disabled = false;
-        format = "[[$symbol$status]]($style) ";
+        format = "[$symbol$number]($style) ";
         symbol = "✖";
         style = "bold red";
       };
 
       jobs = {
         disabled = false;
-        format = "[[$symbol$number]]($style) ";
+        format = "[$symbol$number]($style) ";
         symbol = "⚙";
         style = "bold blue";
       };

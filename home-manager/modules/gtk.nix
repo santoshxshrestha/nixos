@@ -1,12 +1,7 @@
-{ pkgs, lib, config, ... }: {
+{ pkgs, lib, ... }: {
   gtk = {
     enable = true;
-    # theme = {
-    #   name = "Adwaita-dark";
-    # };
-    # iconTheme = {
-    #   name = "Papirus";
-    # };
+    iconTheme = { name = "Papirus"; };
     # font = {
     #   name = "JetBrainsMono Nerd Font";
     #   size = 8;

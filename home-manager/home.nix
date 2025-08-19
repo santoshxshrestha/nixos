@@ -49,7 +49,7 @@
     ".config/hypr/hyprlock.conf".source = ./config/hyprlock/hyprlock.conf;
     ".config/hypr/hyprsunset.conf".source = ./config/hyprsunset/hyprsunset.conf;
     ".config/rofi".source = ./config/rofi;
-    ".config/starship.toml".source = ./config/starship/starship.toml;
+    # ".config/starship.toml".source = ./config/starship/starship.toml;
     ".local/scripts".source = ./scripts;
     ".config/waybar".source = ./config/waybar;
 

@@ -21,6 +21,7 @@
     ./plugins/telescope.nix
     ./plugins/colorschemes.nix
     ./plugins/alpha.nix
+    ./plugins/ai.nix
   ];
   programs.nixvim = {
     enable = true;

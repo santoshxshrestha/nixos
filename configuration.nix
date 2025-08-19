@@ -9,7 +9,7 @@
     ./hardware-configuration.nix
     ./modules/sddm/sddm.nix
     ./modules/packages.nix
-
+    ./modules/stylix/default.nix
   ];
 
   # Bootloader.
@@ -106,11 +106,6 @@
   programs.nix-ld.enable = true;
 
   programs.nix-ld.libraries = with pkgs; [ clang-tools ];
-
-  # enabling the stylix
-  stylix.enable = true;
-  stylix.image = ./home-manager/assets/nixos.png;
-  stylix.polarity = "dark";
 
   #i18n.inputMethod.enable = "fcitx5";
   #i18n.inputMethod.fcitx5.addons= with pkgs;

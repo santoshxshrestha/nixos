@@ -19,6 +19,7 @@
         "$python"
         "$nodejs"
         "$rust"
+        "$lua"
         "$golang"
         "$java"
         "$cmd_duration"

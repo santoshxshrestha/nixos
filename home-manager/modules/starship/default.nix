@@ -120,7 +120,7 @@
 
       # Language-specific modules
       python = {
-        symbol = " ";
+        symbol = " ";
         format = "via [$symbol$pyenv_prefix($version)(($virtualenv))]($style) ";
         style = "bold blue";
         pyenv_version_name = true;
@@ -128,26 +128,32 @@
       };
 
       nodejs = {
-        symbol = " ";
+        symbol = " ";
         format = "via [$symbol($version)]($style) ";
         style = "bold green";
         detect_files = [ "package.json" ".nvmrc" ];
       };
 
       rust = {
-        symbol = " ";
+        symbol = " ";
         format = "via [$symbol($version)]($style) ";
         style = "bold red";
       };
 
+      lua = {
+        symbol = " ";
+        format = "via [$symbol($version)]($style) ";
+        style = "bold blue";
+      };
+
       golang = {
-        symbol = " ";
+        symbol = "󰟓 ";
         format = "via [$symbol($version)]($style) ";
         style = "bold cyan";
       };
 
       java = {
-        symbol = " ";
+        symbol = "";
         format = "via [$symbol($version)]($style) ";
         style = "bold yellow";
       };

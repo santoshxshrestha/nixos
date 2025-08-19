@@ -31,7 +31,7 @@
       };
     };
 
-    image = ../../home-manager/assets/nixos.png;
+    image = ../home-manager/assets/nixos.png;
     polarity = "dark";
   };
 }

@@ -4,11 +4,12 @@
 
   imports = [
     # ./hyprland.nix
-    ./modules/fish/fish.nix
-    ./modules/gtk/gtk.nix
-    ./modules/fastfetch/fastfetch.nix
+    ./modules/fish.nix
+    ./modules/gtk.nix
+    ./modules/fastfetch.nix
     ./modules/nixvim/nixvim.nix
-    ./modules/starship/default.nix
+    ./modules/starship.nix
+    ./modules/starship.nix
 
     # packages home
     ./modules/pkgs/default.nix

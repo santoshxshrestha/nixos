@@ -7,7 +7,9 @@
 }
 
 window#waybar {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.6);
+    /* more transparent */
+    /* background: rgba(0, 0, 0, 0.3); */
     color: #b8b5c7;
     transition-property: background-color;
     transition-duration: .5s;
@@ -84,7 +86,8 @@ window#waybar.hidden {
     margin: 2px;
     padding: 0 10px;
     color: #b8b5c7;
-    font-size: 13px; /* Slightly larger for better icon visibility */
+    font-size: 13px;
+    /* Slightly larger for better icon visibility */
     transition: all 0.3s ease;
 }
 
@@ -117,7 +120,8 @@ window#waybar.hidden {
     margin: 2px;
     padding: 0 10px;
     color: #b8b5c7;
-    font-size: 13px; /* Slightly larger for better icon visibility */
+    font-size: 13px;
+    /* Slightly larger for better icon visibility */
     transition: all 0.3s ease;
 }
 
@@ -155,7 +159,8 @@ window#waybar.hidden {
     margin: 2px;
     padding: 0 10px;
     color: #b8b5c7;
-    font-size: 13px; /* Slightly larger for better icon visibility */
+    font-size: 13px;
+    /* Slightly larger for better icon visibility */
     transition: all 0.3s ease;
 }
 
@@ -183,7 +188,7 @@ window#waybar.hidden {
     animation: pulse 0.3s ease-in-out;
 }
 
-#pulseaudio.microphone.source-muted{
+#pulseaudio.microphone.source-muted {
     background: rgba(255, 0, 0, 0.2);
     color: #ff6666;
 }
@@ -195,7 +200,7 @@ window#waybar.hidden {
     margin: 2px;
     padding: 0 10px;
     color: #b8b5c7;
-    font-size: 13px; 
+    font-size: 13px;
     transition: all 0.3s ease;
 }
 
@@ -207,11 +212,11 @@ window#waybar.hidden {
     padding: 0 8px;
 }
 
-#tray > .passive {
+#tray>.passive {
     -gtk-icon-effect: dim;
 }
 
-#tray > .needs-attention {
+#tray>.needs-attention {
     -gtk-icon-effect: highlight;
     background: rgba(255, 215, 0, 0.2);
 }

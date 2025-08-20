@@ -8,6 +8,11 @@
   programs.nixvim.keymaps = [
     # key maps for copilot chats
     {
+      key = "<leader>cR";
+      action = "<CMD>CopilotChatReset<CR>";
+      options.desc = "Reset Copilot Chat";
+    }
+    {
       key = "<leader>ct";
       action = "<CMD>CopilotChatToggle<CR>";
       options.desc = "Toggle Copilot Chat Window";
@@ -360,32 +365,33 @@
       mode = [ "n" ];
       options = { desc = "Search files"; };
     }
-    # {
-    #   action.__raw = ''
-    #     function()
-    #     local buildin = require('telescope.buildin')
-    #         builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
-    #            winblend = 0,
-    #            previewer = true,
-    #          })
-    #        end'';
-    #   key = "<leader>/";
-    #   mode = [ "n" ];
-    #   options = { desc = "[/] Fuzzily search in current buffer"; };
-    # }
-    # {
-    #   action.__raw = ''
-    #     function()
-    #     local buildin = require('telescope.buildin')
-    #            builtin.live_grep {
-    #             grep_open_files = true,
-    #             prompt_title = 'Live Grep in Open Files',
-    #           }
-    #         end'';
-    #   key = "<leader>s/";
-    #   mode = [ "n" ];
-    #   options = { desc = "[S]earch [/] in Open Files"; };
-    # }
+    # these two keymaps are for searching in current buffer Open files
+    {
+      action.__raw = ''
+        function()
+            local builtin = require('telescope.builtin')
+            builtin.current_buffer_fuzzy_find(require('telescope.themes').get_dropdown {
+                winblend = 0,
+                previewer = true,
+            })
+        end'';
+      key = "<leader>/";
+      mode = [ "n" ];
+      options = { desc = "[/] Fuzzily search in current buffer"; };
+    }
+    {
+      action.__raw = ''
+        function()
+        local builtin = require('telescope.builtin')
+               builtin.live_grep {
+                grep_open_files = true,
+                prompt_title = 'Live Grep in Open Files',
+              }
+            end'';
+      key = "<leader>s/";
+      mode = [ "n" ];
+      options = { desc = "[S]earch [/] in Open Files"; };
+    }
     {
       action = "<cmd>Telescope help_tags<CR>";
       key = "<leader>sh";

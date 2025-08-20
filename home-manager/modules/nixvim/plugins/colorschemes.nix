@@ -52,14 +52,10 @@
           bold = false,
           italic = true,
           on_highlights = function(highlights, colors)
-              -- Treesitter Context
-              highlights.TreesitterContext = { bg = "NONE", fg = colors.fg }
-              highlights.TreesitterContextLineNumber = { bg = "NONE", fg = colors.fg }
-              highlights.TreesitterContextBottom = { underline = true, sp = colors.plus }
-
               -- GitSigns
-              highlights.GitSignsAdd = { fg = colors.plus, bg = "NONE" }
-              highlights.GitSignsChange = { fg = colors.delta, bg = "NONE" }
+              highlights.GitSignsAdd = { fg = "#ffffff", bg = "NONE" }
+              highlights.GitSignsChange = { fg = "#aaaaaa", bg = "NONE" }
+
               highlights.GitSignsDelete = { fg = colors.error, bg = "NONE" }
 
               -- IndentBlankline

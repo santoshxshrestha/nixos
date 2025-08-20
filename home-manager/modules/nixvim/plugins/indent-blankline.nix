@@ -1,6 +1,6 @@
 {
   programs.nixvim.plugins.indent-blankline = {
-    enable = false;
+    enable = true;
     settings = {
       indent = {
         char = "│";

@@ -55,7 +55,6 @@
               -- GitSigns
               highlights.GitSignsAdd = { fg = "#ffffff", bg = "NONE" }
               highlights.GitSignsChange = { fg = "#aaaaaa", bg = "NONE" }
-
               highlights.GitSignsDelete = { fg = colors.error, bg = "NONE" }
 
               -- IndentBlankline

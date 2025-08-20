@@ -1,7 +1,6 @@
 {
   programs.nixvim.plugins = {
     copilot-chat = { enable = true; };
-    copilot-cmp = { enable = true; };
     copilot-lua = {
       enable = true;
       settings = {
@@ -10,17 +9,18 @@
           auto_refresh = false;
         };
         suggestion = {
-          enable = true;
-          auto_trigger = true;
+          enable = false;
+          auto_trigger = false;
           debounce = 90;
           # If you’re using a completion plugin (like nvim-cmp), Copilot’s ghost text disappears while the completion menu is visible — avoids clashing with your completion popup.
           hide_during_completion = true;
           keymap = {
-            accept = "<Tab>";
-            next = "<C-j>";
-            prev = "<C-k>";
-            accept_line = "<C-]>";
-            assept_word = "<C-[>";
+            accept = false;
+            accept_word = false;
+            accept_line = false;
+            next = false;
+            prev = false;
+            dismiss = false;
           };
         };
         filetypes = {

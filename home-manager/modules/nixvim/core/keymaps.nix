@@ -9,36 +9,43 @@
     # key maps for copilot chats
     {
       key = "<leader>cR";
+      mode = [ "n" ];
       action = "<CMD>CopilotChatReset<CR>";
       options.desc = "Reset Copilot Chat";
     }
     {
       key = "<leader>ct";
+      mode = [ "n" "v" ];
       action = "<CMD>CopilotChatToggle<CR>";
       options.desc = "Toggle Copilot Chat Window";
     }
     {
       key = "<leader>cs";
+      mode = [ "n" "v" ];
       action = "<CMD>CopilotChatStop<CR>";
       options.desc = "Stop current Copilot output";
     }
     {
       key = "<leader>cr";
+      mode = [ "v" ];
       action = "<CMD>CopilotChatReview<CR>";
       options.desc = "Review the selected code";
     }
     {
       key = "<leader>ce";
+      mode = [ "v" ];
       action = "<CMD>CopilotChatExplain<CR>";
       options.desc = "Give an explanation for the selected code";
     }
     {
       key = "<leader>cd";
+      mode = [ "v" ];
       action = "<CMD>CopilotChatDocs<CR>";
       options.desc = "Add documentation for the selection";
     }
     {
       key = "<leader>cp";
+      mode = [ "v" ];
       action = "<CMD>CopilotChatTests<CR>";
       options.desc = "Add tests for my code";
     }
@@ -54,21 +61,20 @@
       };
     }
     # keep last yanked when pasting over some thing
-    # nix is messing with it because of the parenthesis 
-    # {
-    #   action = ''"_dp'';
-    #   key = "p";
-    #   mode = [ "n" ];
-    #   options = {
-    #     silent = true;
-    #     noremap = true;
-    #   };
-    # }
+    {
+      action = ''"_dp'';
+      key = "p";
+      mode = [ "v" ];
+      options = {
+        silent = true;
+        noremap = true;
+      };
+    }
     # stay in indent mode
     {
       action = ">gv";
       key = ">";
-      mode = [ "n" ];
+      mode = [ "v" ];
       options = {
         silent = true;
         noremap = true;
@@ -78,7 +84,7 @@
     {
       action = "<gv";
       key = "<";
-      mode = [ "n" ];
+      mode = [ "v" ];
       options = {
         silent = true;
         noremap = true;

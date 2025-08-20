@@ -13,6 +13,6 @@ with pkgs; [
   tmux
   gimp
   discord
-  pywal16
+  # pywal16
 
 ]

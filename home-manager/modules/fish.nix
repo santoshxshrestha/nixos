@@ -37,7 +37,7 @@
       "gs" = "git status";
       "gd" = "git diff";
       "ga" = "git add .";
-      "C" = "git-push";
+      "b" = "beam";
       "c" = "git-commit";
       "P" = "git push origin $(git branch --show-current)";
     };

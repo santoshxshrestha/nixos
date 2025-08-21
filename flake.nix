@@ -34,7 +34,7 @@
       nixosConfigurations.santosh = lib.nixosSystem {
         inherit system;
         modules = [
-          ./configuration.nix
+          ./hosts/helios/configuration.nix
           stylix.nixosModules.stylix
           home-manager.nixosModules.home-manager
 

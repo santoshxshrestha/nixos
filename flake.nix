@@ -45,7 +45,7 @@
                 sharedModules = [ nixvim.homeModules.nixvim ];
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                users.santosh = import ./home/santosh/home.nix;
+                users.santosh = import ./homes/santosh/home.nix;
               };
             }
           ];

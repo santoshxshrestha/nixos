@@ -31,23 +31,27 @@
       system = "x86_64-linux";
       lib = nixpkgs.lib;
     in {
-      nixosConfigurations.santosh = lib.nixosSystem {
-        inherit system;
-        modules = [
-          ./configuration.nix
-          stylix.nixosModules.stylix
-          home-manager.nixosModules.home-manager
+      nixosConfigurations = {
 
-          {
-            home-manager = {
-              sharedModules = [ nixvim.homeModules.nixvim ];
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.santosh = import ./home-manager/home.nix;
-            };
-          }
-        ];
-        specialArgs = { inherit inputs; };
+        santosh = lib.nixosSystem {
+          inherit system;
+          modules = [
+            ./hosts/helios/configuration.nix
+            stylix.nixosModules.stylix
+            home-manager.nixosModules.home-manager
+
+            {
+              home-manager = {
+                sharedModules = [ nixvim.homeModules.nixvim ];
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                users.santosh = import ./homes/santosh/home.nix;
+              };
+            }
+          ];
+          specialArgs = { inherit inputs; };
+        };
+
       };
     };
 }

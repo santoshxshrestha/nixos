@@ -1,6 +1,6 @@
 # NixOS Configuration Documentation
 
-> **⚠️ Disclaimer**: Use at your own risk. This configuration works well for the me, but you might need to adapt it for your specific setup.
+> **⚠️ Disclaimer**: Use at your own risk. This configuration works well for me, but you might need to adapt it for your specific setup.
 
 ## Overview
 
@@ -24,29 +24,38 @@ This repository contains a personal NixOS and Home Manager configuration built w
 ### Development Environment
 
 - **Neovim Setup**: Fully configured development environment via nixvim
-- **Development Tools**: I use dev shells but there are some tools in config too
+- **Development Tools**: Dev shells and additional tools in config
 - **Modular Structure**: Easy customization and scaling for different needs
 
 ## Repository Structure
 
 ```
-nixos/
-├── flake.nix              # Main flake configuration
-├── flake.lock             # Locked dependencies
-├── configuration.nix      # Main NixOS configuration
-├── hardware-configuration.nix  # Hardware-specific settings
-├── home.nix              # Home Manager configuration
-└── modules/              # Custom modules and configurations
-    ├── desktop/          # Desktop environment configs
-    ├── development/      # Development environment
-    ├── system/           # System-level configurations
-    └── users/            # User-specific settings
+
+.
+├── flake.nix # Main flake configuration
+├── flake.lock # Locked dependencies
+├── homes/ # Home Manager configurations (per user)
+│ └── santosh/
+│ ├── assets/ # Images and logos
+│ ├── config/ # App and environment configs (alacritty, hyprland, kitty, etc.)
+│ ├── home.nix # Home Manager entrypoint for user
+│ ├── modules/ # Home Manager modules (nixvim, pkgs, starship, etc.)
+│ └── scripts/ # User scripts and utilities
+├── hosts/ # Host-specific NixOS configurations
+│ └── helios/
+│ ├── configuration.nix
+│ ├── hardware-configuration.nix
+│ └── modules/ # Host-specific modules (packages, sddm, stylix)
+├── wallpapers/ # Wallpaper images
+└── readme.md
+
 ```
 
 ## Configuration Highlights
 
 ### System Configuration
 
+- **Host-based Configuration**: Each system under `hosts/` with its own modules
 - **Boot Configuration**: Optimized boot settings and kernel parameters
 - **Network Management**: NetworkManager with custom network profiles
 - **Security Settings**: Firewall, user permissions, and security hardening
@@ -61,7 +70,7 @@ nixos/
 
 ### Development Setup
 
-- **Neovim**: Full IDE experience with LSP, syntax highlighting, and plugins
+- **Neovim**: Full IDE experience with LSP, syntax highlighting, and plugins (via nixvim)
 - **Shell Environment**: Enhanced shell with aliases, functions, and prompt customization
 - **Version Control**: Git configuration with helpful aliases and settings
 - **Development Tools**: Compilers, interpreters, and build tools
@@ -78,7 +87,7 @@ nixos/
 ### Adding New Packages
 
 ```nix
-# In your configuration.nix or relevant module
+# In your hosts/helios/modules/packages.nix or relevant module
 environment.systemPackages = with pkgs; [
   # Add your packages here
   firefox
@@ -89,7 +98,7 @@ environment.systemPackages = with pkgs; [
 
 ### Modifying Hyprland Configuration
 
-Edit the Hyprland configuration module to adjust:
+Edit the relevant files under `homes/santosh/config/hyprland/` to adjust:
 
 - Keybindings and shortcuts
 - Window management rules
@@ -99,7 +108,7 @@ Edit the Hyprland configuration module to adjust:
 ### Extending Home Manager
 
 ```nix
-# In home.nix or user module
+# In homes/santosh/home.nix or a user module
 home.packages = with pkgs; [
   # User-specific packages
 ];
@@ -112,10 +121,10 @@ programs.{application} = {
 
 ### Adding Custom Modules
 
-Create new modules in the `modules/` directory:
+Create new modules in the appropriate `modules/` directory:
 
 ```nix
-# modules/custom/my-service.nix
+# homes/santosh/modules/my-module.nix
 { config, pkgs, ... }:
 {
   # Your custom configuration
@@ -130,8 +139,8 @@ Create new modules in the `modules/` directory:
 # Update flake inputs
 nix flake update
 
-# Apply updates
-sudo nixos-rebuild switch --flake .
+# Apply updates (replace helios with your host if needed)
+sudo nixos-rebuild switch --flake .#helios
 ```
 
 ### Garbage Collection
@@ -150,7 +159,7 @@ nix-collect-garbage -d
 # List available generations
 sudo nixos-rebuild list-generations
 
-# Switch to a specific generation
+# Switch to a previous generation
 sudo nixos-rebuild switch --rollback
 ```
 
@@ -159,7 +168,7 @@ sudo nixos-rebuild switch --rollback
 ### Common Issues
 
 1. **Hardware Compatibility**: Update `hardware-configuration.nix` for your specific hardware
-2. **Missing Packages**: Check if packages are available in nixpkgs or require additional channels
+2. **Missing Packages**: Check if packages are available in nixpkgs or require additional overlays
 3. **Conflicting Configurations**: Review module imports and option conflicts
 
 ### Debugging Tips
@@ -218,4 +227,4 @@ The configuration is structured modularly to:
 
 ---
 
-**Note**: This documentation is based on the repository structure and features in current state . For the most up-to-date information, please refer to the actual configuration files and commit history in the repository.
+**Note**: This documentation is based on the repository structure and features in the current state. For the most up-to-date information, please refer to the actual configuration files and commit history in the repository.

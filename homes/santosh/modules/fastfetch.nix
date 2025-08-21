@@ -57,10 +57,10 @@
         }
         "break"
 
-        {
-          type = "os";
-          key = " OS";
-        }
+        # {
+        #   type = "os";
+        #   key = " OS";
+        # }
         # {
         #   type = "host";
         #   key = "󰌢 Host";

@@ -4,7 +4,7 @@
     settings = {
       logo = {
         source =
-          "${config.home.homeDirectory}/nixos/home-manager/assets/nixos.png";
+          "${config.home.homeDirectory}/nixos/homes/santosh/assets/nixos.png";
         height = 15;
         width = 40;
         padding = {
@@ -41,16 +41,16 @@
         }
         "break"
 
-        {
-          type = "datetime";
-          key = "󰃭 Date";
-          format = "{1}/{3}/{11}";
-        }
-        {
-          type = "datetime";
-          key = " Time";
-          format = "{15}:{17} {21}";
-        }
+        # {
+        #   type = "datetime";
+        #   key = "󰃭 Date";
+        #   format = "{1}/{3}/{11}";
+        # }
+        # {
+        #   type = "datetime";
+        #   key = " Time";
+        #   format = "{15}:{17} {21}";
+        # }
         {
           type = "uptime";
           key = "󰅐 Uptime";
@@ -61,10 +61,10 @@
           type = "os";
           key = " OS";
         }
-        {
-          type = "host";
-          key = "󰌢 Host";
-        }
+        # {
+        #   type = "host";
+        #   key = "󰌢 Host";
+        # }
         {
           type = "kernel";
           key = " Kernel";
@@ -73,10 +73,10 @@
           type = "packages";
           key = "󰏖 Packages";
         }
-        {
-          type = "shell";
-          key = "󰆍 Shell";
-        }
+        # {
+        #   type = "shell";
+        #   key = "󰆍 Shell";
+        # }
         {
           type = "display";
           key = "󰍹 Display";
@@ -105,10 +105,10 @@
           type = "terminal";
           key = " Terminal";
         }
-        {
-          type = "terminalfont";
-          key = "󰛖 Term Font";
-        }
+        # {
+        #   type = "terminalfont";
+        #   key = "󰛖 Term Font";
+        # }
         "break"
 
         {

@@ -13,6 +13,7 @@ with pkgs; [
   tmux
   gimp
   discord
+  mdwatch
   # pywal16
 
 ]

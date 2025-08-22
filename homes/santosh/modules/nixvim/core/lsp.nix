@@ -3,7 +3,7 @@
   programs.nixvim.plugins.lspsaga = {
     enable = true;
     # ui = { border = "rounded"; };
-    lightbulb = { enable = false; };
+    settings = { lightbulb = { enable = false; }; };
     # hover = {
     #   maxWidth = 0.5;
     #   maxHeight = 0.3;

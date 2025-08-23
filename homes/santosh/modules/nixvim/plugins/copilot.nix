@@ -1,6 +1,19 @@
 {
   programs.nixvim.plugins = {
-    copilot-chat = { enable = true; };
+    copilot-chat = {
+      enable = true;
+      settings = {
+        model = "gpt-5";
+        window = {
+          height = 0.8;
+          width = 0.9;
+          border = "rounded";
+          title = "what on earth";
+          # replace is also a good option
+          layout = "float";
+        };
+      };
+    };
     copilot-lua = {
       enable = true;
       settings = {

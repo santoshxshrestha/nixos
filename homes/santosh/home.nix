@@ -9,6 +9,7 @@
     ./modules/fastfetch.nix
     ./modules/nixvim/nixvim.nix
     ./modules/starship.nix
+    ./modules/waybar.nix
 
     # packages home
     ./modules/pkgs/default.nix
@@ -52,7 +53,7 @@
     ".config/rofi".source = ./config/rofi;
     # ".config/starship.toml".source = ./config/starship/starship.toml;
     ".local/scripts".source = ./scripts;
-    ".config/waybar".source = ./config/waybar;
+    # ".config/waybar".source = ./config/waybar;
 
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a

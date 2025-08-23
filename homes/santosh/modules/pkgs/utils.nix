@@ -1,7 +1,5 @@
 { pkgs }:
 with pkgs; [
-
-  btop
   ffmpeg
   wl-clipboard
   swaynotificationcenter

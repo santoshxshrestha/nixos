@@ -12,6 +12,7 @@
     ./modules/hypridle.nix
     ./modules/hyprlock.nix
     ./modules/zoxide.nix
+    ./modules/btop.nix
     # waybar config
     ./modules/waybar/default.nix
 

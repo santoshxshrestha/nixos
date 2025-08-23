@@ -46,14 +46,11 @@
     ".config/kitty".source = ./config/kitty;
     #".config/alacritty/alacritty.toml".source = ./config/alacritty/alacritty.toml;
     ".tmux.conf".source = ./config/tmux/tmux_aesthetics.conf;
-    #".tmux.conf".source = ./config/tmux/tmux_performance.conf;
     # ".zshrc".source = ./config/zsh/.zshrc;
     ".config/hypr/hyprlock.conf".source = ./config/hyprlock/hyprlock.conf;
     ".config/hypr/hyprsunset.conf".source = ./config/hyprsunset/hyprsunset.conf;
     ".config/rofi".source = ./config/rofi;
-    # ".config/starship.toml".source = ./config/starship/starship.toml;
     ".local/scripts".source = ./scripts;
-    # ".config/waybar".source = ./config/waybar;
 
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a

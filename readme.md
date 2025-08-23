@@ -1,4 +1,8 @@
-# NixOS Configuration Documentation
+<h1 id="header" align="center">
+  <img src=".github/assets/nix-snowflake-colours.svg" width="128px" height="128px" />
+  <br>
+    nixos
+</h1>
 
 > **⚠️ Disclaimer**: Use at your own risk. This configuration works well for me, but you might need to adapt it for your specific setup.
 

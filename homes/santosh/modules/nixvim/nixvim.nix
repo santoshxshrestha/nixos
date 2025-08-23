@@ -22,6 +22,8 @@
     ./plugins/colorschemes.nix
     ./plugins/alpha.nix
     ./plugins/copilot.nix
+    ./plugins/noice.nix
+    ./plugins/which-key.nix
   ];
   programs.nixvim = {
     enable = true;

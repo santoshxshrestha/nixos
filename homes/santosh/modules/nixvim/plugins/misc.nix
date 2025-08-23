@@ -2,18 +2,6 @@
   programs.nixvim.plugins = {
     # neotest for running tests
     neotest = { enable = false; };
-    # enable noice of cmd line and messages
-    noice = {
-      enable = true;
-      settings = {
-        lsp = {
-          hover.enable = true;
-          message.enable = true;
-          signature.enable = true;
-          progress.enable = true;
-        };
-      };
-    };
     # Mmarkdown-preview in browser
     markdown-preview = { enable = true; };
     # icons
@@ -35,17 +23,6 @@
 
     # GitHub integration for vim-fugitive
     #rhubarb = { enable = true; };
-
-    # Hints keybinds
-    which-key = {
-      enable = true;
-      settings = {
-        plugins = {
-          marks = true;
-          registers = true;
-        };
-      };
-    };
 
     # Autoclose parentheses, brackets, quotes, etc.
     nvim-autopairs = { enable = true; };

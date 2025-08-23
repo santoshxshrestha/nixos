@@ -9,6 +9,7 @@
     ./modules/fastfetch.nix
     ./modules/nixvim/nixvim.nix
     ./modules/starship.nix
+    ./modules/hypridle.nix
     # waybar config
     ./modules/waybar/default.nix
 
@@ -42,7 +43,7 @@
       ./config/hyprland/hyprland_aesthetics.conf;
     # ".config/hypr/hyprland.conf".source =
     # ./config/hyprland/hyprland_performance.conf;
-    ".config/hypr/hypridle.conf".source = ./config/hypridle/hypridle.conf;
+    # ".config/hypr/hypridle.conf".source = ./config/hypridle/hypridle.conf;
     ".config/hypr/hyprpaper.conf".source = ./config/hyprpaper/hyprpaper.conf;
     ".config/kitty".source = ./config/kitty;
     #".config/alacritty/alacritty.toml".source = ./config/alacritty/alacritty.toml;

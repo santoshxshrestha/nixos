@@ -42,15 +42,9 @@
   home.file = {
     ".config/hypr/hyprland.conf".source =
       ./config/hyprland/hyprland_aesthetics.conf;
-    # ".config/hypr/hyprland.conf".source =
-    # ./config/hyprland/hyprland_performance.conf;
-    # ".config/hypr/hypridle.conf".source = ./config/hypridle/hypridle.conf;
     ".config/hypr/hyprpaper.conf".source = ./config/hyprpaper/hyprpaper.conf;
     ".config/kitty".source = ./config/kitty;
-    #".config/alacritty/alacritty.toml".source = ./config/alacritty/alacritty.toml;
     ".tmux.conf".source = ./config/tmux/tmux_aesthetics.conf;
-    # ".zshrc".source = ./config/zsh/.zshrc;
-    # ".config/hypr/hyprlock.conf".source = ./config/hyprlock/hyprlock.conf;
     ".config/hypr/hyprsunset.conf".source = ./config/hyprsunset/hyprsunset.conf;
     ".config/rofi".source = ./config/rofi;
     ".local/scripts".source = ./scripts;
@@ -89,8 +83,6 @@
     userName = "Santosh Shrestha";
     userEmail = "santoshxshrestha@gmail.com";
   };
-
-  # programs.starship.enable = true;
 
   # programs.zsh = {
   # 	enable = true;

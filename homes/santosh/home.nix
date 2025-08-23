@@ -11,6 +11,7 @@
     ./modules/starship.nix
     ./modules/hypridle.nix
     ./modules/hyprlock.nix
+    ./modules/zoxide.nix
     # waybar config
     ./modules/waybar/default.nix
 

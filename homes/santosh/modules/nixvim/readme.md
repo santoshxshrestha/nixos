@@ -1,54 +1,59 @@
-<div align="center">
-    <img src="../../assets/neovim-flake-logo.svg" alt="neovim-flake Logo"  width="200">
-</div> 
-#  Snippet Expansion and Completion Setup in NixVim
+<h1 id="header" align="center">
+    <img src="../../assets/neovim-flake-logo.svg" alt="neovim-flake Logo"  width="128px" height="128px" />
 
-This configuration integrates `luasnip` (a Lua-based snippet engine) with `nvim-cmp` (a completion engine) and `nvim-lspconfig` (LSP support), all managed through Nix using `nixvim`.
+  <br>
+    nixvim
+</h1>
 
----
-
-##  Purpose
-
-- Use LSP features for intelligent autocompletion.
-- Expand snippets within the completion menu or manually.
-- Navigate and jump through snippet placeholders.
-- Customize popup borders and highlight groups for visual consistency.
+This directory contains modular configuration for Neovim, managed using Nix and [nixvim](https://github.com/nix-community/nixvim).
 
 ---
 
-##  Plugin Integration Summary
+## Directory Structure
 
-| Plugin         | Purpose                             |
-| -------------- | ----------------------------------- |
-| `nvim-cmp`     | Completion menu engine              |
-| `cmp-nvim-lsp` | Source for LSP-based completion     |
-| `cmp-path`     | File path completion                |
-| `cmp-buffer`   | Text completion from current buffer |
-| `cmp_luasnip`  | Completion source for LuaSnip       |
-| `luasnip`      | Snippet engine                      |
+```
+.
+├── core
+│   ├── autocommands.nix
+│   ├── autocompletion.nix
+│   ├── code-runner.nix
+│   ├── keymaps.nix
+│   ├── lsp.nix
+│   └── opts.nix
+├── nixvim.nix
+├── plugins
+│   ├── alpha.nix
+│   ├── colorschemes.nix
+│   ├── comment.nix
+│   ├── copilot.nix
+│   ├── gitsigns.nix
+│   ├── harpoon.nix
+│   ├── indent-blankline.nix
+│   ├── lualine.nix
+│   ├── misc.nix
+│   ├── none-ls.nix
+│   ├── surround.nix
+│   ├── telescope.nix
+│   └── treesitter.nix
+└── readme.md
+```
 
 ---
 
-##  Configuration Details
+## Module Overview
 
-###  Completion Sources (`cmp.settings.sources`)
+- **core/**
+  - `autocommands.nix`: Custom Neovim autocommands.
+  - `autocompletion.nix`: Completion and snippet engine configuration.
+  - `code-runner.nix`: Code execution helpers.
+  - `keymaps.nix`: Keybinding definitions.
+  - `lsp.nix`: Language Server Protocol (LSP) setup.
+  - `opts.nix`: General Neovim options.
 
-The following sources are configured:
+- **plugins/**
+  - Individual plugin configurations (UI, Git, commenting, etc).
 
-````nix
-sources = [
-  { name = "nvim_lsp"; }   # LSP suggestions
-  { name = "path"; }       # File paths
-  { name = "buffer"; }     # Buffer content
-  { name = "luasnip"; }    # LuaSnip snippet suggestions
-];
+- **nixvim.nix**
+  - Entrypoint for importing and composing all modules.
+
 ---
-##  Snippet Expansion Setup
-This tells nvim-cmp to use LuaSnip as its snippet engine:
-```nix
-snippet = {
-  expand = "function(args) require('luasnip').lsp_expand(args.body) end";
-};
-````
-
-- When a completion item includes a snippet body (like an LSP function template), this function expands it using LuaSnip.

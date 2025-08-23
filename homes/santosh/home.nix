@@ -9,7 +9,7 @@
     ./modules/fastfetch.nix
     ./modules/nixvim/nixvim.nix
     ./modules/starship.nix
-    ./modules/waybar.nix
+    ./modules/waybar/waybar.nix
 
     # packages home
     ./modules/pkgs/default.nix

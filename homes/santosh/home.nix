@@ -10,6 +10,7 @@
     ./modules/nixvim/nixvim.nix
     ./modules/starship.nix
     ./modules/hypridle.nix
+    ./modules/hyprlock.nix
     # waybar config
     ./modules/waybar/default.nix
 
@@ -49,7 +50,7 @@
     #".config/alacritty/alacritty.toml".source = ./config/alacritty/alacritty.toml;
     ".tmux.conf".source = ./config/tmux/tmux_aesthetics.conf;
     # ".zshrc".source = ./config/zsh/.zshrc;
-    ".config/hypr/hyprlock.conf".source = ./config/hyprlock/hyprlock.conf;
+    # ".config/hypr/hyprlock.conf".source = ./config/hyprlock/hyprlock.conf;
     ".config/hypr/hyprsunset.conf".source = ./config/hyprsunset/hyprsunset.conf;
     ".config/rofi".source = ./config/rofi;
     ".local/scripts".source = ./scripts;

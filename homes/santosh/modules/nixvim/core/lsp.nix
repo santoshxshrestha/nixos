@@ -2,20 +2,22 @@
   # for docs and other feat related to lsp
   programs.nixvim.plugins.lspsaga = {
     enable = true;
-    beacon.enable = true;
-    diagnostic = { diagnosticOnlyCurrent = true; };
     # ui = { border = "rounded"; };
-    settings = { lightbulb = { enable = false; }; };
+    settings = {
+      diagnostic = { diagnostic_only_current = true; };
+      lightbulb = { enable = false; };
+      beacon.enable = true;
+      symbol_in_winbar = {
+        enable = false;
+        delay = 300;
+        folder_level = 1;
+        hide_keyword = true;
+      };
+    };
     # hover = {
     #   maxWidth = 0.5;
     #   maxHeight = 0.3;
     # };
-    symbolInWinbar = {
-      enable = false;
-      delay = 300;
-      folderLevel = 1;
-      hideKeyword = true;
-    };
   };
 
   # programs.nixvim.diagnostic = {

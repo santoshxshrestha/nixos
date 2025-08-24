@@ -24,6 +24,7 @@
     ./plugins/copilot.nix
     ./plugins/noice.nix
     ./plugins/which-key.nix
+    ./plugins/oil.nix
   ];
   programs.nixvim = {
     enable = true;

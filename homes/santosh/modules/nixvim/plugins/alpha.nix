@@ -141,7 +141,7 @@
             val = "  λ  ➤  File Explorer";
             on_press = { __raw = "function() vim.cmd('Explore') end"; };
             opts = {
-              keymap = [ "n" "e" ":Explore<CR>" { } ];
+              keymap = [ "n" "e" ":Oil<CR>" { } ];
               shortcut = "e";
               position = "center";
               cursor = 3;

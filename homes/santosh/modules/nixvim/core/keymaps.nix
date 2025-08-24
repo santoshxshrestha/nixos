@@ -429,24 +429,45 @@
       mode = [ "n" ];
       options = { desc = " help tags"; };
     }
+    # toggle oil  
     {
       action.__raw = ''
         function()
-        if vim.bo.filetype == 'netrw' then 
+        if vim.bo.filetype == 'oil' then 
             vim.cmd('bdelete')
         else 
-            vim.cmd('Explore')
+            vim.cmd('Oil')
                 end
-                end
+        end
       '';
       key = "<leader>e";
       mode = [ "n" ];
       options = {
         noremap = true;
         silent = true;
-        desc = "toggle netrw";
+        desc = "toggle oil";
       };
     }
+    # toggle netrw
+    # this is disabled because oil overrides netrw
+    # {
+    #   action.__raw = ''
+    #     function()
+    #     if vim.bo.filetype == 'netrw' then 
+    #         vim.cmd('bdelete')
+    #     else 
+    #         vim.cmd('Explore')
+    #             end
+    #             end
+    #   '';
+    #   key = "<leader>e";
+    #   mode = [ "n" ];
+    #   options = {
+    #     noremap = true;
+    #     silent = true;
+    #     desc = "toggle netrw";
+    #   };
+    # }
 
     # comment.nvim key maps
     # Normal mode - toggle selected lines

@@ -1,4 +1,4 @@
-{ config, ... }: {
+{
   # for docs and other feat related to lsp
   programs.nixvim.plugins.lspsaga = {
     enable = true;
@@ -10,6 +10,7 @@
     # };
   };
 
+  programs.nixvim.plugins.tiny-inline-diagnostic = { enable = true; };
   # programs.nixvim.diagnostic = {
   #   settings = {
   #     virtual_text = {

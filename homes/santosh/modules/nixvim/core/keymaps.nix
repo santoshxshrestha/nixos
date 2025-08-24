@@ -6,6 +6,13 @@
   };
 
   programs.nixvim.keymaps = [
+    # Noice dismiss all notifications
+    {
+      key = "<leader>nd";
+      mode = [ "n" ];
+      action = "<CMD>NoiceDismiss<CR>";
+      options.desc = "Dismiss all Noice notifications";
+    }
     # key maps for copilot chats
     {
       key = "<leader>cR";

@@ -8,7 +8,7 @@
           height = 0.8;
           width = 0.9;
           border = "rounded";
-          title = "what on earth";
+          title = "";
           # replace is also a good option
           layout = "float";
         };

@@ -4,9 +4,13 @@
     enable = true;
     # ui = { border = "rounded"; };
     settings = {
-      diagnostic = { diagnostic_only_current = true; };
+      diagnostic = {
+        diagnostic_only_current = true;
+        # extend_related_information = true;
+      };
       lightbulb = { enable = false; };
       beacon.enable = true;
+      implement.enable = false;
       symbol_in_winbar = {
         enable = false;
         delay = 300;

@@ -426,7 +426,7 @@
     }
     {
       action = "<cmd>Telescope<CR>";
-      key = "<leader>ss";
+      key = "<leader>st";
       mode = [ "n" ];
       options = { desc = " help tags"; };
     }
@@ -434,13 +434,19 @@
       action = "<cmd>Telescope lsp_type_definitions<CR>";
       key = "<leader>sd";
       mode = [ "n" ];
-      options = { desc = "LSP Definitions"; };
+      options = { desc = "Search LSP Definitions"; };
     }
     {
       action = "<cmd>Telescope lsp_refrences<CR>";
-      key = "<leader>sd";
+      key = "<leader>sr";
       mode = [ "n" ];
-      options = { desc = "LSP Definitions"; };
+      options = { desc = "Search LSP references"; };
+    }
+    {
+      action = "<cmd>Telescope lsp_workspace_symbols<CR>";
+      key = "<leader>ss";
+      mode = [ "n" ];
+      options = { desc = "Search workspace symbols"; };
     }
     # toggle oil  
     {

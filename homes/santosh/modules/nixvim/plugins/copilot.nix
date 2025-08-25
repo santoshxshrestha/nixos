@@ -3,7 +3,7 @@
     copilot-chat = {
       enable = true;
       settings = {
-        model = "gpt-5";
+        model = "gpt-4o";
         window = {
           height = 0.8;
           width = 0.9;

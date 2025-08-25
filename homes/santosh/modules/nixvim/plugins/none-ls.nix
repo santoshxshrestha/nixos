@@ -10,7 +10,7 @@
       prettier = {
         enable = true;
         settings.filetypes =
-          [ "html" "json" "yaml" "markdown" "javascript" "markdown" ];
+          [ "html" "json" "yaml" "markdown" "javascript" "typescript" ];
       };
 
       stylua.enable = true;

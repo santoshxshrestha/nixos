@@ -1,6 +1,6 @@
 {
   programs.nixvim = {
-    # local and gglobals leader keys
+    # local and globals leader keys
     globals.mapleader = " ";
     globals.maplocalleader = " ";
   };
@@ -371,6 +371,7 @@
         silent = true;
       };
     }
+
     # telescope key maps
     {
       action = "<cmd>Telescope find_files<CR>";
@@ -428,6 +429,18 @@
       key = "<leader>ss";
       mode = [ "n" ];
       options = { desc = " help tags"; };
+    }
+    {
+      action = "<cmd>Telescope lsp_type_definitions<CR>";
+      key = "<leader>sd";
+      mode = [ "n" ];
+      options = { desc = "LSP Definitions"; };
+    }
+    {
+      action = "<cmd>Telescope lsp_refrences<CR>";
+      key = "<leader>sd";
+      mode = [ "n" ];
+      options = { desc = "LSP Definitions"; };
     }
     # toggle oil  
     {
@@ -573,6 +586,34 @@
       key = "<leader>k";
       action.__raw = "function() require('harpoon'):list():prev() end";
       options = { desc = "Previous harpoon buffer"; };
+    }
+    # key maps for lsp saga
+    # Pops up a floating window showing the definition
+    {
+      action = "<cmd>Lspsaga peek_definition<CR>";
+      key = "<leader>cd";
+      mode = [ "n" ];
+      options = { desc = "Code Definition"; };
+    }
+    {
+      #action = "<cmd>Telescope lsp_incoming_calls<CR>";
+      action = "<cmd>Lspsaga incoming_calls<CR>";
+      key = "<leader>ci";
+      mode = [ "n" ];
+      options = { desc = "Code Incoming Calls"; };
+    }
+    {
+      #action = "<cmd>Telescope lsp_outgoing_calls<CR>";
+      action = "<cmd>Lspsaga outgoing_calls<CR>";
+      key = "<leader>co";
+      mode = [ "n" ];
+      options = { desc = "Code Outgoing Calls"; };
+    }
+    {
+      action = "<cmd>Lspsaga outline<CR>";
+      key = "<leader>cs";
+      mode = [ "n" ];
+      options = { desc = "Code Symbols Outline"; };
     }
   ];
 

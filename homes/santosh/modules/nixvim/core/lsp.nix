@@ -74,8 +74,11 @@
       tailwindcss = { enable = true; };
       # typescript
       ts_ls = { enable = true; };
+      # emment snippet
       emmet_language_server = { enable = true; };
+      # dockerfile
       dockerls = { enable = true; };
+      # json
       jsonls = { enable = true; };
 
     };

@@ -1,4 +1,4 @@
-{ config, ... }: {
+{
   imports = [
     #core
     ./core/keymaps.nix

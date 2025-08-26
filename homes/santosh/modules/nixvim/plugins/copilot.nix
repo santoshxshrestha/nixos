@@ -8,7 +8,8 @@
           height = 0.8;
           width = 0.9;
           border = "rounded";
-          title = "";
+          # title = "[ ]";
+          title = "   AutoPilot ";
           # replace is also a good option
           layout = "float";
         };

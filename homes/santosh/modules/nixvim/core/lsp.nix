@@ -48,6 +48,8 @@
       #   };
       #   root_markers = [ ".git" ];
       # };
+
+      # markdown
       marksman = { enable = true; };
       # htmx
       htmx = { enable = true; };

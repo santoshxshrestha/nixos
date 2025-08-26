@@ -15,6 +15,7 @@
     ./modules/btop.nix
     # waybar config
     ./modules/waybar/default.nix
+    ./modules/swaync.nix
 
     # packages home
     ./modules/pkgs/default.nix

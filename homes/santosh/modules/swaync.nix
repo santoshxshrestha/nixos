@@ -35,7 +35,7 @@
       .control-center-list {
         background: transparent;
         border-radius: 6px;
-        border: 1px solid rgba(82, 79, 103, 0.1);
+        border: none;
         margin: 4px;
       }
 
@@ -69,7 +69,7 @@
 
       .notification-row:focus,
       .notification-row:hover {
-        background: rgba(82, 79, 103, 0.2);
+        background: rgba(82, 79, 103, 0.8);
         color: #d4d1e0;
         transform: none;
         box-shadow: none;
@@ -123,7 +123,7 @@
         background: rgba(82, 79, 103, 0.1);
         border-radius: 6px;
         color: #b8b5c7;
-        border: 1px solid rgba(82, 79, 103, 0.2);
+        border: none;
         position: relative;
         overflow: hidden;
         box-shadow: none;
@@ -136,8 +136,6 @@
         left: 0;
         width: 2px;
         height: 100%;
-        background: rgba(82, 79, 103, 0.5);
-        border-radius: 0 1px 1px 0;
       }
 
       .low {
@@ -181,12 +179,11 @@
       .close-button {
         background: rgba(255, 0, 0, 0.2);
         color: #ff6666;
-        border-radius: 4px;
+        border-radius: 20px;
         width: 20px;
         height: 20px;
         font-size: 12px;
         font-weight: normal;
-        border: 1px solid rgba(255, 0, 0, 0.3);
         transition: all 0.3s ease;
       }
 
@@ -203,7 +200,6 @@
         margin: 2px 4px 2px 0;
         border-radius: 4px;
         background: rgba(82, 79, 103, 0.2);
-        border: 1px solid rgba(82, 79, 103, 0.3);
         color: #b8b5c7;
         font-weight: normal;
         transition: all 0.3s ease;
@@ -225,14 +221,12 @@
         min-height: 48px;
         border-radius: 4px;
         background: rgba(82, 79, 103, 0.1);
-        border: 1px solid rgba(82, 79, 103, 0.2);
         box-shadow: none;
       }
 
       .body-image {
         background: rgba(82, 79, 103, 0.05);
         border-radius: 4px;
-        border: 1px solid rgba(82, 79, 103, 0.1);
         box-shadow: none;
       }
 

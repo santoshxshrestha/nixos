@@ -69,7 +69,7 @@
     }
     {
       key = "<leader>f";
-      action = "<cmd>Terminal code-runner";
+      action = "<cmd>Terminal code-runner<CR>";
       mode = [ "n" ];
       options = {
         silent = true;
@@ -78,8 +78,8 @@
       };
     }
     {
-      key = "<leader>co";
-      action = "<cmd>Terminal opencode";
+      key = "<leader>a";
+      action = "<cmd>Terminal opencode<CR>";
       mode = [ "n" ];
       options = {
         silent = true;

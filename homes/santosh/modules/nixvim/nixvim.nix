@@ -4,7 +4,7 @@
     ./core/keymaps.nix
     ./core/lsp.nix
     ./core/autocompletion.nix
-    ./core/code-runner.nix
+    ./core/terminal.nix
     ./core/opts.nix
     ./core/autocommands.nix
 

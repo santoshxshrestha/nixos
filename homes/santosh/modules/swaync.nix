@@ -61,7 +61,7 @@
         padding: 8px 10px;
         border-radius: 6px;
         color: #b8b5c7;
-        background: rgba(82, 79, 103, 0.1);
+        background: rgba(82, 79, 103, 0.8);
         border: 1px solid rgba(82, 79, 103, 0.2);
         transition: all 0.3s ease;
         position: relative;
@@ -69,7 +69,7 @@
 
       .notification-row:focus,
       .notification-row:hover {
-        background: rgba(82, 79, 103, 0.8);
+        background: rgba(82, 79, 103, 0.2);
         color: #d4d1e0;
         transform: none;
         box-shadow: none;

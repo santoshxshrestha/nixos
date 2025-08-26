@@ -11,6 +11,6 @@ with pkgs; [
   gimp
   discord
   mdwatch
+  opencode
   # pywal16
-
 ]

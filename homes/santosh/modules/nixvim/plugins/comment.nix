@@ -6,22 +6,9 @@
       padding = true;
       sticky = true;
       ignore = null;
-      toggler = {
-        line = "gcc";
-        block = "gbc";
-      };
-      opleader = {
-        line = "gc";
-        block = "gb";
-      };
-      extra = {
-        above = "gcO";
-        below = "gco";
-        eol = "gcA";
-      };
       mappings = {
-        basic = true;
-        extra = true;
+        basic = false;
+        extra = false;
       };
       pre_hook = null;
       post_hook = null;

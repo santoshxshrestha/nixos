@@ -83,7 +83,6 @@
          margin-top: 4px;
        }
 
-       /* Tooltip styling to match waybar */
        tooltip {
          background: rgba(0, 0, 0, 0.8);
          border-radius: 6px;

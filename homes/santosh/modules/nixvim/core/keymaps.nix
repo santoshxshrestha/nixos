@@ -67,6 +67,26 @@
         desc = "Opern floating terminal";
       };
     }
+    {
+      key = "<leader>f";
+      action = "<cmd>Terminal code-runner";
+      mode = [ "n" ];
+      options = {
+        silent = true;
+        noremap = true;
+        desc = "Run the code-runner script";
+      };
+    }
+    {
+      key = "<leader>co";
+      action = "<cmd>Terminal opencode";
+      mode = [ "n" ];
+      options = {
+        silent = true;
+        noremap = true;
+        desc = "Open code";
+      };
+    }
     # keep last yanked when pasting over some thing
     {
       action = ''"_dp'';

@@ -21,7 +21,7 @@
     style = ''
        * {
          font-family: "JetBrains Mono Nerd Font", "Fira Code Nerd Font", monospace;
-         font-size: 11px;
+         font-size: 12px;
        }
 
        .control-center {
@@ -57,7 +57,7 @@
        }
 
        .summary {
-         font-size: 12px;
+         font-size: 14px;
          font-weight: bold;
          color: #ffffff;
          text-shadow: none;
@@ -75,7 +75,7 @@
        }
 
        .body {
-         font-size: 11px;
+         font-size: 13px;
          font-weight: normal;
          background: transparent;
          color: #b8b5c7;

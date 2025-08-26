@@ -6,7 +6,6 @@
         lock_cmd = "pidof hyprlock || hyprlock";
         before_sleep_cmd = "hyprlock";
         after_sleep_cmd = "hyprctl dispatch dpms on";
-        unlock_cmd = "notify-send -t 5000 'Unlocked!'";
         ignore_dbus_inhibit = false;
         ignore_systemd_inhibit = false;
       };
@@ -14,7 +13,7 @@
       listener = [
         {
           timeout = 180;
-          on-timeout = "notify-send -t 5000 'Zzz!'";
+          on-timeout = "notify-send -t 4500 'Zzz!'";
         }
         {
           timeout = 185;
@@ -25,7 +24,6 @@
         {
           timeout = 300;
           on-timeout = "hyprlock";
-          on-resume = "notify-send -t 2000 'Welcome back'";
         }
         {
           timeout = 900;

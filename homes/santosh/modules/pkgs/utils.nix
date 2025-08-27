@@ -12,5 +12,6 @@ with pkgs; [
   discord
   mdwatch
   opencode
+  alacritty
   # pywal16
 ]

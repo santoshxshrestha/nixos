@@ -13,7 +13,6 @@
     ./modules/hyprlock.nix
     ./modules/zoxide.nix
     ./modules/btop.nix
-    # waybar config
     ./modules/waybar/default.nix
     ./modules/swaync.nix
     ./modules/hyprpaper.nix
@@ -44,9 +43,8 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    # ".config/hypr/hyprland.conf".source =
-    #   ./config/hyprland/hyprland_aesthetics.conf;
     ".config/kitty".source = ./config/kitty;
+    ".config/alacritty".source = ./config/alacritty;
     ".tmux.conf".source = ./config/tmux/tmux_aesthetics.conf;
     ".config/hypr/hyprsunset.conf".source = ./config/hyprsunset/hyprsunset.conf;
     ".config/rofi".source = ./config/rofi;

@@ -56,7 +56,7 @@
       exec-once = [
         # "mpvpaper -s -o \"no-audio loop\" eDP-1 ~/Pictures/wallpaper-archive/Dynamic-Wallpapers/yoriichi-tsugikuni-2.1920x1080.mp4"
         "swaync" # Notification center
-        "waybar" # Status bar
+        # "waybar" # Status bar
         "${config.home.homeDirectory}/.local/scripts/switch-to-static"
         # "hyprpanel"  # Alternative status bar
         # "hypridle"   # Idle management

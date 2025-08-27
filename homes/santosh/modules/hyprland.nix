@@ -20,7 +20,7 @@
       ################
 
       # See https://wiki.hyprland.org/Configuring/Monitors/
-      monitors = [
+      monitor = [
         "eDP-1,1920x1080@60.00,0x0,1"
 
         # Projector / Extended monitor config
@@ -94,8 +94,8 @@
         # col.active_border = "rgba(33ccffee) rgba(00ff99ee) 45deg";
         # col.inactive_border = "rgba(595959aa)";
 
-        col.active_border = "rgba(33ccffee) rgba(ff0088ee) 45deg";
-        col.inactive_border = "rgba(222222aa)";
+        # col.active_border = "rgba(33ccffee) rgba(ff0088ee) 45deg";
+        # col.inactive_border = "rgba(222222aa)";
 
         # Set to true enable resizing windows by clicking and dragging on borders and gaps
         resize_on_border = false;

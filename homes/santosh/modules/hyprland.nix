@@ -3,8 +3,8 @@
     enable = true;
     package = pkgs.hyprland;
     # withUWSM = true;
-    xwayland.enable = true;
-    systemd.enable = true;
+    # xwayland.enable = true;
+    # systemd.enable = true;
     settings = {
       # #######################################################################################
       # HYPRLAND CONFIGURATION

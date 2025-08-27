@@ -17,6 +17,7 @@
     ./modules/swaync.nix
     ./modules/hyprpaper.nix
     ./modules/alacritty.nix
+    ./modules/hyprsunset.nix
 
     # packages home
     ./modules/pkgs/default.nix
@@ -46,7 +47,6 @@
   home.file = {
     ".config/kitty".source = ./config/kitty;
     ".tmux.conf".source = ./config/tmux/tmux_aesthetics.conf;
-    ".config/hypr/hyprsunset.conf".source = ./config/hyprsunset/hyprsunset.conf;
     ".config/rofi".source = ./config/rofi;
     ".local/scripts".source = ./scripts;
 

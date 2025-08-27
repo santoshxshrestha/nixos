@@ -60,7 +60,7 @@
         "${config.home.homeDirectory}/.local/scripts/switch-to-static"
         # "hyprpanel"  # Alternative status bar
         # "hypridle"   # Idle management
-        "hyprsunset" # Blue light filter
+        # "hyprsunset" # Blue light filter
         "wl-paste --type text --watch cliphist store" # Clipboard history for text
         "wl-paste --type image --watch cliphist store" # Clipboard history for images
       ];

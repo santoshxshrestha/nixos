@@ -16,6 +16,7 @@
     # waybar config
     ./modules/waybar/default.nix
     ./modules/swaync.nix
+    ./modules/hyprpaper.nix
 
     # packages home
     ./modules/pkgs/default.nix
@@ -45,7 +46,6 @@
   home.file = {
     ".config/hypr/hyprland.conf".source =
       ./config/hyprland/hyprland_aesthetics.conf;
-    ".config/hypr/hyprpaper.conf".source = ./config/hyprpaper/hyprpaper.conf;
     ".config/kitty".source = ./config/kitty;
     ".tmux.conf".source = ./config/tmux/tmux_aesthetics.conf;
     ".config/hypr/hyprsunset.conf".source = ./config/hyprsunset/hyprsunset.conf;

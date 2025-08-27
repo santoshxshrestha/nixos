@@ -3,7 +3,7 @@
 {
 
   imports = [
-    # ./hyprland.nix
+    ./modules/hyprland.nix
     ./modules/fish.nix
     ./modules/gtk.nix
     ./modules/fastfetch.nix
@@ -44,8 +44,8 @@
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
-    ".config/hypr/hyprland.conf".source =
-      ./config/hyprland/hyprland_aesthetics.conf;
+    # ".config/hypr/hyprland.conf".source =
+    #   ./config/hyprland/hyprland_aesthetics.conf;
     ".config/kitty".source = ./config/kitty;
     ".tmux.conf".source = ./config/tmux/tmux_aesthetics.conf;
     ".config/hypr/hyprsunset.conf".source = ./config/hyprsunset/hyprsunset.conf;

@@ -16,6 +16,7 @@
     ./modules/waybar/default.nix
     ./modules/swaync.nix
     ./modules/hyprpaper.nix
+    ./modules/alacritty.nix
 
     # packages home
     ./modules/pkgs/default.nix
@@ -44,7 +45,6 @@
   # plain files is through 'home.file'.
   home.file = {
     ".config/kitty".source = ./config/kitty;
-    ".config/alacritty".source = ./config/alacritty;
     ".tmux.conf".source = ./config/tmux/tmux_aesthetics.conf;
     ".config/hypr/hyprsunset.conf".source = ./config/hyprsunset/hyprsunset.conf;
     ".config/rofi".source = ./config/rofi;

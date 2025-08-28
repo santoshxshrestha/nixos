@@ -3,21 +3,22 @@
 {
 
   imports = [
-    ./modules/hyprland.nix
+    ./modules/hypr/hyprland.nix
+    ./modules/hypr/hypridle.nix
+    ./modules/hypr/hyprpaper.nix
+    ./modules/hypr/hyprlock.nix
+    ./modules/hypr/hyprsunset.nix
+
     ./modules/fish.nix
     ./modules/gtk.nix
     ./modules/fastfetch.nix
     ./modules/nixvim/nixvim.nix
     ./modules/starship.nix
-    ./modules/hypridle.nix
-    ./modules/hyprlock.nix
     ./modules/zoxide.nix
     ./modules/btop.nix
     ./modules/waybar/default.nix
     ./modules/swaync.nix
-    ./modules/hyprpaper.nix
     ./modules/alacritty.nix
-    ./modules/hyprsunset.nix
     ./modules/tmux/default.nix
 
     # packages home

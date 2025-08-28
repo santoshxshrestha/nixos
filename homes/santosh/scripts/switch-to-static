@@ -4,7 +4,7 @@
 pkill mpvpaper
 
 # Directory containing static wallpapers
-WALLPAPER_DIR="$HOME/Pictures/wallpaper-archive/Static-Wallpapers"
+WALLPAPER_DIR="$WALLPAPER_ARCHIVE_PATH/Static-Wallpapers"
 
 # Start hyprpaper if it's not running
 if ! pgrep hyprpaper >/dev/null; then

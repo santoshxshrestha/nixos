@@ -8,11 +8,11 @@ let
     sha256 = "sha256-MwWc27LiZcg5oi+brOmZV4JkWrAezRuN+Z2hQBh7q3I=";
   };
 in {
-  home.file = {
-    "Pictures/wallpaper-archive" = {
-      source = "${wallpapers}";
-      recursive = true;
-    };
-  };
+  # home.file = {
+  #   "Pictures/wallpaper-archive" = {
+  #     source = "${wallpapers}";
+  #     recursive = true;
+  #   };
+  home.sessionVariables = { WALLPAPER_ARCHIVE_PATH = "${wallpapers}"; };
   # stylix.image = "${wallpapers}/path/to/wallpaper.png";
 }

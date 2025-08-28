@@ -4,7 +4,7 @@
 pkill hyprpaper
 
 # Directory containing video wallpapers
-WALLPAPER_DIR="$HOME/Pictures/wallpaper-archive/Dynamic-Wallpapers/"
+WALLPAPER_DIR="$WALLPAPER_ARCHIVE_PATH/Dynamic-Wallpapers/"
 
 # Get current wallpaper if any is running
 CURRENT_WALL=$(pgrep -af "mpv --wallpaper" | grep -o '[^ ]*$' | head -n 1 || echo "none")

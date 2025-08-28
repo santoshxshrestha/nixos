@@ -18,6 +18,7 @@
     ./modules/hyprpaper.nix
     ./modules/alacritty.nix
     ./modules/hyprsunset.nix
+    ./modules/tmux/default.nix
 
     # packages home
     ./modules/pkgs/default.nix
@@ -46,7 +47,6 @@
   # plain files is through 'home.file'.
   home.file = {
     ".config/kitty".source = ./config/kitty;
-    ".tmux.conf".source = ./config/tmux/tmux_aesthetics.conf;
     ".config/rofi".source = ./config/rofi;
     ".local/scripts".source = ./scripts;
 

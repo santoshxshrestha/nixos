@@ -463,10 +463,10 @@
       options = { desc = "Search LSP references"; };
     }
     {
-      action = "<cmd>Telescope lsp_workspace_symbols<CR>";
+      action = "<cmd>Telescope lsp_document_symbols<CR>";
       key = "<leader>ss";
       mode = [ "n" ];
-      options = { desc = "Search workspace symbols"; };
+      options = { desc = "Search document symbols"; };
     }
     # toggle oil  
     # {

@@ -78,6 +78,8 @@
     undofile = true;
     # Set completeopt to have a better completion experience (default: 'menu,preview')
     completeopt = "menuone,noselect";
+    # Hide end of buffer ~ characters (default: true)
+    fillchars = { eob = " "; };
   };
 
   # Additional options that need special handling in NixVim

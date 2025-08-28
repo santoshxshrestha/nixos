@@ -457,7 +457,7 @@
       options = { desc = "Search LSP Definitions"; };
     }
     {
-      action = "<cmd>Telescope lsp_refrences<CR>";
+      action = "<cmd>Telescope lsp_references<CR>";
       key = "<leader>sr";
       mode = [ "n" ];
       options = { desc = "Search LSP references"; };

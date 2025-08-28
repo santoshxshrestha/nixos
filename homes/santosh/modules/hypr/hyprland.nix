@@ -324,8 +324,8 @@
         "$mainMod,minus,exec,~/.local/scripts/waybar-toggle"
 
         # Clipboard history with rofi
-        # ''
-        #   SUPER,V,exec,cliphist list | rofi -dmenu -p "Clipboard History" -theme ~/.config/rofi/themes/clipboard.rasi | cliphist decode | wl-copy''
+        ''
+          SUPER,V,exec,cliphist list | rofi -dmenu -p "Clipboard History" -theme ~/.config/rofi/themes/clipboard.rasi | cliphist decode | wl-copy''
 
         # Window management - see https://wiki.hyprland.org/Configuring/Binds/ for more
         "$mainMod,F,fullscreen"

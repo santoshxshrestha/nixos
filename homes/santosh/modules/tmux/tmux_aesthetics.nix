@@ -1,5 +1,5 @@
 {
-  home.file."~/.tmux.conf".text = ''
+  home.file.".tmux.conf".text = ''
 
     # Terminal Configuration
     set -g terminal-overrides ',xterm-256color:Tc'

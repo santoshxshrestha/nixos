@@ -3,12 +3,18 @@
 {
 
   imports = [
+    # ╭───────────────────────────────────────────────╮
+    # │ Hyprland Configuration Modules                │
+    # ╰───────────────────────────────────────────────╯
     ./modules/hypr/hyprland.nix
     ./modules/hypr/hypridle.nix
     ./modules/hypr/hyprpaper.nix
     ./modules/hypr/hyprlock.nix
     ./modules/hypr/hyprsunset.nix
 
+    # ╭───────────────────────────────────────────────╮
+    # │ General Utility Modules                       │
+    # ╰───────────────────────────────────────────────╯
     ./modules/fish.nix
     ./modules/gtk.nix
     ./modules/fastfetch.nix
@@ -16,16 +22,24 @@
     ./modules/starship.nix
     ./modules/zoxide.nix
     ./modules/btop.nix
+
+    # ╭───────────────────────────────────────────────╮
+    # │ Wayland and Terminal Tools                    │
+    # ╰───────────────────────────────────────────────╯
     ./modules/waybar/default.nix
     ./modules/swaync.nix
     ./modules/alacritty.nix
     ./modules/tmux/default.nix
 
-    # packages home
+    # ╭───────────────────────────────────────────────╮
+    # │ Package Management                            │
+    # ╰───────────────────────────────────────────────╯
     ./modules/pkgs/default.nix
 
-    # wallpapers
-    # ./modules/wallpaper-archive.nix
+    # ╭───────────────────────────────────────────────╮
+    # │ Wallpapers                                    │
+    # ╰───────────────────────────────────────────────╯
+    ./modules/wallpaper-archive.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
   # manage.

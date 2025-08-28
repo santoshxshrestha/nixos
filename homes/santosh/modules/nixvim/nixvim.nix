@@ -1,6 +1,8 @@
 {
   imports = [
-    #core
+    # ╭───────────────────────────────────────────────╮
+    # │ Core Configuration Modules                    │
+    # ╰───────────────────────────────────────────────╯
     ./core/keymaps.nix
     ./core/lsp.nix
     ./core/autocompletion.nix
@@ -8,7 +10,9 @@
     ./core/opts.nix
     ./core/autocommands.nix
 
-    #plugins
+    # ╭───────────────────────────────────────────────╮
+    # │ Plugin Configuration Modules                  │
+    # ╰───────────────────────────────────────────────╯
     ./plugins/harpoon.nix
     ./plugins/surround.nix
     ./plugins/none-ls.nix

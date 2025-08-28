@@ -94,5 +94,15 @@
 
     -- Separate Vim plugins from Neovim in case Vim still in use (default: includes this path if Vim is installed)
     vim.opt.runtimepath:remove('/usr/share/vim/vimfiles')
+
+    -- Netrw configuration
+    -- Disables the netrw banner; use <C-i> to toggle it back
+    vim.g.netrw_banner = 0
+
+    -- Prevents netrw from changing the working directory
+    vim.g.netrw_keepdir = 0
+
+    -- Command to use for copying files in netrw (default: 'cp -r')
+    vim.g.netrw_localcopydircmd = 'cp -r'
   '';
 }

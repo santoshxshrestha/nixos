@@ -1,7 +1,7 @@
-{
+{ performanceMode ? true, ... }: {
   imports = [
     # ╭───────────────────────────────────────────────╮
-    # │ Core Configuration Modules                    │
+    # │ Core Configuration Modules (Always Enabled)   │
     # ╰───────────────────────────────────────────────╯
     ./core/keymaps.nix
     ./core/lsp.nix
@@ -11,25 +11,31 @@
     ./core/autocommands.nix
 
     # ╭───────────────────────────────────────────────╮
-    # │ Plugin Configuration Modules                  │
+    # │ Essential Functional Plugins                  │
     # ╰───────────────────────────────────────────────╯
     ./plugins/harpoon.nix
     ./plugins/surround.nix
     ./plugins/none-ls.nix
     ./plugins/comment.nix
-    ./plugins/indent-blankline.nix
-    ./plugins/gitsigns.nix
-    ./plugins/lualine.nix
     ./plugins/misc.nix
     ./plugins/treesitter.nix
     ./plugins/telescope.nix
-    ./plugins/colorschemes.nix
-    ./plugins/alpha.nix
     ./plugins/copilot.nix
-    ./plugins/noice.nix
+    ./plugins/colorschemes.nix
+  ] ++ (if performanceMode then
+    [
+      # Performance mode: minimal aesthetic plugins
+    ]
+  else [
+    # Full mode: all aesthetic plugins
     ./plugins/which-key.nix
     ./plugins/oil.nix
-  ];
+    ./plugins/gitsigns.nix
+    ./plugins/alpha.nix
+    ./plugins/lualine.nix
+    ./plugins/indent-blankline.nix
+  ]);
+
   programs.nixvim = {
     enable = true;
     plugins = { };

@@ -12,7 +12,7 @@
     };
   };
   programs.nixvim.plugins.noice = {
-    enable = false;
+    enable = true;
     settings = {
       notify.enable = true;
       lsp = {

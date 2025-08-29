@@ -31,6 +31,7 @@ in {
     shell = "${pkgs.fish}/bin/fish";
     terminal = "xterm-256color";
     escapeTime = 0;
+    baseIndex = 1;
 
     # # Terminal Configuration
     # set -g terminal-overrides ',xterm-256color:Tc'
@@ -133,14 +134,6 @@ in {
       # I'll thing of them later I am ok with pre n pre p
       # bind-key -r C-h select-window -t :-
       # bind-key -r C-l select-window -t :+
-
-      # Reload Configuration
-      # unbind r
-      # bind r source-file ~/.tmux.conf
-
-      # Window and Pane Indexing
-      set -g base-index 1
-      set -g pane-base-index 1
 
       # Increased History
       set-option -g history-limit 100000

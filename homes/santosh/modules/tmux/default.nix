@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  colors = ./colors.nix;
+  colors = import ./colors.nix;
   tmux-session-manager = pkgs.tmuxPlugins.mkTmuxPlugin {
     pluginName = "tmux-session-manager";
     name = "tmux-session-manager";

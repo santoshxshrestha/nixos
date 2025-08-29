@@ -39,47 +39,46 @@
   programs.nixvim.plugins.lsp = {
     enable = true;
     servers = {
-      # "*" = {
-      # Global settings for all servers
-      #   capabilities = {
-      #     textDocument = {
-      #       semanticTokens = { multilineTokenSupport = true; };
-      #     };
-      #   };
-      #   root_markers = [ ".git" ];
-      # };
-
       # markdown
       marksman = { enable = true; };
+
       # htmx
-      htmx = { enable = true; };
+      htmx = { enable = false; };
+
       # nix
-      nil_ls = {
-        enable = true;
-        settings = { formatting = { command = [ "nixfmt" ]; }; };
-      };
+      nil_ls = { enable = true; };
+
       # c / c++
-      clangd = { enable = true; };
+      clangd = { enable = false; };
+
       # lua
-      lua_ls = { enable = true; };
+      lua_ls = { enable = false; };
       # bash
       bashls = { enable = true; };
+
       # css
       cssls = { enable = true; };
+
       # Go
-      gopls = { enable = true; };
+      gopls = { enable = false; };
+
       # html
       html = { enable = true; };
+
       # tailwindcss 
-      tailwindcss = { enable = true; };
+      tailwindcss = { enable = false; };
+
       # typescript
-      ts_ls = { enable = true; };
+      ts_ls = { enable = false; };
+
       # emment snippet
-      emmet_language_server = { enable = true; };
+      emmet_language_server = { enable = false; };
+
       # dockerfile
-      dockerls = { enable = true; };
+      dockerls = { enable = false; };
+
       # json
-      jsonls = { enable = true; };
+      jsonls = { enable = false; };
 
     };
   };

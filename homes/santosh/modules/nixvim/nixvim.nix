@@ -1,4 +1,5 @@
-{ performanceMode ? true, ... }: {
+let performanceMode = true;
+in {
   imports = [
     # ╭───────────────────────────────────────────────╮
     # │ Core Configuration Modules (Always Enabled)   │
@@ -22,17 +23,15 @@
     ./plugins/telescope.nix
     ./plugins/copilot.nix
     ./plugins/colorschemes.nix
+    ./plugins/lualine.nix
   ] ++ (if performanceMode then
-    [
-      # Performance mode: minimal aesthetic plugins
-    ]
+    [ ]
   else [
     # Full mode: all aesthetic plugins
     ./plugins/which-key.nix
     ./plugins/oil.nix
     ./plugins/gitsigns.nix
     ./plugins/alpha.nix
-    ./plugins/lualine.nix
     ./plugins/indent-blankline.nix
   ]);
 

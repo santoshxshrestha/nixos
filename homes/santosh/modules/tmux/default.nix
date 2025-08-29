@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 let
   tmux-session-manager = pkgs.tmuxPlugins.mkTmuxPlugin {
     pluginName = "tmux-session-manager";
@@ -13,6 +13,17 @@ let
 in {
   programs.tmux = {
     enable = true;
+    mouse = true;
+    prefix = "C-a";
+    shell = "${pkgs.fish}/bin/fish";
+    terminal = "xterm-256color";
+    escapeTime = 0;
+
+    # # Terminal Configuration
+    # set -g terminal-overrides ',xterm-256color:Tc'
+    # set -g default-terminal "tmux-256color"
+    # # set -ga terminal-overrides ",xterm-256color:Tc"
+    # # the ga one also work but since there is only one color Overrides so no need to use it
 
     plugins = with pkgs; [
       tmuxPlugins.sensible
@@ -29,6 +40,16 @@ in {
           set -g @prefix_highlight_sync_mode_attr 'fg=$rose_text,bg=$rose_base,bold'
           set -g @prefix_highlight_prefix_prompt '󰣇'  # Only show dot when prefix is active
           set -g @prefix_highlight_empty_prompt ' ● '   # show when not in prefix mode
+
+
+          # Status Bar with Enhanced Colors
+          set -g status-style bg=$rose_base,fg=$rose_text
+          set -g status-left "#[fg=$rose_text,bg=$rose_base,italics] 󰆍 #S #[fg=$rose_foam,bg=$rose_surface]"
+          set -g status-left-length 20
+          set -g status-right-length 40
+          # set -g status-right '#[fg=#{rose_text},bg=#{rose_base},italics] #{battery_icon} #{battery_percentage}   %a %b %d   %I:%M %p #{prefix_highlight}' 
+          set -g status-right '#[fg=#{rose_text},bg=#{rose_base},italics] #{prefix_highlight}' 
+          set -g status-justify absolute-centre
         '';
       }
 
@@ -71,18 +92,6 @@ in {
     ];
 
     extraConfig = ''
-      # Terminal Configuration
-      set -g terminal-overrides ',xterm-256color:Tc'
-      set -g default-terminal "tmux-256color"
-      set -s escape-time 0
-      # set -ga terminal-overrides ",xterm-256color:Tc"
-      # the ga one also work but since there is only one color Overrides so no need to use it
-
-      # Prefix Setup
-      unbind C-b
-      set -g prefix C-a
-      bind-key C-a send-prefix
-      set -g mouse on
 
       # enable/disable status Bar
       set -g status on
@@ -130,15 +139,6 @@ in {
       rose_iris="#c4a7e7"
       rose_highlight="#2a2837"
       rose_overlay="#26233a"
-
-      # Status Bar with Enhanced Colors
-      set -g status-style bg=$rose_base,fg=$rose_text
-      set -g status-left "#[fg=$rose_text,bg=$rose_base,italics] 󰆍 #S #[fg=$rose_foam,bg=$rose_surface]"
-      set -g status-left-length 20
-      set -g status-right-length 40
-      # set -g status-right '#[fg=#{rose_text},bg=#{rose_base},italics] #{battery_icon} #{battery_percentage}   %a %b %d   %I:%M %p #{prefix_highlight}' 
-      set -g status-right '#[fg=#{rose_text},bg=#{rose_base},italics] #{prefix_highlight}' 
-      set -g status-justify absolute-centre
 
       #session management
       bind C command-prompt -p "New session name: " "new-session -d -s '%%'"  # Create new sessio

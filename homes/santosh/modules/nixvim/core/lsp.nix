@@ -39,6 +39,9 @@
   programs.nixvim.plugins.lsp = {
     enable = true;
     servers = {
+      # rust
+      rust_analyzer = { enable = true; };
+
       # markdown
       marksman = { enable = true; };
 
@@ -65,7 +68,7 @@
       # html
       html = { enable = true; };
 
-      # tailwindcss 
+      # tailwindcss
       tailwindcss = { enable = false; };
 
       # typescript

@@ -34,7 +34,7 @@
     };
 
     # Sets up nvim lsp for the rust_analyzer automatically
-    rustaceanvim = { enable = true; };
+    rustaceanvim = { enable = false; };
 
     # High-performance color highlighter
     colorizer = { enable = true; };

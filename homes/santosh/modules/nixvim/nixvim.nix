@@ -1,4 +1,4 @@
-let performanceMode = true;
+let focusMode = true;
 in {
   imports = [
     # ╭───────────────────────────────────────────────╮
@@ -24,15 +24,15 @@ in {
     ./plugins/copilot.nix
     ./plugins/colorschemes.nix
     ./plugins/gitsigns.nix
-  ] ++ (if performanceMode then
+  ] ++ (if focusMode then
     [ ]
   else [
-    # Full mode: all aesthetic plugins
+    # Full mode: all overwelming plugins
+    ./plugins/lualine.nix
     ./plugins/which-key.nix
     ./plugins/oil.nix
     ./plugins/alpha.nix
     ./plugins/indent-blankline.nix
-    ./plugins/lualine.nix
   ]);
 
   programs.nixvim = {

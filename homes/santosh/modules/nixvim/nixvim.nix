@@ -23,16 +23,16 @@ in {
     ./plugins/telescope.nix
     ./plugins/copilot.nix
     ./plugins/colorschemes.nix
-    ./plugins/lualine.nix
+    ./plugins/gitsigns.nix
   ] ++ (if performanceMode then
     [ ]
   else [
     # Full mode: all aesthetic plugins
     ./plugins/which-key.nix
     ./plugins/oil.nix
-    ./plugins/gitsigns.nix
     ./plugins/alpha.nix
     ./plugins/indent-blankline.nix
+    ./plugins/lualine.nix
   ]);
 
   programs.nixvim = {

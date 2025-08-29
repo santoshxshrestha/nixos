@@ -1,4 +1,16 @@
-{ pkgs, ... }: {
+{ pkgs, lib, ... }:
+let
+  tmux-session-manager = pkgs.tmuxPlugins.mkTmuxPlugin {
+    pluginName = "tmux-session-manager";
+    name = "tmux-session-manager";
+    src = pkgs.fetchFromGitHub {
+      owner = "santoshxshrestha";
+      repo = "tmux-session-manager";
+      rev = "07c0d4447a40248bea4f04ab9b61263512394500";
+      sha256 = "sha256-94s2I7NUKy0rTdNcI5105LPK/TNDdF2Cuegdxuz6qYA=";
+    };
+  };
+in {
   programs.tmux = {
     enable = true;
 
@@ -48,6 +60,12 @@
           # M- means "hold Meta/Alt"
           set -g @floax-bind '-n M-o'
           set -g @floax-title  '   #{user}@#{host} '
+        '';
+      }
+      {
+        plugin = tmux-session-manager;
+        extraConfig = ''
+          set -g @session_manager_key 'j'
         '';
       }
     ];
@@ -158,21 +176,6 @@
 
       # Message Style
       set -g message-style bg=$rose_surface,fg=$rose_text
-
-      # tmux tmux-session-manager config
-      # set -g @session_manager_key 'j'
-
-      # Plugins
-      # set -g @plugin 'tmux-plugins/tpm'
-      # set -g @plugin 'tmux-plugins/tmux-sensible'
-      # set -g @plugin 'tmux-plugins/tmux-battery'
-      # set -g @plugin 'christoomey/vim-tmux-navigator'
-      # set -g @plugin 'tmux-plugins/tmux-prefix-highlight'
-      # set -g @plugin 'omerxx/tmux-floax'
-      # set -g @plugin 'santoshxshrestha/tmux-session-manager'
-
-      # Initialize TMUX plugin manager
-      # run '~/.tmux/plugins/tpm/tpm'
 
       bind-key -r f run-shell "tmux neww ~/.local/scripts/sessionizer"
       bind-key -r H run-shell "tmux neww ~/.local/scripts/sessionizer ~/dotfiles"

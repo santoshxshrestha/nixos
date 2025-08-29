@@ -1,18 +1,6 @@
 { pkgs, ... }:
 let
-  # Enhanced Rose Pine Colors
-  rose_base = "#020204";
-  rose_surface = "#1f1d2e";
-  rose_text = "#e0def4";
-  rose_subtle = "#908caa";
-  # rose_pine = "#31748f";
-  # rose_gold = "#f6c177";
-  # rose_love = "#eb6f92";
-  rose_foam = "#9ccfd8";
-  # rose_iris = "#c4a7e7";
-  # rose_highlight = "#2a2837";
-  # rose_overlay = "#26233a";
-
+  colors = ./colors.nix;
   tmux-session-manager = pkgs.tmuxPlugins.mkTmuxPlugin {
     pluginName = "tmux-session-manager";
     name = "tmux-session-manager";
@@ -46,31 +34,31 @@ in {
         plugin = tmuxPlugins.prefix-highlight;
         extraConfig = ''
           # Prefix Highlight Configuration
-          set -g @prefix_highlight_fg '${rose_text}'
-          set -g @prefix_highlight_bg '${rose_base}'
+          set -g @prefix_highlight_fg '${colors.rose_text}'
+          set -g @prefix_highlight_bg '${colors.rose_base}'
           set -g @prefix_highlight_show_copy_mode 'on'
-          set -g @prefix_highlight_copy_mode_attr 'fg=${rose_text},bg=${rose_base},bold'
+          set -g @prefix_highlight_copy_mode_attr 'fg=${colors.rose_text},bg=${colors.rose_base},bold'
           set -g @prefix_highlight_show_sync_mode 'on'
-          set -g @prefix_highlight_sync_mode_attr 'fg=${rose_text},bg=${rose_base},bold'
+          set -g @prefix_highlight_sync_mode_attr 'fg=${colors.rose_text},bg=${colors.rose_base},bold'
           set -g @prefix_highlight_prefix_prompt '󰣇'  # Only show dot when prefix is active
           set -g @prefix_highlight_empty_prompt ' ● '   # show when not in prefix mode
 
 
           # Status Bar with Enhanced Colors
-          set -g status-style bg=${rose_base},fg=${rose_text}
-          set -g status-left "#[fg=${rose_text},bg=${rose_base},italics] 󰆍 #S #[fg=${rose_foam},bg=${rose_surface}]"
+          set -g status-style bg=${colors.rose_base},fg=${colors.rose_text}
+          set -g status-left "#[fg=${colors.rose_text},bg=${colors.rose_base},italics] 󰆍 #S #[fg=${colors.rose_foam},bg=${colors.rose_surface}]"
           set -g status-left-length 20
           set -g status-right-length 40
-          # set -g status-right '#[fg=${rose_text},bg=${rose_base},italics] #{battery_icon} #{battery_percentage}   %a %b %d   %I:%M %p #{prefix_highlight}' 
-          set -g status-right '#[fg=${rose_text},bg=${rose_base},italics] #{prefix_highlight}' 
+          # set -g status-right '#[fg=${colors.rose_text},bg=${colors.rose_base},italics] #{battery_icon} #{battery_percentage}   %a %b %d   %I:%M %p #{prefix_highlight}' 
+          set -g status-right '#[fg=${colors.rose_text},bg=${colors.rose_base},italics] #{prefix_highlight}' 
           set -g status-justify absolute-centre
 
 
           # Window Status with Better Colors
-          setw -g window-status-format "#[fg=${rose_subtle},bg=${rose_base},italics] ○ #W "
-          setw -g window-status-current-format "#[fg=${rose_text},bg=${rose_base},italics]  #W "
-          # setw -g window-status-format "#[fg=${rose_subtle},bg=${rose_base},italics] #W "
-          # setw -g window-status-current-format "#[fg=${rose_text},bg=${rose_base},underscore,italics] #W "
+          setw -g window-status-format "#[fg=${colors.rose_subtle},bg=${colors.rose_base},italics] ○ #W "
+          setw -g window-status-current-format "#[fg=${colors.rose_text},bg=${colors.rose_base},italics]  #W "
+          # setw -g window-status-format "#[fg=${colors.rose_subtle},bg=${colors.rose_base},italics] #W "
+          # setw -g window-status-current-format "#[fg=${colors.rose_text},bg=${colors.rose_base},underscore,italics] #W "
           setw -g window-status-separator ""
         '';
       }
@@ -99,7 +87,7 @@ in {
 
           # Floax Configuration
           # set -g @floax-border-color '#7195D2'
-          set -g @floax-border-color '${rose_subtle}'
+          set -g @floax-border-color '${colors.rose_subtle}'
           # M- means "hold Meta/Alt"
           set -g @floax-bind '-n M-o'
           set -g @floax-title  '   #{user}@#{host} '
@@ -122,8 +110,8 @@ in {
       set -g mode-keys vi
       bind -T copy-mode-vi v send-keys -X begin-selection
       bind -T copy-mode-vi y send-keys -X copy-pipe-and-cancel 'wl-copy'
-      # set -g mode-style fg="${rose_surface}",bg="${rose_text}"
-      # set -g mode-style fg="${rose_text}",bg="${rose_surface}"
+      # set -g mode-style fg="${colors.rose_surface}",bg="${colors.rose_text}"
+      # set -g mode-style fg="${colors.rose_text}",bg="${colors.rose_surface}"
 
       # Vim-Like Navigation
       bind-key ^ last-window
@@ -167,11 +155,11 @@ in {
 
 
       # Pane Borders with Enhanced Colors
-      set -g pane-border-style fg=${rose_surface}
-      set -g pane-active-border-style fg=${rose_subtle}
+      set -g pane-border-style fg=${colors.rose_surface}
+      set -g pane-active-border-style fg=${colors.rose_subtle}
 
       # Message Style
-      set -g message-style bg=${rose_surface},fg=${rose_text}
+      set -g message-style bg=${colors.rose_surface},fg=${colors.rose_text}
 
       bind-key -r f run-shell "tmux neww ~/.local/scripts/sessionizer"
       bind-key -r H run-shell "tmux neww ~/.local/scripts/sessionizer ~/dotfiles"

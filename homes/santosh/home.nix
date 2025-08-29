@@ -29,7 +29,7 @@
     ./modules/waybar/default.nix
     ./modules/swaync.nix
     ./modules/alacritty.nix
-    # ./modules/tmux/default.nix
+    ./modules/tmux/default.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Package Management                            │
@@ -64,7 +64,7 @@
     ".config/kitty".source = ./config/kitty;
     ".config/rofi".source = ./config/rofi;
     ".local/scripts".source = ./scripts;
-    ".tmux.conf".source = ./config/tmux/aesthetics.conf;
+    # ".tmux.conf".source = ./config/tmux/aesthetics.conf;
 
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a

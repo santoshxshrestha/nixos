@@ -4,10 +4,52 @@
 
     plugins = with pkgs; [
       tmuxPlugins.sensible
-      tmuxPlugins.battery
       tmuxPlugins.vim-tmux-navigator
-      tmuxPlugins.prefix-highlight
-      tmuxPlugins.tmux-floax
+      {
+        plugin = tmuxPlugins.prefix-highlight;
+        extraConfig = ''
+          # Prefix Highlight Configuration
+          set -g @prefix_highlight_fg '$rose_text'
+          set -g @prefix_highlight_bg '$rose_base'
+          set -g @prefix_highlight_show_copy_mode 'on'
+          set -g @prefix_highlight_copy_mode_attr 'fg=$rose_text,bg=$rose_base,bold'
+          set -g @prefix_highlight_show_sync_mode 'on'
+          set -g @prefix_highlight_sync_mode_attr 'fg=$rose_text,bg=$rose_base,bold'
+          set -g @prefix_highlight_prefix_prompt '󰣇'  # Only show dot when prefix is active
+          set -g @prefix_highlight_empty_prompt ' ● '   # show when not in prefix mode
+        '';
+      }
+
+      {
+        plugin = tmuxPlugins.battery;
+        extraConfig = ''
+          # Battery Icons Configuration
+          set -g @batt_icon_charge_tier8 '󰁹'
+          set -g @batt_icon_charge_tier7 '󰂀'
+          set -g @batt_icon_charge_tier6 '󰁿'
+          set -g @batt_icon_charge_tier5 '󰁾'
+          set -g @batt_icon_charge_tier4 '󰁽'
+          set -g @batt_icon_charge_tier3 '󰁼'
+          set -g @batt_icon_charge_tier2 '󰁻'
+          set -g @batt_icon_charge_tier1 '󰁺'
+          set -g @batt_icon_status_charged '󰂅 '
+          set -g @batt_icon_status_charging '󱐋'
+          set -g @batt_icon_status_discharging '󰂀'
+        '';
+      }
+
+      {
+        plugin = tmuxPlugins.tmux-floax;
+        extraConfig = ''
+
+          # Floax Configuration
+          # set -g @floax-border-color '#7195D2'
+          set -g @floax-border-color '#707070'
+          # M- means "hold Meta/Alt"
+          set -g @floax-bind '-n M-o'
+          set -g @floax-title  '   #{user}@#{host} '
+        '';
+      }
     ];
 
     extraConfig = ''
@@ -116,37 +158,6 @@
 
       # Message Style
       set -g message-style bg=$rose_surface,fg=$rose_text
-
-      # Prefix Highlight Configuration
-      set -g @prefix_highlight_fg '$rose_text'
-      set -g @prefix_highlight_bg '$rose_base'
-      set -g @prefix_highlight_show_copy_mode 'on'
-      set -g @prefix_highlight_copy_mode_attr 'fg=$rose_text,bg=$rose_base,bold'
-      set -g @prefix_highlight_show_sync_mode 'on'
-      set -g @prefix_highlight_sync_mode_attr 'fg=$rose_text,bg=$rose_base,bold'
-      set -g @prefix_highlight_prefix_prompt '󰣇'  # Only show dot when prefix is active
-      set -g @prefix_highlight_empty_prompt ' ● '   # show when not in prefix mode
-
-
-      # Battery Icons Configuration
-      set -g @batt_icon_charge_tier8 '󰁹'
-      set -g @batt_icon_charge_tier7 '󰂀'
-      set -g @batt_icon_charge_tier6 '󰁿'
-      set -g @batt_icon_charge_tier5 '󰁾'
-      set -g @batt_icon_charge_tier4 '󰁽'
-      set -g @batt_icon_charge_tier3 '󰁼'
-      set -g @batt_icon_charge_tier2 '󰁻'
-      set -g @batt_icon_charge_tier1 '󰁺'
-      set -g @batt_icon_status_charged '󰂅 '
-      set -g @batt_icon_status_charging '󱐋'
-      set -g @batt_icon_status_discharging '󰂀'
-
-      # Floax Configuration
-      # set -g @floax-border-color '#7195D2'
-      set -g @floax-border-color '#707070'
-      # M- means "hold Meta/Alt"
-      set -g @floax-bind '-n M-o'
-      set -g @floax-title  '   #{user}@#{host} '
 
       # tmux tmux-session-manager config
       # set -g @session_manager_key 'j'

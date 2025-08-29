@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: {
+{ pkgs, ... }: {
   programs.tmux = {
     enable = true;
 
@@ -142,11 +142,11 @@
       set -g @batt_icon_status_discharging '󰂀'
 
       # Floax Configuration
-      # set -g @tmux-floax-border-color '#7195D2'
-      set -g @tmux-floax-border-color '#707070'
+      # set -g @floax-border-color '#7195D2'
+      set -g @floax-border-color '#707070'
       # M- means "hold Meta/Alt"
-      set -g @tmux-floax-bind '-n M-o'
-      set -g @tmux-floax-title  '   #{user}@#{host} '
+      set -g @floax-bind '-n M-o'
+      set -g @floax-title  '   #{user}@#{host} '
 
       # tmux tmux-session-manager config
       # set -g @session_manager_key 'j'
@@ -158,10 +158,10 @@
       # set -g @plugin 'christoomey/vim-tmux-navigator'
       # set -g @plugin 'tmux-plugins/tmux-prefix-highlight'
       # set -g @plugin 'omerxx/tmux-floax'
-      set -g @plugin 'santoshxshrestha/tmux-session-manager'
+      # set -g @plugin 'santoshxshrestha/tmux-session-manager'
 
       # Initialize TMUX plugin manager
-      run '~/.tmux/plugins/tpm/tpm'
+      # run '~/.tmux/plugins/tpm/tpm'
 
       bind-key -r f run-shell "tmux neww ~/.local/scripts/sessionizer"
       bind-key -r H run-shell "tmux neww ~/.local/scripts/sessionizer ~/dotfiles"

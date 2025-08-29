@@ -102,9 +102,9 @@
     vim.g.netrw_banner = 0
 
     -- Prevents netrw from changing the working directory
-    vim.g.netrw_keepdir = 0
+    -- vim.g.netrw_keepdir = 0
 
     -- Command to use for copying files in netrw (default: 'cp -r')
-    vim.g.netrw_localcopydircmd = 'cp -r'
+    -- vim.g.netrw_localcopydircmd = 'cp -r'
   '';
 }

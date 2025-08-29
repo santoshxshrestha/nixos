@@ -80,6 +80,8 @@
     completeopt = "menuone,noselect";
     # Hide end of buffer ~ characters (default: true)
     fillchars = { eob = " "; };
+    # Hide the status line completely (0 = never, 1 = only if more than one window, 2 = always)
+    laststatus = 1;
   };
 
   # Additional options that need special handling in NixVim

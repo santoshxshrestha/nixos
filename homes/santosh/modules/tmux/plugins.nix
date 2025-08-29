@@ -12,7 +12,7 @@ with pkgs; [
       set -g @prefix_highlight_copy_mode_attr 'fg=${colors.rose_text},bg=${colors.rose_base},bold'
       set -g @prefix_highlight_show_sync_mode 'on'
       set -g @prefix_highlight_sync_mode_attr 'fg=${colors.rose_text},bg=${colors.rose_base},bold'
-      set -g @prefix_highlight_prefix_prompt '󰣇'  # Only show dot when prefix is active
+      set -g @prefix_highlight_prefix_prompt ' '  # Only show dot when prefix is active
       set -g @prefix_highlight_empty_prompt ' ● '   # show when not in prefix mode
 
 

@@ -128,7 +128,7 @@
       states = {
         good = 95;
         warning = 30;
-        critical = 15;
+        critical = 20;
       };
       format = "{icon} {capacity}%";
       format-charging = "󱐋{capacity}%";

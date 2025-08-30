@@ -37,7 +37,7 @@
     # Force all vertical splits to go to the right of current window (default: false)
     splitright = true;
     # Set highlight on search (default: true)
-    hlsearch = false;
+    hlsearch = true;
     # We don't need to see things like -- INSERT -- anymore (default: true)
     showmode = false;
     # Set termguicolors to enable highlight groups (default: false)

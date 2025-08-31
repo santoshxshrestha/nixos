@@ -1,4 +1,6 @@
-let focusMode = false;
+let
+  focusMode = true;
+  aiIntegration = true;
 in {
   imports = [
     # ╭───────────────────────────────────────────────╮
@@ -10,12 +12,6 @@ in {
     ./core/terminal.nix
     ./core/opts.nix
     ./core/autocommands.nix
-
-    # ╭───────────────────────────────────────────────╮
-    # │ Ai Plugins                                    │
-    # ╰───────────────────────────────────────────────╯
-    ./plugins/copilot.nix
-    ./plugins/avante.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Essential Functional Plugins                  │
@@ -31,7 +27,6 @@ in {
     # ╭───────────────────────────────────────────────╮
     # │ UI Plugins                                    │
     # ╰───────────────────────────────────────────────╯
-    # ./plugins/ui.nix
     ./plugins/gitsigns.nix
     ./plugins/colorschemes.nix
     ./plugins/snacks.nix
@@ -39,14 +34,24 @@ in {
   ] ++ (if focusMode then
     [ ]
   else [
-    # Full mode: all overwelming plugins
+    # ╭───────────────────────────────────────────────╮
+    # │ Full mode: all overwhelming plugins           │
+    # ╰───────────────────────────────────────────────╯
     ./plugins/lualine.nix
     ./plugins/noice.nix
     ./plugins/which-key.nix
     ./plugins/oil.nix
     ./plugins/alpha.nix
     ./plugins/indent-blankline.nix
-  ]);
+    ./plugins/notify.nix
+  ]) ++ (if aiIntegration then [
+    # ╭───────────────────────────────────────────────╮
+    # │ Ai Plugins                                    │
+    # ╰───────────────────────────────────────────────╯
+    ./plugins/copilot.nix
+    ./plugins/avante.nix
+  ] else
+    [ ]);
 
   programs.nixvim = {
     enable = true;

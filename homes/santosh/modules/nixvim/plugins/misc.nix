@@ -15,9 +15,6 @@
     # Tmux & split window navigation
     tmux-navigator = { enable = true; };
 
-    # Detect tabstop and shiftwidth automatically
-    # vim-sleuth = { enable = true; };
-
     # Powerful Git integration for Vim
     fugitive = { enable = true; };
 

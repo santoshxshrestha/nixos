@@ -1,4 +1,4 @@
-let focusMode = true;
+let focusMode = false;
 in {
   imports = [
     # ╭───────────────────────────────────────────────╮
@@ -31,7 +31,7 @@ in {
     # ╭───────────────────────────────────────────────╮
     # │ UI Plugins                                    │
     # ╰───────────────────────────────────────────────╯
-    ./plugins/ui.nix
+    # ./plugins/ui.nix
     ./plugins/gitsigns.nix
     ./plugins/colorschemes.nix
     ./plugins/snacks.nix

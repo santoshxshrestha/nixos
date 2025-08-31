@@ -100,7 +100,7 @@
     # stay in indent mode
     {
       action = ">gv";
-      key = ">";
+      key = "<C-l>";
       mode = [ "v" ];
       options = {
         silent = true;
@@ -110,12 +110,34 @@
     }
     {
       action = "<gv";
-      key = "<";
+      key = "<C-h>";
       mode = [ "v" ];
       options = {
         silent = true;
         noremap = true;
         desc = "< without loosing indent mode";
+      };
+    }
+    # move selected line up and down
+    {
+      action = ":m '>+1<CR>gv";
+      key = "<C-j>";
+      mode = [ "v" ];
+      options = {
+        silent = true;
+        noremap = true;
+        desc = "Move selected line down";
+      };
+    }
+    # move selected line up and down
+    {
+      action = ":m '<-2<CR>gv";
+      key = "<C-k>";
+      mode = [ "v" ];
+      options = {
+        silent = true;
+        noremap = true;
+        desc = "Move selected line up";
       };
     }
 

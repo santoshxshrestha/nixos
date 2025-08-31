@@ -56,7 +56,7 @@
       action = "<CMD>CopilotChatTests<CR>";
       options.desc = "Add tests for my code";
     }
-    # using the api of terminal that I wrote 
+    # using the api of terminal that I wrote
     {
       key = "<leader>t";
       action = "<cmd>Terminal<CR>";
@@ -78,7 +78,7 @@
       };
     }
     {
-      key = "<leader>a";
+      key = "<leader>oc";
       action = "<cmd>Terminal opencode<CR>";
       mode = [ "n" ];
       options = {
@@ -130,7 +130,7 @@
         desc = "Toggle line wrapping";
       };
     }
-    # find and center 
+    # find and center
     {
       action = "nzzzv";
       key = "n";
@@ -468,13 +468,13 @@
       mode = [ "n" ];
       options = { desc = "Search document symbols"; };
     }
-    # toggle oil  
+    # toggle oil
     # {
     #   action.__raw = ''
     #     function()
-    #     if vim.bo.filetype == 'oil' then 
+    #     if vim.bo.filetype == 'oil' then
     #         vim.cmd('bdelete')
-    #     else 
+    #     else
     #         vim.cmd('Oil')
     #             end
     #     end

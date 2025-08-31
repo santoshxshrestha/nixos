@@ -12,6 +12,12 @@ in {
     ./core/autocommands.nix
 
     # ╭───────────────────────────────────────────────╮
+    # │ Ai Plugins                                    │
+    # ╰───────────────────────────────────────────────╯
+    ./plugins/copilot.nix
+    ./plugins/avante.nix
+
+    # ╭───────────────────────────────────────────────╮
     # │ Essential Functional Plugins                  │
     # ╰───────────────────────────────────────────────╯
     ./plugins/harpoon.nix
@@ -21,7 +27,6 @@ in {
     ./plugins/misc.nix
     ./plugins/treesitter.nix
     ./plugins/telescope.nix
-    ./plugins/copilot.nix
     ./plugins/colorschemes.nix
     ./plugins/gitsigns.nix
   ] ++ (if focusMode then

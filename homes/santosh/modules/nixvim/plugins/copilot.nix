@@ -1,11 +1,11 @@
 {
   programs.nixvim.plugins = {
     copilot-chat = {
-      enable = true;
+      enable = false;
       settings = {
         model = "gpt-4o";
         window = {
-          height = 0.8;
+          height = 0.9;
           width = 0.9;
           border = "rounded";
           # title = "[ ]";

@@ -2,7 +2,7 @@
   programs.fish = {
     enable = true;
     generateCompletions = true;
-    interactiveShellInit = "fastfetch";
+    # interactiveShellInit = "fastfetch";
 
     shellInit = ''
       set -gx EDITOR nvim

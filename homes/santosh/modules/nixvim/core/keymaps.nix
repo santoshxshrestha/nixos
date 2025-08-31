@@ -174,6 +174,18 @@
       };
 
     }
+    # join line with out moving cursor
+    {
+      action = "mzJ`z";
+      key = "J";
+      mode = [ "n" ];
+      options = {
+        silent = true;
+        noremap = true;
+        desc = "Join line with out moving cursor";
+      };
+
+    }
     # resize with arrow
     {
       action = "<cmd>resize +2<CR>";

@@ -29,7 +29,6 @@ in {
     # ╰───────────────────────────────────────────────╯
     ./plugins/gitsigns.nix
     ./plugins/colorschemes.nix
-    ./plugins/noice.nix
     ./plugins/snacks.nix
 
   ] ++ (if focusMode then
@@ -44,6 +43,7 @@ in {
     ./plugins/alpha.nix
     ./plugins/indent-blankline.nix
     ./plugins/notify.nix
+    ./plugins/noice.nix
   ]) ++ (if aiIntegration then [
     # ╭───────────────────────────────────────────────╮
     # │ Ai Plugins                                    │

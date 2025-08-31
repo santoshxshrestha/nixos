@@ -29,10 +29,11 @@ in {
     # ╰───────────────────────────────────────────────╯
     ./plugins/gitsigns.nix
     ./plugins/colorschemes.nix
+    ./plugins/noice.nix
     ./plugins/snacks.nix
 
   ] ++ (if focusMode then
-    [ ./plugins/noice.nix ]
+    [ ]
   else [
     # ╭───────────────────────────────────────────────╮
     # │ Full mode: all overwhelming plugins           │

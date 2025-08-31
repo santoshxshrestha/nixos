@@ -3,8 +3,8 @@
     enable = true;
     settings = {
       notifier = {
-        enabled = true;
-        # style = "minimal";
+        enabled = false;
+        style = "fancy";
       };
       bigfile = {
         enabled = true;

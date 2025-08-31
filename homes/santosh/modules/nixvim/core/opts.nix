@@ -1,5 +1,7 @@
 {
   programs.nixvim.opts = {
+    # Disable GUI cursor styling (default: '')
+    guicursor = "";
     # Make line numbers default (default: false)
     number = true;
     # Set relative numbered lines (default: false)
@@ -27,9 +29,11 @@
     # Convert tabs to spaces (default: false)
     expandtab = true;
     # Minimal number of screen lines to keep above and below the cursor (default: 0)
-    scrolloff = 4;
+    scrolloff = 10;
     # Minimal number of screen columns either side of cursor if wrap is `false` (default: 0)
     sidescrolloff = 8;
+    # Highlight the column of the cursor (default: false)
+    cursorcolumn = false;
     # Highlight the current line (default: false)
     cursorline = false;
     # Force all horizontal splits to go below current window (default: false)
@@ -37,7 +41,9 @@
     # Force all vertical splits to go to the right of current window (default: false)
     splitright = true;
     # Set highlight on search (default: true)
-    hlsearch = true;
+    hlsearch = false;
+    # Show partial matches for a search pattern (default: false)
+    incsearch = true;
     # We don't need to see things like -- INSERT -- anymore (default: true)
     showmode = false;
     # Set termguicolors to enable highlight groups (default: false)
@@ -67,7 +73,7 @@
     # Enable break indent (default: false)
     breakindent = true;
     # Decrease update time (default: 4000)
-    updatetime = 250;
+    updatetime = 50;
     # Time to wait for a mapped sequence to complete (in milliseconds) (default: 1000)
     timeoutlen = 300;
     # Creates a backup file (default: false)
@@ -82,6 +88,8 @@
     fillchars = { eob = " "; };
     # Controls the visibility of the status line (0 = never, 1 = only if more than one window is open, 2 = always)
     laststatus = 0;
+    # Highlight columns at 80 chars (default: '')
+    colorcolumn = "80";
   };
 
   # Additional options that need special handling in NixVim

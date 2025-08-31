@@ -32,13 +32,12 @@ in {
     ./plugins/snacks.nix
 
   ] ++ (if focusMode then
-    [ ]
+    [ ./plugins/noice.nix ]
   else [
     # ╭───────────────────────────────────────────────╮
     # │ Full mode: all overwhelming plugins           │
     # ╰───────────────────────────────────────────────╯
     ./plugins/lualine.nix
-    ./plugins/noice.nix
     ./plugins/which-key.nix
     ./plugins/oil.nix
     ./plugins/alpha.nix

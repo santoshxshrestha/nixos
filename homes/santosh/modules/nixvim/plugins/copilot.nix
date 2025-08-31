@@ -23,7 +23,7 @@
           auto_refresh = false;
         };
         suggestion = {
-          enable = false;
+          enabled = false;
           auto_trigger = false;
           debounce = 90;
           # If you’re using a completion plugin (like nvim-cmp), Copilot’s ghost text disappears while the completion menu is visible — avoids clashing with your completion popup.

@@ -2,12 +2,13 @@
   programs.nixvim.plugins.noice = {
     enable = true;
     settings = {
-      notify.enable = false;
+      cmdline.enabled = true;
+      notify.enabled = false;
       lsp = {
-        hover.enable = true;
-        message.enable = true;
-        signature.enable = true;
-        progress.enable = true;
+        hover.enabled = true;
+        message.enabled = true;
+        signature.enabled = true;
+        progress.enabled = false;
       };
     };
   };

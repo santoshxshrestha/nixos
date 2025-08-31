@@ -16,7 +16,7 @@
       trim_scope = "outer";
       mode = "cursor";
       separator = null;
-      zindex = 20;
+      zindex = 50;
     };
   };
 

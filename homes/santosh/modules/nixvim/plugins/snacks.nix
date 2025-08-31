@@ -2,14 +2,16 @@
   programs.nixvim.plugins.snacks = {
     enable = true;
     settings = {
-      notifies = { enable = false; };
+      notifier = {
+        enabled = true;
+        # style = "minimal";
+      };
       bigfile = {
-        enable = true;
+        enabled = true;
         notify = true;
       };
-      quickfile = { enable = false; };
-      statuscolumn.enable = false;
-
+      quickfile = { enabled = true; };
+      statuscolumn.enabled = true;
     };
   };
 }

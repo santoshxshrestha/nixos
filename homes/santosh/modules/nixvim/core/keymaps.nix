@@ -78,7 +78,7 @@
       };
     }
     {
-      key = "<leader>oc";
+      key = "<leader>ao";
       action = "<cmd>Terminal opencode<CR>";
       mode = [ "n" ];
       options = {

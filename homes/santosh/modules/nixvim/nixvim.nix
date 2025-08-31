@@ -27,13 +27,21 @@ in {
     ./plugins/misc.nix
     ./plugins/treesitter.nix
     ./plugins/telescope.nix
-    ./plugins/colorschemes.nix
+
+    # ╭───────────────────────────────────────────────╮
+    # │ UI Plugins                                    │
+    # ╰───────────────────────────────────────────────╯
+    ./plugins/ui.nix
     ./plugins/gitsigns.nix
+    ./plugins/colorschemes.nix
+    ./plugins/snacks.nix
+
   ] ++ (if focusMode then
     [ ]
   else [
     # Full mode: all overwelming plugins
     ./plugins/lualine.nix
+    ./plugins/noice.nix
     ./plugins/which-key.nix
     ./plugins/oil.nix
     ./plugins/alpha.nix

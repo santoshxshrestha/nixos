@@ -22,6 +22,7 @@
     ./modules/starship.nix
     ./modules/zoxide.nix
     ./modules/btop.nix
+    ./modules/bat.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Wayland and Terminal Tools                    │

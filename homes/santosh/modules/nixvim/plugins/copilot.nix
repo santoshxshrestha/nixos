@@ -1,61 +1,44 @@
 {
-  programs.nixvim.plugins = {
-    copilot-chat = {
-      enable = false;
-      settings = {
-        model = "gpt-4o";
-        window = {
-          height = 0.9;
-          width = 0.9;
-          border = "rounded";
-          # title = "[ ]";
-          title = "   AutoPilot ";
-          # replace is also a good option
-          layout = "float";
+  programs.nixvim.copilot-lua = {
+    enable = true;
+    settings = {
+      panel = {
+        enabled = false;
+        auto_refresh = false;
+      };
+      suggestion = {
+        enabled = false;
+        auto_trigger = false;
+        debounce = 90;
+        # If you’re using a completion plugin (like nvim-cmp), Copilot’s ghost text disappears while the completion menu is visible — avoids clashing with your completion popup.
+        hide_during_completion = true;
+        keymap = {
+          accept = false;
+          accept_word = false;
+          accept_line = false;
+          next = false;
+          prev = false;
+          dismiss = false;
         };
       };
-    };
-    copilot-lua = {
-      enable = true;
-      settings = {
-        panel = {
-          enabled = false;
-          auto_refresh = false;
-        };
-        suggestion = {
-          enabled = false;
-          auto_trigger = false;
-          debounce = 90;
-          # If you’re using a completion plugin (like nvim-cmp), Copilot’s ghost text disappears while the completion menu is visible — avoids clashing with your completion popup.
-          hide_during_completion = true;
-          keymap = {
-            accept = false;
-            accept_word = false;
-            accept_line = false;
-            next = false;
-            prev = false;
-            dismiss = false;
-          };
-        };
-        filetypes = {
-          "." = false;
-          cvs = false;
-          gitcommit = true;
-          gitrebase = true;
-          help = false;
-          hgcommit = false;
-          markdown = true;
-          svn = false;
-          yaml = false;
-          rs = true;
-          js = true;
-          html = true;
-          nix = true;
-          bash = true;
-          ts = true;
-          lua = true;
-          python = true;
-        };
+      filetypes = {
+        "." = false;
+        cvs = false;
+        gitcommit = true;
+        gitrebase = true;
+        help = false;
+        hgcommit = false;
+        markdown = true;
+        svn = false;
+        yaml = false;
+        rs = true;
+        js = true;
+        html = true;
+        nix = true;
+        bash = true;
+        ts = true;
+        lua = true;
+        python = true;
       };
     };
   };

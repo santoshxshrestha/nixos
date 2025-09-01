@@ -9,7 +9,7 @@
   programs.nixvim.plugins.cmp-async-path = { enable = true; };
   programs.nixvim.plugins.cmp-nvim-lsp-document-symbol = { enable = true; };
   programs.nixvim.plugins.cmp-nvim-lsp-signature-help = { enable = true; };
-  programs.nixvim.plugins.copilot-cmp = { enable = true; };
+  # programs.nixvim.plugins.copilot-cmp = { enable = true; };
 
   programs.nixvim.plugins.lspkind = {
     enable = true;
@@ -41,7 +41,7 @@
           { name = "latex_symbols"; }
           { name = "nvim_lsp_document_symbols"; }
           { name = "nvim_lsp_signature_help"; }
-          { name = "copilot"; }
+          # { name = "copilot"; }
         ];
         snippet = {
           expand =

@@ -1,5 +1,5 @@
 {
-  programs.nixvim.copilot-lua = {
+  programs.nixvim.plugins.copilot-lua = {
     enable = true;
     settings = {
       panel = {
@@ -7,18 +7,18 @@
         auto_refresh = false;
       };
       suggestion = {
-        enabled = false;
-        auto_trigger = false;
+        enabled = true;
+        auto_trigger = true;
         debounce = 90;
         # If you’re using a completion plugin (like nvim-cmp), Copilot’s ghost text disappears while the completion menu is visible — avoids clashing with your completion popup.
         hide_during_completion = true;
         keymap = {
-          accept = false;
-          accept_word = false;
-          accept_line = false;
-          next = false;
-          prev = false;
-          dismiss = false;
+          accept = "<C-l>";
+          accept_word = "<C-w>";
+          accept_line = "<C-e>";
+          next = "<C-]>";
+          prev = "<C-[>";
+          dismiss = "<C-d>";
         };
       };
       filetypes = {

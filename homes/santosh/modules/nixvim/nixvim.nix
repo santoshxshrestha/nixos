@@ -50,6 +50,7 @@ in {
     # ╰───────────────────────────────────────────────╯
     ./plugins/copilot.nix
     ./plugins/avante.nix
+    ./plugins/copilot-chat.nix
   ] else
     [ ]);
 

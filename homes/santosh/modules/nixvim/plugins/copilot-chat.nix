@@ -1,6 +1,6 @@
 {
   programs.nixvim.plugins.copilot-chat = {
-    enable = false;
+    enable = true;
     settings = {
       model = "gpt-4o";
       window = {

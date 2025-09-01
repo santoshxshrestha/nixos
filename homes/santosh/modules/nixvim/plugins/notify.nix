@@ -3,7 +3,7 @@
     enable = true;
     settings = {
       # simple is also good option here
-      render = "compact";
+      render = "simple";
       stages = "slide";
       background_colour = "#000000";
       fps = 60;

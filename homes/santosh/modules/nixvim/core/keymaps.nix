@@ -9,7 +9,7 @@
     # keymaps for quick fix like
     # next quickfix item
     {
-      key = "<C-j>";
+      key = "]q";
       mode = [ "n" ];
       action = "<cmd>cnext<CR>zz";
       options.desc = "Go to next quickfix item";
@@ -17,21 +17,21 @@
     }
     # previous quickfix item
     {
-      key = "<C-k>";
+      key = "[q";
       mode = [ "n" ];
       action = "<cmd>cprev<CR>zz";
       options.desc = "Go to previous quickfix item";
     }
     # next location list item
     {
-      key = "<leader>j";
+      key = "]Q";
       mode = [ "n" ];
       action = "<cmd>lnext<CR>zz";
       options.desc = "Go to next location list item";
     }
     # previous location list item
     {
-      key = "<leader>k";
+      key = "[Q";
       mode = [ "n" ];
       action = "<cmd>lprev<CR>zz";
       options.desc = "Go to previous location list item";

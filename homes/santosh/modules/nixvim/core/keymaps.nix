@@ -599,7 +599,7 @@
     {
       key = "<C-c>";
       action =
-        "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
+        "<cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
       mode = "v";
       options = {
         noremap = true;
@@ -610,7 +610,7 @@
     {
       key = "<C-/>";
       action =
-        "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
+        "<cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
       mode = "v";
       options = {
         noremap = true;

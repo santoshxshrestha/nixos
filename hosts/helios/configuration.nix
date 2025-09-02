@@ -65,7 +65,7 @@
   nixpkgs.config.allowUnfree = true;
 
   services.xserver.enable = true;
-  services.xserver.libinput.touchpad.disableWhileTyping = true;
+  services.libinput.touchpad.disableWhileTyping = true;
 
   programs.hyprland = {
     enable = true;

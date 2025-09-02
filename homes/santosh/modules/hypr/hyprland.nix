@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
@@ -10,7 +11,7 @@
       # HYPRLAND CONFIGURATION
       # This configuration is based on the example from the Hyprland wiki
       # https://wiki.hyprland.org/Configuring/
-      # 
+      #
       # Please note not all available settings / options are set here.
       # For a full list, see the wiki
       # #######################################################################################
@@ -74,7 +75,7 @@
       # env = [
       #   "XCURSOR_SIZE,20"
       #   "XCURSOR_THEME,Night Diamond(Red)"
-      #   "HYPRCURSOR_SIZE,20" 
+      #   "HYPRCURSOR_SIZE,20"
       #   "HYPRCURSOR_THEME,rose-pine-hyprcursor"
       # ];
 
@@ -260,20 +261,19 @@
 
       # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
       dwindle = {
-        pseudotile =
-          true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+        pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
         preserve_split = true; # You probably want this
       };
 
       # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-      master = { new_status = "master"; };
+      master = {
+        new_status = "master";
+      };
 
       # https://wiki.hyprland.org/Configuring/Variables/#misc
       misc = {
-        force_default_wallpaper =
-          -1; # Set to 0 or 1 to disable the anime mascot wallpapers
-        disable_hyprland_logo =
-          false; # If true disables the random hyprland logo / anime girl background. :(
+        force_default_wallpaper = -1; # Set to 0 or 1 to disable the anime mascot wallpapers
+        disable_hyprland_logo = false; # If true disables the random hyprland logo / anime girl background. :(
       };
 
       #############
@@ -296,11 +296,17 @@
           natural_scroll = true;
           tap-to-click = true;
           tap-and-drag = true;
+          disable_while_typing = true;
+          clickfinger_behavior = true;
+          # 1 for time out and 0 for disable and 2 for drag lock with out time out
+          drag_lock = 2;
         };
       };
 
       # https://wiki.hyprland.org/Configuring/Variables/#gestures
-      gestures = { workspace_swipe = false; };
+      gestures = {
+        workspace_swipe = false;
+      };
 
       # Example per-device config
       # See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more
@@ -324,8 +330,7 @@
         "$mainMod,minus,exec,~/.local/scripts/waybar-toggle"
 
         # Clipboard history with rofi
-        ''
-          SUPER,V,exec,cliphist list | rofi -dmenu -p "Clipboard History" -theme ~/.config/rofi/themes/clipboard.rasi | cliphist decode | wl-copy''
+        ''SUPER,V,exec,cliphist list | rofi -dmenu -p "Clipboard History" -theme ~/.config/rofi/themes/clipboard.rasi | cliphist decode | wl-copy''
 
         # Window management - see https://wiki.hyprland.org/Configuring/Binds/ for more
         "$mainMod,F,fullscreen"
@@ -389,8 +394,10 @@
       ];
 
       # Move/resize windows with mainMod + LMB/RMB and dragging
-      bindm =
-        [ "$mainMod,mouse:272,movewindow" "$mainMod,mouse:273,resizewindow" ];
+      bindm = [
+        "$mainMod,mouse:272,movewindow"
+        "$mainMod,mouse:273,resizewindow"
+      ];
 
       # Laptop multimedia keys for volume and LCD brightness
       bindel = [

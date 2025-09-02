@@ -5,7 +5,8 @@
 { pkgs, ... }:
 
 {
-  imports = [ # Include the results of the hardware scan.
+  imports = [
+    # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./modules/sddm.nix
     ./modules/stylix.nix
@@ -64,6 +65,7 @@
   nixpkgs.config.allowUnfree = true;
 
   services.xserver.enable = true;
+  services.xserver.libinput.touchpad.disableWhileTyping = true;
 
   programs.hyprland = {
     enable = true;
@@ -86,7 +88,7 @@
 
   security.polkit.enable = true;
 
-  # remap 
+  # remap
   services.keyd = {
     enable = true;
     keyboards.default = {

@@ -4,7 +4,8 @@
 
     settings = {
       background = {
-        path = "$HOME/nixos/wallpapers/inazuma_cats_place.png";
+        path =
+          "$WALLPAPER_ARCHIVE_PATH/Static-Wallpapers/inazuma_cats_place.png";
         blur_passes = 2;
         contrast = 0.8916;
         brightness = 0.35;

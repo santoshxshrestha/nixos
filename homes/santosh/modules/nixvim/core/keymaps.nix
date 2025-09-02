@@ -575,6 +575,16 @@
     # comment.nvim key maps
     # Normal mode - toggle selected lines
     {
+      key = "<C-_>";
+      action.__raw = "require('Comment.api').toggle.linewise.current";
+      mode = "n";
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "Toggle line wise comment in normal mode";
+      };
+    }
+    {
       key = "<C-c>";
       action.__raw = "require('Comment.api').toggle.linewise.current";
       mode = "n";
@@ -597,25 +607,33 @@
 
     # Visual mode - toggle selected lines
     {
-      key = "<C-c>";
-      action =
-        "<cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
+      key = "<C-_>";
+      action = "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
       mode = "v";
       options = {
         noremap = true;
         silent = true;
-        desc = "Toggle line wise comment in visualmode";
+        desc = "Toggle line wise comment in visual mode";
+      };
+    }
+    {
+      key = "<C-c>";
+      action = "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
+      mode = "v";
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "Toggle line wise comment in visual mode";
       };
     }
     {
       key = "<C-/>";
-      action =
-        "<cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
+      action = "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
       mode = "v";
       options = {
         noremap = true;
         silent = true;
-        desc = "Toggle line wise comment in visualmode";
+        desc = "Toggle line wise comment in visual mode";
       };
     }
 

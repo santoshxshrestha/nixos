@@ -574,6 +574,7 @@
 
     # comment.nvim key maps
     # Normal mode - toggle selected lines
+    # Note: <C-_> maps to Ctrl+/ due to terminal key code handling
     {
       key = "<C-_>";
       action.__raw = "require('Comment.api').toggle.linewise.current";
@@ -608,7 +609,8 @@
     # Visual mode - toggle selected lines
     {
       key = "<C-_>";
-      action = "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
+      action =
+        "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
       mode = "v";
       options = {
         noremap = true;
@@ -618,7 +620,8 @@
     }
     {
       key = "<C-c>";
-      action = "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
+      action =
+        "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
       mode = "v";
       options = {
         noremap = true;
@@ -628,7 +631,8 @@
     }
     {
       key = "<C-/>";
-      action = "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
+      action =
+        "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
       mode = "v";
       options = {
         noremap = true;

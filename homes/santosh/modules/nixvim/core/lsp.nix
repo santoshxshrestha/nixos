@@ -50,13 +50,13 @@
       marksman = { enable = true; };
 
       # htmx
-      htmx = { enable = false; };
+      htmx = { enable = true; };
 
       # nix
       nil_ls = { enable = true; };
 
       # c / c++
-      clangd = { enable = false; };
+      clangd = { enable = true; };
 
       # lua
       lua_ls = { enable = false; };
@@ -73,13 +73,13 @@
       html = { enable = true; };
 
       # tailwindcss
-      tailwindcss = { enable = false; };
+      tailwindcss = { enable = true; };
 
       # typescript
-      ts_ls = { enable = false; };
+      ts_ls = { enable = true; };
 
       # emment snippet
-      emmet_language_server = { enable = false; };
+      emmet_language_server = { enable = true; };
 
       # dockerfile
       dockerls = { enable = false; };

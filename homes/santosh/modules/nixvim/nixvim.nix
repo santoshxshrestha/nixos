@@ -23,6 +23,7 @@ in {
     ./plugins/misc.nix
     ./plugins/treesitter.nix
     ./plugins/telescope.nix
+    ./plugins/rhubarb.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ UI Plugins                                    │

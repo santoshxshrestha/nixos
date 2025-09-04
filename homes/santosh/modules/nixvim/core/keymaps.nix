@@ -300,6 +300,16 @@
     }
     # keymaps for fugutive
     {
+      action = "<cmd>GBrowse<CR>";
+      key = "<leader>go";
+      mode = [ "n" ];
+      options = {
+        noremap = true;
+        silent = true;
+        desc = "Git Browse";
+      };
+    }
+    {
       action = "<cmd>Git<CR>";
       key = "<leader>gs";
       mode = [ "n" ];

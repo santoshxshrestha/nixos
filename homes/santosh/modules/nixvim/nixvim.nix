@@ -1,5 +1,5 @@
 let
-  focusMode = true;
+  focusMode = false;
   aiIntegration = true;
 in {
   imports = [
@@ -43,6 +43,7 @@ in {
     ./plugins/alpha.nix
     ./plugins/indent-blankline.nix
     ./plugins/notify.nix
+    ./plugins/cord.nix
     ./plugins/noice.nix
   ]) ++ (if aiIntegration then [
     # ╭───────────────────────────────────────────────╮

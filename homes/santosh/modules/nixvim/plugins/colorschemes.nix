@@ -2,15 +2,16 @@
   programs.nixvim = {
     colorschemes = {
       catppuccin = {
-        enable = false;
+        enable = true;
         settings = {
           show_end_of_buffer = false;
-          transparent_background = true;
+          transparent_background = false;
           flavor = "mocha";
           float = {
             transparent = true;
             solid = false;
           };
+          color_overrides = { all = { base = "#191d33"; }; };
           no_italic = false;
           no_bold = true;
           no_underline = false;
@@ -29,7 +30,7 @@
       };
 
       palette = {
-        enable = true;
+        enable = false;
         settings = {
           italics = true;
           bolds = false;
@@ -68,9 +69,12 @@
 
     extraConfigLua = ''
       require('vague').setup({
-          transparent = true,
+          transparent = false,
           bold = false,
           italic = true,
+          -- colors = {
+          --     bg = "#191d33",
+          -- },
           on_highlights = function(highlights, colors)
               -- GitSigns
               highlights.GitSignsAdd = { fg = "#ffffff", bg = "NONE" }

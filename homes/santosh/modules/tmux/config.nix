@@ -25,6 +25,9 @@
   # Status Bar Position
   set-option -g status-position top
 
+  # switching windows
+  bind -n M-] next-window      
+  bind -n M-[ previous-window 
 
   #session management
   bind C command-prompt -p "New session name: " "new-session -d -s '%%'"  # Create new sessio

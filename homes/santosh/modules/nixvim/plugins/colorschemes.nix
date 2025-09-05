@@ -17,7 +17,7 @@
         };
       };
       kanagawa = {
-        enable = true;
+        enable = false;
         settings = {
           transparent = false;
           commonStyle = {
@@ -25,6 +25,15 @@
             bold = false;
           };
           undercurl = true;
+        };
+      };
+
+      palette = {
+        enable = true;
+        settings = {
+          italics = true;
+          bolds = false;
+          transparent_background = false;
         };
       };
 

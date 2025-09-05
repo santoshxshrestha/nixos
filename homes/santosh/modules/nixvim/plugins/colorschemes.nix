@@ -16,9 +16,20 @@
           no_underline = false;
         };
       };
+      kanagawa = {
+        enable = true;
+        settings = {
+          transparent = false;
+          commonStyle = {
+            italic = true;
+            bold = false;
+          };
+          undercurl = true;
+        };
+      };
 
       rose-pine = {
-        enable = true;
+        enable = false;
         settings = {
           show_end_of_buffer = false;
           flavor = "main";
@@ -83,7 +94,7 @@
           --   keywords_exception = "none",
           -- },
       })
-       vim.cmd('colorscheme vague')
+       -- vim.cmd('colorscheme vague')
     '';
   };
 }

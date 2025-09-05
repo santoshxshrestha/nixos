@@ -1,5 +1,5 @@
 let
-  focusMode = false;
+  focusMode = true;
   aiIntegration = true;
 in {
   imports = [

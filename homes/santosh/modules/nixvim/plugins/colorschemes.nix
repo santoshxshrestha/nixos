@@ -65,6 +65,7 @@
           sha256 = "sha256-isROQFePz8ofJg0qa3Avbwh4Ml4p9Ii2d+VAAkbeGO8=";
         };
       })
+      (pkgs.vimPlugins.falcon)
 
       (pkgs.vimUtils.buildVimPlugin {
         pname = "black-metal-theme-neovim";

@@ -1,6 +1,7 @@
-{ pkgs,  ... }: {
+{ pkgs, ... }: {
   programs.nixvim = {
     colorschemes = {
+
       catppuccin = {
         enable = true;
         settings = {
@@ -17,6 +18,7 @@
           no_underline = false;
         };
       };
+
       kanagawa = {
         enable = false;
         settings = {

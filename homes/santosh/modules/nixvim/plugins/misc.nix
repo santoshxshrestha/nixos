@@ -1,5 +1,7 @@
 {
   programs.nixvim.plugins = {
+    # automatically save files
+    auto-save = { enable = false; };
     # neotest for running tests
     neotest = { enable = false; };
     # Mmarkdown-preview in browser

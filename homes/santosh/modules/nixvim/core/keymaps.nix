@@ -52,13 +52,19 @@
     }
     {
       key = "<leader>ct";
-      mode = [ "n" "v" ];
+      mode = [
+        "n"
+        "v"
+      ];
       action = "<CMD>CopilotChatToggle<CR>";
       options.desc = "Toggle Copilot Chat Window";
     }
     {
       key = "<leader>cs";
-      mode = [ "n" "v" ];
+      mode = [
+        "n"
+        "v"
+      ];
       action = "<CMD>CopilotChatStop<CR>";
       options.desc = "Stop current Copilot output";
     }
@@ -414,7 +420,9 @@
       action = "<cmd>UndotreeToggle<CR>";
       key = "<leader>u";
       mode = [ "n" ];
-      options = { desc = "Toggle undo tree"; };
+      options = {
+        desc = "Toggle undo tree";
+      };
     }
     # key map for treesitter-context
     {
@@ -468,10 +476,20 @@
 
     # telescope key maps
     {
+      action = "<cmd>Telescope colorscheme<CR>";
+      key = "<leader>sc";
+      mode = [ "n" ];
+      options = {
+        desc = "search colorscheme";
+      };
+    }
+    {
       action = "<cmd>Telescope find_files<CR>";
       key = "<leader>sf";
       mode = [ "n" ];
-      options = { desc = "Search files"; };
+      options = {
+        desc = "Search files";
+      };
     }
     # these two keymaps are for searching in current buffer Open files
     {
@@ -485,7 +503,9 @@
         end'';
       key = "<leader>/";
       mode = [ "n" ];
-      options = { desc = "[/] Fuzzily search in current buffer"; };
+      options = {
+        desc = "[/] Fuzzily search in current buffer";
+      };
     }
     {
       action.__raw = ''
@@ -498,49 +518,65 @@
             end'';
       key = "<leader>s/";
       mode = [ "n" ];
-      options = { desc = "[S]earch [/] in Open Files"; };
+      options = {
+        desc = "[S]earch [/] in Open Files";
+      };
     }
     {
       action = "<cmd>Telescope help_tags<CR>";
       key = "<leader>sh";
       mode = [ "n" ];
-      options = { desc = "Help_tags"; };
+      options = {
+        desc = "Help_tags";
+      };
     }
     {
       action = "<cmd>Telescope live_grep<CR>";
       key = "<leader>sg";
       mode = [ "n" ];
-      options = { desc = "Search using live grep"; };
+      options = {
+        desc = "Search using live grep";
+      };
     }
     {
       action = "<cmd>Telescope buffers<CR>";
       key = "<leader><leader>";
       mode = [ "n" ];
-      options = { desc = "List buffers"; };
+      options = {
+        desc = "List buffers";
+      };
     }
     {
       action = "<cmd>Telescope<CR>";
       key = "<leader>st";
       mode = [ "n" ];
-      options = { desc = " help tags"; };
+      options = {
+        desc = " help tags";
+      };
     }
     {
       action = "<cmd>Telescope lsp_type_definitions<CR>";
       key = "<leader>sd";
       mode = [ "n" ];
-      options = { desc = "Search LSP Definitions"; };
+      options = {
+        desc = "Search LSP Definitions";
+      };
     }
     {
       action = "<cmd>Telescope lsp_references<CR>";
       key = "<leader>sr";
       mode = [ "n" ];
-      options = { desc = "Search LSP references"; };
+      options = {
+        desc = "Search LSP references";
+      };
     }
     {
       action = "<cmd>Telescope lsp_document_symbols<CR>";
       key = "<leader>ss";
       mode = [ "n" ];
-      options = { desc = "Search document symbols"; };
+      options = {
+        desc = "Search document symbols";
+      };
     }
     # toggle oil
     # {
@@ -619,8 +655,7 @@
     # Visual mode - toggle selected lines
     {
       key = "<C-_>";
-      action =
-        "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
+      action = "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
       mode = "v";
       options = {
         noremap = true;
@@ -630,8 +665,7 @@
     }
     {
       key = "<C-c>";
-      action =
-        "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
+      action = "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
       mode = "v";
       options = {
         noremap = true;
@@ -641,8 +675,7 @@
     }
     {
       key = "<C-/>";
-      action =
-        "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
+      action = "<esc><cmd>lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<cr>";
       mode = "v";
       options = {
         noremap = true;
@@ -655,59 +688,76 @@
     {
       mode = "n";
       key = "<leader>H";
-      action.__raw =
-        "function() require'harpoon'.ui:toggle_quick_menu(require'harpoon':list()) end";
-      options = { desc = "Toogle harpoon ui"; };
+      action.__raw = "function() require'harpoon'.ui:toggle_quick_menu(require'harpoon':list()) end";
+      options = {
+        desc = "Toogle harpoon ui";
+      };
     }
     {
       mode = "n";
       key = "<leader>h";
       action.__raw = "function() require'harpoon':list():add() end";
-      options = { desc = "Add current buffer in harpoons list"; };
+      options = {
+        desc = "Add current buffer in harpoons list";
+      };
     }
 
     {
       mode = "n";
       key = "<leader>1";
       action.__raw = "function() require'harpoon':list():select(1) end";
-      options = { desc = "Select 1 ih list of harpoon"; };
+      options = {
+        desc = "Select 1 ih list of harpoon";
+      };
     }
     {
       mode = "n";
       key = "<leader>2";
       action.__raw = "function() require'harpoon':list():select(2) end";
-      options = { desc = "Select 2 in list of harpoon"; };
+      options = {
+        desc = "Select 2 in list of harpoon";
+      };
     }
     {
       mode = "n";
       key = "<leader>3";
       action.__raw = "function() require'harpoon':list():select(3) end";
-      options = { desc = "Select 3 in list of harpoon"; };
+      options = {
+        desc = "Select 3 in list of harpoon";
+      };
     }
     {
       mode = "n";
       key = "<leader>4";
       action.__raw = "function() require'harpoon':list():select(4) end";
-      options = { desc = "Select 4 in list of harpoon"; };
+      options = {
+        desc = "Select 4 in list of harpoon";
+      };
     }
     {
       mode = "n";
       key = "<leader>5";
       action.__raw = "function() require'harpoon':list():select(5) end";
-      options = { desc = "Select 5 in list of harpoon"; };
+      options = {
+        desc = "Select 5 in list of harpoon";
+      };
     }
 
     {
       mode = "n";
       key = "<leader>j";
       action.__raw = "function() require('harpoon'):list():next() end";
-      options = { desc = "Next harpoon buffer"; };
+      options = {
+        desc = "Next harpoon buffer";
+      };
     }
     {
       mode = "n";
       key = "<leader>k";
       action.__raw = "function() require('harpoon'):list():prev() end";
-      options = { desc = "Previous harpoon buffer"; };
+      options = {
+        desc = "Previous harpoon buffer";
+      };
     }
     # key maps for lsp saga
     # Pops up a floating window showing the definition
@@ -715,27 +765,35 @@
       action = "<cmd>Lspsaga peek_definition<CR>";
       key = "<leader>cd";
       mode = [ "n" ];
-      options = { desc = "Code Definition"; };
+      options = {
+        desc = "Code Definition";
+      };
     }
     {
       #action = "<cmd>Telescope lsp_incoming_calls<CR>";
       action = "<cmd>Lspsaga incoming_calls<CR>";
       key = "<leader>ci";
       mode = [ "n" ];
-      options = { desc = "Code Incoming Calls"; };
+      options = {
+        desc = "Code Incoming Calls";
+      };
     }
     {
       #action = "<cmd>Telescope lsp_outgoing_calls<CR>";
       action = "<cmd>Lspsaga outgoing_calls<CR>";
       key = "<leader>co";
       mode = [ "n" ];
-      options = { desc = "Code Outgoing Calls"; };
+      options = {
+        desc = "Code Outgoing Calls";
+      };
     }
     {
       action = "<cmd>Lspsaga outline<CR>";
       key = "<leader>cs";
       mode = [ "n" ];
-      options = { desc = "Code Symbols Outline"; };
+      options = {
+        desc = "Code Symbols Outline";
+      };
     }
   ];
 
@@ -746,22 +804,30 @@
       {
         key = "gd";
         lspBufAction = "definition";
-        options = { desc = "Go to defination"; };
+        options = {
+          desc = "Go to defination";
+        };
       }
       {
         key = "gD";
         lspBufAction = "references";
-        options = { desc = "References"; };
+        options = {
+          desc = "References";
+        };
       }
       {
         key = "gt";
         lspBufAction = "type_definition";
-        options = { desc = "Type defination"; };
+        options = {
+          desc = "Type defination";
+        };
       }
       {
         key = "gi";
         lspBufAction = "implementation";
-        options = { desc = "Got to implementation"; };
+        options = {
+          desc = "Got to implementation";
+        };
       }
       # {
       #   key = "K";
@@ -770,27 +836,37 @@
       {
         action = "<CMD>Lspsaga hover_doc<Enter>";
         key = "K";
-        options = { desc = "Hover docs"; };
+        options = {
+          desc = "Hover docs";
+        };
       }
       {
         action = "<CMD>Lspsaga rename<Enter>";
         key = "<leader>rn";
-        options = { desc = "Rename the variable"; };
+        options = {
+          desc = "Rename the variable";
+        };
       }
       {
         action = "<CMD>Lspsaga code_action<Enter>";
         key = "<leader>ca";
-        options = { desc = "Code action"; };
+        options = {
+          desc = "Code action";
+        };
       }
       {
         action = "<CMD>Lspsaga diagnostic_jump_next<Enter>";
         key = "]d";
-        options = { desc = "Jump to next diagnostic "; };
+        options = {
+          desc = "Jump to next diagnostic ";
+        };
       }
       {
         action = "<CMD>Lspsaga diagnostic_jump_prev<Enter>";
         key = "[d";
-        options = { desc = "Jump to previous diagnostic "; };
+        options = {
+          desc = "Jump to previous diagnostic ";
+        };
       }
     ];
 }

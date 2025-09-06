@@ -55,6 +55,8 @@
     };
 
     extraPlugins = [
+      (pkgs.vimPlugins.falcon)
+
       (pkgs.vimUtils.buildVimPlugin {
         pname = "vague-nvim";
         version = "1.4.1";
@@ -65,7 +67,6 @@
           sha256 = "sha256-isROQFePz8ofJg0qa3Avbwh4Ml4p9Ii2d+VAAkbeGO8=";
         };
       })
-      (pkgs.vimPlugins.falcon)
 
       (pkgs.vimUtils.buildVimPlugin {
         pname = "black-metal-theme-neovim";

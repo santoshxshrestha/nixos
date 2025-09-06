@@ -5,7 +5,7 @@ let
     repo = "wallpaper-archive";
     rev = "main";
     # sha256 = lib.fakeSha256;
-    sha256 = "sha256-MwWc27LiZcg5oi+brOmZV4JkWrAezRuN+Z2hQBh7q3I=";
+    sha256 = "sha256-gdoheRh1CdiHCLi408K/3Rg/4BnQ39IuqL3wcQppjnU=";
   };
 in {
   # home.file = {

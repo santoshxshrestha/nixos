@@ -299,7 +299,7 @@
           disable_while_typing = true;
           clickfinger_behavior = true;
           # 1 for time out and 0 for disable and 2 for drag lock with out time out
-          drag_lock = 2;
+          drag_lock = 0;
         };
       };
 

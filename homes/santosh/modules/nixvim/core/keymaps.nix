@@ -115,7 +115,7 @@
     }
     {
       key = "<leader>ao";
-      action = "<cmd>Terminal opencode<CR>";
+      action = "<cmd>Terminal opencode .<CR>";
       mode = [ "n" ];
       options = {
         silent = true;

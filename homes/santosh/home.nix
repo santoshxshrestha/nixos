@@ -15,7 +15,6 @@
     # ╭───────────────────────────────────────────────╮
     # │ General Utility Modules                       │
     # ╰───────────────────────────────────────────────╯
-    ./modules/fish.nix
     ./modules/gtk.nix
     ./modules/fastfetch.nix
     ./modules/nixvim/nixvim.nix
@@ -23,6 +22,12 @@
     ./modules/zoxide.nix
     ./modules/btop.nix
     ./modules/bat.nix
+
+    # ╭───────────────────────────────────────────────╮
+    # │ Shell                                         │
+    # ╰───────────────────────────────────────────────╯
+    ./modules/shell/fish.nix
+    ./modules/shell/nushell.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Wayland and Terminal Tools                    │

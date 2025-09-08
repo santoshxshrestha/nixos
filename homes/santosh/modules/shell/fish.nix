@@ -22,10 +22,6 @@
       set -gx PATH ${config.home.homeDirectory}/.local/scripts $PATH
       set -gx PATH ${config.home.homeDirectory}/.cargo/bin $PATH
     '';
-    shellAbbrs = {
-      "initialize" = "flake-initializer";
-      "b" = "beam";
-    };
 
     shellAliases = {
       ".." = "cd ..";

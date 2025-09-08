@@ -1,6 +1,8 @@
-{ config, pkgs, lib, ... }: {
+{ lib, ... }: {
   programs.starship = {
     enable = true;
+    enableFishIntegration = true;
+    enableNushellIntegration = true;
     settings = {
       # Add a blank line between shell prompts
       add_newline = true;

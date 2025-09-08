@@ -23,6 +23,11 @@
       set -gx PATH ${config.home.homeDirectory}/.cargo/bin $PATH
     '';
 
+    shellAbbrs = {
+      "initialize" = "flake-initializer";
+      "b" = "beam";
+    };
+
     shellAliases = {
       ".." = "cd ..";
       # "ls" = "ls --color";

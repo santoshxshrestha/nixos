@@ -111,12 +111,6 @@
     userEmail = "santoshxshrestha@gmail.com";
   };
 
-  # programs.zsh = {
-  # 	enable = true;
-  # 	shellAliases = {
-  # 		rebuild = "sudo nixos-rebuild switch --flake /home/santosh/nixos/#santosh";
-  # 	};
-  # };
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 

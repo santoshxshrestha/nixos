@@ -32,9 +32,9 @@
       # "ls" = "ls --color";
       "r" = "rm -f (fzf --reverse)";
 
-      "asdf" = "${config.home.homeDirectory}/.local/scripts/sessionizer";
-      "adsf" = "${config.home.homeDirectory}/.local/scripts/sessionizer";
-      "adfs" = "${config.home.homeDirectory}/.local/scripts/sessionizer";
+      "asdf" = "sessionizer";
+      "adsf" = "sessionizer";
+      "adfs" = "sessionizer";
 
       "rebuild" =
         "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/nixos/#santosh";

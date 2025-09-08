@@ -61,7 +61,9 @@
   set -g message-style bg=${colors.rose_surface},fg=${colors.rose_text}
 
   bind-key -r f run-shell "tmux neww ~/.local/scripts/sessionizer"
-  bind-key -r H run-shell "tmux neww ~/.local/scripts/sessionizer ~/dotfiles"
-  bind-key -r k run-shell "tmux neww ~/.local/scripts/sessionizer ~/dev/mdwatch"
+  bind -n M-i run-shell "tmux neww ~/.local/scripts/sessionizer"
+
+  bind-key -r H run-shell "tmux neww ~/.local/scripts/sessionizer ~/nixos"
+  bind-key -r k run-shell "tmux neww ~/.local/scripts/sessionizer ~/dev"
 
 ''

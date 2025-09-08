@@ -30,7 +30,7 @@
     shellAliases = {
       ".." = "cd ..";
       # "ls" = "ls --color";
-      "r" = "rm -rf (fzf --reverse)";
+      "r" = "rm -f (fzf --reverse)";
 
       "asdf" = "${config.home.homeDirectory}/.local/scripts/sessionizer";
       "adsf" = "${config.home.homeDirectory}/.local/scripts/sessionizer";

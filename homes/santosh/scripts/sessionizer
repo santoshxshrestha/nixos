@@ -3,7 +3,12 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/ -mindepth 1 -maxdepth 4 -type d | fzf --reverse)
+    selected=$(find ~/ -mindepth 1 -maxdepth 4 -type d | fzf --reverse --prompt="✦ ❯ " --header="sessionizer" \
+        --header-first \
+        --border="rounded" \
+        --color="header:italic" \
+        --preview='tree -C {} | head -20' \
+        --preview-window=right:50%:wrap)
 fi
 
 if [[ -z $selected ]]; then

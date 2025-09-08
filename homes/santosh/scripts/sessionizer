@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/ -mindepth 1 -maxdepth 4 -type d | fzf --reverse --prompt="✦ ❯ " --header="sessionizer" \
+    selected=$(find ~/ -mindepth 1 -maxdepth 4 -type d | fzf --reverse --prompt="✦ ❯ " --header="━━━━━━━━━━━━━━━ ✦ SESSIONIZER ✦ ━━━━━━━━━━━━━━━" \
         --header-first \
         --border="rounded" \
         --color="header:italic" \

@@ -13,9 +13,6 @@ else
     )
 fi
 
-# --preview='tree -C {}' \
-# --preview='tree -C {} | head -20' \
-
 if [[ -z $selected ]]; then
     exit 0
 fi

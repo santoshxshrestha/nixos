@@ -23,7 +23,6 @@
     ./modules/zoxide.nix
     ./modules/btop.nix
     ./modules/bat.nix
-    ./modules/lsd.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Wayland and Terminal Tools                    │

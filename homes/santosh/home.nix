@@ -40,7 +40,7 @@
     # ╭───────────────────────────────────────────────╮
     # │ Scripts                                       │
     # ╰───────────────────────────────────────────────╯
-    ./scripts/sessionizer.nix
+    ./modules/scripts/sessionizer.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Wallpapers                                    │
@@ -70,7 +70,6 @@
     ".config/kitty".source = ./config/kitty;
     ".config/rofi".source = ./config/rofi;
     ".local/scripts".source = ./scripts;
-    # ".tmux.conf".source = ./config/tmux/aesthetics.conf;
 
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a

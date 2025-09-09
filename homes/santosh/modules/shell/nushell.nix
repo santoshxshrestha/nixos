@@ -31,7 +31,7 @@
       use ${getCompletions "typst"}
       use ${getCompletions "zoxide"}
 
-      $env.config.cursor_shape.emacs = "line"
+      # $env.config.cursor_shape.emacs = "line"
 
       def dev [path?: string] {
         nix develop ($path | default '.') --command nu

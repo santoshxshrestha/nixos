@@ -57,10 +57,11 @@
     isNormalUser = true;
     description = "Santosh Shrestha";
     extraGroups = [ "networkmanager" "wheel" "video" "audio" ];
-    shell = pkgs.fish;
+    # shell = pkgs.fish;
+    shell = pkgs.nushell;
   };
 
-  programs.fish.enable = true;
+  programs.fish.enable = false;
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 

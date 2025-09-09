@@ -1,7 +1,7 @@
 { config, ... }: {
   programs.nushell = {
-    enable = false;
-    settings = { show_banner = false; };
+    enable = true;
+    settings = { show_banner = true; };
 
     shellAliases = {
       "initialize" = "flake-initializer";

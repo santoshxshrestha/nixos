@@ -16,7 +16,8 @@ in {
     enable = true;
     mouse = true;
     prefix = "C-a";
-    shell = "${pkgs.fish}/bin/fish";
+    # shell = "${pkgs.fish}/bin/fish";
+    shell = "${pkgs.nushell}/bin/nu";
     terminal = "xterm-256color";
     escapeTime = 0;
     baseIndex = 1;

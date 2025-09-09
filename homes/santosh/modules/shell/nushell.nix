@@ -3,6 +3,14 @@
     enable = true;
     settings = { show_banner = true; };
 
+    environmentVariables = { EDITOR = "nvim"; };
+
+    extraEnv = ''
+      $env.PATH = ($env.PATH | split row (char esep) | prepend "${config.home.homeDirectory}/bin")
+      $env.PATH = ($env.PATH | split row (char esep) | prepend "${config.home.homeDirectory}/.local/scripts")
+      $env.PATH = ($env.PATH | split row (char esep) | prepend "${config.home.homeDirectory}/.cargo/bin")
+    '';
+
     shellAliases = {
       "initialize" = "flake-initializer";
       "b" = "beam";

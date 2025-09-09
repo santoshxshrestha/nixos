@@ -1,4 +1,4 @@
-{ config, ... }: {
+{ config, pkgs, ... }: {
   programs.nushell = {
     enable = true;
     settings = { show_banner = true; };
@@ -11,10 +11,48 @@
       $env.PATH = ($env.PATH | split row (char esep) | prepend "${config.home.homeDirectory}/.cargo/bin")
     '';
 
+    extraConfig = let
+      nu_scripts = pkgs.fetchFromGitHub {
+        owner = "nushell";
+        repo = "nu_scripts";
+        rev = "156a0110c724ce3a98327190e8a667657e4ed3c1";
+        hash = "sha256-O/zqhTFzqhFwCD54iXDfe/9WlqMg2PkiO6TLwUyIxmM=";
+      };
+      completions = "${nu_scripts}/custom-completions";
+      getCompletions = cmd: "${completions}/${cmd}/${cmd}-completions.nu";
+    in ''
+      use ${getCompletions "git"}
+      use ${getCompletions "just"}
+      use ${getCompletions "nix"}
+      use ${getCompletions "cargo"}
+      use ${getCompletions "bat"}
+      use ${getCompletions "gh"}
+      use ${getCompletions "ssh"}
+      use ${getCompletions "typst"}
+      use ${getCompletions "zoxide"}
+
+      $env.config.cursor_shape.emacs = "line"
+
+      def dev [path?: string] {
+        nix develop ($path | default '.') --command nu
+      }
+
+      def suspend [] {
+        systemctl suspend
+        exit
+      }
+
+      def "jj push" [] {
+        jj bookmark m (git branch --show-current) --to @
+        jj git push
+      }
+    '';
+
     shellAliases = {
       "initialize" = "flake-initializer";
       "b" = "beam";
 
+      "cd" = "z";
       ".." = "cd ..";
       "r" = "rm -f (fzf --reverse)";
 

@@ -50,6 +50,7 @@
     # ╭───────────────────────────────────────────────╮
     # │ Wallpapers                                    │
     # ╰───────────────────────────────────────────────╯
+    # currently handled by flake.nix inputs
     ./modules/wallpaper-archive.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should

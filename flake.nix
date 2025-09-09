@@ -18,6 +18,7 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    wallpaper-archive = { url = "github:santoshxshrestha/wallpaper-archive"; };
 
     # hyprland = {
     # url = "github:hyprwm/Hyprland/v0.48.1";

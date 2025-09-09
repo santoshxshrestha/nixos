@@ -12,7 +12,10 @@ let
                 --color="header:italic" \
                 --ignore-case \
                 --wrap \
+                --info=hidden \
+                --input-border=rounded \
                 --preview='${pkgs.tree}/bin/tree -C -L 3 -I "node_modules|.git|target" {}' \
+                --preview-border=rounded \
                 --preview-window=right:50%:wrap
         )
     fi

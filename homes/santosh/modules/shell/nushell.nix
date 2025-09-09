@@ -1,7 +1,7 @@
 { config, pkgs, ... }: {
   programs.nushell = {
     enable = true;
-    settings = { show_banner = true; };
+    settings = { show_banner = false; };
 
     environmentVariables = { EDITOR = "nvim"; };
 
@@ -22,14 +22,15 @@
       getCompletions = cmd: "${completions}/${cmd}/${cmd}-completions.nu";
     in ''
       use ${getCompletions "git"}
-      use ${getCompletions "just"}
+      # use ${getCompletions "just"}
       use ${getCompletions "nix"}
       use ${getCompletions "cargo"}
-      use ${getCompletions "bat"}
-      use ${getCompletions "gh"}
+      # use ${getCompletions "bat"}
+      # use ${getCompletions "gh"}
       use ${getCompletions "ssh"}
-      use ${getCompletions "typst"}
+      # use ${getCompletions "typst"}
       use ${getCompletions "zoxide"}
+      # use ${getCompletions "tmux"}
 
       # $env.config.cursor_shape.emacs = "line"
 

@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   programs.nushell = {
-    enable = true;
+    enable = false;
     settings = { show_banner = false; };
 
     environmentVariables = { EDITOR = "nvim"; };

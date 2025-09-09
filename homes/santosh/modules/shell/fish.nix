@@ -1,6 +1,6 @@
 { config, ... }: {
   programs.fish = {
-    enable = false;
+    enable = true;
     generateCompletions = true;
     # interactiveShellInit = "fastfetch";
 
@@ -29,6 +29,7 @@
     };
 
     shellAliases = {
+      "cd" = "z";
       ".." = "cd ..";
       # "ls" = "ls --color";
       "r" = "rm -f (fzf --reverse)";

@@ -10,6 +10,8 @@ let
                 --header-first \
                 --border="rounded" \
                 --color="header:italic" \
+                --ignore-case \
+                --wrap \
                 --preview='${pkgs.tree}/bin/tree -C -L 3 -I "node_modules|.git|target" {}' \
                 --preview-window=right:50%:wrap
         )

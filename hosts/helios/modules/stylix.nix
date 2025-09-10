@@ -2,6 +2,7 @@
   stylix = {
     enable = false;
     image = ../../../wallpapers/Your_Name_Night_Sky.jpg;
+    imageScalingMode = "center";
 
     polarity = "light";
     base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
@@ -25,34 +26,52 @@
     #   base0F = "#d65d0e";
     # };
 
-    fonts = {
-      serif = {
-        package = pkgs.nerd-fonts.hack;
-        name = "Hack Nerd Font";
-      };
-
-      sansSerif = {
-        package = pkgs.nerd-fonts.hack;
-        name = "Hack Nerd Font";
-      };
-
-      monospace = {
-        package = pkgs.nerd-fonts.hack;
-        name = "Hack Nerd Font Mono";
-      };
-
-      emoji = {
-        name = "Noto Emoji";
-        package = pkgs.noto-fonts-monochrome-emoji;
-      };
-
-      sizes = {
-        applications = 10;
-        terminal = 10;
-        desktop = 10;
-        popups = 10;
-      };
-
+    # fonts = {
+    #   serif = {
+    #     package = pkgs.nerd-fonts.hack;
+    #     name = "Hack Nerd Font";
+    #   };
+    #
+    #   sansSerif = {
+    #     package = pkgs.nerd-fonts.hack;
+    #     name = "Hack Nerd Font";
+    #   };
+    #
+    #   monospace = {
+    #     package = pkgs.nerd-fonts.hack;
+    #     name = "Hack Nerd Font Mono";
+    #   };
+    #
+    #   emoji = {
+    #     name = "Noto Emoji";
+    #     package = pkgs.noto-fonts-monochrome-emoji;
+    #   };
+    #
+    #   sizes = {
+    #     applications = 10;
+    #     terminal = 10;
+    #     desktop = 10;
+    #     popups = 10;
+    #   };
+    #
+    # };
+    cursor = {
+      package = pkgs.bibata-cursors;
+      name = "Bibata-Original-Ice";
+      size = 20;
     };
+
+    # targets = {
+    # nixvim.enable = false;
+    # hyprpaper.enable = lib.mkForce false;
+    # kitty.enable = false;
+    # btop.enable = false;
+    # bat.enable = false;
+    # };
+    opacity = {
+      desktop = 1.0;
+      terminal = 0.5;
+    };
+    overlays.enable = false;
   };
 }

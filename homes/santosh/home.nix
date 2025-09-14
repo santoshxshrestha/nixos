@@ -29,6 +29,7 @@
     # ╰───────────────────────────────────────────────╯
     ./modules/shell/fish.nix
     ./modules/shell/nushell.nix
+    ./modules/shell/carapace.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Wayland and Terminal Tools                    │

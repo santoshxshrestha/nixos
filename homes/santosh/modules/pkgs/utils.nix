@@ -14,7 +14,6 @@ with pkgs; [
   opencode
   alacritty
   heroic-unwrapped
-  carapace
 
   # pywal16
 ]

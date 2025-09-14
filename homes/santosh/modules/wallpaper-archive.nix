@@ -1,12 +1,11 @@
 { pkgs, inputs, lib, ... }:
 let
-  #  wallpapers = inputs.wallpaper-archive;
   wallpapers = pkgs.fetchFromGitHub {
     owner = "santoshxshrestha";
     repo = "wallpaper-archive";
     rev = "main";
     # sha256 = lib.fakeSha256;
-    sha256 = "sha256-gdoheRh1CdiHCLi408K/3Rg/4BnQ39IuqL3wcQppjnU=";
+    sha256 = "sha256-YGuw+ADfTIeguvdi5rjJhQrtpOdEEQ/hG2wID4ilFfc=";
   };
 in {
   # home.file = {

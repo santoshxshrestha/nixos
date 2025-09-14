@@ -304,7 +304,25 @@
       };
 
       # https://wiki.hyprland.org/Configuring/Variables/#gestures
-      gestures = { workspace_swipe = false; };
+      gestures = {
+        workspace_swipe_distance = 300;
+        workspace_swipe_invert = true;
+        workspace_swipe_min_speed_to_force = 30;
+        workspace_swipe_cancel_ratio = 0.5;
+        workspace_swipe_create_new = true;
+        workspace_swipe_forever = false;
+      };
+
+      # Gesture configurations
+      gesture = [
+        # Three-finger gesture to resize floating window
+        "3, up, resize"
+        "3, down, resize"
+        "3, left, resize"
+        "3, right, resize"
+      ];
+
+      # Three-finger gesture configurations
 
       # Example per-device config
       # See https://wiki.hyprland.org/Configuring/Keywords/#per-device-input-configs for more

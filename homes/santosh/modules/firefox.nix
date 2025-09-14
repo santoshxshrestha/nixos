@@ -14,6 +14,7 @@
       OffferToSaveLoginsDefault = false;
       PasswordManagerEnabled = false;
       OfferToSaveLogins = false;
+      DisplayBookmarksToolbar = "never";
 
       EnableTrackingProtection = {
         Value = true;
@@ -31,7 +32,7 @@
         "Pocket" = false;
         "SponsoredPocket" = false;
       };
-      ShowHomeButton = true;
+      ShowHomeButton = false;
 
       FirefoxSuggest = {
         "WebSuggestions" = true;

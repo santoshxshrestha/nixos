@@ -52,7 +52,6 @@
     # ╭───────────────────────────────────────────────╮
     # │ Wallpapers                                    │
     # ╰───────────────────────────────────────────────╯
-    # currently handled by flake.nix inputs
     ./modules/wallpaper-archive.nix
   ];
   # Home Manager needs a bit of information about you and the paths it should
@@ -124,6 +123,8 @@
     name = "Bibata-Original-Ice";
     size = 20;
   };
+
+  home.shell.enableNushellIntegration = true;
 
   programs.direnv = {
     enable = true;

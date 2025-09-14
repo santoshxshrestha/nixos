@@ -13,5 +13,6 @@ with pkgs; [
   mdwatch
   opencode
   alacritty
+  heroic-unwrapped
   # pywal16
 ]

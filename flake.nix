@@ -20,11 +20,6 @@
     };
     # wallpaper-archive = { url = "github:santoshxshrestha/wallpaper-archive"; };
 
-    # hyprland = {
-    # url = "github:hyprwm/Hyprland/v0.48.1";
-    # inputs.nixpkgs.follows = "nixpkgs";
-    # };
-
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, nixvim, stylix, ... }:

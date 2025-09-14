@@ -1,6 +1,6 @@
 { config, pkgs, ... }: {
   programs.nushell = {
-    enable = false;
+    enable = true;
     settings = { show_banner = false; };
 
     environmentVariables = { EDITOR = "nvim"; };
@@ -65,6 +65,7 @@
         "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/nixos/#santosh";
 
       "gs" = "git status";
+      "gl" = "git log --oneline --graph --decorate --all";
       "gd" = "git diff";
       "ga" = "git add .";
       "c" = "git-commit";

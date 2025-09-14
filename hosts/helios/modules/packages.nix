@@ -7,7 +7,6 @@
     git
     vim
     neovim
-    firefox
     hyprland
     stow
     networkmanagerapplet

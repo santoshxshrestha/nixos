@@ -22,6 +22,7 @@
     ./modules/zoxide.nix
     ./modules/btop.nix
     ./modules/bat.nix
+    ./modules/firefox.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Shell                                         │

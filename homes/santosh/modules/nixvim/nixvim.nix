@@ -12,6 +12,7 @@ in {
     ./core/terminal.nix
     ./core/opts.nix
     ./core/autocommands.nix
+    ./core/anim_copilot.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Essential Functional Plugins                  │

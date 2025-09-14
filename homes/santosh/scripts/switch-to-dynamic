@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 
 # Kill hyprpaper to save resources
-pkill hyprpaper
+if pgrep hyprpaper >/dev/null; then
+    pkill hyprpaper
+fi
 
 # Directory containing video wallpapers
 WALLPAPER_DIR="$WALLPAPER_ARCHIVE_PATH/Dynamic-Wallpapers/"
 
 # Get current wallpaper if any is running
-CURRENT_WALL=$(pgrep -af "mpv --wallpaper" | grep -o '[^ ]*$' | head -n 1 || echo "none")
+CURRENT_WALL=$(pgrep -af "mpvpaper" | grep -o '[^ ]*$' | head -n 1 || echo "none")
 
 # Kill any existing mpvpaper instances
 pkill mpvpaper

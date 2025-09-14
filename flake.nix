@@ -18,7 +18,6 @@
       url = "github:nix-community/stylix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    # wallpaper-archive = { url = "github:santoshxshrestha/wallpaper-archive"; };
 
   };
 

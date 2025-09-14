@@ -2,7 +2,7 @@
 with pkgs; [
 
   hyprlock
-  rofi-wayland
+  rofi
   waybar
   hypridle
   hyprlock

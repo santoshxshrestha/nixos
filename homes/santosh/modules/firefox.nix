@@ -5,7 +5,13 @@
       settings = {
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
       };
-      userChrome = "";
+      userChrome = ''
+        /* Hide the title bar */
+        .titlebar-close {
+            display: none !important;
+        }
+
+      '';
     };
   };
 }

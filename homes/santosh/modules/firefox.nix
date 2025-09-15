@@ -345,6 +345,10 @@
 
         /* Center the search bar when focused */
         #urlbar[focused] {
+          background: rgba(247, 246, 246, 0.99) !important;
+          border-radius: 14px !important;
+          border: 1px rgba(80, 83, 84, 0.14) solid !important;
+          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.075) !important;
           position: fixed !important;
           top: var(--urlbar-center-top) !important;
           left: var(--urlbar-center-left) !important;

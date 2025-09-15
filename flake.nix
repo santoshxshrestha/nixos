@@ -16,7 +16,7 @@
 
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, stylix, ... }:
+  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, ... }:
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;

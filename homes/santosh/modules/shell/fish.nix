@@ -21,6 +21,8 @@
       set -gx PATH ${config.home.homeDirectory}/bin $PATH
       set -gx PATH ${config.home.homeDirectory}/.local/scripts $PATH
       set -gx PATH ${config.home.homeDirectory}/.cargo/bin $PATH
+
+      carapace _carapace fish | source
     '';
 
     shellAbbrs = {

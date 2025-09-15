@@ -4,6 +4,7 @@
     position = "top";
     height = 24;
     spacing = 2;
+    margin-bottom = 0;
     margin-top = 4;
     margin-left = 8;
     margin-right = 8;

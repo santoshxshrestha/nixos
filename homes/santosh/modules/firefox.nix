@@ -320,6 +320,14 @@
          *  `-----' `--' '--'`-----'    `------' `--' `--'`--' '--' 
          */
 
+
+        :root {
+          /* Variables for centering the search bar */
+          --urlbar-center-top: 50%; /* Vertical center */
+          --urlbar-center-left: 50%; /* Horizontal center */
+          --urlbar-center-transform: translate(-50%, -50%);
+        }
+
         /* has a fixed sized for some reason; make it auto */
         #urlbar-container {
           width: auto !important
@@ -333,6 +341,15 @@
         /* pad url bar text */
         #urlbar:not([focused]) .urlbar-input-box {
           padding-left: var(--urlbar-icon-padding) !important;
+        }
+
+        /* Center the search bar when focused */
+        #urlbar[focused] {
+          position: fixed !important;
+          top: var(--urlbar-center-top) !important;
+          left: var(--urlbar-center-left) !important;
+          transform: var(--urlbar-center-transform) !important;
+          z-index: 9999 !important; /* Ensure it appears above other elements */
         }
 
         /* hide identity box and "shield" buttons */

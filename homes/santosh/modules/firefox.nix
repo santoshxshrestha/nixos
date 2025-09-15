@@ -339,11 +339,7 @@
           left: 50% !important;
           transform: translateX(-50%) !important;
           z-index: 1000 !important;
-
-          background: rgba(247, 246, 246, 0.99) !important;
-          border-radius: 14px !important;
           border: 1px rgba(80, 83, 84, 0.14) solid !important;
-          box-shadow: 0 3px 10px rgba(0, 0, 0, 0.075) !important;
         }
 
         /* hide identity box and "shield" buttons */

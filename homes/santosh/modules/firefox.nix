@@ -44,22 +44,19 @@
         # Ublock Origin
         "uBlock0@raymondhill.net" = {
           "installation_mode" = "force_installed";
-          "install_url" =
-            "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+          "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
           "default_area" = "menupanel";
         };
         # Vimium C
         "vimium-c@gdh1995.cn" = {
           "installation_mode" = "force_installed";
-          "install_url" =
-            "https://addons.mozilla.org/firefox/downloads/latest/vimium-c/latest.xpi";
+          "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/vimium-c/latest.xpi";
           "default_area" = "menupanel";
         };
         # Dark Reader
         "addon@darkreader.org" = {
           "installation_mode" = "force_installed";
-          "install_url" =
-            "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
+          "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
           "default_area" = "menupanel";
         };
         "{446900e4-71c2-419f-a6a7-df9c091e268b}" = {
@@ -70,8 +67,7 @@
         };
         "sponsorBlocker@ajay.app" = {
           "installation_mode" = "force_installed";
-          "install_url" =
-            "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
+          "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
           "default_area" = "menupanel";
         };
         "idcac-pub@guus.ninja" = {
@@ -321,13 +317,6 @@
          */
 
 
-        :root {
-          /* Variables for centering the search bar */
-          --urlbar-center-top: 50%; /* Vertical center */
-          --urlbar-center-left: 50%; /* Horizontal center */
-          --urlbar-center-transform: translate(-50%, -50%);
-        }
-
         /* has a fixed sized for some reason; make it auto */
         #urlbar-container {
           width: auto !important
@@ -345,15 +334,16 @@
 
         /* Center the search bar when focused */
         #urlbar[focused] {
+          position: fixed !important;
+          top: 20% !important; 
+          left: 50% !important;
+          transform: translateX(-50%) !important;
+          z-index: 1000 !important;
+
           background: rgba(247, 246, 246, 0.99) !important;
           border-radius: 14px !important;
           border: 1px rgba(80, 83, 84, 0.14) solid !important;
           box-shadow: 0 3px 10px rgba(0, 0, 0, 0.075) !important;
-          position: fixed !important;
-          top: var(--urlbar-center-top) !important;
-          left: var(--urlbar-center-left) !important;
-          transform: var(--urlbar-center-transform) !important;
-          z-index: 9999 !important; /* Ensure it appears above other elements */
         }
 
         /* hide identity box and "shield" buttons */

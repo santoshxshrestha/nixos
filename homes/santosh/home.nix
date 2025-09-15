@@ -124,8 +124,6 @@
     size = 20;
   };
 
-  home.shell.enableNushellIntegration = true;
-
   programs.direnv = {
     enable = true;
     nix-direnv.enable = true;

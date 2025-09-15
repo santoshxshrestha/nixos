@@ -89,7 +89,7 @@
     # Controls the visibility of the status line (0 = never, 1 = only if more than one window is open, 2 = always)
     laststatus = 0;
     # Highlight columns at 80 chars (default: '')
-    colorcolumn = "80";
+    # colorcolumn = "80";
   };
 
   # Additional options that need special handling in NixVim

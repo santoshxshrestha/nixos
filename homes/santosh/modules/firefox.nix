@@ -25,8 +25,8 @@
       };
 
       FirefoxHome = {
-        "Search" = true;
-        "TopSites" = true;
+        "Search" = false;
+        "TopSites" = false;
         "SponsoredTopSites" = false;
         "Highlights" = false;
         "Pocket" = false;
@@ -44,19 +44,22 @@
         # Ublock Origin
         "uBlock0@raymondhill.net" = {
           "installation_mode" = "force_installed";
-          "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+          "install_url" =
+            "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
           "default_area" = "menupanel";
         };
         # Vimium C
         "vimium-c@gdh1995.cn" = {
           "installation_mode" = "force_installed";
-          "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/vimium-c/latest.xpi";
+          "install_url" =
+            "https://addons.mozilla.org/firefox/downloads/latest/vimium-c/latest.xpi";
           "default_area" = "menupanel";
         };
         # Dark Reader
         "addon@darkreader.org" = {
           "installation_mode" = "force_installed";
-          "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
+          "install_url" =
+            "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
           "default_area" = "menupanel";
         };
         "{446900e4-71c2-419f-a6a7-df9c091e268b}" = {
@@ -67,7 +70,8 @@
         };
         "sponsorBlocker@ajay.app" = {
           "installation_mode" = "force_installed";
-          "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
+          "install_url" =
+            "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
           "default_area" = "menupanel";
         };
         "idcac-pub@guus.ninja" = {
@@ -81,7 +85,21 @@
     };
     profiles.default = {
       settings = {
+        # Enable userChrome.css and userContent.css
         "toolkit.legacyUserProfileCustomizations.stylesheets" = true;
+
+        # Enable Autoscroll
+        "general.autoScroll" = true;
+
+        # Enable Scrolling on tabs to switch
+        "toolkit.tabbox.switchByScrolling" = true;
+
+        # Change browser homepage
+        # "browser.startup.homepage" = "https://santoshxshrestha.github.io/homerc/";
+
+        # Always restore session
+        "browser.startup.page" = 3;
+
       };
       userChrome = ''
         .titlebar-close {

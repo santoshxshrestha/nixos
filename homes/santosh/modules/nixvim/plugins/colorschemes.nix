@@ -3,7 +3,7 @@
     colorschemes = {
 
       catppuccin = {
-        enable = true;
+        enable = false;
         settings = {
           show_end_of_buffer = false;
           transparent_background = false;
@@ -32,11 +32,11 @@
       };
 
       palette = {
-        enable = false;
+        enable = true;
         settings = {
           italics = true;
           bolds = false;
-          transparent_background = false;
+          transparent_background = true;
         };
       };
 

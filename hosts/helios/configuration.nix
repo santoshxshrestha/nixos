@@ -9,7 +9,6 @@
     # Include the results of the hardware scan.
     ./hardware-configuration.nix
     ./modules/sddm.nix
-    ./modules/stylix.nix
     ./modules/packages.nix
   ];
 

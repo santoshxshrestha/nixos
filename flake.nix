@@ -14,11 +14,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    stylix = {
-      url = "github:nix-community/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
   };
 
   outputs = inputs@{ self, nixpkgs, home-manager, nixvim, stylix, ... }:
@@ -32,7 +27,6 @@
           inherit system;
           modules = [
             ./hosts/helios/configuration.nix
-            stylix.nixosModules.stylix
             home-manager.nixosModules.home-manager
 
             {

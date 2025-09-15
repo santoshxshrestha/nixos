@@ -90,10 +90,6 @@
         border_size = 1;
 
         # https://wiki.hyprland.org/Configuring/Variables/#variable-types for info about colors
-        # Alternative color schemes:
-        # "col.active_border" = "rgba(33ccffee) rgba(00ff99ee) 45deg";
-        # "col.inactive_border" = "rgba(595959aa)";
-
         # rose-pine
         # "col.active_border" = "rgba(33ccffee) rgba(ff0088ee) 45deg";
         # "col.inactive_border" = "rgba(222222aa)";
@@ -123,7 +119,8 @@
 
         # Change transparency of focused and unfocused windows
         active_opacity = 0.95;
-        inactive_opacity = 0.8;
+        inactive_opacity = 0.95;
+        # inactive_opacity = 0.8;
         fullscreen_opacity = 1;
 
         # https://wiki.hyprland.org/Configuring/Variables/#blur

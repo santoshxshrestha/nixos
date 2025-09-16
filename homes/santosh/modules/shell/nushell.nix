@@ -61,6 +61,7 @@
       "cd" = "z";
       ".." = "cd ..";
       "r" = "rm -f (fzf --reverse)";
+      "la" = "ls -la";
 
       "asdf" = "sessionizer";
       "adsf" = "sessionizer";

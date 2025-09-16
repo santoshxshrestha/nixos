@@ -1,5 +1,5 @@
 let
-  focusMode = true;
+  focusMode = false;
   aiIntegration = true;
 in {
   imports = [
@@ -39,7 +39,7 @@ in {
     # ╭───────────────────────────────────────────────╮
     # │ Full mode: all overwhelming plugins           │
     # ╰───────────────────────────────────────────────╯
-    ./plugins/lualine.nix
+    # ./plugins/lualine.nix
     ./plugins/which-key.nix
     ./plugins/oil.nix
     ./plugins/alpha.nix

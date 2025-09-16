@@ -46,7 +46,7 @@ in {
     ./plugins/indent-blankline.nix
     ./plugins/notify.nix
     ./plugins/cord.nix
-    ./plugins/noice.nix
+    # ./plugins/noice.nix
   ]) ++ (if aiIntegration then [
     # ╭───────────────────────────────────────────────╮
     # │ Ai Plugins                                    │

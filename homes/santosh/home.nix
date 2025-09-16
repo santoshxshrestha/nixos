@@ -15,7 +15,7 @@
     # ╭───────────────────────────────────────────────╮
     # │ Terminals                                     │
     # ╰───────────────────────────────────────────────╯
-    ./modules/terminals/ghosty.nix
+    ./modules/terminals/ghostty.nix
     ./modules/terminals/kitty.nix
 
     # ╭───────────────────────────────────────────────╮

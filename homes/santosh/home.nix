@@ -13,6 +13,12 @@
     ./modules/hypr/hyprsunset.nix
 
     # ╭───────────────────────────────────────────────╮
+    # │ Terminals                                     │
+    # ╰───────────────────────────────────────────────╯
+    ./modules/terminals/ghosty.nix
+    ./modules/terminals/kitty.nix
+
+    # ╭───────────────────────────────────────────────╮
     # │ General Utility Modules                       │
     # ╰───────────────────────────────────────────────╯
     ./modules/gtk.nix

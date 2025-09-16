@@ -5,7 +5,6 @@ with pkgs; [
   brightnessctl
   playerctl
   ripgrep
-  kitty
   vscode
   tmux
   gimp

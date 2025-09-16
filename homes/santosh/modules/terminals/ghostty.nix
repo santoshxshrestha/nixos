@@ -1,1 +1,0 @@
-{ programs.ghostty = { enable = true; }; }

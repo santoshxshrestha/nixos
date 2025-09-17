@@ -10,11 +10,11 @@
     # };
     environmentVariables = config.home.sessionVariables;
 
-    configFile.text = ''
-      $env.config.edit_mode = 'vi'
-      $env.prompt_indicator_vi_insert = ""
-      $env.prompt_indicator_vi_normal = "❮"
-    '';
+    # configFile.text = ''
+    #   $env.config.edit_mode = 'vi'
+    #   $env.prompt_indicator_vi_insert = ""
+    #   $env.prompt_indicator_vi_normal = "❮"
+    # '';
 
     extraEnv = ''
       $env.PATH = ($env.PATH | split row (char esep) | prepend "${config.home.homeDirectory}/bin")

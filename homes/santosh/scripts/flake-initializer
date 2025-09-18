@@ -13,12 +13,12 @@ if [ "$LOCAL_FLAG" = "--local" ]; then
     echo "Setting up local flake files..."
     curl -O "https://raw.githubusercontent.com/santoshxshrestha/initflake/main/$FLAKE_TYPE/flake.nix"
     curl -O "https://raw.githubusercontent.com/santoshxshrestha/initflake/main/$FLAKE_TYPE/flake.lock"
-    if curl --fail -O "https://raw.githubusercontent.com/santoshxshrestha/initflake/main/$FLAKE_TYPE/nix/default.nix"; then
-        echo "Downloaded default.nix"
-        mkdir nix && mv default.nix nix/
-    else
-        echo "default.nix does not exist in the repository, skipping..."
-    fi
+    # if curl --fail -O "https://raw.githubusercontent.com/santoshxshrestha/initflake/main/$FLAKE_TYPE/nix/default.nix"; then
+    #     echo "Downloaded default.nix"
+    #     mkdir nix && mv default.nix nix/
+    # else
+    #     echo "default.nix does not exist in the repository, skipping..."
+    # fi
 
     if [ -d ".git" ]; then
         echo "Git repository detected, adding files to git..."
@@ -26,7 +26,8 @@ if [ "$LOCAL_FLAG" = "--local" ]; then
         git add .gitignore
         git commit -m "chore(git): add .direnv to .gitignore"
         echo "use flake" >.envrc
-        git add flake.nix flake.lock .envrc nix/default.nix
+        # git add flake.nix flake.lock .envrc nix/default.nix
+        git add flake.nix flake.lock .envrc 
         git commit -m "chore(flakes): add initial flake.nix, default.nix, and flake.lock"
     else
         echo "No git repository found, skipping git operations"

@@ -79,7 +79,7 @@
       "gs" = "git status";
       "gl" = "git log --oneline --graph --decorate --all";
       "gd" = "git diff";
-      "ga" = "git add .";
+      "ga" = "git add -A";
       "c" = "git-commit";
       "P" = "git push origin (git branch --show-current)";
     };

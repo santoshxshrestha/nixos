@@ -1,5 +1,4 @@
-{ config, ... }:
-{
+{ config, ... }: {
   programs.fish = {
     enable = true;
     generateCompletions = true;
@@ -41,18 +40,17 @@
       "adsf" = "sessionizer";
       "adfs" = "sessionizer";
 
-      "rebuild" = "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/nixos/#santosh";
+      "rebuild" =
+        "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/nixos/#santosh";
 
       "gs" = "git status";
       "gl" = "git log --oneline --graph --decorate --all";
       "gd" = "git diff";
-      "ga" = "git add .";
+      "ga" = "git add -A";
       "c" = "git-commit";
       "P" = "git push origin $(git branch --show-current)";
     };
   };
 
-  programs.fzf = {
-    enable = true;
-  };
+  programs.fzf = { enable = true; };
 }

@@ -81,6 +81,7 @@
   # plain files is through 'home.file'.
   home.file = {
     ".config/kitty".source = ./config/kitty;
+    ".config/rofi".source = ./config/rofi;
     ".local/scripts".source = ./scripts;
 
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in

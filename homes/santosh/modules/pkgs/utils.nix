@@ -13,7 +13,6 @@ with pkgs; [
   opencode
   alacritty
   heroic-unwrapped
-  sops
 
   # pywal16
 ]

@@ -2,6 +2,7 @@ configuration {
     modi: "drun,run,window,ssh";
     show-icons: true;
     terminal: "kitty";
+    icon-theme: "Papirus";
     drun-display-format: "{icon} {name}";
     // https://davatorium.github.io/rofi/guides/Positioning/theme3-position
     location: 0;
@@ -14,8 +15,8 @@ configuration {
     kb-row-up: "Up,Control+p";
     kb-row-down: "Down,Control+n";
     kb-accept-entry: "Return,KP_Enter";
-    kb-mode-next: "Shift+Right,Control+Tab";
-    kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";
+    kb-mode-next: "Shift+Right";
+    kb-mode-previous: "Shift+Left";
     kb-remove-char-back: "BackSpace";
 }
 
@@ -123,11 +124,11 @@ listview {
 }
 
 scrollbar {
-    width: 5px;
+    width: 1px;
     border-radius: 4px;
     background-color: @surface1;
     handle-color: @blue;
-    handle-width: 5px;
+    handle-width: 2px;
     padding: 0;
 }
 

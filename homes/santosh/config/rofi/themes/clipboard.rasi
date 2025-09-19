@@ -4,10 +4,8 @@ configuration {
     icon-theme: "Papirus";
     terminal: "kitty";
     
-    /* Enhanced clipboard management */
     display-clipboard: "  Clipboard ";
     
-    /* Advanced keyboard shortcuts */
     kb-row-up: "Up,Control+p";
     kb-row-down: "Down,Control+n";
     kb-accept-entry: "Return,KP_Enter,Control+y";
@@ -16,8 +14,6 @@ configuration {
 
 * {
     font: "JetBrainsMono Nerd Font Mono 11";
-    
-    /* Enhanced color palette with more depth */
     bg-primary:     #1a1b26;       /* Deep dark background */
     bg-secondary:   #24283b;       /* Slightly lighter background */
     bg-accent:      #414868;       /* Accent background */
@@ -65,7 +61,7 @@ inputbar {
 
 textbox-prompt-colon {
     expand: false;
-    str: "❯";
+    str: "✦ ❯";
     background-color: transparent;
     text-color: @accent-color;
     font: "JetBrainsMono Nerd Font Bold 12";
@@ -149,13 +145,6 @@ element.url {
     text-color: @accent-color;
 }
 
-mode-switcher {
-    background-color: @bg-secondary;
-    border-radius: 8px;
-    padding: 5px;
-    spacing: 5px;
-}
-
 button {
     padding: 8px;
     background-color: @bg-accent;
@@ -176,7 +165,6 @@ error-message {
     padding: 10px;
 }
 
-/* Special states */
 element.urgent {
     background-color: rgba(247, 118, 142, 0.2);
     text-color: @urgent-color;

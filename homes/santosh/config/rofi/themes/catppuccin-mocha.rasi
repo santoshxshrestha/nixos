@@ -4,7 +4,7 @@ configuration {
     terminal: "kitty";
     drun-display-format: "{icon} {name}";
     // https://davatorium.github.io/rofi/guides/Positioning/theme3-position
-    location: 6;
+    location: 0;
     disable-history: true;
     hide-scrollbar: false;
     display-drun: " Apps ";
@@ -20,7 +20,7 @@ configuration {
 }
 
 * {
-    font: "JetBrainsMono Nerd Font 12";
+    font: "JetBrainsMono Nerd Font 10";
     
     /* Catppuccin Mocha Colors */
     base:        #1e1e2ed9;   /* 85% opacity */
@@ -58,20 +58,20 @@ configuration {
 }
 
 window {
-    width: 30%;
+    width: 22%;
     transparency: "real";
     blur: true;
     background-color: @base;
     border: 2px;
     border-color: @surface2;
     border-radius: 18px;
-    padding: 16px;
+    padding: 8px;
 }
 
 mainbox {
     children: [inputbar, message, listview, mode-switcher];
     background-color: transparent;
-    spacing: 14px;
+    spacing: 8px;
     padding: 8px;
 }
 
@@ -79,7 +79,7 @@ inputbar {
     children: [prompt, entry];
     background-color: @surface1;
     border-radius: 14px;
-    padding: 14px;
+    padding: 8px;
     border: 1px;
     border-color: @surface2;
 }
@@ -88,7 +88,7 @@ prompt {
     background-color: transparent;
     padding: 0 14px 0 0;
     text-color: @blue;
-    font: "JetBrainsMono Nerd Font Bold 13";
+    font: "JetBrainsMono Nerd Font Bold 11";
 }
 
 entry {
@@ -100,13 +100,13 @@ entry {
 
 message {
     border-radius: 14px;
-    padding: 10px;
+    padding: 4px;
     background-color: @surface0;
     margin: 0 6px;
 }
 
 textbox {
-    padding: 10px;
+    padding: 4px;
     text-color: @text;
 }
 
@@ -132,10 +132,10 @@ scrollbar {
 }
 
 element {
-    padding: 12px;
+    padding: 6px;
     margin: 3px 0;
     border-radius: 12px;
-    spacing: 12px;
+    spacing: 6px;
 }
 
 element normal.normal,
@@ -153,8 +153,8 @@ element selected.normal {
 }
 
 element-icon {
-    size: 26px;
-    padding: 0 14px 0 0;
+    size: 18px;
+    padding: 0 8px 0 0;
     background-color: transparent;
 }
 
@@ -174,7 +174,7 @@ button {
     text-color: @overlay1;
     border-radius: 12px;
     background-color: @surface2;
-    padding: 10px 12px;
+    padding: 6px 8px;
     horizontal-align: 0.5;
     border: 1px;
     border-color: transparent;

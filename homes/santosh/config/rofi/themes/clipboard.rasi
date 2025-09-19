@@ -8,14 +8,10 @@ configuration {
     display-clipboard: "  Clipboard ";
     
     /* Advanced keyboard shortcuts */
-    kb-row-up: "Up,Control+p,Control+k";
-    kb-row-down: "Down,Control+n,Control+j";
+    kb-row-up: "Up,Control+p";
+    kb-row-down: "Down,Control+n";
     kb-accept-entry: "Return,KP_Enter,Control+y";
     kb-delete-entry: "Shift+Delete";
-    kb-custom-1: "Alt+p";      // Pin entry
-    kb-custom-2: "Alt+c";      // Clear history
-    kb-mode-next: "Shift+Right,Control+Tab";
-    kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";
 }
 
 * {
@@ -54,7 +50,7 @@ window {
 }
 
 mainbox {
-    children: [inputbar, listview, mode-switcher];
+    children: [inputbar, listview];
     background-color: transparent;
     spacing: 10px;
 }
@@ -69,7 +65,8 @@ inputbar {
 
 textbox-prompt-colon {
     expand: false;
-    str: " 󰅌  ";
+    str: "❯";
+    background-color: transparent;
     text-color: @accent-color;
     font: "JetBrainsMono Nerd Font Bold 12";
 }

@@ -62,6 +62,7 @@
     description = "Santosh Shrestha";
     extraGroups = [ "networkmanager" "wheel" "video" "audio" ];
     shell = pkgs.fish;
+    openssh.authorizedKeys.keys = [ ];
     # shell = pkgs.nushell;
   };
 

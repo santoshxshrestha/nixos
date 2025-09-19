@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [
@@ -10,7 +10,12 @@
     ./hardware-configuration.nix
     ./modules/sddm.nix
     ./modules/packages.nix
+    inputs.sops-nix.nixosModules.sops
   ];
+
+  sops.defaultSopsFile = ./secrets/sops.yaml;
+  sops.defaultSopsFormat = "yaml";
+  sops.age.keyFile = "/home/users/santosh/.config/sops/age/keys.txt";
 
   # Bootloader.
   boot.loader = {

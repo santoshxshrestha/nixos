@@ -6,7 +6,7 @@ configuration {
     display-drun: "Search";
 }
 
-@theme "rose-pine"
+@theme "catppuccin-mocha"
 
 listview {
     lines: 9;

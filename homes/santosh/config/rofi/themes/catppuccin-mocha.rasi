@@ -3,7 +3,8 @@ configuration {
     show-icons: true;
     terminal: "kitty";
     drun-display-format: "{icon} {name}";
-    location: 0;
+    // https://davatorium.github.io/rofi/guides/Positioning/theme3-position
+    location: 6;
     disable-history: true;
     hide-scrollbar: false;
     display-drun: " Apps ";

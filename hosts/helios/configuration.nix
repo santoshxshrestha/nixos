@@ -13,7 +13,7 @@
     inputs.sops-nix.nixosModules.sops
   ];
 
-  sops.defaultSopsFile = ./secrets/sops.yaml;
+  sops.defaultSopsFile = ./sops.yaml;
   sops.defaultSopsFormat = "yaml";
   sops.age.keyFile = "/home/users/santosh/.config/sops/age/keys.txt";
 

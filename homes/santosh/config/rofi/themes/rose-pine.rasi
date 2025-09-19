@@ -14,7 +14,6 @@ configuration {
     kb-row-up: "Up,Control+p";
     kb-row-down: "Down,Control+n";
     kb-accept-entry: "Return,KP_Enter";
-    kb-remove-to-eol: "Control+Shift+e";
     kb-mode-next: "Shift+Right,Control+Tab";
     kb-mode-previous: "Shift+Left,Control+ISO_Left_Tab";
     kb-remove-char-back: "BackSpace";

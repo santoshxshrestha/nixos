@@ -1,8 +1,8 @@
 { config, lib, ... }: {
-  optons = {
+  options = {
     none-ls.enable = lib.mkEnableOption "Enable none-ls plugin for nixvim";
   };
-  confing = lib.mkIf config.none-ls.enable {
+  config = lib.mkIf config.none-ls.enable {
     programs.nixvim.plugins.lsp-format.enable = true;
     programs.nixvim.plugins.none-ls = {
       enable = true;

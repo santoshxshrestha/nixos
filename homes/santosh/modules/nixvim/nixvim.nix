@@ -35,14 +35,14 @@ in {
     # ╭───────────────────────────────────────────────╮
     # │ Full mode: all overwhelming plugins           │
     # ╰───────────────────────────────────────────────╯
-    # ./plugins/lualine.nix
+    ./plugins/lualine.nix
     ./plugins/which-key.nix
     ./plugins/oil.nix
     ./plugins/alpha.nix
     ./plugins/indent-blankline.nix
     ./plugins/notify.nix
     ./plugins/cord.nix
-    # ./plugins/noice.nix
+    ./plugins/noice.nix
     # ╭───────────────────────────────────────────────╮
     # │ Ai Plugins                                    │
     # ╰───────────────────────────────────────────────╯
@@ -50,10 +50,29 @@ in {
     ./plugins/avante.nix
     ./plugins/copilot-chat.nix
   ];
-  copilot-chat.enable = true;
-  comment.enable = true;
+
   alpha.enable = true;
-  copilot-lua = true;
+  avante.enable = true;
+  colorschemes.enable = true;
+  comment.enable = true;
+  copilot-chat.enable = true;
+  copilot-lua.enable = true;
+  cord.enable = true;
+  gitsigns.enable = true;
+  harpoon.enable = true;
+  indent-blankline.enable = true;
+  lualine.enable = true;
+  misc.enable = true;
+  notify.enable = true;
+  noice.enable = true;
+  none-ls.enable = true;
+  oil.enable = true;
+  rhubarb-vim.enable = true;
+  snacks.enable = true;
+  surround.enable = true;
+  telescope.enable = true;
+  treesitter.enable = true;
+  which-key.enable = true;
 
   programs.nixvim = {
     enable = true;

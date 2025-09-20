@@ -2,7 +2,7 @@
   options = {
     notify.enable = lib.mkEnableOption "Enable notify.nvim plugin for nixvim";
   };
-  cnfig = lib.mkIf config.notify.enable {
+  config = lib.mkIf config.notify.enable {
     programs.nixvim.plugins.notify = {
       enable = true;
       settings = {

@@ -1,9 +1,9 @@
 { config, lib, ... }: {
   options = {
-    anim_copilot.enable =
+    justu.enable =
       lib.mkEnableOption "Enable animated copilot spinner for nix";
   };
-  config = lib.mkIf config.anim_copilot.enable {
+  config = lib.mkIf config.justu.enable {
     programs.nixvim.extraConfigLua = ''
       local spinner = {
       	max_length = 73,

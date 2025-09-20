@@ -76,7 +76,7 @@
   # │ Core Functionality Plugins                    │
   # ╰───────────────────────────────────────────────╯
   autocommands.enable = true;
-  anim_copilot.enable = true;
+  justu.enable = true;
   lsp.enable = true;
   autocompletion.enable = true;
   comment.enable = true;

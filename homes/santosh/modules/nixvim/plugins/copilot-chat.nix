@@ -1,11 +1,9 @@
 { config, lib, ... }: {
   options = {
-    copilot-chat.enable = lib.mkOption {
-      type = lib.types.bool;
-      default = false;
-      description = "Enable copilot-chat.nvim (ChatGPT integration for nvim)";
-    };
+    copilot-chat.enable =
+      lib.mkEnableOption "Enable copilot-chat plugin for nixvim";
   };
+
   config = lib.mkIf config.copilot-chat.enable {
     programs.nixvim.plugins.copilot-chat = {
       enable = true;

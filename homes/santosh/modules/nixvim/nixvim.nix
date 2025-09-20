@@ -1,8 +1,7 @@
 let
   focusMode = false;
   aiIntegration = true;
-in
-{
+in {
   imports = [
     # ╭───────────────────────────────────────────────╮
     # │ Core Configuration Modules (Always Enabled)   │
@@ -34,44 +33,33 @@ in
     ./plugins/colorschemes.nix
     ./plugins/snacks.nix
 
-  ]
-  ++ (
-    if focusMode then
-      [ ]
-    else
-      [
-        # ╭───────────────────────────────────────────────╮
-        # │ Full mode: all overwhelming plugins           │
-        # ╰───────────────────────────────────────────────╯
-        # ./plugins/lualine.nix
-        ./plugins/which-key.nix
-        ./plugins/oil.nix
-        ./plugins/alpha.nix
-        ./plugins/indent-blankline.nix
-        ./plugins/notify.nix
-        ./plugins/cord.nix
-        # ./plugins/noice.nix
-      ]
-  )
-  ++ (
-    if aiIntegration then
-      [
-        # ╭───────────────────────────────────────────────╮
-        # │ Ai Plugins                                    │
-        # ╰───────────────────────────────────────────────╯
-        ./plugins/copilot.nix
-        ./plugins/avante.nix
-        ./plugins/copilot-chat.nix
-      ]
-    else
-      [ ]
-  );
+  ] ++ (if focusMode then
+    [ ]
+  else [
+    # ╭───────────────────────────────────────────────╮
+    # │ Full mode: all overwhelming plugins           │
+    # ╰───────────────────────────────────────────────╯
+    # ./plugins/lualine.nix
+    ./plugins/which-key.nix
+    ./plugins/oil.nix
+    ./plugins/alpha.nix
+    ./plugins/indent-blankline.nix
+    ./plugins/notify.nix
+    ./plugins/cord.nix
+    # ./plugins/noice.nix
+  ]) ++ (if aiIntegration then [
+    # ╭───────────────────────────────────────────────╮
+    # │ Ai Plugins                                    │
+    # ╰───────────────────────────────────────────────╯
+    ./plugins/copilot.nix
+    ./plugins/avante.nix
+    ./plugins/copilot-chat.nix
+  ] else
+    [ ]);
 
   programs.nixvim = {
     enable = true;
-    editorconfig = {
-      enable = true;
-    };
-    plugins = { };
+    editorconfig = { enable = true; };
+    plugins = { copilot-chat.options = false; };
   };
 }

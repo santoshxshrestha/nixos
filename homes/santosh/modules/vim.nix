@@ -16,6 +16,7 @@
     extraConfig = ''
       set expandtab
       set whichwrap=bs<>[]hl
+      set nobackup nowritebackup
       set nowritebackup
       set undofile
       set updatetime=50

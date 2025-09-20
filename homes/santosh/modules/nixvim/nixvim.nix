@@ -1,7 +1,4 @@
-let
-  focusMode = false;
-  aiIntegration = true;
-in {
+{
   imports = [
     # ╭───────────────────────────────────────────────╮
     # │ Core Configuration Modules (Always Enabled)   │
@@ -50,29 +47,50 @@ in {
     ./plugins/avante.nix
     ./plugins/copilot-chat.nix
   ];
-
+  # ╭───────────────────────────────────────────────╮
+  # │ UI and Appearance Plugins                     │
+  # ╰───────────────────────────────────────────────╯
   alpha.enable = true;
-  avante.enable = true;
   colorschemes.enable = true;
-  comment.enable = true;
+  indent-blankline.enable = true;
+  lualine.enable = true;
+  notify.enable = true;
+  snacks.enable = true;
+
+  # ╭───────────────────────────────────────────────╮
+  # │ AI and Automation Plugins                     │
+  # ╰───────────────────────────────────────────────╯
+  avante.enable = true;
   copilot-chat.enable = true;
   copilot-lua.enable = true;
+
+  # ╭───────────────────────────────────────────────╮
+  # │ Git and Navigation Plugins                    │
+  # ╰───────────────────────────────────────────────╯
   cord.enable = true;
   gitsigns.enable = true;
   harpoon.enable = true;
-  indent-blankline.enable = true;
-  lualine.enable = true;
-  misc.enable = true;
-  notify.enable = true;
-  noice.enable = true;
-  none-ls.enable = true;
-  oil.enable = true;
   rhubarb-vim.enable = true;
-  snacks.enable = true;
+
+  # ╭───────────────────────────────────────────────╮
+  # │ Core Functionality Plugins                    │
+  # ╰───────────────────────────────────────────────╯
+  autocommands.enable = true;
+  anim_copilot.enable = true;
+  lsp.enable = true;
+  autocompletion.enable = true;
+  comment.enable = true;
+  misc.enable = true;
+  none-ls.enable = true;
+  noice.enable = true;
+  oil.enable = true;
   surround.enable = true;
   telescope.enable = true;
   treesitter.enable = true;
   which-key.enable = true;
+  terminal.enable = true;
+  opts.enable = true;
+  keymaps.enable = true;
 
   programs.nixvim = {
     enable = true;

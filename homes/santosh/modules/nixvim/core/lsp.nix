@@ -1,5 +1,7 @@
 { config, lib, ... }: {
-  options = { lsp = lib.mkOptionEnable "Enable/disable custom lsp setup"; };
+  options = {
+    lsp.enable = lib.mkEnableOption "Enable/disable custom lsp setup";
+  };
   config = lib.mkIf config.lsp.enable {
     # for docs and other feat related to lsp
     programs.nixvim.plugins.lspsaga = {

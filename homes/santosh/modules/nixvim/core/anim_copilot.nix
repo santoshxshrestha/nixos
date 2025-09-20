@@ -1,6 +1,7 @@
 { config, lib, ... }: {
   options = {
-    anim_copilot = lib.mkOptionEnable "Enable/disable animated copilot spinner";
+    anim_copilot.enable =
+      lib.mkEnableOption "Enable animated copilot spinner for nix";
   };
   config = lib.mkIf config.anim_copilot.enable {
     programs.nixvim.extraConfigLua = ''

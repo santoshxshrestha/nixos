@@ -1,6 +1,6 @@
 { config, lib, ... }: {
   options = {
-    terminal = lib.mkOptionEnable "Enable/disable custom terminal setup";
+    terminal.enable = lib.mkEnableOption "Enable/disable custom terminal setup";
   };
 
   config = lib.mkIf config.terminal.enable {

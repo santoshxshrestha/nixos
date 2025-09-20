@@ -1,5 +1,5 @@
 { config, lib, ... }: {
-  options = { opts = lib.mkOptionModule "Custom Neovim options"; };
+  options = { opts.enable = lib.mkEnableOption "Custom Neovim options"; };
   config = lib.mkIf config.opts.enable {
     programs.nixvim.opts = {
       # Disable GUI cursor styling (default: '')

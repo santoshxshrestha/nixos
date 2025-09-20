@@ -1,5 +1,7 @@
 { config, lib, ... }: {
-  options = { keymaps = lib.mkOptionEnable "Enable/disable custom keymaps"; };
+  options = {
+    keymaps.enable = lib.mkEnableOption "Enable/disable custom keymaps";
+  };
   config = lib.mkIf config.keymaps.enable {
     programs.nixvim = {
       # local and globals leader keys

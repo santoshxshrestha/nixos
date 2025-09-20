@@ -1,7 +1,7 @@
 { config, lib, ... }: {
   options = {
-    autocompletion =
-      lib.mkOptionEnable "Enable/disable custom autocompletion setup";
+    autocompletion.enable =
+      lib.mkEnableOption "Enable/disable custom autocompletion setup";
   };
   config = lib.mkIf config.autocompletion.enable {
     programs.nixvim.plugins.cmp-latex-symbols = { enable = true; };

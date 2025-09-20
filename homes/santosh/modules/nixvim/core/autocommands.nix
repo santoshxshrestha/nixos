@@ -1,6 +1,7 @@
 { config, lib, ... }: {
   options = {
-    autocommands = lib.mkOptionEnable "Enable/disable custom autocommands";
+    autocommands.enable =
+      lib.mkEnableOption "Enable/disable custom autocommands";
   };
 
   config = lib.mkIf config.autocommands.enable {

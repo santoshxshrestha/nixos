@@ -32,10 +32,6 @@ in {
     ./plugins/gitsigns.nix
     ./plugins/colorschemes.nix
     ./plugins/snacks.nix
-
-  ] ++ (if focusMode then
-    [ ]
-  else [
     # ╭───────────────────────────────────────────────╮
     # │ Full mode: all overwhelming plugins           │
     # ╰───────────────────────────────────────────────╯
@@ -47,19 +43,21 @@ in {
     ./plugins/notify.nix
     ./plugins/cord.nix
     # ./plugins/noice.nix
-  ]) ++ (if aiIntegration then [
     # ╭───────────────────────────────────────────────╮
     # │ Ai Plugins                                    │
     # ╰───────────────────────────────────────────────╯
     ./plugins/copilot.nix
     ./plugins/avante.nix
     ./plugins/copilot-chat.nix
-  ] else
-    [ ]);
+  ];
+  copilot-chat.enable = true;
+  comment.enable = true;
+  alpha.enable = true;
+  copilot-lua = true;
 
   programs.nixvim = {
     enable = true;
     editorconfig = { enable = true; };
-    plugins = { copilot-chat.options = false; };
+    plugins = { };
   };
 }

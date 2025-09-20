@@ -37,6 +37,7 @@
       set laststatus=2
       set fileencoding=utf-8
       set autoindent
+      set autocomplete
       set incsearch
       set breakindent
       set mouse=a

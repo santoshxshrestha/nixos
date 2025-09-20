@@ -22,13 +22,18 @@
     # ╰───────────────────────────────────────────────╯
     ./modules/gtk.nix
     ./modules/fastfetch.nix
-    ./modules/nixvim/nixvim.nix
     ./modules/starship.nix
     ./modules/zoxide.nix
     ./modules/btop.nix
     ./modules/bat.nix
     ./modules/firefox.nix
     ./modules/rofi.nix
+
+    # ╭───────────────────────────────────────────────╮
+    # │ Neovim and Vim Modules                        │
+    # ╰───────────────────────────────────────────────╯
+    ./modules/nixvim/nixvim.nix
+    ./modules/vim.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Shell                                         │

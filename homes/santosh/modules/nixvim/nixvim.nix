@@ -9,7 +9,7 @@
     ./core/terminal.nix
     ./core/opts.nix
     ./core/autocommands.nix
-    ./core/anim_copilot.nix
+    ./core/justu.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Essential Functional Plugins                  │

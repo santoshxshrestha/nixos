@@ -17,8 +17,8 @@
       set expandtab
       set whichwrap=bs<>[]hl
       set nobackup nowritebackup
+      set noundofile
       set nowritebackup
-      set undofile
       set updatetime=50
       set timeoutlen=300
       set ignorecase

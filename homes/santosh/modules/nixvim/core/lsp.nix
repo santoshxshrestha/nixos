@@ -64,8 +64,12 @@
 
         # lua
         lua_ls = { enable = false; };
+
         # bash
         bashls = { enable = true; };
+
+        # nushell
+        nushell = { enable = true; };
 
         # css
         cssls = { enable = true; };

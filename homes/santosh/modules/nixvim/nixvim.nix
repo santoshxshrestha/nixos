@@ -60,9 +60,10 @@
   # ╭───────────────────────────────────────────────╮
   # │ AI and Automation Plugins                     │
   # ╰───────────────────────────────────────────────╯
-  avante.enable = true;
-  copilot-chat.enable = true;
+  avante.enable = false;
   copilot-lua.enable = true;
+  copilot-chat.enable = true;
+  justu.enable = true;
 
   # ╭───────────────────────────────────────────────╮
   # │ Git and Navigation Plugins                    │
@@ -76,7 +77,6 @@
   # │ Core Functionality Plugins                    │
   # ╰───────────────────────────────────────────────╯
   autocommands.enable = true;
-  justu.enable = true;
   lsp.enable = true;
   autocompletion.enable = true;
   comment.enable = true;

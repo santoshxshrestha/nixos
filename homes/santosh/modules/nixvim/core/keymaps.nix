@@ -314,6 +314,16 @@
         };
       }
       {
+        action = "<cmd>diffget //3<CR>";
+        key = "gl";
+        mode = [ "n" ];
+        options = {
+          noremap = true;
+          silent = true;
+          desc = "Git Hunks: get right side of diff";
+        };
+      }
+      {
         action = "<cmd>GBrowse<CR>";
         key = "<leader>go";
         mode = [ "n" ];

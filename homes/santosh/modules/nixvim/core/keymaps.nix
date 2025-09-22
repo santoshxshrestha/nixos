@@ -306,7 +306,7 @@
       {
         action = "<cmd>diffget //2<CR>";
         key = "gh";
-        mode = [ "n" ];
+        mode = [ "n" "v" ];
         options = {
           noremap = true;
           silent = true;
@@ -316,7 +316,7 @@
       {
         action = "<cmd>diffget //3<CR>";
         key = "gl";
-        mode = [ "n" ];
+        mode = [ "n" "v" ];
         options = {
           noremap = true;
           silent = true;

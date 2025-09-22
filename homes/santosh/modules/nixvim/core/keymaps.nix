@@ -304,6 +304,16 @@
       }
       # keymaps for fugutive
       {
+        action = "<cmd>diffget //2<CR>";
+        key = "gh";
+        mode = [ "n" ];
+        options = {
+          noremap = true;
+          silent = true;
+          desc = "Git Hunks: get left side of diff";
+        };
+      }
+      {
         action = "<cmd>GBrowse<CR>";
         key = "<leader>go";
         mode = [ "n" ];

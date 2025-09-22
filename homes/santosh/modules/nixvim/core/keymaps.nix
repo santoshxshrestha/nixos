@@ -354,7 +354,7 @@
         };
       }
       {
-        action = "<cmd>Gdiff<CR>";
+        action = "<cmd>Gvdiffsplit!<CR>";
         key = "<leader>gd";
         mode = [ "n" ];
         options = {

@@ -2,7 +2,8 @@
 let
   waybar_config = import ./config.nix;
   waybar_style = import ./style.nix;
-in {
+in
+{
   programs.waybar = {
     enable = true;
     systemd.enable = true;

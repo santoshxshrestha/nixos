@@ -101,7 +101,7 @@
           };
           ":" = {
             mapping = { __raw = "cmp.mapping.preset.cmdline()"; };
-            sources = [ { name = "async_path"; } { name = "cmdline"; } ];
+            sources = [{ name = "async_path"; } { name = "cmdline"; }];
           };
         };
       };

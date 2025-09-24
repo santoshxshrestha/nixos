@@ -29,7 +29,8 @@ let
     #   ForceHideCompletePassword = true;
     # };
   };
-in {
+in
+{
   environment.systemPackages = [ sddm-astronaut ];
 
   services = {

@@ -25,7 +25,8 @@
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
-    in {
+    in
+    {
       nixosConfigurations = {
 
         santosh = lib.nixosSystem {
@@ -47,5 +48,6 @@
         };
 
       };
+      formatter.${system} = nixpkgs.legacyPackages.${system}.nixpkgs-fmt;
     };
 }

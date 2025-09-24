@@ -43,4 +43,5 @@ let
         ${pkgs.tmux}/bin/tmux switch-client -t "$selected_name"
     fi
   '';
-in { home.packages = [ sessionizer ]; }
+in
+{ home.packages = [ sessionizer ]; }

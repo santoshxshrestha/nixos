@@ -3,7 +3,8 @@ let
   waylandPkgs = import ./wayland.nix { inherit pkgs; };
   fontsPkgs = import ./fonts.nix { inherit pkgs; };
   utilsPkgs = import ./utils.nix { inherit pkgs; };
-in {
+in
+{
   home.packages = with pkgs;
 
     waylandPkgs ++ fontsPkgs ++ utilsPkgs;

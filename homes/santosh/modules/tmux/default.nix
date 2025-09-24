@@ -11,7 +11,8 @@ let
       sha256 = "sha256-94s2I7NUKy0rTdNcI5105LPK/TNDdF2Cuegdxuz6qYA=";
     };
   };
-in {
+in
+{
   programs.tmux = {
     enable = true;
     mouse = true;

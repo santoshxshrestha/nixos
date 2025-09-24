@@ -1,4 +1,9 @@
-{ config, lib, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 {
   options = {
     none-ls.enable = lib.mkEnableOption "Enable none-ls plugin for nixvim";
@@ -35,7 +40,10 @@
 
         clang_format.enable = true;
 
-        nixfmt.enable = true;
+        nixfmt = {
+          enable = true;
+          package = pkgs.nixfmt-rfc-style;
+        };
       };
     };
   };

@@ -55,7 +55,6 @@
         };
 
       };
-      # formatter.${system} = nixpkgs.legacyPackages.${system}.nixpkgs-fmt;
       formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt-rfc-style;
     };
 }

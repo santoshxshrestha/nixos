@@ -1,4 +1,5 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options = {
     lsp.enable = lib.mkEnableOption "Enable/disable custom lsp setup";
   };
@@ -12,7 +13,9 @@
           diagnostic_only_current = true;
           # extend_related_information = true;
         };
-        lightbulb = { enable = false; };
+        lightbulb = {
+          enable = false;
+        };
         beacon.enable = true;
         implement.enable = false;
         symbol_in_winbar = {
@@ -51,49 +54,79 @@
         };
 
         # markdown
-        marksman = { enable = true; };
+        marksman = {
+          enable = true;
+        };
 
         # htmx
-        htmx = { enable = true; };
+        htmx = {
+          enable = true;
+        };
 
         # nix
-        nil_ls = { enable = true; };
+        nil_ls = {
+          enable = true;
+        };
 
         # c / c++
-        clangd = { enable = true; };
+        clangd = {
+          enable = true;
+        };
 
         # lua
-        lua_ls = { enable = false; };
+        lua_ls = {
+          enable = false;
+        };
 
         # bash
-        bashls = { enable = true; };
+        bashls = {
+          enable = true;
+        };
 
         # nushell
-        nushell = { enable = true; };
+        nushell = {
+          enable = true;
+        };
 
         # css
-        cssls = { enable = true; };
+        cssls = {
+          enable = true;
+        };
 
         # Go
-        gopls = { enable = false; };
+        gopls = {
+          enable = false;
+        };
 
         # html
-        html = { enable = true; };
+        html = {
+          enable = true;
+        };
 
         # tailwindcss
-        tailwindcss = { enable = true; };
+        tailwindcss = {
+          enable = true;
+        };
 
         # typescript
-        ts_ls = { enable = true; };
+        ts_ls = {
+          enable = true;
+        };
 
         # emment snippet
-        emmet_language_server = { enable = true; };
+        emmet_language_server = {
+          enable = true;
+        };
 
         # dockerfile
-        dockerls = { enable = false; };
+        dockerls = {
+          enable = false;
+        };
 
         # json
-        jsonls = { enable = false; };
+        jsonls = {
+          enable = false;
+        };
 
       };
     };

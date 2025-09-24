@@ -1,7 +1,12 @@
-{ pkgs, config, lib, ... }: {
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
+{
   options = {
-    rhubarb-vim.enable =
-      lib.mkEnableOption "Enable rhubarb.vim plugin for nixvim";
+    rhubarb-vim.enable = lib.mkEnableOption "Enable rhubarb.vim plugin for nixvim";
   };
 
   config = lib.mkIf config.rhubarb-vim.enable {

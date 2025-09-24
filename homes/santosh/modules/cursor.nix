@@ -1,4 +1,8 @@
-{ stdenvNoCC, fetchFromGitHub, lib, }:
+{
+  stdenvNoCC,
+  fetchFromGitHub,
+  lib,
+}:
 stdenvNoCC.mkDerivation {
   pname = "NightDiamond-cursors";
   version = "3ff3c0486430a4901b4d5cbbee87a370aa2b8ce9";

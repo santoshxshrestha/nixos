@@ -1,8 +1,13 @@
-{ ... }: {
+{ ... }:
+{
   gtk = {
     enable = true;
-    theme = { name = "Adwaita-dark"; };
-    iconTheme = { name = "Papirus"; };
+    theme = {
+      name = "Adwaita-dark";
+    };
+    iconTheme = {
+      name = "Papirus";
+    };
     font = {
       name = "JetBrainsMono Nerd Font";
       size = 8;

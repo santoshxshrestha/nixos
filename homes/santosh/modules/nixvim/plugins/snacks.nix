@@ -1,4 +1,5 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options = {
     snacks.enable = lib.mkEnableOption "Enable snacks.nvim plugin for nixvim";
   };
@@ -14,7 +15,9 @@
           enabled = true;
           notify = true;
         };
-        quickfile = { enabled = true; };
+        quickfile = {
+          enabled = true;
+        };
         statuscolumn.enabled = true;
       };
     };

@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
@@ -262,20 +263,19 @@
 
       # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more
       dwindle = {
-        pseudotile =
-          true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
+        pseudotile = true; # Master switch for pseudotiling. Enabling is bound to mainMod + P in the keybinds section below
         preserve_split = true; # You probably want this
       };
 
       # See https://wiki.hyprland.org/Configuring/Master-Layout/ for more
-      master = { new_status = "master"; };
+      master = {
+        new_status = "master";
+      };
 
       # https://wiki.hyprland.org/Configuring/Variables/#misc
       misc = {
-        force_default_wallpaper =
-          -1; # Set to 0 or 1 to disable the anime mascot wallpapers
-        disable_hyprland_logo =
-          false; # If true disables the random hyprland logo / anime girl background. :(
+        force_default_wallpaper = -1; # Set to 0 or 1 to disable the anime mascot wallpapers
+        disable_hyprland_logo = false; # If true disables the random hyprland logo / anime girl background. :(
       };
 
       #############
@@ -348,8 +348,7 @@
         "$mainMod,minus,exec,~/.local/scripts/waybar-toggle"
 
         # Clipboard history with rofi
-        ''
-          SUPER,V,exec,cliphist list | rofi -dmenu -p "Clipboard History" -theme ~/.config/rofi/themes/clipboard.rasi | cliphist decode | wl-copy''
+        ''SUPER,V,exec,cliphist list | rofi -dmenu -p "Clipboard History" -theme ~/.config/rofi/themes/clipboard.rasi | cliphist decode | wl-copy''
 
         # Window management - see https://wiki.hyprland.org/Configuring/Binds/ for more
         "$mainMod,F,fullscreen"
@@ -413,8 +412,10 @@
       ];
 
       # Move/resize windows with mainMod + LMB/RMB and dragging
-      bindm =
-        [ "$mainMod,mouse:272,movewindow" "$mainMod,mouse:273,resizewindow" ];
+      bindm = [
+        "$mainMod,mouse:272,movewindow"
+        "$mainMod,mouse:273,resizewindow"
+      ];
 
       # Laptop multimedia keys for volume and LCD brightness
       bindel = [

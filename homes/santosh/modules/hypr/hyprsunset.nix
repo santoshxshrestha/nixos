@@ -1,5 +1,7 @@
 {
-  services.hyprsunset = { enable = true; };
+  services.hyprsunset = {
+    enable = true;
+  };
 
   home.file.".config/hypr/hyprsunset.conf".text = ''
     max-gamma = 150

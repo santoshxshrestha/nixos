@@ -1,4 +1,5 @@
-{ colors, ... }: ''
+{ colors, ... }:
+''
   # enable/disable status Bar
   set -g status off
 

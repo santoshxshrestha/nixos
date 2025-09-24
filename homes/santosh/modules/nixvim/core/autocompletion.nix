@@ -1,28 +1,52 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options = {
-    autocompletion.enable =
-      lib.mkEnableOption "Enable/disable custom autocompletion setup";
+    autocompletion.enable = lib.mkEnableOption "Enable/disable custom autocompletion setup";
   };
   config = lib.mkIf config.autocompletion.enable {
-    programs.nixvim.plugins.cmp-latex-symbols = { enable = true; };
-    programs.nixvim.plugins.cmp-fish = { enable = true; };
-    programs.nixvim.plugins.cmp-git = { enable = true; };
-    programs.nixvim.plugins.cmp-spell = { enable = true; };
-    programs.nixvim.plugins.cmp-emoji = { enable = true; };
-    programs.nixvim.plugins.cmp-calc = { enable = true; };
-    programs.nixvim.plugins.cmp-cmdline = { enable = true; };
-    programs.nixvim.plugins.cmp-async-path = { enable = true; };
-    programs.nixvim.plugins.cmp-nvim-lsp-document-symbol = { enable = true; };
-    programs.nixvim.plugins.cmp-nvim-lsp-signature-help = { enable = true; };
+    programs.nixvim.plugins.cmp-latex-symbols = {
+      enable = true;
+    };
+    programs.nixvim.plugins.cmp-fish = {
+      enable = true;
+    };
+    programs.nixvim.plugins.cmp-git = {
+      enable = true;
+    };
+    programs.nixvim.plugins.cmp-spell = {
+      enable = true;
+    };
+    programs.nixvim.plugins.cmp-emoji = {
+      enable = true;
+    };
+    programs.nixvim.plugins.cmp-calc = {
+      enable = true;
+    };
+    programs.nixvim.plugins.cmp-cmdline = {
+      enable = true;
+    };
+    programs.nixvim.plugins.cmp-async-path = {
+      enable = true;
+    };
+    programs.nixvim.plugins.cmp-nvim-lsp-document-symbol = {
+      enable = true;
+    };
+    programs.nixvim.plugins.cmp-nvim-lsp-signature-help = {
+      enable = true;
+    };
     # programs.nixvim.plugins.copilot-cmp = { enable = true; };
 
     programs.nixvim.plugins.lspkind = {
       enable = true;
       cmp.enable = true;
       settings = {
-        cmp = { max_width = 10; };
+        cmp = {
+          max_width = 10;
+        };
         mode = "symbol_text";
-        symbol_map = { Copilot = ""; };
+        symbol_map = {
+          Copilot = "";
+        };
         maxwidth = 50;
         ellipsis_char = "...";
       };
@@ -51,22 +75,37 @@
             # { name = "copilot"; }
           ];
           snippet = {
-            expand =
-              "function(args) require('luasnip').lsp_expand(args.body) end";
+            expand = "function(args) require('luasnip').lsp_expand(args.body) end";
           };
           window = {
             documentation = {
-              border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
-              winhighlight =
-                "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CursorLine,Search:None";
+              border = [
+                "╭"
+                "─"
+                "╮"
+                "│"
+                "╯"
+                "─"
+                "╰"
+                "│"
+              ];
+              winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CursorLine,Search:None";
 
               max_width = 50;
               max_height = 20;
             };
             completion = {
-              border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
-              winhighlight =
-                "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CursorLine,Search:None";
+              border = [
+                "╭"
+                "─"
+                "╮"
+                "│"
+                "╯"
+                "─"
+                "╰"
+                "│"
+              ];
+              winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CursorLine,Search:None";
               scrollbar = false;
               max_width = 50;
               max_height = 20;
@@ -96,12 +135,19 @@
         };
         cmdline = {
           "/" = {
-            mapping = { __raw = "cmp.mapping.preset.cmdline()"; };
-            sources = [{ name = "buffer"; }];
+            mapping = {
+              __raw = "cmp.mapping.preset.cmdline()";
+            };
+            sources = [ { name = "buffer"; } ];
           };
           ":" = {
-            mapping = { __raw = "cmp.mapping.preset.cmdline()"; };
-            sources = [{ name = "async_path"; } { name = "cmdline"; }];
+            mapping = {
+              __raw = "cmp.mapping.preset.cmdline()";
+            };
+            sources = [
+              { name = "async_path"; }
+              { name = "cmdline"; }
+            ];
           };
         };
       };

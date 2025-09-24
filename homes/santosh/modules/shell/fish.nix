@@ -1,4 +1,5 @@
-{ config, ... }: {
+{ config, ... }:
+{
   programs.fish = {
     enable = true;
     generateCompletions = true;
@@ -40,8 +41,7 @@
       "adsf" = "sessionizer";
       "adfs" = "sessionizer";
 
-      "rebuild" =
-        "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/nixos/#santosh";
+      "rebuild" = "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/nixos/#santosh";
 
       "gs" = "git status";
       "gl" = "git log --oneline --graph --decorate --all";
@@ -52,5 +52,7 @@
     };
   };
 
-  programs.fzf = { enable = true; };
+  programs.fzf = {
+    enable = true;
+  };
 }

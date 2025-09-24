@@ -1,4 +1,10 @@
-{ pkgs, config, lib, ... }: {
+{
+  pkgs,
+  config,
+  lib,
+  ...
+}:
+{
   options = {
     colorschemes = {
       enable = lib.mkOption {
@@ -22,7 +28,11 @@
               transparent = true;
               solid = false;
             };
-            color_overrides = { all = { base = "#191d33"; }; };
+            color_overrides = {
+              all = {
+                base = "#191d33";
+              };
+            };
             no_italic = false;
             no_bold = true;
             no_underline = false;

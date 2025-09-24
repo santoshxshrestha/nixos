@@ -1,7 +1,7 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options = {
-    copilot-chat.enable =
-      lib.mkEnableOption "Enable copilot-chat plugin for nixvim";
+    copilot-chat.enable = lib.mkEnableOption "Enable copilot-chat plugin for nixvim";
   };
 
   config = lib.mkIf config.copilot-chat.enable {

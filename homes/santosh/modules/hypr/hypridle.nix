@@ -18,8 +18,7 @@
         {
           timeout = 185;
           on-timeout = "hyprctl dispatch dpms off";
-          on-resume =
-            "hyprctl dispatch dpms on && notify-send -t 2000 'Awake!'";
+          on-resume = "hyprctl dispatch dpms on && notify-send -t 2000 'Awake!'";
         }
         {
           timeout = 300;

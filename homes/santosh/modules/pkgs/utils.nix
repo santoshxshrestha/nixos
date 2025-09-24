@@ -1,5 +1,6 @@
 { pkgs }:
-with pkgs; [
+with pkgs;
+[
   ffmpeg
   wl-clipboard
   brightnessctl

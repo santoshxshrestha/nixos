@@ -1,4 +1,5 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options = {
     alpha.enable = lib.mkOption {
       type = lib.types.bool;
@@ -130,11 +131,15 @@
               type = "button";
               val = "  λ  ➤  Recent Files";
               on_press = {
-                __raw =
-                  "function() require('telescope.builtin').oldfiles({results = 10}) end";
+                __raw = "function() require('telescope.builtin').oldfiles({results = 10}) end";
               };
               opts = {
-                keymap = [ "n" "r" ":Telescope oldfiles<CR>" { } ];
+                keymap = [
+                  "n"
+                  "r"
+                  ":Telescope oldfiles<CR>"
+                  { }
+                ];
                 shortcut = "r";
                 position = "center";
                 cursor = 3;
@@ -147,9 +152,16 @@
             {
               type = "button";
               val = "  λ  ➤  File Explorer";
-              on_press = { __raw = "function() vim.cmd('Explore') end"; };
+              on_press = {
+                __raw = "function() vim.cmd('Explore') end";
+              };
               opts = {
-                keymap = [ "n" "e" ":Ex<CR>" { } ];
+                keymap = [
+                  "n"
+                  "e"
+                  ":Ex<CR>"
+                  { }
+                ];
                 shortcut = "e";
                 position = "center";
                 cursor = 3;
@@ -162,9 +174,16 @@
             {
               type = "button";
               val = "  λ  ➤  New File";
-              on_press = { __raw = "function() vim.cmd('enew') end"; };
+              on_press = {
+                __raw = "function() vim.cmd('enew') end";
+              };
               opts = {
-                keymap = [ "n" "n" ":enew<CR>" { } ];
+                keymap = [
+                  "n"
+                  "n"
+                  ":enew<CR>"
+                  { }
+                ];
                 shortcut = "n";
                 position = "center";
                 cursor = 3;
@@ -177,9 +196,16 @@
             {
               type = "button";
               val = "  λ  ➤  Quit";
-              on_press = { __raw = "function() vim.cmd('qa') end"; };
+              on_press = {
+                __raw = "function() vim.cmd('qa') end";
+              };
               opts = {
-                keymap = [ "n" "q" ":qa<CR>" { } ];
+                keymap = [
+                  "n"
+                  "q"
+                  ":qa<CR>"
+                  { }
+                ];
                 shortcut = "q";
                 position = "center";
                 cursor = 3;

@@ -44,22 +44,19 @@
         # Ublock Origin
         "uBlock0@raymondhill.net" = {
           "installation_mode" = "force_installed";
-          "install_url" =
-            "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+          "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
           "default_area" = "menupanel";
         };
         # Vimium C
         "vimium-c@gdh1995.cn" = {
           "installation_mode" = "force_installed";
-          "install_url" =
-            "https://addons.mozilla.org/firefox/downloads/latest/vimium-c/latest.xpi";
+          "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/vimium-c/latest.xpi";
           "default_area" = "menupanel";
         };
         # Dark Reader
         "addon@darkreader.org" = {
           "installation_mode" = "force_installed";
-          "install_url" =
-            "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
+          "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
           "default_area" = "menupanel";
         };
         "{446900e4-71c2-419f-a6a7-df9c091e268b}" = {
@@ -70,8 +67,7 @@
         };
         "sponsorBlocker@ajay.app" = {
           "installation_mode" = "force_installed";
-          "install_url" =
-            "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
+          "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
           "default_area" = "menupanel";
         };
         "idcac-pub@guus.ninja" = {

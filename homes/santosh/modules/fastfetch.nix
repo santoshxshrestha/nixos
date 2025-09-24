@@ -1,10 +1,10 @@
-{ config, ... }: {
+{ config, ... }:
+{
   programs.fastfetch = {
     enable = true;
     settings = {
       logo = {
-        source =
-          "${config.home.homeDirectory}/nixos/homes/santosh/assets/nixos.png";
+        source = "${config.home.homeDirectory}/nixos/homes/santosh/assets/nixos.png";
         height = 15;
         width = 40;
         padding = {

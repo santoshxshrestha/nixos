@@ -5,7 +5,8 @@ let
   utilsPkgs = import ./utils.nix { inherit pkgs; };
 in
 {
-  home.packages = with pkgs;
+  home.packages =
+    with pkgs;
 
     waylandPkgs ++ fontsPkgs ++ utilsPkgs;
   # # Adds the 'hello' command to your environment. It prints a friendly

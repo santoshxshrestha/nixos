@@ -1,4 +1,5 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options = {
     terminal.enable = lib.mkEnableOption "Enable/disable custom terminal setup";
   };

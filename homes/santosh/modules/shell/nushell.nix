@@ -1,7 +1,10 @@
-{ config, ... }: {
+{ config, ... }:
+{
   programs.nushell = {
     enable = true;
-    settings = { show_banner = false; };
+    settings = {
+      show_banner = false;
+    };
 
     # environmentVariables = {
     #   EDITOR = "nvim";
@@ -73,8 +76,7 @@
       "adsf" = "sessionizer";
       "adfs" = "sessionizer";
 
-      "rebuild" =
-        "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/nixos/#santosh";
+      "rebuild" = "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/nixos/#santosh";
 
       "gs" = "git status";
       "gl" = "git log --oneline --graph --decorate --all";

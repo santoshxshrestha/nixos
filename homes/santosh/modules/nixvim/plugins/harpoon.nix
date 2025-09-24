@@ -1,4 +1,5 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options = {
     harpoon.enable = lib.mkEnableOption "Enable harpoon plugin for nixvim";
   };

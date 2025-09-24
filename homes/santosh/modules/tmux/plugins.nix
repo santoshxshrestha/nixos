@@ -1,5 +1,11 @@
-{ pkgs, colors, tmux-session-manager, ... }:
-with pkgs; [
+{
+  pkgs,
+  colors,
+  tmux-session-manager,
+  ...
+}:
+with pkgs;
+[
   tmuxPlugins.sensible
   tmuxPlugins.vim-tmux-navigator
   # {

@@ -55,12 +55,20 @@
     variant = "";
   };
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.santosh = {
     isNormalUser = true;
     description = "Santosh Shrestha";
-    extraGroups = [ "networkmanager" "wheel" "video" "audio" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "video"
+      "audio"
+    ];
     shell = pkgs.fish;
     openssh.authorizedKeys.keys = [ ];
     # shell = pkgs.nushell;
@@ -101,7 +109,9 @@
     keyboards.default = {
       ids = [ "*" ];
       settings = {
-        main = { capslock = "overload(control, esc)"; };
+        main = {
+          capslock = "overload(control, esc)";
+        };
         # Optional: adjust timing (default is usually fine)
         global = {
           overload_tap_timeout = "200"; # milliseconds

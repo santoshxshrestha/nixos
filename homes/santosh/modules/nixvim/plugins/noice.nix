@@ -1,4 +1,5 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options = {
     noice.enable = lib.mkEnableOption "Enable noice.nvim plugin for nixvim";
   };

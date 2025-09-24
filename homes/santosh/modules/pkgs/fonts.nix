@@ -1,5 +1,6 @@
 { pkgs }:
-with pkgs; [
+with pkgs;
+[
   nerd-fonts.jetbrains-mono
   nerd-fonts.iosevka
   nerd-fonts.fira-code

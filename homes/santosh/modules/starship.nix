@@ -1,4 +1,5 @@
-{ lib, ... }: {
+{ lib, ... }:
+{
   programs.starship = {
     enable = true;
     enableFishIntegration = true;
@@ -127,14 +128,21 @@
         format = "via [$symbol$pyenv_prefix($version)(($virtualenv))]($style) ";
         style = "bold blue";
         pyenv_version_name = true;
-        python_binary = [ "python" "python3" "python2" ];
+        python_binary = [
+          "python"
+          "python3"
+          "python2"
+        ];
       };
 
       nodejs = {
         symbol = " ";
         format = "via [$symbol($version)]($style) ";
         style = "bold green";
-        detect_files = [ "package.json" ".nvmrc" ];
+        detect_files = [
+          "package.json"
+          ".nvmrc"
+        ];
       };
 
       rust = {
@@ -186,23 +194,41 @@
       };
 
       # Disabled modules (to exclude hostname, time, etc.)
-      hostname = { disabled = true; };
+      hostname = {
+        disabled = true;
+      };
 
-      time = { disabled = true; };
+      time = {
+        disabled = true;
+      };
 
-      username = { disabled = true; };
+      username = {
+        disabled = true;
+      };
 
-      battery = { disabled = true; };
+      battery = {
+        disabled = true;
+      };
 
-      memory_usage = { disabled = true; };
+      memory_usage = {
+        disabled = true;
+      };
 
-      package = { disabled = true; };
+      package = {
+        disabled = true;
+      };
 
-      aws = { disabled = true; };
+      aws = {
+        disabled = true;
+      };
 
-      docker_context = { disabled = true; };
+      docker_context = {
+        disabled = true;
+      };
 
-      kubernetes = { disabled = true; };
+      kubernetes = {
+        disabled = true;
+      };
     };
   };
 }

@@ -1,7 +1,7 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options = {
-    copilot-lua.enable =
-      lib.mkEnableOption "Enable copilot-lua plugin for nixvim";
+    copilot-lua.enable = lib.mkEnableOption "Enable copilot-lua plugin for nixvim";
   };
 
   config = lib.mkIf config.copilot-lua.enable {

@@ -1,5 +1,8 @@
-{ config, lib, ... }: {
-  options = { opts.enable = lib.mkEnableOption "Custom Neovim options"; };
+{ config, lib, ... }:
+{
+  options = {
+    opts.enable = lib.mkEnableOption "Custom Neovim options";
+  };
   config = lib.mkIf config.opts.enable {
     programs.nixvim.opts = {
       # Disable GUI cursor styling (default: '')
@@ -87,7 +90,9 @@
       # Set completeopt to have a better completion experience (default: 'menu,preview')
       completeopt = "menuone,noselect";
       # Hide end of buffer ~ characters (default: true)
-      fillchars = { eob = " "; };
+      fillchars = {
+        eob = " ";
+      };
       # Controls the visibility of the status line (0 = never, 1 = only if more than one window is open, 2 = always)
       laststatus = 0;
       # Highlight columns at 80 chars (default: '')

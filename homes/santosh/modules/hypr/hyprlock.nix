@@ -4,8 +4,7 @@
 
     settings = {
       background = {
-        path =
-          "$WALLPAPER_ARCHIVE_PATH/Static-Wallpapers/inazuma_cats_place.png";
+        path = "$WALLPAPER_ARCHIVE_PATH/Static-Wallpapers/inazuma_cats_place.png";
         blur_passes = 2;
         contrast = 0.8916;
         brightness = 0.35;
@@ -19,25 +18,27 @@
         disable_loading_bar = false;
       };
 
-      "input-field" = [{
-        monitor = "eDP-1";
-        size = "320, 60";
-        outline_thickness = 2;
-        dots_size = 0.2;
-        dots_spacing = 0.2;
-        dots_center = true;
-        outer_color = "rgba(18, 18, 18, 18)";
-        inner_color = "rgba(18,18,18,0.5)";
-        font_color = "rgba(181, 181, 181,1)";
-        fade_on_empty = true;
-        font_size = 1;
-        placeholder_text = "";
-        fail_text = "󰞇";
-        hide_input = false;
-        position = "0, -310";
-        halign = "center";
-        valign = "center";
-      }];
+      "input-field" = [
+        {
+          monitor = "eDP-1";
+          size = "320, 60";
+          outline_thickness = 2;
+          dots_size = 0.2;
+          dots_spacing = 0.2;
+          dots_center = true;
+          outer_color = "rgba(18, 18, 18, 18)";
+          inner_color = "rgba(18,18,18,0.5)";
+          font_color = "rgba(181, 181, 181,1)";
+          fade_on_empty = true;
+          font_size = 1;
+          placeholder_text = "";
+          fail_text = "󰞇";
+          hide_input = false;
+          position = "0, -310";
+          halign = "center";
+          valign = "center";
+        }
+      ];
 
       label = [
         {

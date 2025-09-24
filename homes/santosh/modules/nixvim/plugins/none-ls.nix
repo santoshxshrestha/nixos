@@ -1,4 +1,5 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options = {
     none-ls.enable = lib.mkEnableOption "Enable none-ls plugin for nixvim";
   };
@@ -10,8 +11,14 @@
       sources.formatting = {
         prettier = {
           enable = true;
-          settings.filetypes =
-            [ "html" "json" "yaml" "markdown" "javascript" "typescript" ];
+          settings.filetypes = [
+            "html"
+            "json"
+            "yaml"
+            "markdown"
+            "javascript"
+            "typescript"
+          ];
           # Disable the TypeScript Language Server's built-in formatter to avoid conflicts
           disableTsServerFormatter = true;
         };
@@ -20,7 +27,10 @@
 
         shfmt = {
           enable = true;
-          settings.extra_args = [ "-i" "4" ];
+          settings.extra_args = [
+            "-i"
+            "4"
+          ];
         };
 
         clang_format.enable = true;

@@ -44,4 +44,6 @@ let
     fi
   '';
 in
-{ home.packages = [ sessionizer ]; }
+{
+  home.packages = [ sessionizer ];
+}

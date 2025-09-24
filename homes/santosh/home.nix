@@ -117,12 +117,16 @@
   #
   #  /etc/profiles/per-user/santosh/etc/profile.d/hm-session-vars.sh
   #
-  home.sessionVariables = { EDITOR = "nvim"; };
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
   programs.git = {
     enable = true;
     userName = "Santosh Shrestha";
     userEmail = "santoshxshrestha@gmail.com";
-    extraConfig = { init.defaultBranch = "main"; };
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
   };
 
   # Let Home Manager install and manage itself.

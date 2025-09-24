@@ -1,4 +1,5 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options = {
     lualine.enable = lib.mkEnableOption "Enable lualine plugin for nixvim";
   };
@@ -18,37 +19,47 @@
             right = " ";
           };
           disabled_filetypes = {
-            statusline = [ "alpha" "neo-tree" ];
+            statusline = [
+              "alpha"
+              "neo-tree"
+            ];
             winbar = [ ];
           };
           always_divide_middle = true;
         };
 
         sections = {
-          lualine_a = [{
-            __unkeyed-1 = "mode";
-            fmt.__raw = ''
-              function(str)
-                return ' ' .. str
-                -- return ' ' .. str:sub(1, 1) -- displays only the first character
-              end
-            '';
-          }];
+          lualine_a = [
+            {
+              __unkeyed-1 = "mode";
+              fmt.__raw = ''
+                function(str)
+                  return ' ' .. str
+                  -- return ' ' .. str:sub(1, 1) -- displays only the first character
+                end
+              '';
+            }
+          ];
 
           lualine_b = [ "branch" ];
 
-          lualine_c = [{
-            __unkeyed-1 = "filename";
-            file_status = true; # shows readonly, modified status
-            path = 0; # 0 = just filename, 1 = relative path, 2 = absolute path
-          }];
+          lualine_c = [
+            {
+              __unkeyed-1 = "filename";
+              file_status = true; # shows readonly, modified status
+              path = 0; # 0 = just filename, 1 = relative path, 2 = absolute path
+            }
+          ];
 
           lualine_x = [
             # Diagnostics
             {
               __unkeyed-1 = "diagnostics";
               sources = [ "nvim_diagnostic" ];
-              sections = [ "error" "warn" ];
+              sections = [
+                "error"
+                "warn"
+              ];
               symbols = {
                 error = " ";
                 warn = " ";
@@ -109,14 +120,18 @@
         inactive_sections = {
           lualine_a = [ ];
           lualine_b = [ ];
-          lualine_c = [{
-            __unkeyed-1 = "filename";
-            path = 1; # relative path for inactive windows
-          }];
-          lualine_x = [{
-            __unkeyed-1 = "location";
-            padding = 0;
-          }];
+          lualine_c = [
+            {
+              __unkeyed-1 = "filename";
+              path = 1; # relative path for inactive windows
+            }
+          ];
+          lualine_x = [
+            {
+              __unkeyed-1 = "location";
+              padding = 0;
+            }
+          ];
           lualine_y = [ ];
           lualine_z = [ ];
         };

@@ -21,7 +21,14 @@
 
   };
 
-  outputs = inputs@{ self, nixpkgs, home-manager, nixvim, ... }:
+  outputs =
+    inputs@{
+      self,
+      nixpkgs,
+      home-manager,
+      nixvim,
+      ...
+    }:
     let
       system = "x86_64-linux";
       lib = nixpkgs.lib;
@@ -48,6 +55,7 @@
         };
 
       };
-      formatter.${system} = nixpkgs.legacyPackages.${system}.nixpkgs-fmt;
+      # formatter.${system} = nixpkgs.legacyPackages.${system}.nixpkgs-fmt;
+      formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt-rfc-style;
     };
 }

@@ -9,7 +9,10 @@
     margin-left = 8;
     margin-right = 8;
 
-    modules-left = [ "hyprland/workspaces" "hyprland/window" ];
+    modules-left = [
+      "hyprland/workspaces"
+      "hyprland/window"
+    ];
     modules-center = [ "clock" ];
     modules-right = [
       "network"
@@ -112,8 +115,7 @@
         dnd-none = "";
         inhibited-notification = "<span foreground='red'><sup></sup></span>";
         inhibited-none = "";
-        dnd-inhibited-notification =
-          "<span foreground='red'><sup></sup></span>";
+        dnd-inhibited-notification = "<span foreground='red'><sup></sup></span>";
         dnd-inhibited-none = "";
       };
       return-type = "json";
@@ -135,7 +137,18 @@
       format-charging = "󱐋{capacity}%";
       format-plugged = "󱟢{capacity}%";
       format-alt = "{icon} {time}";
-      format-icons = [ "󰁺" "󰁻" "󰁼" "󰁽" "󰁾" "󰁿" "󰂀" "󰂁" "󰂂" "󰁹" ];
+      format-icons = [
+        "󰁺"
+        "󰁻"
+        "󰁼"
+        "󰁽"
+        "󰁾"
+        "󰁿"
+        "󰂀"
+        "󰂁"
+        "󰂂"
+        "󰁹"
+      ];
       # on-scroll-up = "brightnessctl set +5%";
       # on-scroll-down = "brightnessctl set 5%-";
       tooltip-format = ''
@@ -157,7 +170,11 @@
         phone = "󰏲";
         portable = "󰦧";
         car = "󰄋";
-        default = [ "󰕿" "󰖀" "󰕾" ];
+        default = [
+          "󰕿"
+          "󰖀"
+          "󰕾"
+        ];
       };
       on-click = "pavucontrol";
       on-click-right = "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle";
@@ -199,6 +216,8 @@
     };
 
     # System tray
-    tray = { spacing = 8; };
+    tray = {
+      spacing = 8;
+    };
   };
 }

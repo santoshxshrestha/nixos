@@ -1,4 +1,5 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options = {
     justu.enable = lib.mkEnableOption "Enable animated copilot spinner for nix";
   };

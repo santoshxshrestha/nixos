@@ -22,8 +22,7 @@ in
     terminal = "xterm-256color";
     escapeTime = 0;
     baseIndex = 1;
-    plugins =
-      import ./plugins.nix { inherit pkgs colors tmux-session-manager; };
+    plugins = import ./plugins.nix { inherit pkgs colors tmux-session-manager; };
 
     extraConfig = import ./config.nix { inherit colors; };
   };

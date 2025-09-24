@@ -7,4 +7,8 @@ let
     sha256 = "sha256-0OmIh1WFPMbvsioTmhGjCTNBuFrPoLgMvIN49vhm7d8=";
   };
 in
-{ home.sessionVariables = { WALLPAPER_ARCHIVE_PATH = "${wallpapers}"; }; }
+{
+  home.sessionVariables = {
+    WALLPAPER_ARCHIVE_PATH = "${wallpapers}";
+  };
+}

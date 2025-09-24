@@ -1,4 +1,5 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options = {
     treesitter.enable = lib.mkEnableOption "Enable treesitter and related plugins";
   };
@@ -6,7 +7,9 @@
     programs.nixvim.plugins.treesitter = {
       enable = true;
       folding = false;
-      settings = { indent.enable = true; };
+      settings = {
+        indent.enable = true;
+      };
     };
 
     programs.nixvim.plugins.treesitter-context = {

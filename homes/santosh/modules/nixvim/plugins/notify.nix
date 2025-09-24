@@ -1,4 +1,5 @@
-{ config, lib, ... }: {
+{ config, lib, ... }:
+{
   options = {
     notify.enable = lib.mkEnableOption "Enable notify.nvim plugin for nixvim";
   };

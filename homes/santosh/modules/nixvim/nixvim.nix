@@ -94,7 +94,9 @@
 
   programs.nixvim = {
     enable = true;
-    editorconfig = { enable = true; };
+    editorconfig = {
+      enable = true;
+    };
     plugins = { };
   };
 }

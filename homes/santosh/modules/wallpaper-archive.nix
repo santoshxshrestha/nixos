@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 let
   wallpapers = pkgs.fetchFromGitHub {
     owner = "santoshxshrestha";

@@ -41,6 +41,11 @@
         enable = true;
       };
 
+      # To make the  GBrowse work of the fugitive
+      rhubarb = {
+        enable = true;
+      };
+
       # GitHub integration for vim-fugitive
       #rhubarb = { enable = true; };
 

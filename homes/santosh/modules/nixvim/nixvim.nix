@@ -21,7 +21,6 @@
     ./plugins/misc.nix
     ./plugins/treesitter.nix
     ./plugins/telescope.nix
-    ./plugins/rhubarb.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ UI Plugins                                    │
@@ -71,7 +70,6 @@
   cord.enable = true;
   gitsigns.enable = true;
   harpoon.enable = true;
-  rhubarb-vim.enable = true;
 
   # ╭───────────────────────────────────────────────╮
   # │ Core Functionality Plugins                    │

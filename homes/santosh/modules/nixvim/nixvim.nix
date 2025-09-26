@@ -51,7 +51,7 @@
   # ╰───────────────────────────────────────────────╯
   alpha.enable = true;
   colorschemes.enable = true;
-  indent-blankline.enable = true;
+  indent-blankline.enable = false;
   lualine.enable = true;
   notify.enable = true;
   snacks.enable = true;
@@ -60,9 +60,9 @@
   # │ AI and Automation Plugins                     │
   # ╰───────────────────────────────────────────────╯
   avante.enable = false;
-  copilot-lua.enable = true;
-  copilot-chat.enable = true;
-  justu.enable = true;
+  copilot-lua.enable = false;
+  copilot-chat.enable = false;
+  justu.enable = false;
 
   # ╭───────────────────────────────────────────────╮
   # │ Git and Navigation Plugins                    │

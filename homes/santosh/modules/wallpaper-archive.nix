@@ -4,7 +4,7 @@ let
     owner = "santoshxshrestha";
     repo = "wallpaper-archive";
     rev = "main";
-    sha256 = "sha256-0OmIh1WFPMbvsioTmhGjCTNBuFrPoLgMvIN49vhm7d8=";
+    hash = "sha256-+OACxoGN+RTGcfyJVUsNPpUB/9swPsHmS/E5MYtwoHA=";
   };
 in
 {

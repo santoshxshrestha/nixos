@@ -450,6 +450,10 @@
       # "float,class:^(kitty)$"
       # ];
 
+      layerrule = [
+        "animation slide,rofi"
+      ];
+
       windowrulev2 = [
         # Example window rules - v2 uncomment and modify as needed:
         # "float,class:^(kitty)$,title:^(kitty)$"

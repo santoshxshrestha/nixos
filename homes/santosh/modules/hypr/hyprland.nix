@@ -180,9 +180,9 @@
       animations = {
         enabled = true; # Set to true to enable animations
         bezier = [
-          "wind,0.05,0.9,0.1,1.05"
-          "winIn,0.1,1.1,0.1,1.1"
-          "winOut,0.3,-0.3,0,1"
+          "wind,0.05,0.9,0.1,1"
+          "winIn,0.1,1,0.1,1"
+          "winOut,0.3,0,0,1"
           "liner,1,1,1,1"
         ];
         animation = [

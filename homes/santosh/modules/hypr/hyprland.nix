@@ -178,7 +178,7 @@
 
       # https://wiki.hyprland.org/Configuring/Variables/#animations
       animations = {
-        enabled = false; # Set to true to enable animations
+        enabled = true; # Set to true to enable animations
         bezier = [
           "wind,0.05,0.9,0.1,1.05"
           "winIn,0.1,1.1,0.1,1.1"
@@ -190,10 +190,10 @@
           "windowsIn,1,6,winIn,slide"
           "windowsOut,1,5,winOut,slide"
           "windowsMove,1,5,wind,slide"
-          "border,1,1,liner"
-          "borderangle,1,30,liner,loop"
+          "border,0,1,liner"
+          "borderangle,0,30,liner,loop"
           "fade,1,10,default"
-          "workspaces,1,5,wind"
+          "workspaces,0,5,wind"
         ];
       };
 

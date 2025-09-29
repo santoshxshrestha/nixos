@@ -60,9 +60,9 @@
   # │ AI and Automation Plugins                     │
   # ╰───────────────────────────────────────────────╯
   avante.enable = false;
-  copilot-lua.enable = false;
-  copilot-chat.enable = false;
-  justu.enable = false;
+  copilot-lua.enable = true;
+  copilot-chat.enable = true;
+  justu.enable = true;
 
   # ╭───────────────────────────────────────────────╮
   # │ Git and Navigation Plugins                    │

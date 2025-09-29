@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 {
+  imports = [
+    ./modules/monitors.nix
+  ];
   wayland.windowManager.hyprland = {
     enable = true;
     package = pkgs.hyprland;
@@ -15,24 +18,6 @@
       # Please note not all available settings / options are set here.
       # For a full list, see the wiki
       # #######################################################################################
-
-      ################
-      ### MONITORS ###
-      ################
-
-      # See https://wiki.hyprland.org/Configuring/Monitors/
-      monitor = [
-        "eDP-1,1920x1080@60.00,0x0,1"
-
-        # Projector / Extended monitor config
-        # Automatically configure the projector (HDMI-A-1) to use its preferred resolution
-        # and mirror the internal display (eDP-1). This ensures the projector matches its
-        # native resolution and displays the same content as the laptop screen.
-        "HDMI-A-1,preferred,auto,1,mirror,eDP-1"
-
-        # Alternative manual configuration:
-        # "HDMI-A-1,1920x1080@60,auto,1,mirror,eDP-1"
-      ];
 
       ###################
       ### MY PROGRAMS ###

@@ -6,7 +6,7 @@
     # ╭───────────────────────────────────────────────╮
     # │ Hyprland Configuration Modules                │
     # ╰───────────────────────────────────────────────╯
-    ./modules/hypr/hyprland.nix
+    ./modules/hypr/hyprland/hyprland.nix
     ./modules/hypr/hypridle.nix
     ./modules/hypr/hyprpaper.nix
     ./modules/hypr/hyprlock.nix

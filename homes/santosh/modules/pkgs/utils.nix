@@ -14,6 +14,7 @@ with pkgs;
   opencode
   alacritty
   heroic-unwrapped
-
-  # pywal16
+  obs-studio
+  vlc
+  mpv
 ]

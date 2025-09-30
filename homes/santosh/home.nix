@@ -59,6 +59,7 @@
     # │ Scripts                                       │
     # ╰───────────────────────────────────────────────╯
     ./modules/scripts/sessionizer.nix
+    ./modules/scripts/music-player.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Wallpapers                                    │

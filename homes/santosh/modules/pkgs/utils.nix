@@ -7,12 +7,10 @@ with pkgs;
   playerctl
   ripgrep
   vscode
-  tmux
   gimp
   discord
   mdwatch
   opencode
-  alacritty
   heroic-unwrapped
   obs-studio
   vlc

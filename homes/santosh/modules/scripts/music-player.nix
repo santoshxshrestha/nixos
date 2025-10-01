@@ -5,13 +5,13 @@ let
     url_haven="https://youtube.com/playlist?list=PLBBcaljFGSiSz8czPRv3tX3C4nKo4On4j&si=pXh1Ru-7vK-3evs5"
     url_lofi="https://youtube.com/playlist?list=PLBBcaljFGSiSMYqaq-Vs-1hmnMyCvzW7D&si=Lcd-U9CV3pMydS6k"
 
-    if [[ -z "$1" ]]; then
-    echo "Usage: play [--select] <url|haven|lofi>"
+    if [[ -z "$1" || "$1" == "--help" || "$1" == "-h" ]]; then
+    echo "Usage: play [--select|-s] <url|haven|lofi>"
     exit 1
     fi
 
     select_mode=false
-    if [[ "$1" == "--select" ]]; then
+    if [[ "$1" == "--select" || "$1" == "-s" ]]; then
     select_mode=true
     shift
     fi

@@ -10,6 +10,7 @@
     ./hardware-configuration.nix
     ./modules/sddm.nix
     ./modules/packages.nix
+    ./modules/bluetooth.nix
     inputs.sops-nix.nixosModules.sops
   ];
 
@@ -96,6 +97,7 @@
     alsa.enable = true;
     pulse.enable = true;
   };
+
   xdg.portal.enable = true;
   xdg.portal.extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
 

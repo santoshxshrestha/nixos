@@ -239,7 +239,12 @@
 
     # System tray
     tray = {
+      icon-size = 14;
       spacing = 8;
+      expand = true;
+      icons = {
+        "nm-applet" = "/home/santosh/nixos/homes/santosh/assets/signal.png";
+      };
     };
   };
 }

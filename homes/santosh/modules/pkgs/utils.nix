@@ -11,7 +11,7 @@ with pkgs;
   discord
   mdwatch
   opencode
-  heroic-unwrapped
+  heroic
   obs-studio
   vlc
   mpv

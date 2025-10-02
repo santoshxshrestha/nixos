@@ -1,6 +1,6 @@
 { config, ... }:
 let
-  waybar_config = import ./config.nix;
+  waybar_config = import ./config.nix { inherit config; };
   waybar_style = import ./style.nix;
 in
 {

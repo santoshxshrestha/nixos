@@ -1,3 +1,4 @@
+{ config, ... }:
 {
   mainBar = {
     layers = "top";
@@ -241,9 +242,10 @@
     tray = {
       icon-size = 14;
       spacing = 8;
-      expand = true;
+      expand = false;
       icons = {
-        "nm-applet" = "/home/santosh/nixos/homes/santosh/assets/signal.png";
+        "nm-applet" = "${config.home.homeDirectory}/nixos/homes/santosh/assets/signal.png";
+        "discord" = "${config.home.homeDirectory}/nixos/homes/santosh/assets/discord.png";
       };
     };
   };

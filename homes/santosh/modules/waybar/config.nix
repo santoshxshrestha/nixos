@@ -16,6 +16,7 @@
     modules-center = [ "clock" ];
     modules-right = [
       "network"
+      "bluetooth"
       "backlight"
       "pulseaudio"
       "pulseaudio#microphone"
@@ -102,6 +103,27 @@
       max-length = 20;
       on-click = "nm-connection-editor";
       interval = 5;
+    };
+
+    "bluetooth" = {
+      format-off = "󰂲";
+      format-on = "";
+      format-disabled = "󰂲";
+      format-connected = " {device_alias}";
+      format-connected-battery = " {device_alias} {device_battery_percentage}%";
+      tooltip-format = ''
+        {controller_alias}	{controller_address}
+
+        {num_connections} connected'';
+      tooltip-format-connected = ''
+        {controller_alias}	{controller_address}
+
+        {num_connections} connected
+
+        {device_enumerate}'';
+      tooltip-format-enumerate-connected = "{device_alias}	{device_address}";
+      tooltip-format-enumerate-connected-battery = "{device_alias}	{device_address}	{device_battery_percentage}%";
+      on-click = "blueman-manager";
     };
 
     # Custom notification module

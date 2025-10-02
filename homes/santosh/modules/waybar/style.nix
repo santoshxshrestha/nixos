@@ -101,6 +101,26 @@
       color: #ff8a80;
   }
 
+  #bluetooth {
+      background: rgba(82, 79, 103, 0.2);
+      border-radius: 6px;
+      margin: 2px;
+      padding: 0 10px;
+      color: #b8b5c7;
+      font-size: 13px;
+      /* Slightly larger for better icon visibility */
+      transition: all 0.3s ease;
+  }
+
+  #bluetooth:hover {
+      background: rgba(82, 79, 103, 0.3);
+  }
+
+  #bluetooth.disabled {
+      background: rgba(255, 0, 0, 0.2);
+      color: #ff8a80;
+  }
+
   /* Custom notification */
   #custom-notification {
       background: rgba(82, 79, 103, 0.2);

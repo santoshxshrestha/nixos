@@ -20,4 +20,6 @@
       };
     };
   };
+
+  services.blueman.enable = true;
 }

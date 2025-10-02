@@ -88,7 +88,6 @@
       };
     };
 
-    # Network - Changed to show only WiFi icon, name on hover
     network = {
       format-wifi = "  {signalStrength}%";
       format-ethernet = "󰈀  {signalStrength}%";

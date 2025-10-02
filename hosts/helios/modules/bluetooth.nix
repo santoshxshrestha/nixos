@@ -26,7 +26,7 @@
         };
       };
     };
-    services.blueman-applet = {
+    services.blueman = {
       enable = true;
     };
   };

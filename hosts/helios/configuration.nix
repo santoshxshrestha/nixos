@@ -105,6 +105,9 @@
 
   security.polkit.enable = true;
 
+  # Enable Bluetooth and Blueman service
+  bluetooth.enable = true;
+
   # remap
   services.keyd = {
     enable = true;

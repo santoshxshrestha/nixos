@@ -3,8 +3,8 @@
   gtk = {
     enable = true;
     theme = {
-      name = "Adwaita-dark";
-      package = pkgs.adwaita-icon-theme;
+      name = "Tokyonight-Dark";
+      package = pkgs.tokyonight-gtk-theme;
     };
     iconTheme = {
       name = "Papirus-Dark";

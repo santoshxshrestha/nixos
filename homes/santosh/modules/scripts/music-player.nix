@@ -25,7 +25,7 @@ let
     fi
     fi
 
-    if [[ "$1" == "haven" ]]; then
+    if [[ "$select_mode" == false && "$1" == "haven" ]]; then
     ${pkgs.mpv}/bin/mpv --no-video --shuffle --loop-playlist=inf "$url_haven"
     fi
 
@@ -38,7 +38,7 @@ let
     fi
     fi
 
-    if [[ "$1" == "lofi" ]]; then
+    if [[ "$select_mode" == false && "$1" == "lofi" ]]; then
     ${pkgs.mpv}/bin/mpv --no-video --shuffle --loop-playlist=inf "$url_lofi"
     fi
 
@@ -51,9 +51,10 @@ let
     fi
     fi
 
+    # I dong think so I will ever play single song from url so no need to handle that case
+    # just shuffle and play the whole playlist
     if [[ "$1" != "haven" && "$1" != "lofi" ]]; then
-    ${pkgs.mpv}/bin/mpv --no-video "$1"
-    # mvp --no-video --shuffle --loop-playlist=inf "$1"
+    ${pkgs.mpv}/bin/mpv --no-video --shuffle --loop-playlist=inf "$1"
     fi
   '';
 in

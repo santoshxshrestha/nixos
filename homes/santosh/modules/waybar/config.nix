@@ -22,7 +22,7 @@
       "pulseaudio"
       "pulseaudio#microphone"
       "battery"
-      # "tray"
+      "tray"
       "custom/notification"
     ];
 
@@ -242,10 +242,10 @@
       icon-size = 14;
       spacing = 8;
       expand = false;
-      icons = {
-        "nm-applet" = "${config.home.homeDirectory}/nixos/homes/santosh/assets/signal.png";
-        "discord" = "${config.home.homeDirectory}/nixos/homes/santosh/assets/discord.png";
-      };
+      # icons = {
+      #   "nm-applet" = "${config.home.homeDirectory}/nixos/homes/santosh/assets/signal.png";
+      #   "discord" = "${config.home.homeDirectory}/nixos/homes/santosh/assets/discord.png";
+      # };
     };
   };
 }

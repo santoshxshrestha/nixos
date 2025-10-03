@@ -138,7 +138,10 @@
                   "n"
                   "r"
                   ":Telescope oldfiles<CR>"
-                  { }
+                  {
+                    silent = true;
+                    noremap = true;
+                  }
                 ];
                 shortcut = "r";
                 position = "center";
@@ -160,7 +163,10 @@
                   "n"
                   "e"
                   ":Ex<CR>"
-                  { }
+                  {
+                    silent = true;
+                    noremap = true;
+                  }
                 ];
                 shortcut = "e";
                 position = "center";
@@ -182,7 +188,10 @@
                   "n"
                   "n"
                   ":enew<CR>"
-                  { }
+                  {
+                    silent = true;
+                    noremap = true;
+                  }
                 ];
                 shortcut = "n";
                 position = "center";
@@ -204,7 +213,10 @@
                   "n"
                   "q"
                   ":qa<CR>"
-                  { }
+                  {
+                    silent = true;
+                    noremap = true;
+                  }
                 ];
                 shortcut = "q";
                 position = "center";

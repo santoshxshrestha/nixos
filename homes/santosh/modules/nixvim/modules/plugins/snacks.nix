@@ -14,6 +14,9 @@
         bigfile = {
           enabled = true;
           notify = true;
+          size = {
+            __raw = "1.5 * 1024 * 1024"; # 1.5 MB
+          };
         };
         quickfile = {
           enabled = true;

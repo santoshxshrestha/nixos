@@ -22,7 +22,7 @@
       "pulseaudio"
       "pulseaudio#microphone"
       "battery"
-      "tray"
+      # "tray"
       "custom/notification"
     ];
 

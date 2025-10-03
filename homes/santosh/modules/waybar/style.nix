@@ -128,6 +128,7 @@
       margin: 2px;
       padding: 0 10px;
       color: #b8b5c7;
+      font-size: 13px;
   }
 
   #custom-notification:hover {

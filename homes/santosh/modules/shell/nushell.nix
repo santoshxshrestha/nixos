@@ -1,4 +1,7 @@
-{ config, ... }:
+{ config, pkgs, ... }:
+let
+  bat = "${pkgs.bat}/bin/bat";
+in
 {
   programs.nushell = {
     enable = true;
@@ -80,7 +83,7 @@
 
       "gs" = "git status";
       "gl" = "git log --oneline --graph --decorate --all";
-      "gd" = "git diff";
+      "gd" = "git diff | ${bat}";
       "ga" = "git add -A";
       "c" = "git-commit";
       "P" = "git push origin (git branch --show-current)";

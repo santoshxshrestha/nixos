@@ -19,9 +19,9 @@ let
     echo -en "$a\0icon\x1f$a\n"
     done | rofi -dmenu -p "wallpaper selector" -theme ~/nixos/homes/santosh/config/rofi/themes/wallpaper-selector.rasi)
 
-    # WALLPAPER=$(find "$WALLPAPER_DIR" | rofi -dmenu -p "wallpaper selector" -theme ~/.config/rofi/themes/clipboard.rasi)
     if [ -z "$WALLPAPER" ]; then
     notify-send "No wallpaper selected, exiting..."
+    exit 1
     fi
 
     hyprctl hyprpaper reload ,"$WALLPAPER"

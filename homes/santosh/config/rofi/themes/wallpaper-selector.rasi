@@ -1,3 +1,9 @@
+/* Wallpaper Selector - Catppuccin Mocha Style */
+
+configuration {
+    show-icons: true;
+}
+
 * {
     font: "JetBrainsMono Nerd Font 10";
     base:        #1e1e2ed9;
@@ -34,31 +40,49 @@
 }
 
 window {
-    width: 100%;
-    height: 100%;
+    width: 1000px;
+    height: 600px;
     transparency: "real";
     blur: true;
     background-color: @base;
-    border: 0px;
-    border-radius: 0px;
-    padding: 0;
+    border: 2px;
+    border-color: @surface2;
+    border-radius: 18px;
+    padding: 8px;
 }
 
 mainbox {
-    children: [inputbar, listview];
-    background-color: transparent;
-    spacing: 16px;
-    padding: 32px;
     orientation: horizontal;
+    spacing: 8px;
+    padding: 8px;
+    background-color: transparent;
+    children: [preview, listarea];
+}
+
+preview {
+    expand: true;
+    width: 60%;
+    margin: 8px 16px 8px 8px;
+    background-color: @surface0;
+    border-radius: 18px;
+    padding: 16px;
+}
+
+listarea {
+    orientation: vertical;
+    width: 40%;
+    background-color: transparent;
+    spacing: 8px;
+    children: [inputbar, listview];
 }
 
 inputbar {
-    children: [prompt, entry];
     background-color: @surface1;
     border-radius: 14px;
-    padding: 16px;
+    padding: 8px;
     border: 1px;
     border-color: @surface2;
+    children: [prompt, entry];
 }
 
 prompt {
@@ -76,23 +100,33 @@ entry {
 }
 
 listview {
-    lines: 3;
-    columns: 6;
+    lines: 10;
+    columns: 1;
     fixed-height: false;
     dynamic: true;
     scrollbar: true;
     background-color: transparent;
-    border-radius: 18px;
+    border-radius: 14px;
     margin: 0 12px;
-    spacing: 24px;
+    spacing: 12px;
     padding: 8px 0 8px 0;
+    width: 100%;
+}
+
+scrollbar {
+    width: 2px;
+    border-radius: 4px;
+    background-color: @surface1;
+    handle-color: @blue;
+    handle-width: 4px;
+    padding: 0;
 }
 
 element {
-    padding: 12px;
-    margin: 6px;
-    border-radius: 16px;
-    spacing: 8px;
+    padding: 8px;
+    margin: 4px;
+    border-radius: 12px;
+    spacing: 4px;
     children: [element-icon, element-text];
 }
 
@@ -111,26 +145,16 @@ element selected.normal {
 }
 
 element-icon {
-    size: 180px;
-    padding: 0 12px 0 0;
+    size: 64px;
+    border-radius: 10px;
     background-color: #ffffff22;
-    border-radius: 18px;
+    padding: 0;
 }
 
 element-text {
     background-color: transparent;
-    text-color: inherit;
+    text-color: @overlay1;
+    font: "JetBrainsMono Nerd Font 8";
+    padding: 2px 0 0 0;
     vertical-align: 0.5;
-    highlight: none;
-    font: "JetBrainsMono Nerd Font 9";
-    padding: 0 4px;
-}
-
-scrollbar {
-    width: 2px;
-    border-radius: 4px;
-    background-color: @surface1;
-    handle-color: @blue;
-    handle-width: 4px;
-    padding: 0;
 }

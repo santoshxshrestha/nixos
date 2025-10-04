@@ -97,6 +97,9 @@ entry {
 num-filtered-rows {
     text-color: @overlay1;
     expand: false;
+    background-color: transparent;
+    text-color: @blue;
+    font: "JetBrainsMono Nerd Font Bold 11";
 }
 
 listview {

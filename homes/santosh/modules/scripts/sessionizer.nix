@@ -9,7 +9,6 @@ let
         selected=$(
             find ${config.home.homeDirectory} -mindepth 1 -maxdepth 4 -type d | ${pkgs.fzf}/bin/fzf --reverse --prompt="✦ ❯ " --header="━━━━━━━━━━━━━━━ ✦ SESSIONIZER ✦ ━━━━━━━━━━━━━━━" \
                 --header-first \
-                --border="rounded" \
                 --color="header:italic" \
                 --ignore-case \
                 --wrap \

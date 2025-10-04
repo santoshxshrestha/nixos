@@ -10,7 +10,8 @@
 
     bind = [
       # Custom script bindings
-      "$mainMod,w,exec,~/.local/scripts/switch-to-static"
+      "$mainMod,w,exec,rofi-wallpaper-selector"
+      # "$mainMod,w,exec,~/.local/scripts/switch-to-static"
       "$mainMod,d,exec,~/.local/scripts/switch-to-dynamic"
       "$mainMod,minus,exec,~/.local/scripts/waybar-toggle"
 

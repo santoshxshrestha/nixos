@@ -1,6 +1,4 @@
 {
-  lib,
-  config,
   pkgs,
   ...
 }:
@@ -16,16 +14,16 @@ let
     # WALLPAPER=$(find "$WALLPAPER_DIR" | fzf)
 
     WALLPAPER=$( for a in "$WALLPAPER_DIR"/*; do
-    echo -en "$a\0icon\x1f$a\n"
+    echo -en "$(basename $a)\0icon\x1f$a\n"
     done | rofi -dmenu -p "wallpaper selector" -theme ~/nixos/homes/santosh/config/rofi/themes/wallpaper-selector.rasi)
 
     if [ -z "$WALLPAPER" ]; then
-    notify-send "No wallpaper selected, exiting..."
+    notify-send "Wallpaper-selector" "No wallpaper selected, exiting..."
     exit 1
     fi
 
     hyprctl hyprpaper reload ,"$WALLPAPER"
-    notify-send "Wallpaper changed to $(basename "$WALLPAPER")"
+    notify-send "Wallpaper-selector" "Wallpaper changed to $(basename "$WALLPAPER")"
   '';
 in
 {

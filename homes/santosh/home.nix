@@ -60,6 +60,7 @@
     # ╰───────────────────────────────────────────────╯
     ./modules/scripts/sessionizer.nix
     ./modules/scripts/music-player.nix
+    ./modules/scripts/cliphist-reset.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Wallpapers                                    │

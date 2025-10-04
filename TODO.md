@@ -9,3 +9,5 @@ This file tracks tasks, ideas, and improvements for my NixOS configuration.
 - [ ] Manage the imports of the `home.nix` file better.
 - [ ] Add the keymaps for deletatio of the clipboard history in `..hypr/keymaps.nix`
 - [ ] Configure the shell to use vi mode by the press of `Esc` key.
+- [ ] Add a script for selection of wallpaper by the use of the rofi dmenu.
+

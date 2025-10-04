@@ -49,6 +49,7 @@ mainbox {
     background-color: transparent;
     spacing: 16px;
     padding: 32px;
+    orientation: horizontal;
 }
 
 inputbar {
@@ -84,6 +85,7 @@ listview {
     border-radius: 18px;
     margin: 0 12px;
     spacing: 24px;
+    padding: 8px 0 8px 0;
 }
 
 element {
@@ -103,15 +105,16 @@ element alternate.normal {
 element selected.normal {
     background-color: @blue;
     text-color: @base;
-    border: 2px;
+    border: 1px;
     border-color: @lavender;
-    border-radius: 16px;
+    border-radius: 10px;
 }
 
 element-icon {
-    size: 96px;
+    size: 180px;
     padding: 0 12px 0 0;
-    background-color: transparent;
+    background-color: #ffffff22;
+    border-radius: 18px;
 }
 
 element-text {
@@ -119,7 +122,8 @@ element-text {
     text-color: inherit;
     vertical-align: 0.5;
     highlight: none;
-    font: "JetBrainsMono Nerd Font 11";
+    font: "JetBrainsMono Nerd Font 9";
+    padding: 0 4px;
 }
 
 scrollbar {

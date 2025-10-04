@@ -82,14 +82,22 @@ inputbar {
     padding: 8px;
     border: 1px;
     border-color: @surface2;
-    children: [prompt, entry];
+    children: [textbox-prompt-colon, entry];
 }
 
-prompt {
+textbox-prompt-colon {
+    expand: false;
+    str: "✦ ❯ ";
     background-color: transparent;
-    padding: 0 14px 0 0;
     text-color: @blue;
-    font: "JetBrainsMono Nerd Font Bold 12";
+    font: "JetBrainsMono Nerd Font Bold 11";
+}
+
+entry {
+    placeholder: "Search wallpaper...";
+    placeholder-color: @overlay1;
+    text-color: @text;
+    background-color: transparent;
 }
 
 entry {

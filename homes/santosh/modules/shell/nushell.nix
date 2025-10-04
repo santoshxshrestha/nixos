@@ -83,11 +83,14 @@ in
 
       gs = "git status";
       gl = "git log --oneline --graph --decorate --all";
-      # gd = "git diff | bat";
       ga = "git add -A";
       c = "git-commit";
       P = "git push origin (git branch --show-current)";
     };
+
+    extraConfig = ''
+      def gd [] { git diff | ${bat} }
+    '';
   };
 
 }

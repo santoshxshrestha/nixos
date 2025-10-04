@@ -1,0 +1,132 @@
+* {
+    font: "JetBrainsMono Nerd Font 10";
+    base:        #1e1e2ed9;
+    mantle:      #181825d9;
+    crust:       #11111bd9;
+    surface0:    #313244d9;
+    surface1:    #45475ad9;
+    surface2:    #585b70d9;
+    text:        #cdd6f4;
+    subtext1:    #bac2de;
+    subtext0:    #a6adc8;
+    overlay2:    #9399b2;
+    overlay1:    #7f849c;
+    overlay0:    #6c7086;
+    blue:        #89b4fa;
+    lavender:    #b4befe;
+    sapphire:    #74c7ec;
+    sky:         #89dceb;
+    teal:        #94e2d5;
+    green:       #a6e3a1;
+    yellow:      #f9e2af;
+    peach:       #fab387;
+    maroon:      #eba0ac;
+    red:         #f38ba8;
+    mauve:       #cba6f7;
+    pink:        #f5c2e7;
+    flamingo:    #f2cdcd;
+    rosewater:   #f5e0dc;
+    background-color: @base;
+    text-color: @text;
+    margin: 0;
+    padding: 0;
+    spacing: 0;
+}
+
+window {
+    width: 100%;
+    height: 100%;
+    transparency: "real";
+    blur: true;
+    background-color: @base;
+    border: 0px;
+    border-radius: 0px;
+    padding: 0;
+}
+
+mainbox {
+    children: [inputbar, listview];
+    background-color: transparent;
+    spacing: 16px;
+    padding: 32px;
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: @surface1;
+    border-radius: 14px;
+    padding: 16px;
+    border: 1px;
+    border-color: @surface2;
+}
+
+prompt {
+    background-color: transparent;
+    padding: 0 14px 0 0;
+    text-color: @blue;
+    font: "JetBrainsMono Nerd Font Bold 12";
+}
+
+entry {
+    background-color: transparent;
+    placeholder: "search wallpapers...";
+    placeholder-color: @overlay1;
+    padding: 0;
+}
+
+listview {
+    lines: 3;
+    columns: 6;
+    fixed-height: false;
+    dynamic: true;
+    scrollbar: true;
+    background-color: transparent;
+    border-radius: 18px;
+    margin: 0 12px;
+    spacing: 24px;
+}
+
+element {
+    padding: 12px;
+    margin: 6px;
+    border-radius: 16px;
+    spacing: 8px;
+    children: [element-icon, element-text];
+}
+
+element normal.normal,
+element alternate.normal {
+    background-color: @surface1;
+    text-color: @text;
+}
+
+element selected.normal {
+    background-color: @blue;
+    text-color: @base;
+    border: 2px;
+    border-color: @lavender;
+    border-radius: 16px;
+}
+
+element-icon {
+    size: 96px;
+    padding: 0 12px 0 0;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+    highlight: none;
+    font: "JetBrainsMono Nerd Font 11";
+}
+
+scrollbar {
+    width: 2px;
+    border-radius: 4px;
+    background-color: @surface1;
+    handle-color: @blue;
+    handle-width: 4px;
+    padding: 0;
+}

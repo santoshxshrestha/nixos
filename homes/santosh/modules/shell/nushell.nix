@@ -67,26 +67,26 @@ in
     # '';
 
     shellAliases = {
-      "initialize" = "flake-initializer";
-      "b" = "beam";
+      initialize = "flake-initializer";
+      b = "beam";
 
-      "cd" = "z";
+      cd = "z";
       ".." = "cd ..";
-      "r" = "rm -f (fzf --reverse)";
-      "la" = "ls -la";
+      r = "rm -f (fzf --reverse)";
+      la = "ls -la";
 
-      "asdf" = "sessionizer";
-      "adsf" = "sessionizer";
-      "adfs" = "sessionizer";
+      asdf = "sessionizer";
+      adsf = "sessionizer";
+      adfs = "sessionizer";
 
-      "rebuild" = "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/nixos/#santosh";
+      rebuild = "sudo nixos-rebuild switch --flake ${config.home.homeDirectory}/nixos/#santosh";
 
-      "gs" = "git status";
-      "gl" = "git log --oneline --graph --decorate --all";
-      "gd" = "git diff | ${bat}";
-      "ga" = "git add -A";
-      "c" = "git-commit";
-      "P" = "git push origin (git branch --show-current)";
+      gs = "git status";
+      gl = "git log --oneline --graph --decorate --all";
+      # gd = "git diff | bat";
+      ga = "git add -A";
+      c = "git-commit";
+      P = "git push origin (git branch --show-current)";
     };
   };
 

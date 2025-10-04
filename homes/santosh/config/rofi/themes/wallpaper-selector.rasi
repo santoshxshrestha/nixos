@@ -6,7 +6,8 @@ configuration {
 
 * {
     font: "JetBrainsMono Nerd Font 10";
-    base:        #1e1e2ed9;
+    /* Catppuccin Mocha Colors with transparency */
+    base:        #1e1e2ed9;   /* 85% opacity */
     mantle:      #181825d9;
     crust:       #11111bd9;
     surface0:    #313244d9;
@@ -146,10 +147,10 @@ element alternate.normal {
 
 element selected.normal {
     background-color: @blue;
-    text-color: @base;
+    text-color: #000000;
     border: 1px;
     border-color: @lavender;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 element-icon {
@@ -161,8 +162,63 @@ element-icon {
 
 element-text {
     background-color: transparent;
-    text-color: @overlay1;
-    font: "JetBrainsMono Nerd Font 8";
+    text-color: @text;
+    font: "JetBrainsMono Nerd Font 10";
+    font-weight: 400;
     padding: 2px 0 0 0;
     vertical-align: 0.5;
+    text-overflow: "…";
+}
+
+element-text selected.normal {
+    text-color: #181825;
+}
+
+element.text {
+    text-color: @fg-primary;
+}
+
+element.image {
+    text-color: @accent-alt;
+}
+
+element.code {
+    text-color: @success-color;
+}
+
+element.url {
+    text-color: @accent-color;
+}
+
+button {
+    text-color: @overlay1;
+    border-radius: 12px;
+    background-color: @surface2;
+    padding: 6px 8px;
+    horizontal-align: 0.5;
+    border: 1px;
+    border-color: transparent;
+}
+
+button selected {
+    background-color: @blue;
+    text-color: @base;
+    border-color: @lavender;
+}
+
+error-message {
+    background-color: @red;
+    text-color: @base;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+element.urgent {
+    background-color: rgba(247, 118, 142, 0.2);
+    text-color: @urgent-color;
+}
+
+element.active {
+    background-color: rgba(122, 162, 247, 0.2);
+    text-color: @accent-color;
 }

@@ -15,7 +15,7 @@
       "$mainMod,minus,exec,~/.local/scripts/waybar-toggle"
 
       # Clipboard history with rofi
-      # TODO : Add another keymp for deleting the item from the db
+      ''SUPER_SHIFT,V,exec,cliphist list | rofi -dmenu -p "Clipboard History" -theme ~/.config/rofi/themes/clipboard.rasi | cliphist delete''
       ''SUPER,V,exec,cliphist list | rofi -dmenu -p "Clipboard History" -theme ~/.config/rofi/themes/clipboard.rasi | cliphist decode | wl-copy''
 
       # Window management - see https://wiki.hyprland.org/Configuring/Binds/ for more

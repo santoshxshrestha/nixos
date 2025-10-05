@@ -62,7 +62,6 @@ mainbox {
 
 preview {
     expand: true;
-    width: 100%;
     margin: 8px 16px 8px 8px;
     background-image: url("~/.current_wallpaper", height);
     border-radius: 18px;
@@ -71,7 +70,6 @@ preview {
 
 listarea {
     orientation: vertical;
-    width: 40%;
     background-color: transparent;
     spacing: 8px;
     children: [inputbar, listview];

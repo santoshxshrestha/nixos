@@ -1,8 +1,10 @@
 {
   pkgs,
+  config,
   ...
 }:
 let
+  theme = "${config.home.homeDirectory}/.config/rofi/themes/wallpaper-selector.rasi";
   rofi-wallpaper-selector = pkgs.writeShellScriptBin "rofi-wallpaper-selector" ''
     #!/usr/bin/env bash
     WALLPAPER_DIR="$WALLPAPER_ARCHIVE_PATH/Static-Wallpapers"
@@ -15,7 +17,8 @@ let
     WALLPAPER=$( for a in "$WALLPAPER_DIR"/*; do
     # echo -en "$a\0icon\x1f$a\n"
     echo -en "$(basename "$a")\0icon\x1f$a\n"
-    done | rofi -dmenu -p "wallpaper selector" -theme ~/nixos/homes/santosh/config/rofi/themes/wallpaper-selector.rasi)
+    done | rofi -dmenu -p "wallpaper selector" -theme ${theme}
+    )
 
     if [ -z "$WALLPAPER" ]; then
     notify-send "Wallpaper-selector" "No wallpaper selected, exiting..."
@@ -26,7 +29,7 @@ let
 
     hyprctl hyprpaper reload ,"$NEW_WALLPAPER"
     notify-send "Wallpaper-selector" "Wallpaper changed to $WALLPAPER"
-    ln -sf "$NEW_WALLPAPER" ~/.current_wallpaper
+    ln -sf "$NEW_WALLPAPER" ${config.home.homeDirectory}/.current_wallpaper
   '';
 in
 {

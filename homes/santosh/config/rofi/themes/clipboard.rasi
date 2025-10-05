@@ -188,4 +188,4 @@ element.urgent {
 
 element.active {
     background-color: rgba(122, 162, 247, 0.2);
-
+}

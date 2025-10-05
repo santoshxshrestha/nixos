@@ -174,21 +174,6 @@ element-text selected.normal {
     text-color: #181825;
 }
 
-element.text {
-    text-color: @fg-primary;
-}
-
-element.image {
-    text-color: @accent-alt;
-}
-
-element.code {
-    text-color: @success-color;
-}
-
-element.url {
-    text-color: @accent-color;
-}
 
 button {
     text-color: @overlay1;

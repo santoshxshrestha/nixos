@@ -12,7 +12,6 @@ let
     hyprpaper &
     sleep 1
     fi
-    # WALLPAPER=$(find "$WALLPAPER_DIR" | fzf)
 
     WALLPAPER=$( for a in "$WALLPAPER_DIR"/*; do
     echo -en "$a\0icon\x1f$a\n"

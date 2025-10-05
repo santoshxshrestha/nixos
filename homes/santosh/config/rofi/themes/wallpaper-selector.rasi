@@ -190,10 +190,8 @@ error-message {
 
 element.urgent {
     background-color: rgba(247, 118, 142, 0.2);
-    text-color: @urgent-color;
 }
 
 element.active {
     background-color: rgba(122, 162, 247, 0.2);
-    text-color: @accent-color;
 }

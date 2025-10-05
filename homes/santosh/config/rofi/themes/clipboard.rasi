@@ -159,23 +159,6 @@ element-text {
     text-overflow: "…";
 }
 
-/* Special entry type styling */
-element.text {
-    text-color: @fg-primary;
-}
-
-element.image {
-    text-color: @accent-alt;
-}
-
-element.code {
-    text-color: @success-color;
-}
-
-element.url {
-    text-color: @accent-color;
-}
-
 button {
     text-color: @overlay1;
     border-radius: 12px;
@@ -201,10 +184,8 @@ error-message {
 
 element.urgent {
     background-color: rgba(247, 118, 142, 0.2);
-    text-color: @urgent-color;
 }
 
 element.active {
     background-color: rgba(122, 162, 247, 0.2);
-    text-color: @accent-color;
-}
+

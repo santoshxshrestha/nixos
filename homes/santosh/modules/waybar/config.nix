@@ -1,4 +1,3 @@
-{ config, ... }:
 {
   mainBar = {
     layers = "top";

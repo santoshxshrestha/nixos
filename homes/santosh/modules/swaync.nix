@@ -22,12 +22,13 @@
        * {
          font-family: "JetBrains Mono Nerd Font", "Fira Code Nerd Font", monospace;
          font-size: 12px;
+         font-weight: 400;
        }
 
        .control-center {
          background: rgba(0, 0, 0, 0.8);
          border-radius: 20px;
-         border: 1px solid rgba(64,64,64,1) rgba(96,96,96,1) 45deg
+         border: 1px solid rgba(64,64,64,1) rgba(96,96,96,1) 45deg;
          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
          color: #b8b5c7;
          width: 300px;

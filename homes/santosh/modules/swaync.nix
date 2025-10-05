@@ -26,19 +26,23 @@
 
        .control-center {
          background: rgba(0, 0, 0, 0.8);
-         border-radius: 8px;
-         border: 1px solid rgba(82, 79, 103, 0.3);
+         border-radius: 20px;
+         border: 1px solid rgba(64,64,64,1) rgba(96,96,96,1) 45deg
          box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
          color: #b8b5c7;
+         width: 300px;
+         max-height: 600px;
        }
 
       .notification {
+      padding: 12px;
         background: rgba(0, 0, 0, 0.8);
-        border-radius: 8px;
-        border: 1px solid rgba(82, 79, 103, 0.3);
+        border-radius: 20px;
+        border: 1px solid rgba(64,64,64,1) rgba(96,96,96,1) 45deg
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
         color: #b8b5c7;
         min-width: 300px;
+        min-height: 80px;
         max-width: 400px;
       }
 

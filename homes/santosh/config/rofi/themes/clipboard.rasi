@@ -9,7 +9,6 @@ configuration {
     kb-row-up: "Up,Control+p";
     kb-row-down: "Down,Control+n";
     kb-accept-entry: "Return,KP_Enter,Control+y";
-    kb-delete-entry: "Shift+Delete";
 }
 
 * {

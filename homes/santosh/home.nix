@@ -62,6 +62,7 @@
     ./modules/scripts/music-player.nix
     ./modules/scripts/cliphist-reset.nix
     ./modules/scripts/rofi-wallpaper-selector.nix
+    ./modules/scripts/clipManager.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Wallpapers                                    │

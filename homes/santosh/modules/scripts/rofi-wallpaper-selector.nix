@@ -6,6 +6,7 @@ let
   rofi-wallpaper-selector = pkgs.writeShellScriptBin "rofi-wallpaper-selector" ''
     #!/usr/bin/env bash
     WALLPAPER_DIR="$WALLPAPER_ARCHIVE_PATH/Static-Wallpapers"
+    CURRENT_WALLPAPER=$(hyprctl hyprpaper listloaded)
 
     if ! pgrep hyprpaper >/dev/null; then
     hyprpaper &
@@ -24,6 +25,7 @@ let
 
     hyprctl hyprpaper reload ,"$WALLPAPER"
     notify-send "Wallpaper-selector" "Wallpaper changed to $(basename "$WALLPAPER")"
+    ln -sf "$WALLPAPER" ~/.current_wallpaper
   '';
 in
 {

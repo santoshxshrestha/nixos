@@ -41,7 +41,7 @@ configuration {
 }
 
 window {
-    width: 1000px;
+    width: 1500px;
     height: 600px;
     transparency: "real";
     blur: true;
@@ -62,9 +62,9 @@ mainbox {
 
 preview {
     expand: true;
-    width: 60%;
+    width: 100%;
     margin: 8px 16px 8px 8px;
-    background-color: @surface0;
+    background-image: url("~/.current_wallpaper", height);
     border-radius: 18px;
     padding: 16px;
 }

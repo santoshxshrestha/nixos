@@ -39,7 +39,7 @@
       padding: 12px;
         background: rgba(0, 0, 0, 0.8);
         border-radius: 20px;
-        border: 1px solid rgba(64,64,64,1) rgba(96,96,96,1) 45deg
+        border: 1px solid rgba(64,64,64,1) rgba(96,96,96,1) 45deg;
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
         color: #b8b5c7;
         min-width: 300px;

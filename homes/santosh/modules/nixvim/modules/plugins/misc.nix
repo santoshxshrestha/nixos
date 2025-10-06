@@ -46,9 +46,6 @@
         enable = true;
       };
 
-      # GitHub integration for vim-fugitive
-      #rhubarb = { enable = true; };
-
       # Autoclose parentheses, brackets, quotes, etc.
       nvim-autopairs = {
         enable = true;

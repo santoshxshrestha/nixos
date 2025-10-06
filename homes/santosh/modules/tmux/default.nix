@@ -1,6 +1,6 @@
 { pkgs, ... }:
 let
-  colors = import ./colors.nix;
+  colors = import ./modules/colors.nix;
   tmux-session-manager = pkgs.tmuxPlugins.mkTmuxPlugin {
     pluginName = "tmux-session-manager";
     name = "tmux-session-manager";
@@ -22,8 +22,8 @@ in
     terminal = "xterm-256color";
     escapeTime = 0;
     baseIndex = 1;
-    plugins = import ./plugins.nix { inherit pkgs colors tmux-session-manager; };
+    plugins = import ./modules/plugins.nix { inherit pkgs colors tmux-session-manager; };
 
-    extraConfig = import ./config.nix { inherit colors; };
+    extraConfig = import ./modules/config.nix { inherit colors; };
   };
 }

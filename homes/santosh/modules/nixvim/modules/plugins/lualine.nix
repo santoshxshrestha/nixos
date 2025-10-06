@@ -38,6 +38,9 @@
                   -- return ' ' .. str:sub(1, 1) -- displays only the first character
                 end
               '';
+              section_separators = {
+                left = "";
+              };
             }
           ];
 

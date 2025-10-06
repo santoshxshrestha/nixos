@@ -24,10 +24,10 @@
 
 
     # Window Status with Better Colors
-    setw -g window-status-format "#[fg=${colors.rose_subtle},bg=${colors.rose_base},italics] ○ #W "
-    setw -g window-status-current-format "#[fg=${colors.rose_text},bg=${colors.rose_base},italics]  #W "
-    # setw -g window-status-format "#[fg=${colors.rose_subtle},bg=${colors.rose_base},italics] #W "
-    # setw -g window-status-current-format "#[fg=${colors.rose_text},bg=${colors.rose_base},underscore,italics] #W "
+    # setw -g window-status-format "#[fg=${colors.rose_subtle},bg=${colors.rose_base},italics] ○ #W "
+    # setw -g window-status-current-format "#[fg=${colors.rose_text},bg=${colors.rose_base},italics]  #W "
+    setw -g window-status-format "#[fg=${colors.rose_subtle},bg=${colors.rose_base},italics] #W "
+    setw -g window-status-current-format "#[fg=${colors.rose_text},bg=${colors.rose_base},underscore,italics] #W "
     setw -g window-status-separator ""
   '';
 }

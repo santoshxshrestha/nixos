@@ -46,8 +46,8 @@
   bind -n M-Down resize-pane -D 7
 
   # Better window/pane creation
-  bind o split-window -h -c "#{pane_current_path}"   # Split horizontally using |
-  bind v split-window -v -c "#{pane_current_path}"   # Split vertically using -
+  bind v split-window -h -c "#{pane_current_path}"   # Split horizontally using |
+  bind o split-window -v -c "#{pane_current_path}"   # Split vertically using -
   bind c new-window -c "#{pane_current_path}"        # New window with current path
 
   setw -g monitor-activity on

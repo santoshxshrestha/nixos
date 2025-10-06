@@ -10,6 +10,7 @@
   # set -g mode-style fg="${colors.rose_surface}",bg="${colors.rose_text}"
   # set -g mode-style fg="${colors.rose_text}",bg="${colors.rose_surface}"
 
+
   # Vim-Like Navigation
   bind-key ^ last-window
   bind-key h select-pane -L
@@ -60,6 +61,9 @@
 
   # Message Style
   set -g message-style bg=${colors.rose_surface},fg=${colors.rose_text}
+
+  # Session  mode style
+  set -g mode-style fg="${colors.rose_base}",bg="${colors.rose_subtle}"
 
   bind-key -r f run-shell "tmux neww sessionizer"
   bind -n M-i run-shell "tmux neww sessionizer"

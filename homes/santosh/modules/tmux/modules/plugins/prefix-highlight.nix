@@ -14,20 +14,26 @@
 
 
     # Status Bar with Enhanced Colors
-    set -g status-style bg=${colors.rose_base},fg=${colors.rose_text}
-    set -g status-left "#[fg=${colors.rose_text},bg=${colors.rose_base},italics] 󰆍 #S #[fg=${colors.rose_foam},bg=${colors.rose_surface}]"
+    # set -g status-style bg=${colors.rose_base},fg=${colors.rose_text}
+    set -g status-style bg=default,fg=${colors.rose_text}
+
+    # set -g status-left "#[fg=${colors.rose_text},bg=${colors.rose_base},italics] 󰆍 #S #[fg=${colors.rose_foam},bg=${colors.rose_surface}]"
+    set -g status-left "#[fg=${colors.rose_text},bg=default,italics] 󰆍 #S #[fg=${colors.rose_foam},bg=${colors.rose_surface}]"
+
     set -g status-left-length 20
     set -g status-right-length 40
+
     # set -g status-right '#[fg=${colors.rose_text},bg=${colors.rose_base},italics] #{battery_icon} #{battery_percentage}   %a %b %d   %I:%M %p #{prefix_highlight}'
-    set -g status-right '#[fg=${colors.rose_text},bg=${colors.rose_base},italics] #{prefix_highlight}'
+    # set -g status-right '#[fg=${colors.rose_text},bg=${colors.rose_base},italics] #{prefix_highlight}'
+    set -g status-right '#[fg=${colors.rose_text},bg=default,italics] #{prefix_highlight}'
     set -g status-justify absolute-centre
 
 
     # Window Status with Better Colors
     # setw -g window-status-format "#[fg=${colors.rose_subtle},bg=${colors.rose_base},italics] ○ #W "
     # setw -g window-status-current-format "#[fg=${colors.rose_text},bg=${colors.rose_base},italics]  #W "
-    setw -g window-status-format "#[fg=${colors.rose_subtle},bg=${colors.rose_base},italics] #W "
-    setw -g window-status-current-format "#[fg=${colors.rose_text},bg=${colors.rose_base},underscore,italics] #W "
+    setw -g window-status-format "#[fg=${colors.rose_subtle},bg=default,italics] #W "
+    setw -g window-status-current-format "#[fg=${colors.rose_text},bg=default,underscore,italics] #W "
     setw -g window-status-separator ""
   '';
 }

@@ -1,7 +1,7 @@
 { colors, ... }:
 ''
   # enable/disable status Bar
-  set -g status off
+  set -g status on
 
   # Copy Mode
   set -g mode-keys vi
@@ -27,8 +27,8 @@
   set-option -g status-position top
 
   # switching windows
-  bind -n M-] next-window      
-  bind -n M-[ previous-window 
+  bind -n M-] next-window
+  bind -n M-[ previous-window
 
   #session management
   bind C command-prompt -p "New session name: " "new-session -d -s '%%'"  # Create new sessio
@@ -50,7 +50,7 @@
   bind c new-window -c "#{pane_current_path}"        # New window with current path
 
   setw -g monitor-activity on
-  # set -g visual-activity on #this line will give give you kinda notification 
+  # set -g visual-activity on #this line will give give you kinda notification
   setw -g automatic-rename on
 
 

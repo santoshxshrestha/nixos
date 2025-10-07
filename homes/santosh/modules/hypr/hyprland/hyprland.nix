@@ -57,6 +57,13 @@
       #   "HYPRCURSOR_THEME,rose-pine-hyprcursor"
       # ];
 
+      plugins = {
+        hyprscrolling = {
+          fullscreen_on_one_column = true;
+          follow_focus = true;
+        };
+      };
+
       #####################
       ### LOOK AND FEEL ###
       #####################

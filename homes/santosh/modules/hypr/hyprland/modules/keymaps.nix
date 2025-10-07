@@ -48,7 +48,7 @@
       "$mainMod,s,exec,hyprshot -m region -o /home/santosh/Pictures/Screenshots --clipboard-only" # Screenshot region to clipboard only
 
       # Lock screen
-      "SUPER_SHIFT,l,exec,hyprlock"
+      "SUPER,l,exec,hyprlock"
 
       # Move focus with mainMod + vim-style keys
       "$mainMod,h,movefocus,l"

@@ -57,7 +57,11 @@
       #   "HYPRCURSOR_THEME,rose-pine-hyprcursor"
       # ];
 
-      plugins = {
+      #######################
+      ####### PLUGINS  ######
+      #######################
+      #See https://wiki.hypr.land/Plugins/Using-Plugins/
+      plugin = {
         hyprscrolling = {
           fullscreen_on_one_column = true;
           follow_focus = true;

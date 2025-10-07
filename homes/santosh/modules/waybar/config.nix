@@ -16,6 +16,7 @@
     modules-center = [ "clock" ];
     modules-right = [
       "network"
+      "gamemode"
       "bluetooth"
       "backlight"
       "pulseaudio"
@@ -102,6 +103,19 @@
       max-length = 20;
       on-click = "nm-connection-editor";
       interval = 5;
+    };
+
+    gamemode = {
+      format = "{glyph}";
+      format-alt = "{glyph} {count}";
+      glyph = " ";
+      hide-not-running = false;
+      use-icon = true;
+      icon-name = "input-gaming-symbolic";
+      icon-spacing = 4;
+      icon-size = 20;
+      tooltip = true;
+      tooltip-format = "Games running: {count}";
     };
 
     "bluetooth" = {

@@ -11,7 +11,10 @@ with pkgs;
   discord
   mdwatch
   opencode
+
   heroic
+  gamemode
+
   obs-studio
   vlc
   mpv

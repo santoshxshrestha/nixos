@@ -101,6 +101,26 @@
       color: #ff8a80;
   }
 
+  #gamemode {
+      background: rgba(82, 79, 103, 0.2);
+      border-radius: 6px;
+      margin: 2px;
+      padding: 0 10px;
+      color: #b8b5c7;
+      font-size: 13px;
+      /* Slightly larger for better icon visibility */
+      transition: all 0.3s ease;
+  }
+
+  #gamemode:hover {
+      background: rgba(82, 79, 103, 0.3);
+  }
+
+  #gamemode.running {
+      background: rgba(0, 255, 0, 0.2);
+      color: #66ff66;
+  }
+
   #bluetooth {
       background: rgba(82, 79, 103, 0.2);
       border-radius: 6px;

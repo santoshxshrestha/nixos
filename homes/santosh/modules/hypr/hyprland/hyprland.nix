@@ -10,7 +10,13 @@
   ];
   wayland.windowManager.hyprland = {
     enable = true;
+
     package = pkgs.hyprland;
+
+    plugins = [
+      pkgs.hyprlandPlugins.hyprscrolling
+    ];
+
     # withUWSM = true;
     # xwayland.enable = true;
     # systemd.enable = true;
@@ -77,7 +83,8 @@
         # Please see https://wiki.hyprland.org/Configuring/Tearing/ before you turn this on
         allow_tearing = false;
 
-        layout = "dwindle";
+        # layout = "dwindle";
+        layout = "scrolling";
       };
 
       # See https://wiki.hyprland.org/Configuring/Dwindle-Layout/ for more

@@ -32,6 +32,14 @@
       "$mainMod,space,exec,$menu"
       "$mainMod,b,exec,$browser"
 
+      # Scrolling management
+      "$mainMod, period, layoutmsg, move +col"
+      "$mainMod, comma, layoutmsg, move -col"
+      "$mainMod SHIFT, period, layoutmsg, movewindowto r"
+      "$mainMod SHIFT, comma, layoutmsg, movewindowto l"
+      "$mainMod SHIFT, up, layoutmsg, movewindowto u"
+      "$mainMod SHIFT, down, layoutmsg, movewindowto d"
+
       # Screenshot bindings
       # Note: HYPRSHOT_DIR command has issues, so forcing specific directory
       "$mainMod,PRINT,exec,hyprshot -m window -o /home/santosh/Pictures/Screenshots" # Screenshot a window

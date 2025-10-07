@@ -11,6 +11,7 @@
       settings = {
         diagnostic = {
           diagnostic_only_current = true;
+          showCodeAction = true;
           # extend_related_information = true;
         };
         lightbulb = {

@@ -53,6 +53,9 @@
           enable = true;
           installCargo = true;
           installRustc = true;
+          settings = {
+            checkOnSave = true;
+          };
         };
 
         # markdown

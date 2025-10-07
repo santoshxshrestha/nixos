@@ -12,8 +12,6 @@ with pkgs;
   mdwatch
   opencode
 
-  heroic
-  gamemode
 
   obs-studio
   vlc

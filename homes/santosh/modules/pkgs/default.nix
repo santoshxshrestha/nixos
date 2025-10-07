@@ -3,9 +3,10 @@ let
   waylandPkgs = import ./wayland.nix { inherit pkgs; };
   fontsPkgs = import ./fonts.nix { inherit pkgs; };
   utilsPkgs = import ./utils.nix { inherit pkgs; };
+  gamingPkgs = import ./gaming.nix { inherit pkgs; };
 in
 {
-  home.packages = waylandPkgs ++ fontsPkgs ++ utilsPkgs;
+  home.packages = waylandPkgs ++ fontsPkgs ++ utilsPkgs ++ gamingPkgs;
   # # Adds the 'hello' command to your environment. It prints a friendly
   # # "Hello, world!" when run.
   # pkgs.hello

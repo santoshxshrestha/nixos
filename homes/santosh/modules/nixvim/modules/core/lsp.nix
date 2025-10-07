@@ -12,6 +12,7 @@
         diagnostic = {
           diagnostic_only_current = true;
           showCodeAction = true;
+          jumpNumShortcut = true;
           # extend_related_information = true;
         };
         lightbulb = {

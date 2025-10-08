@@ -1,3 +1,4 @@
+{ cofnig, pkgs, ... }:
 {
   programs.alacritty = {
     enable = true;
@@ -7,6 +8,9 @@
         TERM = "xterm-256color";
         LANG = "en_US.UTF-8";
         LC_ALL = "en_US.UTF-8";
+      };
+      terminal = {
+        shell = "${pkgs.nushell}/bin/nu";
       };
 
       window = {

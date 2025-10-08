@@ -16,6 +16,7 @@
     # │ Terminals                                     │
     # ╰───────────────────────────────────────────────╯
     ./modules/terminals/kitty.nix
+    ./modules/terminals/alacritty.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ General Utility Modules                       │
@@ -47,7 +48,6 @@
     # ╰───────────────────────────────────────────────╯
     ./modules/waybar/default.nix
     ./modules/swaync.nix
-    ./modules/alacritty.nix
     ./modules/tmux/default.nix
 
     # ╭───────────────────────────────────────────────╮

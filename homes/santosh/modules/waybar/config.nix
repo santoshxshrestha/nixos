@@ -1,4 +1,13 @@
 {
+  lib,
+  osConfig,
+  ...
+}:
+let
+  inherit (lib) optionalString;
+  sys = osConfig.hardware;
+in
+{
   mainBar = {
     layers = "top";
     position = "top";
@@ -17,7 +26,7 @@
     modules-right = [
       "network"
       "gamemode"
-      "bluetooth"
+      (optionalString (sys.bluetooth.enable or false) "bluetooth")
       "backlight"
       "pulseaudio"
       "pulseaudio#microphone"

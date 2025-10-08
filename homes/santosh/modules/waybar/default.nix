@@ -1,5 +1,11 @@
+{
+  pkgs,
+  lib,
+  osConfig,
+  ...
+}:
 let
-  waybar_config = import ./config.nix;
+  waybar_config = import ./config.nix { inherit pkgs lib osConfig; };
   waybar_style = import ./style.nix;
 in
 {

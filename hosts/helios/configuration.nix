@@ -12,6 +12,7 @@
     ./modules/packages.nix
     ./modules/bluetooth.nix
     inputs.sops-nix.nixosModules.sops
+    ./modules/tlp.nix
   ];
 
   sops.defaultSopsFile = ./sops.yaml;
@@ -107,6 +108,9 @@
 
   # Enable Bluetooth and Blueman service
   bluetooth.enable = false;
+
+  # Enable TLP for power management
+  tlp.enable = true;
 
   # remap
   services.keyd = {

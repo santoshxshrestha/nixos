@@ -147,8 +147,8 @@
   home.pointerCursor = {
     gtk.enable = true;
     x11.enable = true;
+    package = pkgs.nightdiamond-cursors;
     name = "NightDiamond-Blue";
-    package = pkgs.callPackage ./modules/cursor.nix { };
     size = 20;
   };
 

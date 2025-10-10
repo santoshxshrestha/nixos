@@ -4,7 +4,7 @@
   # ╭───────────────────────────────────────────────╮
   # │ UI and Appearance Plugins                     │
   # ╰───────────────────────────────────────────────╯
-  alpha.enable = true;
+  alpha.enable = false;
   colorschemes.enable = true;
   indent-blankline.enable = false;
   lualine.enable = true;
@@ -15,14 +15,14 @@
   # │ AI and Automation Plugins                     │
   # ╰───────────────────────────────────────────────╯
   avante.enable = false;
-  copilot-lua.enable = true;
-  copilot-chat.enable = true;
-  justu.enable = true;
+  copilot-lua.enable = false;
+  copilot-chat.enable = false;
+  justu.enable = false;
 
   # ╭───────────────────────────────────────────────╮
   # │ Git and Navigation Plugins                    │
   # ╰───────────────────────────────────────────────╯
-  cord.enable = true;
+  cord.enable = false;
   gitsigns.enable = true;
   harpoon.enable = true;
 
@@ -36,11 +36,11 @@
   misc.enable = true;
   none-ls.enable = true;
   noice.enable = true;
-  oil.enable = true;
+  oil.enable = false;
   surround.enable = true;
   telescope.enable = true;
   treesitter.enable = true;
-  which-key.enable = true;
+  which-key.enable = false;
   terminal.enable = true;
   opts.enable = true;
   keymaps.enable = true;

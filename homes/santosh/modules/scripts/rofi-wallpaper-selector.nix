@@ -17,7 +17,7 @@ let
     WALLPAPER=$( for a in "$WALLPAPER_DIR"/*; do
     # echo -en "$a\0icon\x1f$a\n"
     echo -en "$(basename "$a")\0icon\x1f$a\n"
-    done | rofi -dmenu -p "wallpaper selector" -theme ${theme}
+    done | rofi -i -dmenu -p "wallpaper selector" -theme ${theme}
     )
 
     if [ -z "$WALLPAPER" ]; then

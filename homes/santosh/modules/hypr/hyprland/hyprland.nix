@@ -40,7 +40,7 @@
       # "$terminal" = "alacritty";  # Alternative terminal
       "$fileManager" = "thunar";
       # "$menu" = "wofi --show drun";  # Alternative launcher
-      "$menu" = "rofi -show drun";
+      "$menu" = "rofi -i -show drun";
       # "$browser" = "zen-browser";  # Alternative browser
       "$browser" = "firefox";
 

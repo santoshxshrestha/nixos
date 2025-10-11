@@ -20,10 +20,10 @@
         CPU_MIN_PERF_ON_BAT = 0;
         CPU_MAX_PERF_ON_BAT = 20;
 
-        #Optional helps save long term battery health
-        START_CHARGE_THRESH_BAT0 = 40; # 40 and below it starts to charge
-        STOP_CHARGE_THRESH_BAT0 = 80; # 80 and above it stops charging
-
+        # sudo tlp-stat -b
+        # See https://linrunner.de/tlp/settings/bc-vendors.html
+        START_CHARGE_THRESH_BAT0 = 0; # dummy value
+        STOP_CHARGE_THRESH_BAT0 = 1;
       };
     };
   };

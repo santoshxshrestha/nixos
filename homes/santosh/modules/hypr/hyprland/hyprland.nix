@@ -65,6 +65,7 @@
         # See https://github.com/hyprwm/hyprland-plugins/tree/main/hyprscrolling
         hyprscrolling = {
           fullscreen_on_one_column = true;
+          column_width = 0.5;
           follow_focus = true;
         };
       };

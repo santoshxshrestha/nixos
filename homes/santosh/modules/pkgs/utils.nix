@@ -12,7 +12,6 @@ with pkgs;
   mdwatch
   opencode
 
-
   obs-studio
   vlc
   mpv

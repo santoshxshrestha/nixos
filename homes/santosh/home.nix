@@ -23,7 +23,7 @@
     # ╰───────────────────────────────────────────────╯
     ./modules/gtk.nix
     ./modules/fastfetch.nix
-    ./modules/starship.nix
+    ./modules/starship/starship.nix
     ./modules/zoxide.nix
     ./modules/btop.nix
     ./modules/bat.nix

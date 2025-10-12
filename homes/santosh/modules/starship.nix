@@ -115,7 +115,7 @@
 
       # Character module - the prompt character
       character = {
-        success_symbol = "[✦ ❯](bold white)";
+        success_symbol = "[🭧🭒](fg:#d20f39)[✦ ❯](fg:white bg:#d20f39)[](fg:#d20f39)";
         error_symbol = "[❯](bold red)";
         vicmd_symbol = "[❮](bold blue)";
       };

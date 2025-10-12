@@ -1,6 +1,6 @@
 { lib, ... }:
 {
-  programs.starship.settings = {
+  settings = {
     # Add a blank line between shell prompts
     add_newline = true;
 

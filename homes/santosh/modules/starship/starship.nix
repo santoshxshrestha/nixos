@@ -7,6 +7,6 @@ in
     enable = true;
     enableFishIntegration = true;
     enableNushellIntegration = true;
-    settings = voxel.programs.starship.settings;
+    settings = voxel.settings;
   };
 }

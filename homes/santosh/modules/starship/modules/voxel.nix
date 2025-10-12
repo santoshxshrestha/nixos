@@ -42,7 +42,7 @@
       home_symbol = " ";
       read_only = " ";
       read_only_style = "bold red";
-      format = "[ ](fg:#d20f39)[$path](fg:white bg:#d20f39)[$read_only]($read_only_style)[ ](fg:#d20f39)";
+      format = "[🭒](fg:#e0def4)[$path](fg:black bg:#e0def4)[$read_only]($read_only_style)[](fg:#e0def4)";
     };
 
     # Git branch with cool styling
@@ -95,22 +95,22 @@
 
     # Git metrics - shows insertions/deletions
     git_metrics = {
-      added_style = "bold white";
-      deleted_style = "bold white";
+      added_style = "bold #e0def4";
+      deleted_style = "bold #e0def4";
       format = "([+$added]($added_style) )([-$deleted]($deleted_style) )";
       disabled = true;
     };
 
     cmd_duration = {
       min_time = 0;
-      format = "[🬖🬥🬔🬗](fg:#d20f39)[ time:$duration ](bg:#d20f39 fg:#000000)[🬖🬥🬖🬥](fg:#d20f39)";
-      style = "bg:#d20f39 fg:#000000";
+      format = "[🬖🬥🬔🬗](fg:#e0def4)[ time:$duration ](bg:#e0def4 fg:black)[🬖🬥🬖🬥](fg:#e0def4)";
+      style = "bg:#e0def4 fg:black";
       show_milliseconds = true;
     };
 
     # Character module - the prompt character
     character = {
-      success_symbol = "[🭧🭒](fg:#d20f39)[✦ ❯](fg:white bg:#d20f39)[](fg:#d20f39)";
+      success_symbol = "[🭧🭒](fg:#e0def4)[✦ ❯](fg:black bg:#e0def4)[](fg:#e0def4)";
       error_symbol = "[❯](bold red)";
       vicmd_symbol = "[❮](bold blue)";
     };

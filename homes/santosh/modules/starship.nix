@@ -43,11 +43,10 @@
       directory = {
         truncation_length = 3;
         truncation_symbol = "…/";
-        home_symbol = "~";
+        home_symbol = " ";
         read_only = " ";
-        style = "bold white";
         read_only_style = "bold red";
-        format = "[$path]($style)[$read_only]($read_only_style) ";
+        format = "[ ](fg:#d20f39)[$path](fg:white bg:#d20f39)[$read_only]($read_only_style)[ ](fg:#d20f39)";
       };
 
       # Git branch with cool styling

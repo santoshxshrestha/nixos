@@ -25,13 +25,12 @@
         "$lua"
         "$golang"
         "$java"
-        "$cmd_duration"
         "$line_break"
         "$character"
       ];
 
       # Right side prompt format
-      right_format = "$all";
+      right_format = "$cmd_duration";
 
       # Nix shell module
       nix_shell = {
@@ -107,11 +106,10 @@
         disabled = true;
       };
 
-      # Command duration - shows execution time
       cmd_duration = {
-        min_time = 500;
-        format = "took [$duration]($style) ";
-        style = "bold blue";
+        min_time = 0;
+        format = "[🬖🬥🬔🬗](fg:#d20f39)[ time:$duration ](bg:#d20f39 fg:#000000)[🬖🬥🬖🬥](fg:#d20f39)";
+        style = "bg:#d20f39 fg:#000000";
         show_milliseconds = true;
       };
 

@@ -7,7 +7,7 @@ let
         selected=$1
     else
         selected=$(
-            find ${config.home.homeDirectory} -mindepth 1 -maxdepth 4 -type d | ${pkgs.fzf}/bin/fzf --reverse --prompt="✦ ❯ " --header="━━━━━━━━━━━━━━━ ✦ SESSIONIZER ✦ ━━━━━━━━━━━━━━━" \
+            find ${config.home.homeDirectory} ${config.home.homeDirectory}/nixos -mindepth 1 -maxdepth 4 -type d | ${pkgs.fzf}/bin/fzf --reverse --prompt="✦ ❯ " --header="━━━━━━━━━━━━━━━ ✦ SESSIONIZER ✦ ━━━━━━━━━━━━━━━" \
                 --header-first \
                 --color="header:italic" \
                 --ignore-case \

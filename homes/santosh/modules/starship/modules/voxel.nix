@@ -39,10 +39,11 @@
     directory = {
       truncation_length = 3;
       truncation_symbol = "…/";
-      home_symbol = " ";
+      home_symbol = "~";
       read_only = " ";
+      style = "bold white";
       read_only_style = "bold red";
-      format = "[🭒](fg:#e0def4)[$path](fg:black bg:#e0def4)[$read_only]($read_only_style)[](fg:#e0def4)";
+      format = "[$path]($style)[$read_only]($read_only_style) ";
     };
 
     # Git branch with cool styling
@@ -103,16 +104,16 @@
 
     cmd_duration = {
       min_time = 0;
-      format = "[🬖🬥🬔🬗](fg:#e0def4)[ time:$duration ](bg:#e0def4 fg:black)[🬖🬥🬖🬥](fg:#e0def4)";
-      style = "bg:#e0def4 fg:black";
+      format = "[🬖🬥🬔🬗](fg:#8aadf4)[ time:$duration ](bg:#8aadf4 fg:#24273a)[🬖🬥🬖🬥](fg:#8aadf4)";
+      style = "bg:#8aadf4 fg:#24273a";
       show_milliseconds = true;
     };
 
     # Character module - the prompt character
     character = {
-      success_symbol = "[🭧🭒](fg:#e0def4)[✦ ❯](fg:black bg:#e0def4)[](fg:#e0def4)";
-      error_symbol = "[❯](bold red)";
-      vicmd_symbol = "[❮](bold blue)";
+      success_symbol = "[🭧🭒](fg:#8aadf4)[✦ ❯](fg:#24273a bg:#8aadf4)[](fg:#8aadf4)";
+      error_symbol = "[🭧🭒](fg:#ed8796)[✦ ❯](fg:#24273a bg:#ed8796)[](fg:#ed8796)";
+      vicmd_symbol = "[🭧🭒](fg:#7dc4e4)[✦ ❮](fg:#24273a bg:#7dc4e4)[](fg:#7dc4e4)";
     };
 
     # Language-specific modules

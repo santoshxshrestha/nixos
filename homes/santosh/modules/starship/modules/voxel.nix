@@ -104,14 +104,14 @@
 
     cmd_duration = {
       min_time = 0;
-      style = "bg:#8aadf4 fg:#24273a";
-      format = "[🬖🬥🬔🬗](fg:#8aadf4)[ time:$duration ]($style)[🬖🬥🬖🬥](fg:#8aadf4)";
+      style = "bg:#33303F fg:#e0def4";
+      format = "[🬖🬥🬔🬗](fg:#33303F)[ time:$duration ]($style)[🬖🬥🬖🬥](#33303F)";
       show_milliseconds = true;
     };
 
     # Character module - the prompt character
     character = {
-      success_symbol = "[🭧🭒](fg:#8aadf4)[ ](fg:#24273a bg:#8aadf4)[](fg:#8aadf4)";
+      success_symbol = "[🭧🭒](fg:#33303F)[ ](fg:#e0def4 bg:#33303F)[](fg:#33303F)";
       error_symbol = "[🭧🭒](fg:#ed8796)[ ](fg:#24273a bg:#ed8796)[](fg:#ed8796)";
       vicmd_symbol = "[🭧🭒](fg:#7dc4e4)[ ](fg:#24273a bg:#7dc4e4)[](fg:#7dc4e4)";
     };

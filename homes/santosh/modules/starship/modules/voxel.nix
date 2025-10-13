@@ -111,9 +111,9 @@
 
     # Character module - the prompt character
     character = {
-      success_symbol = "[🭧🭒](fg:#8aadf4)[✦ ❯](fg:#24273a bg:#8aadf4)[](fg:#8aadf4)";
-      error_symbol = "[🭧🭒](fg:#ed8796)[✦ ❯](fg:#24273a bg:#ed8796)[](fg:#ed8796)";
-      vicmd_symbol = "[🭧🭒](fg:#7dc4e4)[✦ ❮](fg:#24273a bg:#7dc4e4)[](fg:#7dc4e4)";
+      success_symbol = "[🭧🭒](fg:#8aadf4)[ ](fg:#24273a bg:#8aadf4)[](fg:#8aadf4)";
+      error_symbol = "[🭧🭒](fg:#ed8796)[ ](fg:#24273a bg:#ed8796)[](fg:#ed8796)";
+      vicmd_symbol = "[🭧🭒](fg:#7dc4e4)[ ](fg:#24273a bg:#7dc4e4)[](fg:#7dc4e4)";
     };
 
     # Language-specific modules

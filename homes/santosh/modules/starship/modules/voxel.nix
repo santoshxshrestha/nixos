@@ -104,8 +104,8 @@
 
     cmd_duration = {
       min_time = 0;
-      format = "[🬖🬥🬔🬗](fg:#8aadf4)[ time:$duration ](bg:#8aadf4 fg:#24273a)[🬖🬥🬖🬥](fg:#8aadf4)";
       style = "bg:#8aadf4 fg:#24273a";
+      format = "[🬖🬥🬔🬗](fg:#8aadf4)[ time:$duration ]($style)[🬖🬥🬖🬥](fg:#8aadf4)";
       show_milliseconds = true;
     };
 

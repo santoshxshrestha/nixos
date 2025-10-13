@@ -32,7 +32,11 @@
         enabled = true;
         range = 30;
         render_power = 3;
-        color = "0x66000000";
+        # color = "0x66000000";
+        color = "0x66505050";
+        color_inactive = "0x66202020";
+        sharp = false;
+        ignore_window = true;
         # Alternative shadow settings:
         # range = 4;
         # color = "rgba(1a1a1aee)";

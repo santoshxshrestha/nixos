@@ -7,7 +7,7 @@
   alpha.enable = false;
   colorschemes.enable = true;
   indent-blankline.enable = false;
-  lualine.enable = true;
+  lualine.enable = false;
   notify.enable = true;
   snacks.enable = true;
 

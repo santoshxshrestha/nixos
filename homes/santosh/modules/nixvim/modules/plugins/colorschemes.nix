@@ -19,7 +19,7 @@
       colorschemes = {
 
         catppuccin = {
-          enable = true;
+          enable = false;
           settings = {
             show_end_of_buffer = false;
             transparent_background = true;
@@ -61,7 +61,7 @@
         };
 
         rose-pine = {
-          enable = false;
+          enable = true;
           settings = {
             show_end_of_buffer = false;
             flavor = "main";
@@ -69,7 +69,7 @@
             disable_float_background = true;
             styles = {
               bold = false;
-              italic = true;
+              italic = false;
               transparency = true;
             };
           };
@@ -180,8 +180,8 @@
           --   keywords_exception = "none",
           -- },
         })
+        -- vim.cmd('colorscheme dark-funeral')
         -- vim.cmd('colorscheme vague')
-        vim.cmd('colorscheme dark-funeral')
       '';
     };
   };

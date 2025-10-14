@@ -89,7 +89,8 @@
                 "╰"
                 "│"
               ];
-              winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CursorLine,Search:None";
+              # winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CursorLine,Search:None";
+              winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:MyCmpSel,Search:None";
 
               max_width = 50;
               max_height = 20;
@@ -105,7 +106,8 @@
                 "╰"
                 "│"
               ];
-              winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CursorLine,Search:None";
+              # winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CursorLine,Search:None";
+              winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:MyCmpSel,Search:None";
               scrollbar = false;
               max_width = 50;
               max_height = 20;
@@ -157,5 +159,9 @@
       cmp_luasnip.enable = true;
       luasnip.enable = true;
     };
+
+    programs.nixvim.extraConfigLua = ''
+      vim.api.nvim_set_hl(0, "MyCmpSel", { bg = "#ffffff", fg ="#000000", bold = true })
+    '';
   };
 }

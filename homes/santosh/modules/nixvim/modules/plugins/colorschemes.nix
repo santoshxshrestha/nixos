@@ -181,6 +181,7 @@
           -- },
         })
         -- vim.cmd('colorscheme vague')
+        vim.cmd('colorscheme dark-funeral')
       '';
     };
   };

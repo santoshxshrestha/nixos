@@ -17,14 +17,15 @@
       enable = true;
       settings = {
         enable = true;
-        max_lines = 0;
+        max_lines = 5;
         min_window_height = 0;
         line_numbers = true;
         multiline_threshold = 20;
+        # Which context lines to discard if max_lines is exceeded.
         trim_scope = "outer";
         mode = "cursor";
-        separator = null;
-        zindex = 50;
+        separator = "-";
+        zindex = 90;
       };
     };
 

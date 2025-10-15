@@ -5,6 +5,11 @@
     settings = {
       theme = "dark-funeral";
       command = "${pkgs.nushell}/bin/nu";
+
+      font-family = "JetBrainsMono Nerd Font";
+      font-family-bold = "JetBrainsMono Nerd Font";
+      font-family-italic = "JetBrainsMono Nerd Font";
+      font-family-bold-italic = "JetBrainsMono Nerd Font";
     };
     themes = {
       dark-funeral = {
@@ -41,6 +46,7 @@
           "14=#fbcb97"
           "15=#c1c1c1"
         ];
+        background-opacity = 0.8;
       };
     };
   };

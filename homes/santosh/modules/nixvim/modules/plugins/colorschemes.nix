@@ -17,6 +17,17 @@
   config = lib.mkIf config.colorschemes.enable {
     programs.nixvim = {
       colorschemes = {
+        tokyonight = {
+          enable = true;
+          settings = {
+            style = "night";
+            transparent = true;
+            styles = {
+              floats = "transparent";
+              sidebars = "transparent";
+            };
+          };
+        };
 
         catppuccin = {
           enable = false;
@@ -61,7 +72,7 @@
         };
 
         rose-pine = {
-          enable = true;
+          enable = false;
           settings = {
             show_end_of_buffer = false;
             flavor = "main";

@@ -8,7 +8,7 @@
   colorschemes.enable = true;
   indent-blankline.enable = false;
   lualine.enable = false;
-  notify.enable = true;
+  notify.enable = false;
   snacks.enable = true;
 
   # ╭───────────────────────────────────────────────╮

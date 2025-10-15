@@ -1,8 +1,10 @@
+{ pkgs, ... }:
 {
   programs.ghostty = {
     enable = true;
     settings = {
       theme = "dark-funeral";
+      command = "${pkgs.nushell}/bin/nu";
     };
     themes = {
       dark-funeral = {

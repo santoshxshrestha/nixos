@@ -35,7 +35,7 @@
   comment.enable = true;
   misc.enable = true;
   none-ls.enable = true;
-  noice.enable = true;
+  noice.enable = false;
   oil.enable = false;
   surround.enable = true;
   telescope.enable = true;

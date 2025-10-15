@@ -18,7 +18,7 @@
     programs.nixvim = {
       colorschemes = {
         tokyonight = {
-          enable = true;
+          enable = false;
           settings = {
             style = "night";
             transparent = true;
@@ -30,7 +30,7 @@
         };
 
         catppuccin = {
-          enable = false;
+          enable = true;
           settings = {
             show_end_of_buffer = false;
             transparent_background = true;

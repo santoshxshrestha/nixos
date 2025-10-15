@@ -24,7 +24,7 @@
         # Which context lines to discard if max_lines is exceeded.
         trim_scope = "outer";
         mode = "cursor";
-        separator = "-";
+        # separator = "-";
         zindex = 90;
       };
     };

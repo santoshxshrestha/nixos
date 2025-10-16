@@ -77,7 +77,9 @@
       "audio"
     ];
     shell = pkgs.fish;
-    openssh.authorizedKeys.keys = [ ];
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPEP4JsCAwBRTvHsIeruzVx93usGdU3D9Rx4KE/LWQ8s santosh@atlas"
+    ];
     # shell = pkgs.nushell;
   };
 
@@ -161,7 +163,17 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh = {
+    enable = true;
+    settings = {
+      PasswordAuthentication = false;
+      KbdInteractiveAuthentication = false;
+      PermitRootLogin = "no";
+      AllowUsers = [ "santosh" ];
+    };
+  };
+  # Fail2Ban is a service that bans hosts that cause multiple authentication errors.
+  services.fail2ban.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

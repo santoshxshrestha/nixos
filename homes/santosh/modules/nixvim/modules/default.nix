@@ -15,7 +15,7 @@
   # ╰───────────────────────────────────────────────╯
   ./plugins/harpoon.nix
   ./plugins/surround.nix
-  ./plugins/none-ls.nix
+  ./plugins/formatter.nix
   ./plugins/comment.nix
   ./plugins/misc.nix
   ./plugins/treesitter.nix

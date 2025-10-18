@@ -34,7 +34,7 @@
   autocompletion.enable = true;
   comment.enable = true;
   misc.enable = true;
-  none-ls.enable = true;
+  formatter.enable = true;
   noice.enable = false;
   oil.enable = false;
   surround.enable = true;

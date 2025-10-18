@@ -6,9 +6,9 @@
 }:
 {
   options = {
-    none-ls.enable = lib.mkEnableOption "Enable none-ls plugin for nixvim";
+    formatter.enable = lib.mkEnableOption "Enable formatter for nixvim";
   };
-  config = lib.mkIf config.none-ls.enable {
+  config = lib.mkIf config.formatter.enable {
     programs.nixvim.plugins.lsp-format = {
       enable = true;
       lspServersToEnable = [

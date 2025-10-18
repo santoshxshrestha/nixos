@@ -9,7 +9,15 @@
     none-ls.enable = lib.mkEnableOption "Enable none-ls plugin for nixvim";
   };
   config = lib.mkIf config.none-ls.enable {
-    programs.nixvim.plugins.lsp-format.enable = true;
+    programs.nixvim.plugins.lsp-format = {
+      enable = true;
+      lspServersToEnable = [
+        "dockerls"
+        "gopls"
+        "nushell"
+        "rust_analyzer"
+      ];
+    };
     programs.nixvim.plugins.none-ls = {
       enable = true;
       enableLspFormat = true;
@@ -17,6 +25,7 @@
         prettier = {
           enable = true;
           settings.filetypes = [
+            "css"
             "html"
             "json"
             "yaml"

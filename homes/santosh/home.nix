@@ -127,10 +127,14 @@
   };
   programs.git = {
     enable = true;
-    userName = "Santosh Shrestha";
-    userEmail = "santoshxshrestha@gmail.com";
-    extraConfig = {
-      init.defaultBranch = "main";
+    settings = {
+      user = {
+        name = "Santosh Shrestha";
+        email = "santoshxshrestha@gmail.com";
+      };
+      extraConfig = {
+        init.defaultBranch = "main";
+      };
     };
   };
 

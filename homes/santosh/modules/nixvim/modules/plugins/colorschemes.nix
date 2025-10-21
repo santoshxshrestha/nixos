@@ -155,7 +155,7 @@
         require('vague').setup({
           transparent = false,
           bold = false,
-          italic = true,
+          italic = false,
           -- colors = {
           --     bg = "#191d33",
           -- },

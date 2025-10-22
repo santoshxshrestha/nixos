@@ -34,9 +34,11 @@ It provides a reproducible, declarative setup for my daily development and deskt
 
 ```
 .
+├── .editorconfig
 ├── .github/
 │   └── assets/
-│       └── nix-snowflake-colours.svg
+├── flake.lock
+├── flake.nix
 ├── homes/
 │   └── santosh/
 │       ├── assets/
@@ -49,15 +51,10 @@ It provides a reproducible, declarative setup for my daily development and deskt
 │       ├── modules/
 │       ├── configuration.nix
 │       └── hardware-configuration.nix
+├── secrets/
 ├── wallpapers/
-│   ├── anime-night-sky-illustration.jpg
-│   ├── inazuma_cats_place.png
-│   ├── nix-dark.png
-│   ├── nix.png
-│   └── Your_Name_Night_Sky.jpg
-├── flake.nix
-├── flake.lock
-└── readme.md
+├── README.md
+├── TODO.md
 ```
 
 ---

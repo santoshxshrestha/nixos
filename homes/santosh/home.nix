@@ -129,7 +129,7 @@
     enable = true;
     settings = {
       user = {
-        name = "Santosh Shrestha";
+        name = "santoshxshrestha";
         email = "santoshxshrestha@gmail.com";
       };
       extraConfig = {

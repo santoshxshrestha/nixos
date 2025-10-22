@@ -19,7 +19,8 @@
 
       set -U fish_greeting
 
-      set -gx PATH ${config.home.homeDirectory}/bin $PATH
+      # set -gx PATH ${config.home.homeDirectory}/bin $PATH
+      set -gx PATH ${config.home.homeDirectory}/.local/bin $PATH
       set -gx PATH ${config.home.homeDirectory}/.local/scripts $PATH
       set -gx PATH ${config.home.homeDirectory}/.cargo/bin $PATH
 

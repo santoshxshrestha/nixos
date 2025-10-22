@@ -23,7 +23,8 @@ in
     # '';
 
     extraEnv = ''
-      $env.PATH = ($env.PATH | split row (char esep) | prepend "${config.home.homeDirectory}/bin")
+      # $env.PATH = ($env.PATH | split row (char esep) | prepend "${config.home.homeDirectory}/bin")
+      $env.PATH = ($env.PATH | split row (char esep) | prepend "${config.home.homeDirectory}/.local/bin")
       $env.PATH = ($env.PATH | split row (char esep) | prepend "${config.home.homeDirectory}/.local/scripts")
       $env.PATH = ($env.PATH | split row (char esep) | prepend "${config.home.homeDirectory}/.cargo/bin")
     '';

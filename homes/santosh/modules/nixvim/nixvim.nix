@@ -14,7 +14,7 @@
   # ╭───────────────────────────────────────────────╮
   # │ AI and Automation Plugins                     │
   # ╰───────────────────────────────────────────────╯
-  avante.enable = true;
+  avante.enable = false;
   copilot-lua.enable = true;
   copilot-chat.enable = false;
   justu.enable = false;

@@ -1,7 +1,9 @@
 {
   primary = {
-    foreground = "#e0def4";
-    background = "#191724";
+    foreground = "#cccccc"; # kitty default
+
+    background = "#000000"; # kitty default
+
     dim_foreground = "#908caa";
     bright_foreground = "#e0def4";
   };

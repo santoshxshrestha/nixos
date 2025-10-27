@@ -146,11 +146,14 @@
   #i18n.inputMethod.fcitx5.addons= with pkgs;
   #[fcitx5-mozc];
 
-  #services.logind = {
-  #enable = true;
-  #lidSwitch = "ignore";
-  #lidSwitchDocked = "ignore";
-  #};
+  services.logind = {
+    settings.Login = {
+      HandleLidSwitch = "ignore";
+      lidSwitchDocked = "ignore";
+      HandlePowerKey = "suspend";
+      HandlePowerKeyLongPress = "poweroff";
+    };
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

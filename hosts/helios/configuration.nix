@@ -19,6 +19,7 @@
     inputs.sops-nix.nixosModules.sops
     ./modules/tlp.nix
     ./modules/logind.nix
+    ./modules/keyd.nix
   ];
 
   sops.defaultSopsFile = ./sops.yaml;
@@ -121,21 +122,7 @@
   tlp.enable = true;
 
   # remap
-  services.keyd = {
-    enable = true;
-    keyboards.default = {
-      ids = [ "*" ];
-      settings = {
-        main = {
-          capslock = "overload(control, esc)";
-        };
-        # Optional: adjust timing (default is usually fine)
-        global = {
-          overload_tap_timeout = "200"; # milliseconds
-        };
-      };
-    };
-  };
+  keyd.enable = true;
 
   # https://nix.dev/guides/faq#how-to-run-non-nix-executables
   programs.command-not-found.enable = true;

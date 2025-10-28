@@ -1,4 +1,8 @@
-{ config, lib, ... }:
+{
+  config,
+  lib,
+  ...
+}:
 {
   options = {
     logind.enable = lib.mkEnableOption "Enable systemd logind settings";

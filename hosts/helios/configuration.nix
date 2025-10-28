@@ -18,6 +18,7 @@
     ./modules/bluetooth.nix
     inputs.sops-nix.nixosModules.sops
     ./modules/tlp.nix
+    ./modules/logind.nix
   ];
 
   sops.defaultSopsFile = ./sops.yaml;
@@ -146,14 +147,8 @@
   #i18n.inputMethod.fcitx5.addons= with pkgs;
   #[fcitx5-mozc];
 
-  services.logind = {
-    settings.Login = {
-      HandleLidSwitch = "ignore";
-      lidSwitchDocked = "ignore";
-      HandlePowerKey = "suspend";
-      HandlePowerKeyLongPress = "poweroff";
-    };
-  };
+  # Enable the systemd logind service to manage user logins.
+  logind.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

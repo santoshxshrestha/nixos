@@ -1,7 +1,7 @@
 { colors, ... }:
 ''
   # enable/disable status Bar
-  set -g status on
+  set -g status off
 
   # Copy Mode
   set -g mode-keys vi
@@ -34,7 +34,7 @@
   #session management
   bind C command-prompt -p "New session name: " "new-session -d -s '%%'"  # Create new sessio
   # bind S command-prompt -p "Rename session:" "rename-session '%%'"
-  bind s choose-tree -Zs              # Interactive session chooser
+  bind j choose-tree -Zs              # Interactive session chooser
 
   # For synchronize-panes mode
   bind = setw synchronize-panes

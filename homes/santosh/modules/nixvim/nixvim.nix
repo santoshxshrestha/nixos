@@ -7,7 +7,7 @@
   alpha.enable = false;
   colorschemes.enable = true;
   indent-blankline.enable = false;
-  lualine.enable = false;
+  lualine.enable = true;
   notify.enable = false;
   snacks.enable = true;
 
@@ -40,7 +40,7 @@
   surround.enable = true;
   telescope.enable = true;
   treesitter.enable = true;
-  which-key.enable = false;
+  which-key.enable = true;
   terminal.enable = true;
   opts.enable = true;
   keymaps.enable = true;

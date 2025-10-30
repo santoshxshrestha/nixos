@@ -25,7 +25,7 @@
   set-option -g history-limit 100000
 
   # Status Bar Position
-  set-option -g status-position bottom
+  set-option -g status-position top
 
   # switching windows
   bind -n M-] next-window

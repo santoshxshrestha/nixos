@@ -10,6 +10,7 @@
   lualine.enable = true;
   notify.enable = false;
   snacks.enable = true;
+  vim-tpipeline.enable = true;
 
   # ╭───────────────────────────────────────────────╮
   # │ AI and Automation Plugins                     │

@@ -27,6 +27,8 @@
   ./plugins/gitsigns.nix
   ./plugins/colorschemes.nix
   ./plugins/snacks.nix
+  ./plugins/vim-tpipeline.nix
+
   # ╭───────────────────────────────────────────────╮
   # │ Full mode: all overwhelming plugins           │
   # ╰───────────────────────────────────────────────╯

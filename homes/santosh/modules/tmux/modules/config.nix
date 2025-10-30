@@ -1,7 +1,7 @@
 { colors, ... }:
 ''
   # enable/disable status Bar
-  set -g status off
+  set -g status on
 
   # Copy Mode
   set -g mode-keys vi
@@ -25,7 +25,7 @@
   set-option -g history-limit 100000
 
   # Status Bar Position
-  set-option -g status-position top
+  set-option -g status-position bottom
 
   # switching windows
   bind -n M-] next-window

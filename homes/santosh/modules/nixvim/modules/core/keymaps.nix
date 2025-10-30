@@ -532,6 +532,14 @@
       }
       # these two keymaps are for searching in current buffer Open files
       {
+        action = "<cmd>Telescope current_buffer_fuzzy_find<CR>";
+        key = "<leader>/";
+        mode = [ "n" ];
+        options = {
+          desc = "[/] Fuzzily search in current buffer";
+        };
+      }
+      {
         action.__raw = ''
           function()
               local builtin = require('telescope.builtin')
@@ -540,10 +548,10 @@
                   previewer = true,
               })
           end'';
-        key = "<leader>/";
+        key = "<leader>?";
         mode = [ "n" ];
         options = {
-          desc = "[/] Fuzzily search in current buffer";
+          desc = "[?] Fuzzily search in current buffer small window";
         };
       }
       {

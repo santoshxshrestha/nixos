@@ -7,10 +7,10 @@
   alpha.enable = false;
   colorschemes.enable = true;
   indent-blankline.enable = false;
-  lualine.enable = true;
+  lualine.enable = false;
   notify.enable = false;
   snacks.enable = true;
-  vim-tpipeline.enable = true;
+  vim-tpipeline.enable = false;
 
   # ╭───────────────────────────────────────────────╮
   # │ AI and Automation Plugins                     │

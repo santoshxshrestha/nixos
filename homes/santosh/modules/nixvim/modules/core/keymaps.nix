@@ -515,6 +515,14 @@
         };
       }
       {
+        action = "<cmd>Telescope git_branches<CR>";
+        key = "<leader>sb";
+        mode = [ "n" ];
+        options = {
+          desc = "search git branches";
+        };
+      }
+      {
         action = "<cmd>Telescope find_files<CR>";
         key = "<leader>sf";
         mode = [ "n" ];
@@ -633,9 +641,9 @@
       {
         action.__raw = ''
           function()
-          if vim.bo.filetype == 'netrw' then 
+          if vim.bo.filetype == 'netrw' then
               vim.cmd('bdelete')
-          else 
+          else
               vim.cmd('Explore')
                   end
                   end

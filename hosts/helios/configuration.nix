@@ -20,6 +20,7 @@
     ./modules/tlp.nix
     ./modules/logind.nix
     ./modules/keyd.nix
+    ./modules/systemd.nix
   ];
 
   sops.defaultSopsFile = ./sops.yaml;
@@ -133,6 +134,9 @@
   #i18n.inputMethod.enable = "fcitx5";
   #i18n.inputMethod.fcitx5.addons= with pkgs;
   #[fcitx5-mozc];
+
+  # Enable the systemd configuration.
+  systemd.enable = true;
 
   # Enable the systemd logind service to manage user logins.
   logind.enable = true;

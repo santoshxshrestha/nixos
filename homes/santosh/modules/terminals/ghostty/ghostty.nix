@@ -10,6 +10,10 @@
       font-family-bold = "JetBrainsMono Nerd Font";
       font-family-italic = "JetBrainsMono Nerd Font";
       font-family-bold-italic = "JetBrainsMono Nerd Font";
+      custom-shader-animation = true;
+      custom-shader = "/home/santosh/nixos/homes/santosh/modules/terminals/ghostty/shaders/coil.glsl";
+      # custom-shader = "/home/santosh/nixos/homes/santosh/modules/terminals/ghostty/shaders/glow.glsl";
+      mouse-hide-while-typing = true;
     };
     themes = {
       dark-funeral = {

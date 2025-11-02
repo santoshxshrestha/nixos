@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, config, ... }:
 {
   programs.ghostty = {
     enable = true;
@@ -11,8 +11,8 @@
       font-family-italic = "JetBrainsMono Nerd Font";
       font-family-bold-italic = "JetBrainsMono Nerd Font";
       custom-shader-animation = true;
-      custom-shader = "/home/santosh/nixos/homes/santosh/modules/terminals/ghostty/shaders/coil.glsl";
-      # custom-shader = "/home/santosh/nixos/homes/santosh/modules/terminals/ghostty/shaders/glow.glsl";
+      custom-shader = "${config.home.homeDirectory}/nixos/homes/santosh/modules/terminals/ghostty/shaders/coil.glsl";
+      # custom-shader = "${config.home.homeDirectory}/nixos/homes/santosh/modules/terminals/ghostty/shaders/glow.glsl";
       mouse-hide-while-typing = true;
     };
     themes = {

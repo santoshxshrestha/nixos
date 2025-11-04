@@ -28,6 +28,11 @@
   harpoon.enable = true;
 
   # ╭───────────────────────────────────────────────╮
+  # │ Essential Functional Plugins                  │
+  # ╰───────────────────────────────────────────────╯
+  ufo.enable = true;
+
+  # ╭───────────────────────────────────────────────╮
   # │ Core Functionality Plugins                    │
   # ╰───────────────────────────────────────────────╯
   autocommands.enable = true;

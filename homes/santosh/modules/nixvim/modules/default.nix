@@ -20,6 +20,7 @@
   ./plugins/misc.nix
   ./plugins/treesitter.nix
   ./plugins/telescope.nix
+  ./plugins/ufo.nix
 
   # ╭───────────────────────────────────────────────╮
   # │ UI Plugins                                    │

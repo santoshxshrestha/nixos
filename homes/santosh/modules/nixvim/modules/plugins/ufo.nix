@@ -10,6 +10,8 @@
   config = lib.mkIf config.ufo.enable {
     programs.nixvim.plugins.nvim-ufo = {
       enable = true;
+      setupLspCapabilities = true;
     };
+
   };
 }

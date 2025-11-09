@@ -17,7 +17,7 @@
   # ╰───────────────────────────────────────────────╯
   avante.enable = false;
   copilot-lua.enable = true;
-  copilot-chat.enable = false;
+  copilot-chat.enable = true;
   justu.enable = false;
 
   # ╭───────────────────────────────────────────────╮

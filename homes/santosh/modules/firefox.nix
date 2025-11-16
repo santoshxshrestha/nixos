@@ -41,6 +41,12 @@
       };
 
       ExtensionSettings = {
+        # React Developer Tools
+        "@react-devtools" = {
+          "installation_mode" = "force_installed";
+          "install_url" = "https://addons.mozilla.org/firefox/downloads/latest/react-devtools/latest.xpi";
+          "default_area" = "menupanel";
+        };
         # Ublock Origin
         "uBlock0@raymondhill.net" = {
           "installation_mode" = "force_installed";
@@ -116,7 +122,7 @@
           --navbar-max-width: max(60vw, 800px);
 
           /* Dynamic tab width */
-          --active-tab-width: clamp(100px, 24vw, 240px);    
+          --active-tab-width: clamp(100px, 24vw, 240px);
           --inactive-tab-width: clamp(100px, 18vw, 180px);
 
           /* Preferred find bar width
@@ -221,11 +227,11 @@
 
 
 
-        /* ,--.  ,--.  ,---.,--.   ,--.      ,-----.    ,---.  ,------.  
-         * |  ,'.|  | /  O  \\  `.'  /,-----.|  |) /_  /  O  \ |  .--. ' 
-         * |  |' '  ||  .-.  |\     / '-----'|  .-.  \|  .-.  ||  '--'.' 
-         * |  | `   ||  | |  | \   /         |  '--' /|  | |  ||  |\  \  
-         * `--'  `--'`--' `--'  `-'          `------' `--' `--'`--' '--' 
+        /* ,--.  ,--.  ,---.,--.   ,--.      ,-----.    ,---.  ,------.
+         * |  ,'.|  | /  O  \\  `.'  /,-----.|  |) /_  /  O  \ |  .--. '
+         * |  |' '  ||  .-.  |\     / '-----'|  .-.  \|  .-.  ||  '--'.'
+         * |  | `   ||  | |  | \   /         |  '--' /|  | |  ||  |\  \
+         * `--'  `--'`--' `--'  `-'          `------' `--' `--'`--' '--'
          */
 
         /* hide nav bar background */
@@ -323,11 +329,11 @@
 
 
 
-        /* ,--. ,--.,------. ,--.       ,-----.    ,---.  ,------.  
-         * |  | |  ||  .--. '|  |,-----.|  |) /_  /  O  \ |  .--. ' 
-         * |  | |  ||  '--'.'|  |'-----'|  .-.  \|  .-.  ||  '--'.' 
-         * '  '-'  '|  |\  \ |  '--.    |  '--' /|  | |  ||  |\  \  
-         *  `-----' `--' '--'`-----'    `------' `--' `--'`--' '--' 
+        /* ,--. ,--.,------. ,--.       ,-----.    ,---.  ,------.
+         * |  | |  ||  .--. '|  |,-----.|  |) /_  /  O  \ |  .--. '
+         * |  | |  ||  '--'.'|  |'-----'|  .-.  \|  .-.  ||  '--'.'
+         * '  '-'  '|  |\  \ |  '--.    |  '--' /|  | |  ||  |\  \
+         *  `-----' `--' '--'`-----'    `------' `--' `--'`--' '--'
          */
 
 
@@ -349,7 +355,7 @@
         /* Center the search bar when focused */
         #urlbar[focused] {
           position: fixed !important;
-          top: 20% !important; 
+          top: 20% !important;
           left: 50% !important;
           transform: translateX(-50%) !important;
           z-index: 1000 !important;
@@ -368,11 +374,11 @@
 
 
 
-        /* ,--------. ,---.  ,-----.   ,---.   
-         * '--.  .--'/  O  \ |  |) /_ '   .-'  
-         *    |  |  |  .-.  ||  .-.  \`.  `-.  
-         *    |  |  |  | |  ||  '--' /.-'    | 
-         *    `--'  `--' `--'`------' `-----'  
+        /* ,--------. ,---.  ,-----.   ,---.
+         * '--.  .--'/  O  \ |  |) /_ '   .-'
+         *    |  |  |  .-.  ||  .-.  \`.  `-.
+         *    |  |  |  | |  ||  '--' /.-'    |
+         *    `--'  `--' `--'`------' `-----'
          */
 
         /* always positions tabs first */
@@ -453,13 +459,13 @@
           border-top-right-radius: var(--tab-border-radius) !important;
         }
 
-        /* toolbar button margins */ 
+        /* toolbar button margins */
         #PersonalToolbar toolbarbutton {
           margin-top: 4px !important;
           margin-bottom: 4px !important;
         }
 
-        /* make bookmark button padding uniform */ 
+        /* make bookmark button padding uniform */
         #PlacesToolbarItems toolbarbutton {
           padding: var(--bookmark-block-padding) !important;
         }
@@ -473,11 +479,11 @@
 
 
 
-        /* ,------.,--.,--.  ,--.,------.         ,-----.    ,---.  ,------.  
-         * |  .---'|  ||  ,'.|  ||  .-.  \ ,-----.|  |) /_  /  O  \ |  .--. ' 
-         * |  `--, |  ||  |' '  ||  |  \  :'-----'|  .-.  \|  .-.  ||  '--'.' 
-         * |  |`   |  ||  | `   ||  '--'  /       |  '--' /|  | |  ||  |\  \  
-         * `--'    `--'`--'  `--'`-------'        `------' `--' `--'`--' '--' 
+        /* ,------.,--.,--.  ,--.,------.         ,-----.    ,---.  ,------.
+         * |  .---'|  ||  ,'.|  ||  .-.  \ ,-----.|  |) /_  /  O  \ |  .--. '
+         * |  `--, |  ||  |' '  ||  |  \  :'-----'|  .-.  \|  .-.  ||  '--'.'
+         * |  |`   |  ||  | `   ||  '--'  /       |  '--' /|  | |  ||  |\  \
+         * `--'    `--'`--'  `--'`-------'        `------' `--' `--'`--' '--'
          *  __________________________________________________________________________________
          * |  ————————————————————————————————————————————————————————————   ———— ————   ———  |
          * | | Find in page                                               | | /\ | \/ | | X | |

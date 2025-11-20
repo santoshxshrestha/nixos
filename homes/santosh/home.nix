@@ -65,6 +65,7 @@
     ./modules/scripts/rofi-wallpaper-selector.nix
     ./modules/scripts/clipManager.nix
     ./modules/scripts/pomodoro.nix
+    ./modules/scripts/quick-rm.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Wallpapers                                    │

@@ -73,7 +73,7 @@ in
 
       cd = "z";
       ".." = "cd ..";
-      r = "rm -f (fzf --reverse)";
+      r = "quick-rm";
       la = "ls -la";
 
       asdf = "sessionizer";

@@ -41,6 +41,13 @@
       };
 
       ExtensionSettings = {
+        # Read Aloud
+        "{ddc62400-f22d-4dd3-8b4a-05837de53c2e}" = {
+          "installation_mode" = "force_installed";
+          "install_url" =
+            "https://addons.mozilla.org/firefox/downloads/latest/read-aloud-a-text-to-speech-voice-reader/latest.xpi";
+          "default_area" = "menupanel";
+        };
         # React Developer Tools
         "@react-devtools" = {
           "installation_mode" = "force_installed";

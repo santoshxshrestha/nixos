@@ -4,7 +4,7 @@
   # ╭───────────────────────────────────────────────╮
   # │ UI and Appearance Plugins                     │
   # ╰───────────────────────────────────────────────╯
-  alpha.enable = false;
+  alpha.enable = true;
   colorschemes.enable = true;
   indent-blankline.enable = false;
   lualine.enable = false;
@@ -42,7 +42,7 @@
   misc.enable = true;
   formatter.enable = true;
   noice.enable = false;
-  oil.enable = false;
+  oil.enable = true;
   surround.enable = true;
   telescope.enable = true;
   treesitter.enable = true;

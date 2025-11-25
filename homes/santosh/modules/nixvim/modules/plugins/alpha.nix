@@ -163,7 +163,7 @@
                   keymap = [
                     "n"
                     "e"
-                    ":Ex<CR>"
+                    ":Oil<CR>"
                     {
                       silent = true;
                       noremap = true;

@@ -18,7 +18,7 @@
     programs.nixvim = {
       colorschemes = {
         tokyonight = {
-          enable = false;
+          enable = true;
           settings = {
             style = "night";
             transparent = true;
@@ -72,7 +72,7 @@
         };
 
         rose-pine = {
-          enable = true;
+          enable = false;
           settings = {
             show_end_of_buffer = false;
             flavor = "main";

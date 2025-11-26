@@ -66,6 +66,7 @@
     ./modules/scripts/clipManager.nix
     ./modules/scripts/pomodoro.nix
     ./modules/scripts/quick-rm.nix
+    ./modules/scripts/flake-initializer.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Wallpapers                                    │

@@ -24,6 +24,7 @@ in
     ];
     modules-center = [ "clock" ];
     modules-right = [
+      "group/tray-expander"
       "network"
       "gamemode"
       (optionalString (sys.bluetooth.enable or false) "bluetooth")
@@ -31,7 +32,6 @@ in
       "pulseaudio"
       "pulseaudio#microphone"
       "battery"
-      "tray"
       "custom/notification"
     ];
 
@@ -262,6 +262,23 @@ in
     };
 
     # System tray
+    "group/tray-expander" = {
+      orientation = "inherit";
+      drawer = {
+        transition-duration = 600;
+        children-class = "tray-group-item";
+      };
+      modules = [
+        "custom/expand-icon"
+        "tray"
+      ];
+    };
+
+    "custom/expand-icon" = {
+      format = "";
+      tooltip = false;
+    };
+
     tray = {
       icon-size = 14;
       spacing = 8;

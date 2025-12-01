@@ -253,7 +253,6 @@
       margin: 2px;
       padding: 0 8px;
   }
-
   #tray>.passive {
       -gtk-icon-effect: dim;
   }
@@ -262,6 +261,18 @@
       -gtk-icon-effect: highlight;
       background: rgba(255, 215, 0, 0.2);
   }
+
+  #custom-expand-icon {
+      margin-right: 18px;
+      transition: all 0.3s ease;
+      background: rgba(82, 79, 103, 0.2);
+      border-radius: 6px;
+      margin: 2px;
+      padding: 0 10px;
+      color: #b8b5c7;
+      font-size: 13px;
+  }
+
 
   /* Tooltip */
   tooltip {

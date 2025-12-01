@@ -98,17 +98,19 @@ in
     };
 
     network = {
-      format-wifi = "  {signalStrength}%";
+      format-wifi = "  {signalStrength}%  ↓↑ {bandwidthTotalBytes}";
       format-ethernet = "󰈀  {signalStrength}%";
       format-disconnected = "󰤮 ";
       tooltip-format = "{ifname} via {gwaddr}";
       tooltip-format-wifi = ''
         {essid} ({signalStrength}%) 󰤨
+        ↑{bandwidthUpBytes} ↓{bandwidthDownBytes}
         {frequency}MHz'';
       tooltip-format-ethernet = ''
         {ifname} 󰈀
         IP: {ipaddr}'';
       tooltip-format-disconnected = "Disconnected";
+      min-length = 20;
       max-length = 20;
       on-click = "nm-connection-editor";
       interval = 5;

@@ -7,7 +7,7 @@
   alpha.enable = true;
   colorschemes.enable = true;
   indent-blankline.enable = false;
-  lualine.enable = false;
+  lualine.enable = true;
   notify.enable = false;
   snacks.enable = true;
   vim-tpipeline.enable = false;

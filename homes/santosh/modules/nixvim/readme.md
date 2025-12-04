@@ -1,5 +1,5 @@
 <h1 id="header" align="center">
-    <img src="../../assets/neovim-flake-logo.svg" alt="neovim-flake Logo"  width="128px" height="128px" />
+  <img src="../../../../.github/assets/neovim-flake-logo.svg" alt="neovim-flake Logo"  width="128px" height="128px" />
 
   <br>
     nixvim

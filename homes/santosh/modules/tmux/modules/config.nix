@@ -1,7 +1,7 @@
 { colors, ... }:
 ''
   # enable/disable status Bar
-  set -g status off
+  set -g status on
 
   # Copy Mode
   set -g mode-keys vi

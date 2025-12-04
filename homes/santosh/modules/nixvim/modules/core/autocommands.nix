@@ -12,6 +12,19 @@
         pattern = "*";
         command = "lua vim.highlight.on_yank{timeout=50}";
       }
+
+      # if it works don't touch it
+      {
+        event = [
+          "WinResized"
+        ];
+        pattern = "*";
+        command = "lua
+        if vim.env.TMUX then
+          vim.opt.laststatus = 0
+        end
+          ";
+      }
     ];
   };
 }

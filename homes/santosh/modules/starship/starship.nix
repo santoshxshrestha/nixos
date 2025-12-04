@@ -8,6 +8,6 @@ in
     enable = true;
     enableFishIntegration = true;
     enableNushellIntegration = true;
-    settings = voxel.settings;
+    settings = prime.settings;
   };
 }

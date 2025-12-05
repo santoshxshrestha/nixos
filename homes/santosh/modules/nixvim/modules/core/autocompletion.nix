@@ -38,7 +38,8 @@
 
     programs.nixvim.plugins.lspkind = {
       enable = true;
-      cmp.enable = true;
+      # enabling this will give the two icons side by side which looks cluttered
+      cmp.enable = false;
       settings = {
         cmp = {
           max_width = 10;

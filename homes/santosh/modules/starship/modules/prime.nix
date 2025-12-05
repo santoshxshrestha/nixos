@@ -64,7 +64,7 @@
       ahead = "↑";
       behind = "↓";
       diverged = "↕";
-      up_to_date = "";
+      up_to_date = " ";
       untracked = "?";
       stashed = "⚑";
       modified = "!";
@@ -114,8 +114,8 @@
     # Character module - the prompt character
     character = {
       success_symbol = "[✦ ❯](bold white)";
-      error_symbol = "[❯](bold red)";
-      vicmd_symbol = "[❮](bold blue)";
+      error_symbol = "[✦ ](bold red)[❯](bond white)";
+      vicmd_symbol = "[❮✦ ](bold blue)";
     };
 
     # Language-specific modules

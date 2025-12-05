@@ -12,7 +12,8 @@
         lsp = {
           hover.enabled = true;
           message.enabled = true;
-          signature.enabled = true;
+          # signature is enabled in nvimlsp_signagure_help
+          signature.enabled = false;
           progress.enabled = false;
         };
       };

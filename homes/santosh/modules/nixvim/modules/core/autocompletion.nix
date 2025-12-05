@@ -69,9 +69,6 @@
             { name = "git"; }
             { name = "latex_symbols"; }
             { name = "nvim_lsp_document_symbols"; }
-            {
-              name = "nvim_lsp_signature_help";
-            }
             # { name = "copilot"; }
           ];
           snippet = {

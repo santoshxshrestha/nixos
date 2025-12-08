@@ -101,6 +101,10 @@
     xwayland.enable = true;
   };
 
+  programs.niri = {
+    enable = true;
+  };
+
   hardware.graphics.enable = true;
 
   services.pipewire = {

@@ -248,7 +248,8 @@ layout {
         offset x=0 y=5
 
         // You can also change the shadow color and opacity.
-        color "#5050";
+        // color "#5050";
+           color "#505050";
     }
 
     // Struts shrink the area occupied by windows, similarly to layer-shell panels.

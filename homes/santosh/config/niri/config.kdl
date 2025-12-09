@@ -309,6 +309,15 @@ animations {
 // Window rules let you adjust behavior for individual windows.
 // Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Window-Rules
+// for transparency effect.
+window-rule {
+    match is-active=true
+    opacity 1.0
+}
+window-rule {
+    match is-active=false
+    opacity 0.9
+}
 
 // Work around WezTerm's initial configure bug
 // by setting an empty default-column-width.
@@ -343,8 +352,8 @@ window-rule {
 
 // Example: enable rounded corners for all windows.
 // (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    geometry-corner-radius 12
+window-rule {
+    geometry-corner-radius 10
     clip-to-geometry true
 }
 

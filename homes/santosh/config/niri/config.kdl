@@ -278,6 +278,9 @@ layout {
 // spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
 
 spawn-sh-at-startup "swaybg -m fill -o* -i ~/.current_wallpaper"
+spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
+spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
+spawn-sh-at-startup "swaync"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
@@ -377,6 +380,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
+    Super+V hotkey-overlay-title="Open a clipManager: " { spawn-sh "clipManager"; }
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Space hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -i -show drun"; }
     Alt+Shift+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }

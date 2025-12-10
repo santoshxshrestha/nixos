@@ -22,6 +22,7 @@ in
       "hyprland/workspaces"
       "hyprland/window"
       "niri/workspaces"
+      "niri/window"
     ];
     modules-center = [ "clock" ];
     modules-right = [
@@ -79,6 +80,12 @@ in
 
     # Window title
     "hyprland/window" = {
+      format = "{}";
+      max-length = 30;
+      separate-outputs = true;
+    };
+
+    "niri/window" = {
       format = "{}";
       max-length = 30;
       separate-outputs = true;

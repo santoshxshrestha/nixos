@@ -9,9 +9,17 @@ let
     #!/usr/bin/env bash
     WALLPAPER_DIR="$WALLPAPER_ARCHIVE_PATH/Static-Wallpapers"
 
-    if ! pgrep hyprpaper >/dev/null; then
+    if pgrep hyprland >/dev/null; then
+    HYPRLAND=true
+    else
+    HYPRLAND=false
+    fi
+
+    if $HYPRLAND && ! pgrep hyprpaper >/dev/null; then
     hyprpaper &
     sleep 1
+    else
+    pkill swaybg
     fi
 
     WALLPAPER=$( for a in "$WALLPAPER_DIR"/*; do
@@ -27,7 +35,12 @@ let
 
     NEW_WALLPAPER=$WALLPAPER_DIR/$WALLPAPER
 
+    if $HYPRLAND; then
     hyprctl hyprpaper reload ,"$NEW_WALLPAPER"
+    else
+    swaybg -m fill -o*  -i "$NEW_WALLPAPER" &
+    fi
+
     notify-send "Wallpaper-selector" "Wallpaper changed to $WALLPAPER"
     ln -sf "$NEW_WALLPAPER" ${config.home.homeDirectory}/.current_wallpaper
   '';

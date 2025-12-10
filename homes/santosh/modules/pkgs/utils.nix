@@ -13,6 +13,7 @@ with pkgs;
   opencode
 
   obs-studio
+  xwayland-satellite
   vlc
   mpv
   swaybg

@@ -30,7 +30,7 @@
         };
 
         catppuccin = {
-          enable = false;
+          enable = true;
           settings = {
             show_end_of_buffer = false;
             transparent_background = true;
@@ -72,7 +72,7 @@
         };
 
         rose-pine = {
-          enable = true;
+          enable = false;
           settings = {
             show_end_of_buffer = false;
             flavor = "main";

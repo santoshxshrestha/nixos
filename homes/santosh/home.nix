@@ -30,6 +30,7 @@
     ./modules/bat.nix
     ./modules/firefox.nix
     ./modules/rofi.nix
+    ./modules/wlsunset.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Neovim and Vim Modules                        │

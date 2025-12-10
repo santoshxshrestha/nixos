@@ -15,4 +15,5 @@ with pkgs;
   obs-studio
   vlc
   mpv
+  swaybg
 ]

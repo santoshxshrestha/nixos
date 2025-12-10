@@ -379,6 +379,7 @@ binds {
     Mod+Space hotkey-overlay-title="Run an Application: fuzzel" { spawn-sh "rofi -i -show drun"; }
     Alt+Shift+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
     Mod+B hotkey-overlay-title="Open the Web Browser: firefox" { spawn "firefox"; }
+    Mod+W hotkey-overlay-title="Open wallpaper change: rofi-wallpaper-selector" { spawn-sh "rofi-wallpaper-selector";}
 
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
@@ -603,7 +604,7 @@ binds {
     // Toggle tabbed column display mode.
     // Windows in this column will appear as vertical tabs,
     // rather than stacked on top of each other.
-    Mod+W { toggle-column-tabbed-display; }
+    // Mod+W { toggle-column-tabbed-display; }
 
     // Actions to switch layouts.
     // Note: if you uncomment these, make sure you do NOT have

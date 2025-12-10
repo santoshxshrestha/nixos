@@ -18,8 +18,6 @@ let
     if $HYPRLAND && ! pgrep hyprpaper >/dev/null; then
     hyprpaper &
     sleep 1
-    else
-    pkill swaybg
     fi
 
     WALLPAPER=$( for a in "$WALLPAPER_DIR"/*; do
@@ -38,6 +36,7 @@ let
     if $HYPRLAND; then
     hyprctl hyprpaper reload ,"$NEW_WALLPAPER"
     else
+    pkill swaybg
     swaybg -m fill -o*  -i "$NEW_WALLPAPER" &
     fi
 

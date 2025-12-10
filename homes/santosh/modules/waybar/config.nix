@@ -55,8 +55,10 @@ in
       };
 
       "niri/workspaces" = {
-        "format" = "{icon}";
-        "format-icons" = {
+        all-outputs = true;
+        format = "{icon}";
+        current-only = false;
+        format-icons = {
           "1" = "1";
           "2" = "2";
           "3" = "3";
@@ -68,13 +70,6 @@ in
           "9" = "9";
           "10" = "10";
         };
-      };
-      persistent_workspaces = {
-        "1" = [ ];
-        "2" = [ ];
-        "3" = [ ];
-        "4" = [ ];
-        "5" = [ ];
       };
     };
 

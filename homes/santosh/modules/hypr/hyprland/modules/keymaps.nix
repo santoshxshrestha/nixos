@@ -13,7 +13,6 @@
       "$mainMod,w,exec,rofi-wallpaper-selector"
       # "$mainMod,w,exec,~/.local/scripts/switch-to-static"
       "$mainMod,d,exec,~/.local/scripts/switch-to-dynamic"
-      "$mainMod,minus,exec,~/.local/scripts/waybar-toggle"
 
       # Clipboard history with rofi
       # ''SUPER_SHIFT,V,exec,cliphist list | rofi -dmenu -theme ~/.config/rofi/themes/clipboard.rasi | cliphist delete''
@@ -42,6 +41,8 @@
       "$mainMod, u, layoutmsg, promote"
       "$mainMod, f, layoutmsg, fit active"
       "$mainMod, c, layoutmsg, togglefit"
+      "$mainMod, minus, layoutmsg, colresize -0.2"
+      "$mainMod, equal, layoutmsg, colresize +0.2"
 
       # Screenshot bindings
       # Note: HYPRSHOT_DIR command has issues, so forcing specific directory

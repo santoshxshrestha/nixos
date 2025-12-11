@@ -28,6 +28,8 @@ in
       "niri/window"
     ];
 
+    modules-center = [ "clock" ];
+
     modules-right = [
       "group/tray-expander"
       "network"

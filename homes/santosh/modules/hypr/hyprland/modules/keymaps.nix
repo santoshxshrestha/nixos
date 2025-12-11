@@ -32,8 +32,8 @@
       "$mainMod,b,exec,$browser"
 
       # Scrolling management
-      "$mainMod, period, layoutmsg, move +col"
-      "$mainMod, comma, layoutmsg, move -col"
+      # "$mainMod, period, layoutmsg, move +col"
+      # "$mainMod, comma, layoutmsg, move -col"
       "$mainMod, period, layoutmsg, movewindowto r"
       "$mainMod, comma, layoutmsg, movewindowto l"
       "$mainMod, up, layoutmsg, movewindowto u"

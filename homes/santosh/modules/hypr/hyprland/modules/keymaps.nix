@@ -21,7 +21,7 @@
       ''SUPER,V,exec,clipManager''
 
       # Window management - see https://wiki.hyprland.org/Configuring/Binds/ for more
-      "$mainMod,F,fullscreen"
+      "$mainMod SHIFT,F,fullscreen"
       "$mainMod,RETURN,exec,$terminal"
       "$mainMod,Q,killactive"
       "$mainMod,M,exit"
@@ -40,7 +40,7 @@
       "$mainMod SHIFT, up, layoutmsg, movewindowto u"
       "$mainMod SHIFT, down, layoutmsg, movewindowto d"
       "$mainMod, u, layoutmsg, promote"
-      "$mainMod, y, layoutmsg, fit active"
+      "$mainMod, f, layoutmsg, fit active"
       "$mainMod, c, layoutmsg, togglefit"
 
       # Screenshot bindings

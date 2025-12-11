@@ -4,12 +4,13 @@
   ...
 }:
 let
+  currentDesktop = builtins.getEnv "XDG_CURRENT_DESKTOP";
   theme = "${config.home.homeDirectory}/.config/rofi/themes/wallpaper-selector.rasi";
   rofi-wallpaper-selector = pkgs.writeShellScriptBin "rofi-wallpaper-selector" ''
     #!/usr/bin/env bash
     WALLPAPER_DIR="$WALLPAPER_ARCHIVE_PATH/Static-Wallpapers"
 
-    if pgrep hyprland >/dev/null; then
+    if [${currentDesktop} == "hyprland"]; then
     HYPRLAND=true
     else
     HYPRLAND=false

@@ -41,6 +41,7 @@
       "$mainMod SHIFT, down, layoutmsg, movewindowto d"
       "$mainMod, u, layoutmsg, promote"
       "$mainMod, y, layoutmsg, fit active"
+      "$mainMod, c, layoutmsg, togglefit"
 
       # Screenshot bindings
       # Note: HYPRSHOT_DIR command has issues, so forcing specific directory

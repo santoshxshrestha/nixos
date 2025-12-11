@@ -23,7 +23,7 @@
       # Window management - see https://wiki.hyprland.org/Configuring/Binds/ for more
       "$mainMod,F,fullscreen"
       "$mainMod,RETURN,exec,$terminal"
-      "$mainMod,C,killactive"
+      "$mainMod,Q,killactive"
       "$mainMod,M,exit"
       "$mainMod,E,exec,$fileManager"
       "$mainMod,V,togglefloating"

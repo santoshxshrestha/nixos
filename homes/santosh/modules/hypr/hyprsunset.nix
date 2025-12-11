@@ -1,6 +1,6 @@
 {
   services.hyprsunset = {
-    enable = true;
+    enable = false;
   };
 
   home.file.".config/hypr/hyprsunset.conf".text = ''

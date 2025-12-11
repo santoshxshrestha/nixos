@@ -6,6 +6,7 @@
 let
   inherit (lib) optionalString;
   sys = osConfig.hardware;
+  currentDesktop = builtins.getEnv "XDG_CURRENT_DESKTOP";
 in
 {
   mainBar = {
@@ -21,10 +22,12 @@ in
     modules-left = [
       "hyprland/workspaces"
       "hyprland/window"
+    ]
+    ++ lib.optionals (currentDesktop == "niri") [
       "niri/workspaces"
       "niri/window"
     ];
-    modules-center = [ "clock" ];
+
     modules-right = [
       "group/tray-expander"
       "network"

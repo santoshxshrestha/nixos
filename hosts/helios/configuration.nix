@@ -95,7 +95,7 @@
   services.libinput.touchpad.disableWhileTyping = true;
 
   programs.hyprland = {
-    enable = true;
+    enable = false;
     withUWSM = true;
     # package = inputs.hyprland.packages."${pkgs.system}".hyprland;
     xwayland.enable = true;

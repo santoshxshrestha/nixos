@@ -20,7 +20,7 @@
         HandleLidSwithcExternalPower = "lock";
 
         # idle settings
-        IdleAction = "ignore";
+        IdleAction = "suspend-then-hibernate";
         IdleActionSec = "300"; # 5 minutes
 
         # power button settings

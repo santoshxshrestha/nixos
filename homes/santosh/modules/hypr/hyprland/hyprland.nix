@@ -9,7 +9,7 @@
     ./modules/inputs.nix
   ];
   wayland.windowManager.hyprland = {
-    enable = true;
+    enable = false;
 
     package = pkgs.hyprland;
 

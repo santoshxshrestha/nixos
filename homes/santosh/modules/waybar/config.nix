@@ -11,7 +11,7 @@ in
   mainBar = {
     layers = "top";
     position = "top";
-    height = 22;
+    height = 24;
     spacing = 2;
     margin-bottom = 0;
     margin-top = 4;
@@ -26,7 +26,6 @@ in
     ];
 
     modules-center = [
-      "sndio"
       "cava"
       "clock"
       "privacy"
@@ -46,21 +45,23 @@ in
 
     "cava" = {
       # "cava_config" = "$XDG_CONFIG_HOME/cava/cava.conf";
-      framerate = 30;
+      framerate = 60;
       autosens = 1;
       # sensitivity = 100;
-      bars = 14;
-      lower_cutoff_freq = 50;
-      higher_cutoff_freq = 10000;
+      bars = 18;
+      lower_cutoff_freq = 30;
+      higher_cutoff_freq = 12000;
       method = "pulse";
       source = "auto";
       stereo = true;
       reverse = false;
       bar_delimiter = 0;
-      monstercat = false;
-      waves = false;
-      noise_reduction = 0.77;
+      monstercat = true;
+      waves = true;
+      noise_reduction = 0.85;
       input_delay = 2;
+      hide_on_silence = true;
+      sleep_timer = 5;
       format-icons = [
         "▁"
         "▂"

@@ -81,14 +81,32 @@
   }
 
   #cava {
-      background: rgba(82, 79, 103, 0.2);
-      border-radius: 6px;
+      background: linear-gradient(90deg, rgba(138, 43, 226, 0.15), rgba(75, 0, 130, 0.15));
+      border-radius: 8px;
       margin: 2px;
-      padding: 0 10px;
-      color: #b8b5c7;
-      font-size: 13px;
-      /* Slightly larger for better icon visibility */
-      transition: all 0.3s ease;
+      padding: 0 12px;
+      color: #c792ea;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 1px;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 2px 8px rgba(138, 43, 226, 0.1);
+  }
+
+  #cava:hover {
+      background: linear-gradient(90deg, rgba(138, 43, 226, 0.25), rgba(75, 0, 130, 0.25));
+      box-shadow: 0 4px 12px rgba(138, 43, 226, 0.2);
+  }
+
+  #cava.updated {
+      color: #bb9af7;
+      text-shadow: 0 0 8px rgba(187, 154, 247, 0.4);
+  }
+
+  #cava.silent {
+      background: rgba(82, 79, 103, 0.15);
+      color: #6e6a86;
+      box-shadow: none;
   }
 
   /* Network */

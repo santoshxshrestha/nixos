@@ -72,7 +72,7 @@ in
           text = ''cmd[update:1000] echo -e "$(date +"%d, %b %A")"'';
           color = "rgba(255, 255, 255, 1)";
           font_size = 13;
-          font_family = "Nimbus Mono";
+          font_family = "Anton";
           position = "0, -550";
           halign = "center";
           valign = "center";
@@ -82,7 +82,7 @@ in
           text = ''cmd[update:1000] echo -e "$(date +"%d, %b %A")"'';
           color = "rgba(255, 255, 255, 1)";
           font_size = 20;
-          font_family = "Nimbus Mono";
+          font_family = "Anton";
           position = "10, -480";
           halign = "center";
           valign = "center";

@@ -19,8 +19,8 @@ in
     margin-right = 8;
 
     modules-left = [
-      "hyprland/workspaces"
-      "hyprland/window"
+      # "hyprland/workspaces"
+      # "hyprland/window"
       "niri/workspaces"
       "niri/window"
       "cava"
@@ -28,7 +28,7 @@ in
 
     modules-center = [
       "clock"
-      "privacy"
+      # "privacy"
     ];
 
     modules-right = [

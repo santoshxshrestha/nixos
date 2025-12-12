@@ -11,7 +11,7 @@ in
   mainBar = {
     layers = "top";
     position = "top";
-    height = 24;
+    height = 22;
     spacing = 2;
     margin-bottom = 0;
     margin-top = 4;

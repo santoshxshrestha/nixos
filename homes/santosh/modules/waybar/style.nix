@@ -80,6 +80,17 @@
       background: rgba(82, 79, 103, 0.3);
   }
 
+  #cava {
+      background: rgba(82, 79, 103, 0.2);
+      border-radius: 6px;
+      margin: 2px;
+      padding: 0 10px;
+      color: #b8b5c7;
+      font-size: 13px;
+      /* Slightly larger for better icon visibility */
+      transition: all 0.3s ease;
+  }
+
   /* Network */
   #network {
       background: rgba(82, 79, 103, 0.2);

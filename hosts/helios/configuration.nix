@@ -21,6 +21,7 @@
     ./modules/logind.nix
     ./modules/keyd.nix
     ./modules/systemd.nix
+    ./modules/nh.nix
   ];
 
   sops.defaultSopsFile = ./sops.yaml;
@@ -128,6 +129,9 @@
 
   # remap
   keyd.enable = true;
+
+  # nh
+  nh.enable = true;
 
   # https://nix.dev/guides/faq#how-to-run-non-nix-executables
   programs.command-not-found.enable = true;

@@ -29,6 +29,7 @@
     ./modules/firefox.nix
     ./modules/rofi.nix
     ./modules/wlsunset.nix
+    ./modules/nh.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Neovim and Vim Modules                        │
@@ -164,4 +165,6 @@
     enable = true;
     nix-direnv.enable = true;
   };
+
+  nh.enable = true;
 }

@@ -44,13 +44,13 @@
           modules = [
             ./hosts/helios/configuration.nix
             home-manager.nixosModules.home-manager
-
             {
               home-manager = {
                 sharedModules = [ nixvim.homeModules.nixvim ];
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 users.santosh = import ./homes/santosh/home.nix;
+                extraSpecialArgs = { inherit inputs; };
               };
             }
           ];

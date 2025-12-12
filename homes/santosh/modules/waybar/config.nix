@@ -23,10 +23,10 @@ in
       "hyprland/window"
       "niri/workspaces"
       "niri/window"
+      "cava"
     ];
 
     modules-center = [
-      "cava"
       "clock"
       "privacy"
     ];
@@ -80,10 +80,10 @@ in
     "hyprland/workspaces" = {
       disable-scroll = true;
       all-outputs = true;
-      format = "{name}";
+      format = "{icon}";
       format-icons = {
-        "1" = "1";
-        "2" = "2";
+        "1" = " ";
+        "2" = "󰈹 ";
         "3" = "3";
         "4" = "4";
         "5" = "5";
@@ -91,25 +91,32 @@ in
         "7" = "7";
         "8" = "8";
         "9" = "9";
-        "10" = "10";
+        "10" = "";
+        urgent = "";
+        default = "";
       };
+      persistent-workspaces = {
+        "*" = 5;
+      };
+    };
 
-      "niri/workspaces" = {
-        all-outputs = true;
-        format = "{icon}";
-        current-only = false;
-        format-icons = {
-          "1" = "1";
-          "2" = "2";
-          "3" = "3";
-          "4" = "4";
-          "5" = "5";
-          "6" = "6";
-          "7" = "7";
-          "8" = "8";
-          "9" = "9";
-          "10" = "10";
-        };
+    "niri/workspaces" = {
+      all-outputs = true;
+      format = "{icon}";
+      current-only = false;
+      format-icons = {
+        "1" = " ";
+        "2" = "󰈹 ";
+        "3" = "3";
+        "4" = "4";
+        "5" = "5";
+        "6" = "6";
+        "7" = "7";
+        "8" = "8";
+        "9" = "9";
+        "10" = "";
+        urgent = "";
+        default = "";
       };
     };
 

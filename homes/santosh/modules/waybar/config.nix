@@ -25,7 +25,10 @@ in
       "niri/window"
     ];
 
-    modules-center = [ "clock" ];
+    modules-center = [
+      "clock"
+      "privacy"
+    ];
 
     modules-right = [
       "group/tray-expander"
@@ -116,6 +119,29 @@ in
         on-scroll-up = "shift_up";
         on-scroll-down = "shift_down";
       };
+    };
+
+    privacy = {
+      icon-spacing = 10;
+      icon-size = 13;
+      transition-duration = 300;
+      modules = [
+        {
+          type = "screenshare";
+          tooltip = true;
+          tooltip-icon-size = 20;
+        }
+        {
+          type = "audio-out";
+          tooltip = true;
+          tooltip-icon-size = 20;
+        }
+        {
+          type = "audio-in";
+          tooltip = true;
+          tooltip-icon-size = 20;
+        }
+      ];
     };
 
     network = {

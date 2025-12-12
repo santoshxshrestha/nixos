@@ -121,6 +121,13 @@
       color: #66ff66;
   }
 
+  #privacy {
+      background: rgba(82, 79, 103, 0.2);
+      border-radius: 6px;
+      margin: 2px;
+      padding: 0 8px;
+  }
+
   #bluetooth {
       background: rgba(82, 79, 103, 0.2);
       border-radius: 6px;

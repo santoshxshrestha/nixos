@@ -388,6 +388,13 @@ binds {
     Mod+B hotkey-overlay-title="Open the Web Browser: firefox" { spawn "firefox"; }
     Mod+W hotkey-overlay-title="Open wallpaper change: rofi-wallpaper-selector" { spawn-sh "rofi-wallpaper-selector";}
 
+    // Screenshot binds. (hyprshot)
+      Mod+Print hotkey-overlay-title="Screenshot a window: hyprshot" { spawn-sh "hyprshot -m window -o /home/santosh/Pictures/Screenshots";}
+      Print hotkey-overlay-title="Screenshot a monitor: hyprshot" { spawn-sh "hyprshot -m output -o /home/santosh/Pictures/Screenshots";}
+      Shift+Print hotkey-overlay-title="Screenshot a region: hyprshot" { spawn-sh "hyprshot -m region -o /home/santosh/Pictures/Screenshots";}
+      Mod+S hotkey-overlay-title="Screenshot a region to clipboard-only: hyprshot" {spawn-sh "hyprshot -m region -o /home/santosh/Pictures/Screenshots --clipboard-only"; }
+
+
     // Use spawn-sh to run a shell command. Do this if you need pipes, multiple commands, etc.
     // Note: the entire command goes as a single argument. It's passed verbatim to `sh -c`.
     // For example, this is a standard bind to toggle the screen reader (orca).
@@ -632,9 +639,9 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    Shift+Print { screenshot; }
-    Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    // Shift+Print { screenshot; }
+    // Print { screenshot-screen; }
+    // Alt+Print { screenshot-window; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here

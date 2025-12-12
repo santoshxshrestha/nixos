@@ -48,7 +48,7 @@ in
       framerate = 60;
       autosens = 1;
       # sensitivity = 100;
-      bars = 18;
+      bars = 30;
       lower_cutoff_freq = 30;
       higher_cutoff_freq = 12000;
       method = "pulse";

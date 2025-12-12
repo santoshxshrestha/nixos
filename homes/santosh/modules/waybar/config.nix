@@ -92,8 +92,6 @@ in
         "8" = "8";
         "9" = "9";
         "10" = "";
-        urgent = "";
-        default = "";
       };
       persistent-workspaces = {
         "*" = 5;
@@ -115,8 +113,6 @@ in
         "8" = "8";
         "9" = "9";
         "10" = "";
-        urgent = "";
-        default = "";
       };
     };
 

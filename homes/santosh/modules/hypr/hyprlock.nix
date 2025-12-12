@@ -1,10 +1,14 @@
+{ config, ... }:
+let
+  currentWallpaper = "${config.home.homeDirectory}/.current_wallpaper";
+in
 {
   programs.hyprlock = {
     enable = true;
 
     settings = {
       background = {
-        path = "$WALLPAPER_ARCHIVE_PATH/Static-Wallpapers/inazuma_cats_place.png";
+        path = currentWallpaper;
         blur_passes = 2;
         contrast = 0.8916;
         brightness = 0.35;

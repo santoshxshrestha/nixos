@@ -1,12 +1,8 @@
 // This config is in the KDL format: https://kdl.dev
 // "/-" comments out the following node.
-// Check the wiki for a full description of the configuration:
 // https://yalter.github.io/niri/Configuration:-Introduction
 
-// Input device configuration.
-// Find the full list of options on the wiki:
 // https://yalter.github.io/niri/Configuration:-Input
-prefer-no-csd
 input {
     keyboard {
         xkb {
@@ -26,9 +22,7 @@ input {
         // numlock
     }
 
-    // Next sections include libinput settings.
-    // Omitting settings disables them, or leaves them at their default values.
-    // All commented-out settings here are examples, not defaults.
+    // libiniput settings
     touchpad {
         // off
         tap
@@ -73,23 +67,10 @@ input {
 
 // You can configure outputs by their name, which you can find
 // by running `niri msg outputs` while inside a niri instance.
-// The built-in laptop monitor is usually called "eDP-1".
-// Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Outputs
-// Remember to uncomment the node by removing "/-"!
 output "eDP-1" {
-    // Uncomment this line to disable this output.
     // off
-
-    // Resolution and, optionally, refresh rate of the output.
-    // The format is "<width>x<height>" or "<width>x<height>@<refresh rate>".
-    // If the refresh rate is omitted, niri will pick the highest refresh rate
-    // for the resolution.
-    // If the mode is omitted altogether or is invalid, niri will pick one automatically.
-    // Run `niri msg outputs` while inside a niri instance to list all outputs and their modes.
     mode "1920x1080@60.001"
-
-    // You can use integer or fractional scale, for example use 1.5 for 150% scale.
     scale 1
 
     // Transform allows to rotate the output counter-clockwise, valid values are:
@@ -108,8 +89,6 @@ output "eDP-1" {
     position x=1280 y=0
 }
 
-// Settings that influence how windows are positioned and sized.
-// Find more information on the wiki:
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
     // Set gaps around windows in logical pixels.
@@ -141,9 +120,9 @@ layout {
     // preset-window-heights { }
 
     // You can change the default width of the new windows.
-    default-column-width { proportion 0.5; }
+    // default-column-width { proportion 0.5; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
-    // default-column-width {}
+     default-column-width {}
 
     // By default focus ring and border are rendered as a solid background rectangle
     // behind windows. That is, they will show up through semitransparent windows.
@@ -184,14 +163,12 @@ layout {
         // defaulting to 180 (top-to-bottom gradient).
         // You can use any CSS linear-gradient tool on the web to set these up.
         // Changing the color space is also supported, check the wiki for more info.
-        //
         active-gradient from="#404040" to="#606060" angle=45
 
         // You can also color the gradient relative to the entire view
         // of the workspace, rather than relative to just the window itself.
         // To do that, set relative-to="workspace-view".
-        //
-        // inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+        inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
     }
 
     // You can also add a border. It's similar to the focus ring, but always visible.
@@ -293,7 +270,7 @@ hotkey-overlay {
 // Additionally, clients will be informed that they are tiled, removing some client-side rounded corners.
 // This option will also fix border/focus ring drawing behind some semitransparent windows.
 // After enabling or disabling this, you need to restart the apps for this to take effect.
-// prefer-no-csd
+prefer-no-csd
 
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
@@ -303,12 +280,10 @@ screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
 // You can also set this to null to disable saving screenshots to disk.
 // screenshot-path null
 
-// Animation settings.
-// The wiki explains how to configure individual animations:
 // https://yalter.github.io/niri/Configuration:-Animations
 animations {
     // Uncomment to turn off all animations.
-     // off
+    // off
 
     // Slow down all animations by this factor. Values below 1 speed them up instead.
     slowdown 0.5

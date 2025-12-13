@@ -21,7 +21,7 @@
 
         # idle settings
         IdleAction = "suspend-then-hibernate";
-        IdleActionSec = "300"; # 5 minutes
+        IdleActionSec = "600"; # 10 minutes
 
         # power button settings
         HandlePowerKey = "suspend-then-hibernate";

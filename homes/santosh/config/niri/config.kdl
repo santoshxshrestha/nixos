@@ -412,9 +412,10 @@ binds {
     // I think I dont need this because we are working with columns
     // Mod+J     { focus-window-down; }
     // Mod+K     { focus-window-up; }
+
     // still if i want to I can use some thing like this
-    Mod+U     { focus-window-down; }
-    Mod+I     { focus-window-up; }
+    // Mod+U     { focus-window-down; }
+    // Mod+I     { focus-window-up; }
     Mod+H     { focus-column-left; }
     Mod+L     { focus-column-right; }
 

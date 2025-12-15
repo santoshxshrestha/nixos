@@ -8,6 +8,11 @@
     programs.nixvim.plugins.copilot-chat = {
       enable = true;
       settings = {
+        answer_header = "## Ai ";
+        question_header = "## santosh ";
+        show_help = false;
+        auto_follow_cursor = true;
+        highlight_selection = false;
         model = "gpt-4o";
         window = {
           height = 0.9;

@@ -44,6 +44,10 @@ c)
     echo "Compiling C file: $file with 'gcc'..."
     gcc "$file" && ./a.out
     ;;
+py)
+    echo "Executing Python file: $file with 'python3'..."
+    python3 "$file"
+    ;;
 cpp)
     echo "Compiling C++ file: $file with 'g++'..."
     g++ "$file" && ./a.out

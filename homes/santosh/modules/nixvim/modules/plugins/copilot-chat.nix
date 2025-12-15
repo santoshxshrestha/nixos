@@ -14,7 +14,9 @@
           width = 0.9;
           border = "rounded";
           # title = "[ ]";
-          title = "   AutoPilot ";
+          # title = "   AutoPilot ";
+          # want nothing in the title bar so using this unicode character
+          title = "─";
           # replace is also a good option
           layout = "float";
         };

@@ -15,14 +15,13 @@
         highlight_selection = false;
         model = "gpt-4o";
         window = {
-          height = 0.9;
-          width = 0.9;
-          border = "rounded";
-          # title = "[ ]";
+          height = 1;
+          width = 1;
+          # here we are just removing the border by setting it to none as I am doing the height and width to 100%
+          # border = "rounded";
+          border = "none";
           # title = "   AutoPilot ";
-          # want nothing in the title bar so using this unicode character
           title = "─";
-          # replace is also a good option
           layout = "float";
         };
       };

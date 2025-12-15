@@ -68,6 +68,11 @@
           enable = true;
         };
 
+        # python
+        pylsp = {
+          enable = true;
+        };
+
         # nix
         nixd = {
           enable = true;

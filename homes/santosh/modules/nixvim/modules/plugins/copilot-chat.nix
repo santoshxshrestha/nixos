@@ -13,7 +13,7 @@
         show_help = false;
         auto_follow_cursor = true;
         highlight_selection = false;
-        model = "gpt-4o";
+        model = "gpt-5.1-codex";
         window = {
           height = 1;
           width = 1;

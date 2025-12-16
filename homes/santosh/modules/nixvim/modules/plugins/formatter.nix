@@ -16,6 +16,7 @@
         "gopls"
         "nushell"
         "rust_analyzer"
+        "pylsp"
       ];
     };
     programs.nixvim.plugins.none-ls = {

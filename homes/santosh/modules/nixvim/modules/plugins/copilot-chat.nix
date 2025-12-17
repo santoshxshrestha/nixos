@@ -8,12 +8,17 @@
     programs.nixvim.plugins.copilot-chat = {
       enable = true;
       settings = {
-        answer_header = "## Ai ";
-        question_header = "## santosh ";
+        headers = {
+          assistant = "## Ai ";
+          user = "## santosh ";
+          tool = "## Tool ";
+        };
         show_help = false;
         auto_follow_cursor = true;
+        auto_fold = true;
         highlight_selection = false;
         model = "gpt-5.1-codex";
+        seperator = " ";
         window = {
           height = 1;
           width = 1;

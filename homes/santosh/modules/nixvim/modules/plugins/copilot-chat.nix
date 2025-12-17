@@ -18,7 +18,6 @@
         auto_fold = true;
         highlight_selection = false;
         model = "gpt-5.1-codex";
-        seperator = " ";
         window = {
           height = 1;
           width = 1;

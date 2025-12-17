@@ -25,6 +25,16 @@
         end
           ";
       }
+      # I want my copilot chat separator to be same as normal background so that it will look like a single window
+      {
+        event = [
+          "VimEnter"
+        ];
+        pattern = "*";
+        command = "lua
+            vim.api.nvim_set_hl(0, 'CopilotChatSeparator', { fg = vim.api. nvim_get_hl(0, { name = 'Normal' }).bg or '#000000', bg = 'NONE' })
+          ";
+      }
     ];
   };
 }

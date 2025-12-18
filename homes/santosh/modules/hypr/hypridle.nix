@@ -33,11 +33,10 @@
           timeout = 300;
           on-timeout = "hyprlock";
         }
-        # the suspend-then-hibernate will be handled by logind
-        # {
-        #   timeout = 900;
-        #   on-timeout = "systemctl suspend-then-hibernate";
-        # }
+        {
+          timeout = 900;
+          on-timeout = "systemctl suspend-then-hibernate";
+        }
       ];
     };
   };

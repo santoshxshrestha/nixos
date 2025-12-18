@@ -20,6 +20,7 @@
     sops
     gnupg
     pinentry-tty
+    jq
   ];
   users.users.santosh.packages = with pkgs; [
     # rose-pine-hyprcursor

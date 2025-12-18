@@ -12,5 +12,5 @@ with pkgs;
   hyprshot
   mpvpaper
   hyprpaper
-
+  wl-mirror
 ]

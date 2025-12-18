@@ -666,4 +666,8 @@ binds {
     // Powers off the monitors. To turn them back on, do any input like
     // moving the mouse or pressing any other key.
     Mod+Shift+P { power-off-monitors; }
+
+    // Mirror the currently focused output using wl-mirror.
+    // https://yalter.github.io/niri/Screencasting.html
+    Mod+P repeat=false { spawn-sh "wl-mirror $(niri msg --json focused-output | jq -r .name)"; }
 }

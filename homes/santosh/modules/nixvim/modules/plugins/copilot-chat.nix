@@ -17,7 +17,8 @@
         auto_follow_cursor = true;
         auto_fold = true;
         highlight_selection = false;
-        model = "gpt-5.1-codex";
+        # model = "gpt-5.1-codex";
+        model = "gpt-4.1";
         window = {
           height = 1;
           width = 1;

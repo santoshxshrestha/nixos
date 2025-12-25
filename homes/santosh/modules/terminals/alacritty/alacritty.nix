@@ -57,7 +57,7 @@
         };
         builtin_box_drawing = true;
       };
-      colors = import ./colorscheme/tokyonight.nix;
+      colors = import ./colorscheme/catppuccin.nix;
     };
   };
 }

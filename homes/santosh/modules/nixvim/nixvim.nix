@@ -30,7 +30,7 @@
   # ╭───────────────────────────────────────────────╮
   # │ Essential Functional Plugins                  │
   # ╰───────────────────────────────────────────────╯
-  ufo.enable = false;
+  ufo.enable = true;
 
   # ╭───────────────────────────────────────────────╮
   # │ Core Functionality Plugins                    │

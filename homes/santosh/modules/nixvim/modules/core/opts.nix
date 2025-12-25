@@ -104,6 +104,15 @@
       laststatus = 0;
       # Highlight columns at 80 chars (default: '')
       # colorcolumn = "80";
+
+      # Set default fold level to 99 (default: 0)
+      foldlevelstart = 99;
+
+      # Set fold method to 'expr' for treesitter based folding (default: 'manual')
+      # foldlevel = 99;
+
+      # this will disable folding entirely
+      # foldenable = false;
     };
 
     # Additional options that need special handling in NixVim

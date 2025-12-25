@@ -57,7 +57,7 @@
         };
         builtin_box_drawing = true;
       };
-      colors = import ./colorscheme/rosepine.nix;
+      colors = import ./colorscheme/tokyonight.nix;
     };
   };
 }

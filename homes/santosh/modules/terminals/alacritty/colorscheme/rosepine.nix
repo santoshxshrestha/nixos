@@ -9,8 +9,9 @@
   };
 
   cursor = {
-    text = "#e0def4";
-    cursor = "#524f67";
+    # changed the text color to cursor and cursor color to text color
+    cursor = "#e0def4";
+    text = "#524f67";
   };
 
   vi_mode_cursor = {

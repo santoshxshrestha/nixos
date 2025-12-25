@@ -8,6 +8,11 @@
 
   };
 
+  # cursor = {
+  #   cursor = "#e0def4";
+  #   text = "#524f67";
+  # };
+
   normal = {
     black = "#32344a";
     red = "#f7768e";

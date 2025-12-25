@@ -122,6 +122,21 @@
 
       # Set the fold expression to use treesitter (default: '')
       foldexpr = "nvim_treesitter#foldexpr()";
+
+      fillchars = {
+        fold = "─";
+        foldopen = "";
+        foldclose = "";
+        diff = "╱";
+        wbr = "─";
+        msgsep = "─";
+        horiz = "─";
+        horizup = "│";
+        horizdown = "│";
+        vertright = "│";
+        vertleft = "│";
+        verthoriz = "│";
+      };
     };
 
     # Additional options that need special handling in NixVim

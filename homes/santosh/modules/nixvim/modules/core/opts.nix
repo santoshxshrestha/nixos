@@ -115,7 +115,7 @@
       foldenable = true;
 
       # Set the width of the fold column (default: 0)
-      foldcolumn = "1";
+      foldcolumn = "auto";
     };
 
     # Additional options that need special handling in NixVim

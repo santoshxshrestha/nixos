@@ -116,6 +116,12 @@
 
       # Set the width of the fold column (default: 0)
       foldcolumn = "auto";
+
+      # Set fold method to 'expr' for treesitter based folding (default: 'manual')
+      foldmethod = "expr";
+
+      # Set the fold expression to use treesitter (default: '')
+      foldexpr = "nvim_treesitter#foldexpr()";
     };
 
     # Additional options that need special handling in NixVim

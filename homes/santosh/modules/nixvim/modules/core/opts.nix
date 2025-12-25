@@ -109,10 +109,13 @@
       foldlevelstart = 99;
 
       # Set fold method to 'expr' for treesitter based folding (default: 'manual')
-      # foldlevel = 99;
+      foldlevel = 99;
 
       # this will disable folding entirely
-      # foldenable = false;
+      foldenable = true;
+
+      # Set the width of the fold column (default: 0)
+      foldcolumn = "1";
     };
 
     # Additional options that need special handling in NixVim

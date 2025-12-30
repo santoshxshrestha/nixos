@@ -93,11 +93,22 @@
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
-  home.file = {
-    ".config/kitty".source = ./config/kitty;
-    ".config/rofi".source = ./config/rofi;
-    ".local/scripts".source = ./scripts;
+  home.file.".config/kitty" = {
+    source = ./config/kitty;
+    recursive = true;
+  };
 
+  home.file.".config/rofi" = {
+    source = ./config/rofi;
+    recursive = true;
+  };
+
+  home.file."./local/scripts" = {
+    source = ./scripts;
+    recursive = true;
+  };
+
+  home.file = {
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.

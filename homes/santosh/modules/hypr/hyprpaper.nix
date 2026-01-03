@@ -1,7 +1,7 @@
-{ config, ... }:
+{ ... }:
 {
   services.hyprpaper = {
-    enable = true;
+    enable = false;
     settings = {
       splash = true;
       splash_offset = 1.2;

@@ -32,10 +32,11 @@
     ./modules/nh.nix
 
     # ╭───────────────────────────────────────────────╮
-    # │ Neovim and Vim Modules                        │
+    # │ Code editors                                  │
     # ╰───────────────────────────────────────────────╯
     ./modules/nixvim/nixvim.nix
     ./modules/vim.nix
+    ./modules/zed.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Shell                                         │

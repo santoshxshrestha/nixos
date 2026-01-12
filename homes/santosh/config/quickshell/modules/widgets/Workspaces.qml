@@ -35,12 +35,15 @@ ColumnLayout {
             implicitWidth: 32
             active: model.isActive
 
+            // Slightly smaller glyph for workspace indicator.
+            label.font.pixelSize: 12
+
             text: {
                 const index = model.idx ?? model.index ?? model.id;
                 const workspaceIcon = root.icons[index] ?? String(index);
 
                 // Focused: mapped icon. Others: inactive marker only.
-                return model.isActive ? workspaceIcon : "\uf10c";
+                return model.isActive ? workspaceIcon : "\u2022";
             }
 
             onLeftClicked: Services.Niri.focusWorkspaceById(model.id)

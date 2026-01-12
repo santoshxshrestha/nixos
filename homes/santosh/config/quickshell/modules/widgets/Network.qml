@@ -15,6 +15,7 @@ WidgetButton {
         if (Services.Network.primaryType === "ethernet") return "󰈀 ";
         return "\uf1eb";
     }
+    label.font.pixelSize: 12
 
     // Match Waybar disconnected look.
     label.color: Services.Network.connected ? "#f0f0f0" : "#ff8a80"

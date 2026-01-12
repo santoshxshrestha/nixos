@@ -14,6 +14,10 @@ Rectangle {
     property real hoverOpacity: 0.45
     property real activeOpacity: 0.70
 
+    // Text/icon dimming on hover.
+    property real normalTextOpacity: 1.0
+    property real hoverTextOpacity: 0.70
+
     property bool active: false
 
     signal leftClicked()
@@ -41,7 +45,7 @@ Rectangle {
         id: label
         anchors.centerIn: parent
         color: "#f0f0f0"
-        opacity: 1
+        opacity: root.normalTextOpacity
         font.family: "JetBrains Mono Nerd Font"
         font.pixelSize: 18
         font.bold: root.active
@@ -54,11 +58,13 @@ Rectangle {
         acceptedButtons: Qt.LeftButton | Qt.RightButton
 
         onEntered: {
-            if (!root.active) bg.opacity = root.hoverOpacity
+            bg.opacity = root.hoverOpacity
+            label.opacity = root.hoverTextOpacity
         }
 
         onExited: {
-            if (!root.active) bg.opacity = root.normalOpacity
+            bg.opacity = root.active ? root.activeOpacity : root.normalOpacity
+            label.opacity = root.normalTextOpacity
         }
 
         onClicked: (mouse) => {

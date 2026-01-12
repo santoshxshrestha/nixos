@@ -8,9 +8,10 @@ Rectangle {
     property color normalColor: "#524f67"
     property color hoverColor: "#524f67"
     property color activeColor: "#524f67"
-    property real normalOpacity: 0.20
+    // Higher opacity = brighter overall buttons.
+    property real normalOpacity: 0.50
     property real hoverOpacity: 0.30
-    property real activeOpacity: 0.50
+    property real activeOpacity: 0.70
 
     property bool active: false
 

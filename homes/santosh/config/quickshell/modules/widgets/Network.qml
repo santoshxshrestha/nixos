@@ -11,8 +11,8 @@ WidgetButton {
     // - ethernet connected: \udb80\ude00
     // - disconnected: \udb82\udd2e
     text: {
-        if (!Services.Network.connected) return "\udb82\udd2e";
-        if (Services.Network.primaryType === "ethernet") return "\udb80\ude00";
+        if (!Services.Network.connected) return " ";
+        if (Services.Network.primaryType === "ethernet") return "󰈀 ";
         return "\uf1eb";
     }
 

@@ -261,7 +261,7 @@ layout {
 //spawn-at-startup "waybar"
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
-// spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
+spawn-sh-at-startup "qs -c ~/nixos/homes/santosh/config/quickshell"
 
 spawn-sh-at-startup "swaybg -m fill -o* -i ~/.current_wallpaper"
 spawn-sh-at-startup "wl-paste --type text --watch cliphist store"

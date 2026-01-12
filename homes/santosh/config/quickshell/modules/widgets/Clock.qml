@@ -20,7 +20,7 @@ Rectangle {
             text: Qt.formatTime(root.now, "h")
             color: "#ffffff"
             font.family: "JetBrains Mono Nerd Font"
-            font.pixelSize: 14
+            font.pixelSize: 16
             font.bold: true
             horizontalAlignment: Text.AlignHCenter
             width: parent.width
@@ -28,9 +28,9 @@ Rectangle {
 
         Text {
             text: Qt.formatTime(root.now, "mm")
-            color: "#e6e6e6"
+            color: "#ffffff"
             font.family: "JetBrains Mono Nerd Font"
-            font.pixelSize: 14
+            font.pixelSize: 16
             horizontalAlignment: Text.AlignHCenter
             width: parent.width
         }

@@ -21,16 +21,16 @@ Rectangle {
 
     radius: 6
     color: active ? activeColor : normalColor
-    opacity: active ? activeOpacity : normalOpacity
+    opacity: active ? activeOpacity : Math.max(normalOpacity, 0.45)
 
     implicitHeight: 28
 
     Text {
         id: label
         anchors.centerIn: parent
-        color: root.active ? "#ffffff" : "#e6e6e6"
+        color: root.active ? "#ffffff" : "#ffffff"
         font.family: "JetBrains Mono Nerd Font"
-        font.pixelSize: 14
+        font.pixelSize: 16
     }
 
     MouseArea {

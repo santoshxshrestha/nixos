@@ -17,4 +17,5 @@ with pkgs;
   vlc
   mpv
   swaybg
+  quickshell
 ]

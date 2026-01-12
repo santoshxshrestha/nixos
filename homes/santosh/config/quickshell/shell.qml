@@ -7,8 +7,9 @@ import "./modules/bar/"
 import "./services" as Services
 
 ShellRoot {
-    // Ensure singleton is instantiated and connects on startup.
+    // Ensure singletons are instantiated on startup.
     property var _niri: Services.Niri
+    property var _battery: Services.Battery
 
     LazyLoader {
         active: true

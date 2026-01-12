@@ -8,9 +8,10 @@ Rectangle {
     property color normalColor: "#524f67"
     property color hoverColor: "#524f67"
     property color activeColor: "#524f67"
-    // Higher opacity = brighter overall buttons.
-    property real normalOpacity: 0.50
-    property real hoverOpacity: 0.30
+
+    // Background opacity only (keeps text/icons bright).
+    property real normalOpacity: 0.40
+    property real hoverOpacity: 0.45
     property real activeOpacity: 0.70
 
     property bool active: false
@@ -21,17 +22,26 @@ Rectangle {
     signal wheelDown()
 
     radius: 6
-    color: active ? activeColor : normalColor
-    opacity: active ? activeOpacity : normalOpacity
+    color: "transparent"
+    opacity: 1
 
     implicitHeight: 28
 
     property alias label: label
 
+    Rectangle {
+        id: bg
+        anchors.fill: parent
+        radius: root.radius
+        color: root.active ? root.activeColor : root.normalColor
+        opacity: root.active ? root.activeOpacity : root.normalOpacity
+    }
+
     Text {
         id: label
         anchors.centerIn: parent
-        color: "#ffffff"
+        color: "#f0f0f0"
+        opacity: 1
         font.family: "JetBrains Mono Nerd Font"
         font.pixelSize: 18
         font.bold: root.active
@@ -44,11 +54,11 @@ Rectangle {
         acceptedButtons: Qt.LeftButton | Qt.RightButton
 
         onEntered: {
-            if (!root.active) root.opacity = root.hoverOpacity
+            if (!root.active) bg.opacity = root.hoverOpacity
         }
 
         onExited: {
-            if (!root.active) root.opacity = root.normalOpacity
+            if (!root.active) bg.opacity = root.normalOpacity
         }
 
         onClicked: (mouse) => {

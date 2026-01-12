@@ -33,7 +33,15 @@ PanelWindow {
             anchors.margins: 6
             spacing: 6
 
-            // Top spacer
+            // Top section
+            ColumnLayout {
+                Layout.alignment: Qt.AlignTop
+                spacing: 6
+
+                Workspaces { Layout.fillWidth: true }
+            }
+
+            // Spacer between top and center
             Item { Layout.fillHeight: true }
 
             // Center section
@@ -41,10 +49,11 @@ PanelWindow {
                 Layout.alignment: Qt.AlignVCenter
                 spacing: 6
 
-                Workspaces {
-                    Layout.fillWidth: true
-                }
+                Clock { Layout.fillWidth: true }
             }
+
+            // Spacer between center and bottom
+            Item { Layout.fillHeight: true }
 
             // Bottom section
             ColumnLayout {
@@ -58,7 +67,6 @@ PanelWindow {
                 Microphone { Layout.fillWidth: true }
                 Battery { Layout.fillWidth: true }
                 Notifications { Layout.fillWidth: true }
-                Clock { Layout.fillWidth: true }
             }
         }
     }

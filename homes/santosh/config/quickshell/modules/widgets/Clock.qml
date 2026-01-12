@@ -1,47 +1,57 @@
 import QtQuick
 
-Rectangle {
+import "./" as Widgets
+
+Widgets.WidgetButton {
     id: root
 
     property var now: new Date()
 
-    color: "#524f67"
-    opacity: 0.20
-    radius: 6
+    // Keep WidgetButton's internal label empty; we'll render two lines.
+    text: ""
 
-    implicitWidth: 32
-    implicitHeight: 42
+    // Outer size includes some padding around text.
+    implicitWidth: 38
+    implicitHeight: 56
+
+    // Padding inside the button.
+    readonly property int paddingX: 2
+    readonly property int paddingTop: 3
+    readonly property int paddingBottom: 8
 
     Column {
-        anchors.centerIn: parent
-        spacing: 0
+        anchors {
+            fill: parent
+            leftMargin: root.paddingX
+            rightMargin: root.paddingX
+            topMargin: root.paddingTop
+            bottomMargin: root.paddingBottom
+        }
+        spacing: 2
 
         Text {
-            text: Qt.formatTime(root.now, "h")
+            text: {
+                let h = root.now.getHours();
+                h = h % 12;
+                if (h === 0) h = 12;
+                return String(h).padStart(2, "0");
+            }
             color: "#ffffff"
             font.family: "JetBrains Mono Nerd Font"
-            font.pixelSize: 16
+            font.pixelSize: 18
             font.bold: true
             horizontalAlignment: Text.AlignHCenter
             width: parent.width
         }
 
         Text {
-            text: Qt.formatTime(root.now, "mm")
+            text: String(root.now.getMinutes()).padStart(2, "0")
             color: "#ffffff"
             font.family: "JetBrains Mono Nerd Font"
-            font.pixelSize: 16
+            font.pixelSize: 18
             horizontalAlignment: Text.AlignHCenter
             width: parent.width
         }
-    }
-
-    MouseArea {
-        anchors.fill: parent
-        hoverEnabled: true
-
-        onEntered: root.opacity = 0.30
-        onExited: root.opacity = 0.20
     }
 
     Timer {

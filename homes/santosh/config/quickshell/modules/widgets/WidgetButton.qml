@@ -25,12 +25,16 @@ Rectangle {
 
     implicitHeight: 28
 
+    property alias label: label
+
     Text {
         id: label
         anchors.centerIn: parent
-        color: root.active ? "#ffffff" : "#ffffff"
+        color: "#ffffff"
         font.family: "JetBrains Mono Nerd Font"
-        font.pixelSize: 16
+        font.pixelSize: 18
+        font.bold: root.active
+        visible: label.text.length > 0
     }
 
     MouseArea {

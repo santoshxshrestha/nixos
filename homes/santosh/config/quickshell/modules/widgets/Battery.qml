@@ -1,20 +1,19 @@
 import QtQuick
 
-import Quickshell.Services.UPower
 import "../../services" as Services
 
 WidgetButton {
     id: root
 
     // Render as a single centered glyph so it always fits.
-    text: Services.Battery.available ? batteryGlyph : "\udb80\udc79"
+    text: Services.BatterySys.available ? batteryGlyph : "\udb80\udc79"
 
-    property int pct: Math.round(Services.Battery.percentage * 100)
+    property int pct: Math.round(Services.BatterySys.percentage * 100)
 
     property string batteryGlyph: {
         // Match the Waybar config icons you use (10-level Nerd Font set).
-        if (Services.Battery.isCharging) return "\udb85\udc0b"; // charging
-        if (Services.Battery.isPluggedIn) return "\udb85\udfe2"; // plugged
+        if (Services.BatterySys.isCharging) return "\udb85\udc0b"; // charging
+        if (Services.BatterySys.isPluggedIn) return "\udb85\udfe2"; // plugged
 
         if (pct <= 10) return "\udb80\udc7a";
         if (pct <= 20) return "\udb80\udc7b";
@@ -33,8 +32,8 @@ WidgetButton {
 
     // Match Waybar-ish battery colors (charging > low battery).
     label.color: {
-        if (!Services.Battery.available) return "#f0f0f0";
-        if (Services.Battery.isCharging) return "#66ff66";
+        if (!Services.BatterySys.available) return "#f0f0f0";
+        if (Services.BatterySys.isCharging) return "#66ff66";
         if (pct <= 20) return "#ff6666";
         if (pct <= 30) return "#ffcc66";
         return "#f0f0f0";
@@ -46,5 +45,5 @@ WidgetButton {
     // Tooltip-style info without cramming text into the button.
     // Quick and portable: just use the button's `toolTip` if available.
     // (If your Quickshell build doesn’t expose it, this is ignored.)
-    property string toolTip: Services.Battery.available ? `${pct}%` : "Battery"
+    property string toolTip: Services.BatterySys.available ? `${pct}%` : "Battery"
 }

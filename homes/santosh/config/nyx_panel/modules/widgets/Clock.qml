@@ -12,7 +12,7 @@ Widgets.WidgetButton {
 
     // Outer size includes some padding around text.
     implicitWidth: 38
-    implicitHeight: 70
+    implicitHeight: 140
 
     // Padding inside the button.
     readonly property int paddingX: 2
@@ -49,6 +49,42 @@ Widgets.WidgetButton {
             color: "#ffffff"
             font.family: "JetBrains Mono Nerd Font"
             font.pixelSize: 20
+            horizontalAlignment: Text.AlignHCenter
+            width: parent.width
+        }
+
+        Rectangle {
+            width: parent.width
+            height: 4
+            color: "#ffffff"
+            opacity: 0.25
+        }
+
+        Text {
+            text: Qt.formatDateTime(root.now, "ddd")
+            color: "#ffffff"
+            font.family: "JetBrains Mono Nerd Font"
+            font.pixelSize: 14
+            font.bold: true
+            horizontalAlignment: Text.AlignHCenter
+            width: parent.width
+        }
+
+        Text {
+            text: Qt.formatDateTime(root.now, "d")
+            color: "#ffffff"
+            font.family: "JetBrains Mono Nerd Font"
+            font.pixelSize: 14
+            font.bold: true
+            horizontalAlignment: Text.AlignHCenter
+            width: parent.width
+        }
+
+        Text {
+            text: Qt.formatDateTime(root.now, "MMM")
+            color: "#ffffff"
+            font.family: "JetBrains Mono Nerd Font"
+            font.pixelSize: 14
             horizontalAlignment: Text.AlignHCenter
             width: parent.width
         }

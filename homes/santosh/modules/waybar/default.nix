@@ -10,8 +10,8 @@ let
 in
 {
   programs.waybar = {
-    enable = true;
-    systemd.enable = false;
+    enable = false;
+    systemd.enable = true;
     settings = waybar_config;
     style = waybar_style;
   };

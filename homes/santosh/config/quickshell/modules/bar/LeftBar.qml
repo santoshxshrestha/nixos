@@ -33,17 +33,18 @@ PanelWindow {
             anchors.margins: 6
             spacing: 6
 
-            // Top section
+            // Top spacer
+            Item { Layout.fillHeight: true }
+
+            // Center section
             ColumnLayout {
-                Layout.alignment: Qt.AlignTop
+                Layout.alignment: Qt.AlignVCenter
                 spacing: 6
 
                 Workspaces {
                     Layout.fillWidth: true
                 }
             }
-
-            Item { Layout.fillHeight: true }
 
             // Bottom section
             ColumnLayout {

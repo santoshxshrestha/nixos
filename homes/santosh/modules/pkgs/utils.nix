@@ -1,4 +1,4 @@
-{ pkgs }:
+{ pkgs, inputs }:
 with pkgs;
 [
   ffmpeg
@@ -17,5 +17,8 @@ with pkgs;
   vlc
   mpv
   swaybg
-  quickshell
+
+  # Provided via flake inputs (not nixpkgs).
+  inputs.quickshell.packages.${pkgs.system}.default
+  inputs.qml-niri.packages.${pkgs.system}.quickshell
 ]

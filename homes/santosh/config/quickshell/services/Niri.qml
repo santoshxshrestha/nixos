@@ -1,12 +1,14 @@
 pragma Singleton
 import QtQuick
+import Niri 0.1
 
-QtObject {
+Niri {
     id: root
 
-    property var workspaces: []
+    Component.onCompleted: connect()
 
-    function focusWorkspaceById(_id) {
-        // TODO: implement once Niri QML plugin is available.
+    onConnected: console.info("Connected to niri")
+    onErrorOccurred: function(error) {
+        console.error("Niri error:", error)
     }
 }

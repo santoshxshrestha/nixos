@@ -22,13 +22,8 @@ ColumnLayout {
         10: ""
     })
 
-    // Placeholder until Niri workspace API is wired.
     Repeater {
-        model: Services.Niri.workspaces.length ? Services.Niri.workspaces : [
-            { id: 1, idx: 1, isActive: true, activeWindowId: 1 },
-            { id: 2, idx: 2, isActive: false, activeWindowId: 1 },
-            { id: 3, idx: 3, isActive: false, activeWindowId: 0 },
-        ]
+        model: Services.Niri.workspaces
 
         WidgetButton {
             required property var model
@@ -37,10 +32,15 @@ ColumnLayout {
             active: model.isActive
 
             text: {
+                // niri:workspaces provides workspace "idx" and stable "id".
                 const index = model.idx ?? model.index ?? model.id;
-                const icon = root.icons[index] ?? String(index);
-                const isActiveButNotFocused = !model.isActive && (model.activeWindowId ?? 0) > 0;
-                return model.isActive ? icon : (isActiveButNotFocused ? "\uf111" : "\uf10c");
+                const workspaceIcon = root.icons[index] ?? String(index);
+
+                // If focused: show workspace icon.
+                // If not focused: show a simple state indicator only.
+                // (You asked to *not* show app-specific/window-based indicators.)
+                if (model.isActive) return workspaceIcon;
+                return "\uf10c";
             }
 
             onLeftClicked: Services.Niri.focusWorkspaceById(model.id)

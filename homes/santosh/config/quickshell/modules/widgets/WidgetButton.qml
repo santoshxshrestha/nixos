@@ -21,7 +21,7 @@ Rectangle {
 
     radius: 6
     color: active ? activeColor : normalColor
-    opacity: active ? activeOpacity : Math.max(normalOpacity, 0.45)
+    opacity: active ? activeOpacity : normalOpacity
 
     implicitHeight: 28
 

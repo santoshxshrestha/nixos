@@ -12,11 +12,11 @@ Widgets.WidgetButton {
 
     // Outer size includes some padding around text.
     implicitWidth: 38
-    implicitHeight: 56
+    implicitHeight: 70
 
     // Padding inside the button.
     readonly property int paddingX: 2
-    readonly property int paddingTop: 3
+    readonly property int paddingTop: 8
     readonly property int paddingBottom: 8
 
     Column {
@@ -38,7 +38,7 @@ Widgets.WidgetButton {
             }
             color: "#ffffff"
             font.family: "JetBrains Mono Nerd Font"
-            font.pixelSize: 18
+            font.pixelSize: 20
             font.bold: true
             horizontalAlignment: Text.AlignHCenter
             width: parent.width
@@ -48,7 +48,7 @@ Widgets.WidgetButton {
             text: String(root.now.getMinutes()).padStart(2, "0")
             color: "#ffffff"
             font.family: "JetBrains Mono Nerd Font"
-            font.pixelSize: 18
+            font.pixelSize: 20
             horizontalAlignment: Text.AlignHCenter
             width: parent.width
         }

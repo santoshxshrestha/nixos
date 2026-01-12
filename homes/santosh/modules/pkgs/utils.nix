@@ -19,6 +19,6 @@ with pkgs;
   swaybg
 
   # Provided via flake inputs (not nixpkgs).
-  inputs.quickshell.packages.${pkgs.system}.default
-  inputs.qml-niri.packages.${pkgs.system}.quickshell
+  # inputs.quickshell.packages.${stdenv.hostPlatform.system}.default
+  inputs.qml-niri.packages.${stdenv.hostPlatform.system}.quickshell
 ]

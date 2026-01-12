@@ -14,7 +14,7 @@ PanelWindow {
         bottom: true
     }
 
-    implicitWidth: 44
+    implicitWidth: 40
     color: "transparent"
 
     Rectangle {
@@ -30,7 +30,7 @@ PanelWindow {
 
         ColumnLayout {
             anchors.fill: parent
-            anchors.margins: 6
+            anchors.margins: 4
             spacing: 6
 
             // Top section

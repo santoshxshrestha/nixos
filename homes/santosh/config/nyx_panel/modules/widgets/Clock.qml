@@ -54,9 +54,10 @@ Widgets.WidgetButton {
             width: parent.width
         }
 
+        // seperator between time and date
         Rectangle {
             width: parent.width
-            height: 4
+            height: 3
             color: "#ffffff"
             opacity: 0.25
         }

@@ -40,7 +40,7 @@ WidgetButton {
 
     // Keep layout stable even if font differs.
     implicitWidth: implicitHeight
-    implicitHeight: 65
+    implicitHeight: label.font.pixelSize * 2 + 8
 
     Column {
         anchors {
@@ -50,7 +50,7 @@ WidgetButton {
             topMargin: root.paddingTop
             bottomMargin: root.paddingBottom
         }
-        spacing: 4
+        spacing: 2
 
         Text {
             text: Services.BatterySys.available ? batteryGlyph : "\udb80\udc79"
@@ -62,19 +62,19 @@ WidgetButton {
             width: parent.width
         }
 
-        // seperator between time and date
-        Rectangle {
-            width: parent.width
-            height: 3
-            color: "#ffffff"
-            opacity: 0.25
-        }
+        // // seperator between time and date
+        // Rectangle {
+        //     width: parent.width
+        //     height: 3
+        //     color: "#ffffff"
+        //     opacity: 0.25
+        // }
 
         Text {
             text: Services.BatterySys.available ? `${pct}%` : "N/A"
             color: root.label.color
             font.family: "JetBrains Mono Nerd Font"
-            font.pixelSize: 14
+            font.pixelSize: 10
             font.bold: true
             horizontalAlignment: Text.AlignHCenter
             width: parent.width

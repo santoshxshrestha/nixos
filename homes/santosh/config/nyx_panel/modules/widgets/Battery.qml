@@ -6,7 +6,6 @@ WidgetButton {
     id: root
 
     // Render as a single centered glyph so it always fits.
-    text: Services.BatterySys.available ? batteryGlyph : "\udb80\udc79"
 
     property int pct: Math.round(Services.BatterySys.percentage * 100)
 
@@ -41,6 +40,46 @@ WidgetButton {
 
     // Keep layout stable even if font differs.
     implicitWidth: implicitHeight
+    implicitHeight: 65
+
+    Column {
+        anchors {
+            fill: parent
+            leftMargin: root.paddingX
+            rightMargin: root.paddingX
+            topMargin: root.paddingTop
+            bottomMargin: root.paddingBottom
+        }
+        spacing: 4
+
+        Text {
+            text: Services.BatterySys.available ? batteryGlyph : "\udb80\udc79"
+            color: root.label.color
+            font.family: "JetBrains Mono Nerd Font"
+            font.pixelSize:root.label.font.pixelSize
+            font.bold: true
+            horizontalAlignment: Text.AlignHCenter
+            width: parent.width
+        }
+
+        // seperator between time and date
+        Rectangle {
+            width: parent.width
+            height: 3
+            color: "#ffffff"
+            opacity: 0.25
+        }
+
+        Text {
+            text: Services.BatterySys.available ? `${pct}%` : "N/A"
+            color: root.label.color
+            font.family: "JetBrains Mono Nerd Font"
+            font.pixelSize: 14
+            font.bold: true
+            horizontalAlignment: Text.AlignHCenter
+            width: parent.width
+        }
+    }
 
     // Tooltip-style info without cramming text into the button.
     // Quick and portable: just use the button's `toolTip` if available.

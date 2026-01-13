@@ -86,6 +86,7 @@ Widgets.WidgetButton {
             color: "#ffffff"
             font.family: "JetBrains Mono Nerd Font"
             font.pixelSize: 14
+            font.bold: true
             horizontalAlignment: Text.AlignHCenter
             width: parent.width
         }

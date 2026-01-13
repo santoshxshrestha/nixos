@@ -32,7 +32,8 @@ WidgetButton {
             onStreamFinished: {
                 const out = (this.text ?? "").trim();
                 const muted = out.includes("MUTED");
-                root.active = muted;
+                // active will change the color of the widget to be different then other which I dont want
+                // root.active = muted;
                 root.text = muted ? root.disabledIcon : root.enabledIcon;
             }
         }

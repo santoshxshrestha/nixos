@@ -8,7 +8,7 @@
       enable = true;
     };
     programs.nixvim.plugins.cmp-fish = {
-      enable = true;
+      enable = false;
     };
     programs.nixvim.plugins.cmp-git = {
       enable = true;
@@ -66,7 +66,7 @@
             { name = "spell"; }
             { name = "async_path"; }
             { name = "emoji"; }
-            { name = "fish"; }
+            # { name = "fish"; }
             { name = "git"; }
             { name = "latex_symbols"; }
             { name = "nvim_lsp_document_symbols"; }

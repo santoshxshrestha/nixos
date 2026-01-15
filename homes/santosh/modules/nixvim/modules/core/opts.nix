@@ -11,7 +11,8 @@
   config = lib.mkIf config.opts.enable {
     programs.nixvim.opts = {
       # Set the default shell to use (default: '/bin/sh')
-      shell = "${pkgs.nushell}/bin/nu";
+      # shell = "${pkgs.nushell}/bin/nu";
+
       # Disable GUI cursor styling (default: '')
       guicursor = "";
       # Make line numbers default (default: false)

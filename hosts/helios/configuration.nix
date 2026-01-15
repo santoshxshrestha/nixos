@@ -79,14 +79,12 @@
       "video"
       "audio"
     ];
-    shell = pkgs.fish;
+    shell = pkgs.bash;
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPEP4JsCAwBRTvHsIeruzVx93usGdU3D9Rx4KE/LWQ8s santosh@atlas"
     ];
     # shell = pkgs.nushell;
   };
-
-  programs.fish.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

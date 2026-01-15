@@ -88,6 +88,7 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+  programs.bash.enable = true;
 
   services.xserver.enable = true;
   services.libinput.touchpad.disableWhileTyping = true;

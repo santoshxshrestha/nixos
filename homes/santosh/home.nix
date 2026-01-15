@@ -44,6 +44,7 @@
     ./modules/shell/fish.nix
     ./modules/shell/nushell.nix
     ./modules/shell/carapace.nix
+    ./modules/shell/bash.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Wayland and Terminal Tools                    │

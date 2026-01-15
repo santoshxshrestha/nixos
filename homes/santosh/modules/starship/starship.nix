@@ -7,6 +7,7 @@ in
   programs.starship = {
     enable = true;
     enableFishIntegration = true;
+    enableBashIntegration = true;
     enableNushellIntegration = true;
     settings = prime.settings;
   };

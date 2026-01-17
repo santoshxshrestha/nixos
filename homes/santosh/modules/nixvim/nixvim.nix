@@ -6,9 +6,9 @@
   # ╰───────────────────────────────────────────────╯
   alpha.enable = true;
   colorschemes.enable = true;
-  indent-blankline.enable = false;
+  indent-blankline.enable = true;
   lualine.enable = true;
-  notify.enable = false;
+  notify.enable = true;
   snacks.enable = true;
   vim-tpipeline.enable = true;
 
@@ -18,7 +18,7 @@
   avante.enable = false;
   copilot-lua.enable = true;
   copilot-chat.enable = true;
-  justu.enable = false;
+  justu.enable = true;
 
   # ╭───────────────────────────────────────────────╮
   # │ Git and Navigation Plugins                    │
@@ -41,7 +41,7 @@
   comment.enable = true;
   misc.enable = true;
   formatter.enable = true;
-  noice.enable = false;
+  noice.enable = true;
   oil.enable = true;
   surround.enable = true;
   telescope.enable = true;

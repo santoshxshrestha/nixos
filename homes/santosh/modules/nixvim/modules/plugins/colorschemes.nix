@@ -54,6 +54,7 @@
           enable = true;
           settings = {
             transparent = false;
+            dimInactive = false;
             commonStyle = {
               italic = true;
               bold = false;

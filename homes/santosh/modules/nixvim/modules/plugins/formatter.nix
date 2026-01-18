@@ -33,6 +33,7 @@
             "markdown"
             "javascript"
             "typescript"
+            "typescriptreact"
           ];
           # Disable the TypeScript Language Server's built-in formatter to avoid conflicts
           disableTsServerFormatter = true;

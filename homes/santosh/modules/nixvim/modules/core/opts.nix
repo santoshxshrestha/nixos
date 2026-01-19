@@ -68,7 +68,8 @@
       # Creates a swapfile (default: true)
       swapfile = false;
       # Make indenting smarter again (default: false)
-      smartindent = true;
+      # this is handled by treesitter
+      smartindent = false;
       # '2' Always show tabs, '1' show if more than one tab, '0' never show (default: 1)
       showtabline = 0;
       # Allow backspace on (default: 'indent,eol,start')

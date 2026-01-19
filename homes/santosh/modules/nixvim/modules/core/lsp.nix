@@ -9,12 +9,13 @@
       enable = true;
       # ui = { border = "rounded"; };
       settings = {
-        diagnostic = {
-          diagnostic_only_current = true;
-          showCodeAction = true;
-          jumpNumShortcut = true;
-          # extend_related_information = true;
-        };
+        # diagnostic will be handled by nixvim diagnostic module
+        # diagnostic = {
+        #   diagnostic_only_current = true;
+        #   showCodeAction = true;
+        #   jumpNumShortcut = true;
+        #   # extend_related_information = true;
+        # };
         lightbulb = {
           enable = false;
         };
@@ -33,17 +34,18 @@
       # };
     };
 
-    # programs.nixvim.diagnostic = {
-    #   settings = {
-    #     virtual_text = {
-    #       spacing = 2;
-    #       prefix = "";
-    #     };
-    #     update_in_insert = true;
-    #     severity_sort = true;
-    #     signs = true;
-    #   };
-    # };
+    programs.nixvim.diagnostic = {
+      settings = {
+        virtual_text = {
+          current_line = true;
+          spacing = 2;
+          prefix = "";
+        };
+        update_in_insert = true;
+        severity_sort = true;
+        signs = true;
+      };
+    };
 
     programs.nixvim.plugins.lsp = {
       enable = true;

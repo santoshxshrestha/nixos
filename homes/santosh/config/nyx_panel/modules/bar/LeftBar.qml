@@ -33,55 +33,48 @@ PanelWindow {
             anchors.margins: 4
             spacing: 6
 
-            Visualizer {
-                id: visualizer
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                visible: active
-            }
-
-            // Normal UI; auto-hidden when audio is playing.
+            // Top section
             ColumnLayout {
-                Layout.fillHeight: true
-                Layout.fillWidth: true
-                visible: !visualizer.visible
+                Layout.alignment: Qt.AlignTop
                 spacing: 6
 
-                // Top section
-                ColumnLayout {
-                    Layout.alignment: Qt.AlignTop
-                    spacing: 6
+                Workspaces { Layout.fillWidth: true }
+            }
 
-                    Workspaces { Layout.fillWidth: true }
-                }
+            // Spacer between top and center (visualizer lives here)
+            Visualizer {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                opacity: active ? 1.0 : 0.0
+            }
 
-                // Spacer between top and center
-                Item { Layout.fillHeight: true }
+            // Center section
+            ColumnLayout {
+                Layout.alignment: Qt.AlignVCenter
+                spacing: 6
 
-                // Center section
-                ColumnLayout {
-                    Layout.alignment: Qt.AlignVCenter
-                    spacing: 6
+                Clock { Layout.fillWidth: true }
+            }
 
-                    Clock { Layout.fillWidth: true }
-                }
+            // Spacer between center and bottom (visualizer lives here)
+            Visualizer {
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                opacity: active ? 1.0 : 0.0
+            }
 
-                // Spacer between center and bottom
-                Item { Layout.fillHeight: true }
+            // Bottom section
+            ColumnLayout {
+                Layout.alignment: Qt.AlignBottom
+                spacing: 6
 
-                // Bottom section
-                ColumnLayout {
-                    Layout.alignment: Qt.AlignBottom
-                    spacing: 6
-
-                    Tray { Layout.fillWidth: true }
-                    Network { Layout.fillWidth: true }
-                    Brightness { Layout.fillWidth: true }
-                    Volume { Layout.fillWidth: true }
-                    Microphone { Layout.fillWidth: true }
-                    Battery { Layout.fillWidth: true }
-                    Notifications { Layout.fillWidth: true }
-                }
+                Tray { Layout.fillWidth: true }
+                Network { Layout.fillWidth: true }
+                Brightness { Layout.fillWidth: true }
+                Volume { Layout.fillWidth: true }
+                Microphone { Layout.fillWidth: true }
+                Battery { Layout.fillWidth: true }
+                Notifications { Layout.fillWidth: true }
             }
         }
     }

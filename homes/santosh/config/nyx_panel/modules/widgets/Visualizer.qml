@@ -18,10 +18,10 @@ Item {
     property real threshold: 0.5
 
     // How many line segments vertically.
-    property int bins: 80
+    property int bins: 10
 
     // Thickness of each segment.
-    property int lineThickness: 2
+    property int lineThickness: 1
 
     // Animation phase.
     property real phase: 0.0
@@ -98,6 +98,10 @@ Item {
 
     // Vertical stack of horizontal bars; looks like a wave through time.
     opacity: root.active ? 1.0 : 0.0
+
+    // Keep taking layout space even when hidden.
+    // (We hide via opacity in the parent layout.)
+    visible: true
 
     Item {
         id: wave

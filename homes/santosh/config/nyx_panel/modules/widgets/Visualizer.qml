@@ -3,11 +3,16 @@ import QtQuick.Layouts
 import Quickshell
 import Quickshell.Io
 
+import "../../services" as Services
+
 // Full-height audio "wave" visualizer.
 //
 // Drives from scripts/pw-peak.sh, which prints one float amplitude per line.
 Item {
     id: root
+
+    // When disabled, do not poll or animate.
+    readonly property bool enabled: !Services.Config.disableVisualizer
 
     // Audio is considered active if there are active playback streams.
     // This is a cheap, reliable proxy that doesn’t need DSP.
@@ -29,6 +34,14 @@ Item {
     // Internal ring buffer for the wave.
     property var history: []
 
+    onEnabledChanged: {
+        if (root.enabled) return;
+        root.active = false;
+        root.level = 0.0;
+        root.phase = 0.0;
+        root.history = [];
+    }
+
     function pushSample(v) {
         const nv = Math.max(0, Math.min(1.2, v));
         if (history.length === 0) {
@@ -43,7 +56,7 @@ Item {
     Timer {
         interval: 16
         repeat: true
-        running: true
+        running: root.enabled
         onTriggered: {
             if (!root.active) {
                 root.level = 0.0;
@@ -63,13 +76,14 @@ Item {
     }
 
     function refreshActive() {
+        if (!root.enabled) return;
         activeProc.running = true;
     }
 
     Timer {
         interval: 300
         repeat: true
-        running: true
+        running: root.enabled
         triggeredOnStart: true
         onTriggered: root.refreshActive()
     }
@@ -97,7 +111,7 @@ Item {
     }
 
     // Vertical stack of horizontal bars; looks like a wave through time.
-    opacity: root.active ? 1.0 : 0.0
+    opacity: (root.enabled && root.active) ? 1.0 : 0.0
 
     // Keep taking layout space even when hidden.
     // (We hide via opacity in the parent layout.)

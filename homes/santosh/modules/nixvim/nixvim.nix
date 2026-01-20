@@ -1,4 +1,4 @@
-{
+rec {
   imports = import ./modules/default.nix;
 
   # ╭───────────────────────────────────────────────╮
@@ -16,9 +16,10 @@
   # │ AI and Automation Plugins                     │
   # ╰───────────────────────────────────────────────╯
   avante.enable = false;
+
   copilot-lua.enable = true;
-  copilot-chat.enable = true;
-  justu.enable = true;
+  copilot-chat.enable = copilot-lua.enable;
+  justu.enable = copilot-lua.enable;
 
   # ╭───────────────────────────────────────────────╮
   # │ Git and Navigation Plugins                    │

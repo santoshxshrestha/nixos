@@ -56,6 +56,10 @@ js)
     echo "Executing JavaScript file: $file with 'node'..."
     node "$file"
     ;;
+ts)
+    echo "Executing TypeScript file: $file with 'ts-node'..."
+    tsc "$file" && node "${file%.ts}.js"
+    ;;
 rs)
     echo "Running Rust project: $file with 'cargo run'..."
     cargo run

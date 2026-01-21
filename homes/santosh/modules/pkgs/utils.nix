@@ -2,7 +2,6 @@
 with pkgs;
 [
   ffmpeg
-  wl-clipboard
   brightnessctl
   playerctl
   ripgrep
@@ -13,7 +12,6 @@ with pkgs;
   opencode
 
   obs-studio
-  xwayland-satellite
   vlc
   mpv
   swaybg
@@ -21,4 +19,10 @@ with pkgs;
   # Provided via flake inputs (not nixpkgs).
   # inputs.quickshell.packages.${stdenv.hostPlatform.system}.default
   inputs.qml-niri.packages.${stdenv.hostPlatform.system}.quickshell
+
+  (import ./rust/crane-rs.nix {
+    lib = lib;
+    rustPlatform = pkgs.rustPlatform;
+    fetchFromGitHub = pkgs.fetchFromGitHub;
+  })
 ]

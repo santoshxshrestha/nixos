@@ -13,4 +13,6 @@ with pkgs;
   mpvpaper
   hyprpaper
   wl-mirror
+  xwayland-satellite
+  wl-clipboard
 ]

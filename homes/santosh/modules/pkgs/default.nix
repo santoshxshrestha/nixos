@@ -1,4 +1,9 @@
-{ config, pkgs, inputs, ... }:
+{
+  config,
+  pkgs,
+  inputs,
+  ...
+}:
 let
   waylandPkgs = import ./wayland.nix { inherit pkgs; };
   fontsPkgs = import ./fonts.nix { inherit pkgs; };

@@ -1,7 +1,6 @@
 { pkgs }:
 with pkgs;
 [
-
   hyprlock
   rofi
   waybar

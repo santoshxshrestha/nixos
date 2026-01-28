@@ -30,6 +30,7 @@
     ./modules/rofi.nix
     ./modules/wlsunset.nix
     ./modules/nh.nix
+    ./modules/zathura.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Code editors                                  │

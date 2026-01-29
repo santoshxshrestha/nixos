@@ -174,8 +174,8 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     }
 
     // Draw cursor
-    float sdfCursor = getSdfRectangle(vu, currentCursor.xy - (currentCursor.zw * offsetFactor), currentCursor.zw * 0.5);
-    newColor = mix(newColor, CURRENT_CURSOR_COLOR, 1.0 - smoothstep(0.0, 0.01, sdfCursor));
+    // float sdfCursor = getSdfRectangle(vu, currentCursor.xy - (currentCursor.zw * offsetFactor), currentCursor.zw * 0.5);
+    // newColor = mix(newColor, CURRENT_CURSOR_COLOR, 1.0 - smoothstep(0.0, 0.01, sdfCursor));
 
     fragColor = newColor;
 }

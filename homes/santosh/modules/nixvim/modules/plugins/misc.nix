@@ -7,7 +7,7 @@
     programs.nixvim.plugins = {
       # automatically save files
       auto-save = {
-        enable = false;
+        enable = true;
       };
       # neotest for running tests
       neotest = {

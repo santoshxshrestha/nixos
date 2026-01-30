@@ -18,7 +18,7 @@
       theme = "catppuccin_mocha";
       editor = {
         line-number = "relative";
-        lsp.display-message  = true;
+        lsp.display-messages  = true;
       };
     };
   };

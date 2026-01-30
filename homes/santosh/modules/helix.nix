@@ -1,12 +1,25 @@
 {
   programs.helix = {
     enable = true;
-    languages = [
-      {
-        name = "rust";
-        enable = true;
-        auto-format = true;
-      }
-    ];
+    languages = {
+      language = [
+        {
+          name = "rust";
+          auto-format = true;
+        }
+        {
+          name = "nix";
+          auto-format = true;
+        }
+      ];
+
+    };
+    settings = {
+      theme = "catppuccin_mocha";
+      editor = {
+        line-number = "relative";
+        lsp.display-message  = true;
+      };
+    };
   };
 }

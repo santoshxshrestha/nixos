@@ -38,6 +38,7 @@
     ./modules/nixvim/nixvim.nix
     ./modules/vim.nix
     ./modules/zed.nix
+    ./modules/helix.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Shell                                         │

@@ -30,7 +30,7 @@
         };
 
         catppuccin = {
-          enable = false;
+          enable = true;
           settings = {
             show_end_of_buffer = false;
             transparent_background = true;
@@ -51,7 +51,7 @@
         };
 
         kanagawa = {
-          enable = true;
+          enable = false;
           settings = {
             transparent = false;
             dimInactive = false;

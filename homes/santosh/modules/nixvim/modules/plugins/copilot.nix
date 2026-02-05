@@ -14,19 +14,19 @@
           auto_refresh = false;
         };
         suggestion = {
-          enabled = true;
+          enabled = false;
           auto_trigger = true;
           debounce = 90;
           # If you’re using a completion plugin (like nvim-cmp), Copilot’s ghost text disappears while the completion menu is visible — avoids clashing with your completion popup.
           hide_during_completion = true;
-          keymap = {
-            accept = "<tab>";
-            accept_word = "<C-w>";
-            accept_line = "<C-f>";
-            next = "<M-]>";
-            prev = "<M-[>";
-            dismiss = "<C-d>";
-          };
+          # keymap = {
+          #   accept = "<tab>";
+          #   accept_word = "<C-w>";
+          #   accept_line = "<C-f>";
+          #   next = "<M-]>";
+          #   prev = "<M-[>";
+          #   dismiss = "<C-d>";
+          # };
         };
         filetypes = {
           "." = false;

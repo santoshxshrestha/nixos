@@ -19,7 +19,7 @@ rec {
 
   copilot-lua.enable = true;
   copilot-chat.enable = copilot-lua.enable;
-  justu.enable = copilot-lua.enable;
+  justu.enable = false;
 
   # ╭───────────────────────────────────────────────╮
   # │ Git and Navigation Plugins                    │

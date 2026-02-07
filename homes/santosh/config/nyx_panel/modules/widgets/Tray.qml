@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Layouts
 
+import Quickshell
 import Quickshell.Widgets
 import Quickshell.Services.SystemTray
 
@@ -30,8 +31,21 @@ ColumnLayout {
                 enabled: false
             }
 
+            QsMenuAnchor {
+                id: menuAnchor
+                anchor.item: btn
+
+                anchor.edges: Edges.Right | Edges.Top
+                anchor.gravity: Edges.Right | Edges.Bottom
+                anchor.margins.right: 6
+            }
+
             onLeftClicked: modelData.activate()
-            onRightClicked: modelData.secondaryActivate()
+            onRightClicked: {
+                if (!modelData.menu) return;
+                menuAnchor.menu = modelData.menu;
+                if (!menuAnchor.visible) menuAnchor.open();
+            }
 
             onWheelUp: modelData.scroll(120, false)
             onWheelDown: modelData.scroll(-120, false)

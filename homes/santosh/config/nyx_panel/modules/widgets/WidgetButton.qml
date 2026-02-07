@@ -25,6 +25,9 @@ Rectangle {
     signal wheelUp()
     signal wheelDown()
 
+    signal hoverEntered()
+    signal hoverExited()
+
     radius: 6
     color: "transparent"
     opacity: 1
@@ -60,11 +63,13 @@ Rectangle {
         onEntered: {
             bg.opacity = root.hoverOpacity
             label.opacity = root.hoverTextOpacity
+            root.hoverEntered();
         }
 
         onExited: {
             bg.opacity = root.active ? root.activeOpacity : root.normalOpacity
             label.opacity = root.normalTextOpacity
+            root.hoverExited();
         }
 
         onClicked: (mouse) => {

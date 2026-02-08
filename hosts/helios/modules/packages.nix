@@ -8,7 +8,6 @@
     git
     vim
     neovim
-    hyprland
     stow
     networkmanagerapplet
     pavucontrol

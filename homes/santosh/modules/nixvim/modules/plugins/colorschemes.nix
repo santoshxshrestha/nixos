@@ -90,18 +90,8 @@
 
       extraPlugins = [
         (pkgs.vimPlugins.falcon)
-
-        (pkgs.vimUtils.buildVimPlugin {
-          pname = "vague-nvim";
-          version = "1.4.1";
-          src = pkgs.fetchFromGitHub {
-            owner = "vague2k";
-            repo = "vague.nvim";
-            rev = "v1.4.1";
-            sha256 = "sha256-isROQFePz8ofJg0qa3Avbwh4Ml4p9Ii2d+VAAkbeGO8=";
-          };
-        })
-
+        (pkgs.vimPlugins.kanso-nvim)
+        (pkgs.vimPlugins.vague-nvim)
         (pkgs.vimUtils.buildVimPlugin {
           pname = "black-metal-theme-neovim";
           version = "6d0207871387077f40d5396ab1ae90520e688d36";

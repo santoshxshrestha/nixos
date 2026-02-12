@@ -10,7 +10,7 @@ ColumnLayout {
     // Map workspace index -> icon.
     readonly property var icons: ({
         1: "\uf120",       // terminal
-        2: "\udb80\ude39", // code
+        2: "\udb80\ude39", // firefox
         3: "3",
         4: "4",
         5: "5",
@@ -36,14 +36,15 @@ ColumnLayout {
             active: model.isActive
 
             // Slightly smaller glyph for workspace indicator.
-            label.font.pixelSize: 12
+            label.font.pixelSize: 20
 
             text: {
                 const index = model.idx ?? model.index ?? model.id;
-                const workspaceIcon = root.icons[index] ?? String(index);
+                // const workspaceIcon = root.icons[index] ?? String(index);
+                const workspaceIcon = String("\udb82\udee5");
 
                 // Focused: mapped icon. Others: inactive marker only.
-                return model.isActive ? workspaceIcon : "\u2022";
+                return model.isActive ? workspaceIcon : "\udb82\udee3";
             }
 
             onLeftClicked: Services.Niri.focusWorkspaceById(model.id)

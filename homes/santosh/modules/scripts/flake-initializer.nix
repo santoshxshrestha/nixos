@@ -20,7 +20,8 @@ let
 
       if [ "$LOCAL_FLAG" = "--local" ]; then
           echo "Setting up local flake files..."
-          curl -fsSL -O "https://raw.githubusercontent.com/santoshxshrestha/initflake/main/$FLAKE_TYPE/flake.nix"
+          wget -q "https://raw.githubusercontent.com/santoshxshrestha/initflake/main/$FLAKE_TYPE/flake.nix" -O flake.nix
+          wget -q "https://raw.githubusercontent.com/santoshxshrestha/initflake/main/$FLAKE_TYPE/flake.lock" -O flake.lock
 
           if [ -d ".git" ]; then
               echo "Git repository detected, adding files to git..."
@@ -32,7 +33,7 @@ let
 
               echo "use flake" >.envrc
 
-              git add flake.nix .envrc
+              git add flake.nix flake.lock .envrc
               git commit -m "chore(flakes): add initial flake.nix"
           else
               echo "No git repository found, skipping git operations"

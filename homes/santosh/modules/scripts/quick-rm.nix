@@ -3,7 +3,7 @@ let
   quick-rm = pkgs.writeShellScriptBin "quick-rm" ''
     #!/usr/bin/env bash
 
-               ${pkgs.fzf}/bin/fzf --reverse --prompt="✦ ❯ " --header="━━━━━━━━━━━━━━━ ✦ quick-rm✦ ━━━━━━━━━━━━━━━" \
+               ${pkgs.fzf}/bin/fzf --reverse --multi --prompt="✦ ❯ " --header="━━━━━━━━━━━━━━━ ✦ quick-rm✦ ━━━━━━━━━━━━━━━" \
                    --header-first \
                    --color="header:italic" \
                    --ignore-case \

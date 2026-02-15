@@ -12,7 +12,7 @@ let
                    --input-border=rounded \
                    --preview='${pkgs.coreutils}/bin/cat {}' \
                    --preview-border=rounded \
-                   --preview-window=right:50%:wrap | xargs -r -0 rm -vf
+                   --preview-window=right:50%:wrap | xargs -r rm -vf
   '';
 in
 {

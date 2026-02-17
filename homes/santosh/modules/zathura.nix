@@ -6,6 +6,9 @@
       default-fg = "#c0caf5";
 
       recolor = true;
+
+      # copy selections to the system cliboard
+      selection-clipboard = "clipboard";
     };
   };
 }

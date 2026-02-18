@@ -8,5 +8,5 @@ Item {
     property bool disableVisualizer: true
 
     // When true, the active workspace icon does not spin.
-    property bool disableWorkspaceSpin: false
+    property bool disableWorkspaceSpin: true
 }

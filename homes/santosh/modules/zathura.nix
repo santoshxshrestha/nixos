@@ -8,7 +8,10 @@
 
       recolor = true;
 
-      # recolor-darkcolor = "#FFFFFF";
+      # text should be some what easy on eyes
+      recolor-darkcolor = "#c0caf5";
+
+      # transparent color rather then white backround color
       recolor-lightcolor = "rgba(0,0,0,0)";
 
       # copy selections to the system cliboard

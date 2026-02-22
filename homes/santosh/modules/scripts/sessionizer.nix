@@ -7,14 +7,18 @@ let
         selected=$1
     else
         selected=$(
-            find ${config.home.homeDirectory} ${config.home.homeDirectory}/nixos -mindepth 1 -maxdepth 4 -type d | ${pkgs.fzf}/bin/fzf --reverse --prompt="✦ ❯ " --header="━━━━━━━━━━━━━━━ ✦ SESSIONIZER ✦ ━━━━━━━━━━━━━━━" \
+
+    find ${config.home.homeDirectory} ${config.home.homeDirectory}/nixos -mindepth 1 -maxdepth 4 \
+                \( -name "node_modules" -o -name ".git" -o -name "target" \) -prune -o \
+                -type d -print | \
+                ${pkgs.fzf}/bin/fzf --reverse --prompt="✦ ❯ " --header="━━━━━━━━━━━━━━━ ✦ SESSIONIZER ✦ ━━━━━━━━━━━━━━━" \
                 --header-first \
                 --color="header:italic" \
                 --ignore-case \
                 --wrap \
                 --info=hidden \
                 --input-border=rounded \
-                --preview='${pkgs.tree}/bin/tree -C -L 3 -I "node_modules|.git|target" {}' \
+                --preview='${pkgs.tree}/bin/tree -C -L 3 {}' \
                 --preview-border=rounded \
                 --preview-window=right:50%:wrap
         )

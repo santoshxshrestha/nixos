@@ -8,7 +8,7 @@ rec {
   colorschemes.enable = true;
   indent-blankline.enable = true;
   lualine.enable = true;
-  notify.enable = true;
+  notify.enable = false;
   snacks.enable = true;
   vim-tpipeline.enable = true;
 

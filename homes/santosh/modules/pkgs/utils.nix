@@ -8,7 +8,6 @@ with pkgs;
   vscode
   gimp
   discord
-  mdwatch
   opencode
 
   obs-studio
@@ -20,5 +19,5 @@ with pkgs;
   # inputs.quickshell.packages.${stdenv.hostPlatform.system}.default
   inputs.qml-niri.packages.${stdenv.hostPlatform.system}.quickshell
   inputs.crane-rs.packages.${stdenv.hostPlatform.system}.default
-
+  inputs.mdwatch.packages.${stdenv.hostPlatform.system}.default
 ]

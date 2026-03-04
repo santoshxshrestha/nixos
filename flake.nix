@@ -29,6 +29,7 @@
       url = "github:Mic92/sops-nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     nh = {
       url = "github:nix-community/nh";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -36,6 +37,11 @@
 
     crane-rs = {
       url = "github:santoshxshrestha/crane-rs";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    mdwatch = {
+      url = "github:santoshxshrestha/mdwatch";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

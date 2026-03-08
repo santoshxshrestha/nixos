@@ -5,7 +5,7 @@
     plugins = with pkgs.vimPlugins; [
       vim-airline
       vim-nix
-      ctrlp
+      ctrlp-vim
       vim-commentary
       vim-surround
       vim-fugitive

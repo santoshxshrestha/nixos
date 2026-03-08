@@ -5,9 +5,9 @@
   };
   config = lib.mkIf config.systemd.enable {
     systemd = {
-      sleep.extraConfig = ''
-        HibernateDelaySec=20min
-      '';
+      sleep.settings.Sleep = {
+        HibernateDelaySec = "20min";
+      };
     };
   };
 }

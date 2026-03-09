@@ -362,7 +362,8 @@
         "nixvim": "nixvim",
         "qml-niri": "qml-niri",
         "quickshell": "quickshell",
-        "sops-nix": "sops-nix"
+        "sops-nix": "sops-nix",
+        "wallpaper-archive": "wallpaper-archive"
       }
     },
     "rust-analyzer-src": {
@@ -449,6 +450,26 @@
       "original": {
         "owner": "numtide",
         "repo": "treefmt-nix",
+        "type": "github"
+      }
+    },
+    "wallpaper-archive": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1773046677,
+        "narHash": "sha256-b74jVJ+55CLdIcUibvvAJpgcEQv5uHEEaF393k8ZOHs=",
+        "owner": "santoshxshrestha",
+        "repo": "wallpaper-archive",
+        "rev": "58760bf324a0c1992c1309173616d5dbfa70c60c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "santoshxshrestha",
+        "repo": "wallpaper-archive",
         "type": "github"
       }
     }

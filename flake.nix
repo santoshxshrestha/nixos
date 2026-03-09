@@ -44,6 +44,11 @@
       url = "github:santoshxshrestha/mdwatch";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    wallpaper-archive = {
+      url = "github:santoshxshrestha/wallpaper-archive";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =

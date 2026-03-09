@@ -5,7 +5,7 @@ if pgrep mpvpaper >/dev/null; then
     pkill mpvpaper
 fi
 
-WALLPAPER_DIR="$WALLPAPER_ARCHIVE_PATH/Static-Wallpapers"
+WALLPAPER_DIR="$WALLPAPER_ARCHIVE_PATH/wallpapers"
 
 if ! pgrep hyprpaper >/dev/null; then
     hyprpaper &

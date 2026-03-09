@@ -8,7 +8,7 @@ let
   theme = "${config.home.homeDirectory}/.config/rofi/themes/wallpaper-selector.rasi";
   rofi-wallpaper-selector = pkgs.writeShellScriptBin "rofi-wallpaper-selector" ''
     #!/usr/bin/env bash
-    WALLPAPER_DIR="$WALLPAPER_ARCHIVE_PATH/Static-Wallpapers"
+    WALLPAPER_DIR="$WALLPAPER_ARCHIVE_PATH/wallpapers"
 
     if [${currentDesktop} == "hyprland"]; then
     HYPRLAND=true

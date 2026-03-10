@@ -58,16 +58,9 @@ Item {
 
     function setWallpaper(filePath: string): void {
         currentWallpaper = filePath;
-        applyProc.command = ["sh", "-c",
+        Quickshell.execDetached(["sh", "-c",
             "pkill swaybg || true; sleep 0.2; swaybg -m fill -o\\* -i '" + filePath + "' & ln -sf '" + filePath + "' ~/.current_wallpaper"
-        ];
-        applyProc.running = true;
-    }
-
-    // Process to apply the wallpaper.
-    Process {
-        id: applyProc
-        command: ["true"]
+        ]);
     }
 
     // Process to scan the wallpaper directory.

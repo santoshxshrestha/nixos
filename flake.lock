@@ -460,11 +460,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1773046677,
-        "narHash": "sha256-b74jVJ+55CLdIcUibvvAJpgcEQv5uHEEaF393k8ZOHs=",
+        "lastModified": 1773134351,
+        "narHash": "sha256-gKG4md5cZJahu0WPs0YnzRlNIBQjYDa5xwukZmTsh30=",
         "owner": "santoshxshrestha",
         "repo": "wallpaper-archive",
-        "rev": "58760bf324a0c1992c1309173616d5dbfa70c60c",
+        "rev": "9da8374db08e27946adf80cf976296aead9090f7",
         "type": "github"
       },
       "original": {

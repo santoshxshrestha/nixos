@@ -26,16 +26,36 @@ Item {
     property string wallpaperDir: "/nix/store/5171ic8fb6x33vczirzdabribbf7prqv-source/wallpapers"
 
     function toggle(): void {
-        panelVisible = !panelVisible;
+        if (panelVisible) {
+            hide();
+        } else {
+            show();
+        }
     }
 
     function show(): void {
+        syncSelectedIndex();
         panelVisible = true;
     }
 
     function hide(): void {
         panelVisible = false;
     }
+
+    // Set selectedIndex to match currentWallpaper in the wallpapers list.
+    function syncSelectedIndex(): void {
+        if (wallpapers.length === 0 || currentWallpaper === "") return;
+        for (let i = 0; i < wallpapers.length; i++) {
+            if (wallpapers[i] === currentWallpaper) {
+                selectedIndex = i;
+                return;
+            }
+        }
+    }
+
+    // Auto-sync when wallpapers list or currentWallpaper finishes loading.
+    onWallpapersChanged: syncSelectedIndex()
+    onCurrentWallpaperChanged: syncSelectedIndex()
 
     function selectNext(): void {
         if (wallpapers.length > 0) {

@@ -27,7 +27,7 @@ PanelWindow {
     exclusionMode: ExclusionMode.Ignore
     focusable: true
 
-    readonly property int thumbWidth: 200
+    readonly property int thumbWidth: 300
     readonly property int thumbSpacing: 6
     readonly property int itemStep: thumbWidth + thumbSpacing  // 206
     readonly property int indicatorHeight: 4

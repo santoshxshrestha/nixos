@@ -134,11 +134,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1772827752,
-        "narHash": "sha256-RHeDSTQ/zYVFRKCUb8v79sgHXCnBxwGRi8KNaW8d5X0=",
+        "lastModified": 1773080071,
+        "narHash": "sha256-aAa9Y1aKfZVnUyNkEUM7FJKEvQsX9BUqGlTb9zhZzTk=",
         "owner": "santoshxshrestha",
         "repo": "mdwatch",
-        "rev": "4466190ab847d6f323bcd00e876f1ec7f2ce2455",
+        "rev": "4f2d3509f8989dd242163bcf12774f22e457e5cb",
         "type": "github"
       },
       "original": {

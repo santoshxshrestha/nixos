@@ -69,7 +69,7 @@ PanelWindow {
                 spacing: 6
 
                 Tray { Layout.fillWidth: true }
-                Network { Layout.fillWidth: true }
+                // Network { Layout.fillWidth: true }
                 Brightness { Layout.fillWidth: true }
                 Volume { Layout.fillWidth: true }
                 Microphone { Layout.fillWidth: true }

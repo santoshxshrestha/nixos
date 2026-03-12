@@ -10,7 +10,7 @@ ShellRoot {
     // Ensure singletons are instantiated on startup.
     property var _niri: Services.Niri
     property var _batterySys: Services.BatterySys
-    property var _network: Services.Network
+    // property var _network: Services.Network
     property var _wallpaper: Services.Wallpaper
 
     LazyLoader {

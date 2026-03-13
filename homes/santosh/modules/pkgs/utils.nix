@@ -14,6 +14,10 @@ with pkgs;
   vlc
   mpv
   swaybg
+  # hashcat
+  aircrack-ng
+  # hcxtools
+  macchanger
 
   # Provided via flake inputs (not nixpkgs).
   # inputs.quickshell.packages.${stdenv.hostPlatform.system}.default

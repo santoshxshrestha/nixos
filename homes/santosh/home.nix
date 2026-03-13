@@ -109,7 +109,7 @@
     recursive = true;
   };
 
-  home.file."./.local/scripts" = {
+  home.file.".local/scripts" = {
     source = ./scripts;
     recursive = true;
   };

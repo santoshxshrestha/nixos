@@ -39,20 +39,20 @@ It provides a reproducible, declarative setup for my daily development and deskt
 ├── .editorconfig
 ├── .github/
 │   └── assets/
-├── flake.lock
 ├── flake.nix
-├── homes/
-│   └── santosh/
-│       ├── assets/
-│       ├── config/
-│       ├── modules/
-│       ├── scripts/
-│       └── home.nix
+├── flake.lock
 ├── hosts/
 │   └── helios/
-│       ├── modules/
 │       ├── configuration.nix
-│       └── hardware-configuration.nix
+│       ├── hardware-configuration.nix
+│       └── modules/
+├── homes/
+│   └── santosh/
+│       ├── home.nix
+│       ├── modules/
+│       ├── config/
+│       ├── scripts/
+│       └── assets/
 ├── secrets/
 ├── wallpapers/
 ├── README.md

@@ -4,9 +4,11 @@
   nixos
 </h1>
 
-# ⚠️ Personal NixOS & Home Manager Configuration
+<div align="center">
+  <h1> Personal NixOS & Home Manager Configuration.</h1> <br/>
+</div>
 
-> **Warning:**  
+> [!CAUTION]
 > This repository contains my personal NixOS and Home Manager configuration.  
 > **Do not use, fork, or adapt this configuration unless you fully understand every part of it.**  
 > It is tailored for my hardware, workflow, and preferences, and is not intended for external use or collaboration.

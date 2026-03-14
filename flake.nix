@@ -1,5 +1,5 @@
 {
-  description = "flake for santosh";
+  description = "flake for nixos configuration of vimlinuz";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
@@ -36,17 +36,17 @@
     };
 
     crane-rs = {
-      url = "github:santoshxshrestha/crane-rs";
+      url = "github:vimlinuz/crane-rs";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     mdwatch = {
-      url = "github:santoshxshrestha/mdwatch";
+      url = "github:vimlinuz/mdwatch";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
     wallpaper-archive = {
-      url = "github:santoshxshrestha/wallpaper-archive";
+      url = "github:vimlinuz/wall-archive";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };

@@ -5,7 +5,7 @@ let
     pluginName = "tmux-session-manager";
     name = "tmux-session-manager";
     src = pkgs.fetchFromGitHub {
-      owner = "santoshxshrestha";
+      owner = "vimlinuz";
       repo = "tmux-session-manager";
       rev = "07c0d4447a40248bea4f04ab9b61263512394500";
       sha256 = "sha256-94s2I7NUKy0rTdNcI5105LPK/TNDdF2Cuegdxuz6qYA=";

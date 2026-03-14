@@ -150,8 +150,8 @@
     enable = true;
     settings = {
       user = {
-        name = "santoshxshrestha";
-        email = "santoshxshrestha@gmail.com";
+        name = "vimlinuz";
+        email = "vimlinuz@gmail.com";
       };
       extraConfig = {
         init.defaultBranch = "main";

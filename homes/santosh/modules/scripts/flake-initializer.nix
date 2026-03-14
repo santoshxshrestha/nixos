@@ -11,7 +11,7 @@ let
 
       if [ "$1" = "--list" ] || [ "$1" = "-l" ]; then
           echo "Available flake types:"
-          curl -fsSL https://api.github.com/repos/santoshxshrestha/initflake/contents | ${pkgs.jq}/bin/jq '.[] | select(.type == "dir") | .name'
+          curl -fsSL https://api.github.com/repos/vimlinuz/initflake/contents | ${pkgs.jq}/bin/jq '.[] | select(.type == "dir") | .name'
           exit 0
       fi
 
@@ -20,8 +20,8 @@ let
 
       if [ "$LOCAL_FLAG" = "--local" ]; then
           echo "Setting up local flake files..."
-          wget -q "https://raw.githubusercontent.com/santoshxshrestha/initflake/main/$FLAKE_TYPE/flake.nix" -O flake.nix
-          wget -q "https://raw.githubusercontent.com/santoshxshrestha/initflake/main/$FLAKE_TYPE/flake.lock" -O flake.lock
+          wget -q "https://raw.githubusercontent.com/vimlinuz/initflake/main/$FLAKE_TYPE/flake.nix" -O flake.nix
+          wget -q "https://raw.githubusercontent.com/vimlinuz/initflake/main/$FLAKE_TYPE/flake.lock" -O flake.lock
 
           if [ -d ".git" ]; then
               echo "Git repository detected, adding files to git..."
@@ -46,7 +46,7 @@ let
           echo "✓ Local flake files downloaded and configured"
       else
           echo "Setting up remote flake reference..."
-          echo "use flake \"github:santoshxshrestha/initflake?dir=$FLAKE_TYPE\"" >.envrc
+          echo "use flake \"github:vimlinuz/initflake?dir=$FLAKE_TYPE\"" >.envrc
           direnv allow
           echo "✓ Remote flake configured"
       fi

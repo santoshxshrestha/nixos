@@ -74,6 +74,7 @@ It provides a reproducible, declarative setup for my daily development and deskt
 > **Note:**  
 > This is a personal configuration repository for NixOS and Home Manager.  
 > Contributions, issues, or pull requests are **not** accepted as this repository is entirely tailored to my specific hardware, workflow, and preferences.
+
 ---
 
 **Thinking of using NixOS or Home Manager?**  

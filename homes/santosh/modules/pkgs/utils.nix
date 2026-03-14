@@ -18,6 +18,7 @@ with pkgs;
   aircrack-ng
   # hcxtools
   macchanger
+  libreoffice
 
   # Provided via flake inputs (not nixpkgs).
   # inputs.quickshell.packages.${stdenv.hostPlatform.system}.default

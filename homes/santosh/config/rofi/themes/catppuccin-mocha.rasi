@@ -1,5 +1,5 @@
 configuration {
-    modi: "drun,run,window,ssh";
+    modi: "drun,window,run,ssh";
     show-icons: true;
     terminal: "kitty";
     icon-theme: "Papirus";
@@ -15,9 +15,15 @@ configuration {
     kb-row-up: "Up,Control+p";
     kb-row-down: "Down,Control+n";
     kb-accept-entry: "Return,KP_Enter";
-    kb-mode-next: "Shift+Right";
-    kb-mode-previous: "Shift+Left";
+
+    kb-mode-complete: "";
+    kb-clear-line: "";
+
+    kb-mode-next: "Control+l";
+
+    kb-mode-previous: "Ctrl+h";
     kb-remove-char-back: "BackSpace";
+    kb-remove-word-back: "Control+w,Control+BackSpace";
 }
 
 * {

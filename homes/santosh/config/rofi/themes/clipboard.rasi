@@ -15,35 +15,22 @@ configuration {
     font: "JetBrainsMono Nerd Font 10";
 
     /* Catppuccin Mocha Colors with transparency */
-    base:        #1e1e2ed9;   /* 85% opacity */
-    mantle:      #181825d9;
-    crust:       #11111bd9;
-    surface0:    #313244d9;
-    surface1:    #45475ad9;
-    surface2:    #585b70d9;
-    text:        #cdd6f4;
-    subtext1:    #bac2de;
-    subtext0:    #a6adc8;
-    overlay2:    #9399b2;
-    overlay1:    #7f849c;
-    overlay0:    #6c7086;
-    blue:        #89b4fa;
-    lavender:    #b4befe;
-    sapphire:    #74c7ec;
-    sky:         #89dceb;
-    teal:        #94e2d5;
-    green:       #a6e3a1;
-    yellow:      #f9e2af;
-    peach:       #fab387;
-    maroon:      #eba0ac;
-    red:         #f38ba8;
-    mauve:       #cba6f7;
-    pink:        #f5c2e7;
-    flamingo:    #f2cdcd;
-    rosewater:   #f5e0dc;
+    base:        #000000cc;   /* 80% opacity */
+    mantle:      #181818cc;   /* near black */
+    crust:       #111111cc;   /* darker */
+    surface0:    #222222cc;   /* dark gray */
+    surface1:    #2f2f2fcc;   /* mid gray */
+    surface2:    #606060cc;   /* light gray border */
+    overlay1:    #7f7f7fcc;   /* overlay text gray */
+    overlay2:    #969696cc;   /* lighter overlay */
+    blue:        #444444cc;   /* gray accent, replaces blue */
+    lavender:    #606060cc;   /* gray accent, replaces lavender */
+    sky:         #444444cc;   /* gray accent, replaces sky */
+    red:         #606060cc;   /* gray accent, replaces red */
+    text:        #ffffff;
 
     background-color: @base;
-    text-color: @text;
+    text-color: #ffffff;
     margin: 0;
     padding: 0;
     spacing: 0;
@@ -82,22 +69,22 @@ textbox-prompt-colon {
     expand: false;
     str: "✦ ❯";
     background-color: transparent;
-    text-color: @blue;
+    text-color: #ffffff;
     font: "JetBrainsMono Nerd Font Bold 11";
 }
 
 entry {
     placeholder: "Search clipboard...";
     placeholder-color: @overlay1;
-    text-color: @text;
+    text-color: #ffffff;
     background-color: transparent;
 }
 
 num-filtered-rows {
-    text-color: @overlay1;
+    text-color: #ffffff;
     expand: false;
     background-color: transparent;
-    text-color: @blue;
+    text-color: #ffffff;
     font: "JetBrainsMono Nerd Font Bold 11";
 }
 
@@ -134,14 +121,14 @@ element {
 element normal.normal,
 element alternate.normal {
     background-color: @surface1;
-    text-color: @text;
+    text-color: #ffffff;
 }
 
 element selected.normal {
-    background-color: @blue;
-    text-color: @base;
+    background-color: #444444cc;
+    text-color: #ffffff;
     border: 1px;
-    border-color: @lavender;
+    border-color: #606060cc;
     border-radius: 12px;
 }
 
@@ -160,7 +147,7 @@ element-text {
 }
 
 button {
-    text-color: @overlay1;
+    text-color: #ffffff;
     border-radius: 12px;
     background-color: @surface2;
     padding: 6px 8px;
@@ -170,14 +157,14 @@ button {
 }
 
 button selected {
-    background-color: @blue;
-    text-color: @base;
-    border-color: @lavender;
+    background-color: #444444cc;
+    text-color: #ffffff;
+    border-color: #606060cc;
 }
 
 error-message {
     background-color: @red;
-    text-color: @base;
+    text-color: #ffffff;
     border-radius: 12px;
     padding: 12px;
 }

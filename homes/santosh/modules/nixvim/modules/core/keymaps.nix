@@ -130,7 +130,7 @@
       }
       # keep last yanked when pasting over some thing
       {
-        action = ''"_dp'';
+        action = ''"_dP'';
         key = "p";
         mode = [ "v" ];
         options = {

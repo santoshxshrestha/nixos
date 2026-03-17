@@ -132,7 +132,7 @@ element {
 
 element normal.normal,
 element alternate.normal {
-    background-color: @surface1;
+    background-color: transparent;
     text-color: #ffffff;
 }
 

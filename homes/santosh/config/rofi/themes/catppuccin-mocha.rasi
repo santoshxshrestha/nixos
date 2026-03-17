@@ -146,8 +146,21 @@ element selected.normal {
 
 element-icon {
     size: 18px;
-    padding: 0 8px 0 0;
+    padding: 0 8px 0 14px;
     background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: #ffffff;
+}
+
+element-text selected, element.selected.normal element-text {
+    background-color: #444444cc;
+    text-color: #ffffff;
+    border-radius: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 element-text {

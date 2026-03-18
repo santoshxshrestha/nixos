@@ -32,6 +32,8 @@
     ./modules/nh.nix
     ./modules/zathura.nix
 
+    ./modules/git.nix
+
     # ╭───────────────────────────────────────────────╮
     # │ Code editors                                  │
     # ╰───────────────────────────────────────────────╯
@@ -145,18 +147,6 @@
   #
   home.sessionVariables = {
     EDITOR = "nvim";
-  };
-  programs.git = {
-    enable = true;
-    settings = {
-      user = {
-        name = "vimlinuz";
-        email = "vimlinuz@gmail.com";
-      };
-      extraConfig = {
-        init.defaultBranch = "main";
-      };
-    };
   };
 
   # Let Home Manager install and manage itself.

@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   imports = [
     # ╭───────────────────────────────────────────────╮
@@ -33,6 +32,7 @@
     ./modules/zathura.nix
 
     ./modules/git.nix
+    ./modules/direnv.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Code editors                                  │
@@ -80,6 +80,11 @@
     # │ Wallpapers                                    │
     # ╰───────────────────────────────────────────────╯
     ./modules/wallpaper-archive.nix
+
+    # ╭───────────────────────────────────────────────╮
+    # │  Ricing                                        │
+    # ╰───────────────────────────────────────────────╯
+    ./modules/cursor.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should
@@ -151,27 +156,6 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
-  home.pointerCursor = {
-    gtk.enable = true;
-    x11.enable = true;
-    package = pkgs.bibata-cursors;
-    name = "Bibata-Original-Ice";
-    size = 20;
-  };
-
-  # home.pointerCursor = {
-  #   gtk.enable = true;
-  #   x11.enable = true;
-  #   package = pkgs.nightdiamond-cursors;
-  #   name = "NightDiamond-Blue";
-  #   size = 20;
-  # };
-
-  programs.direnv = {
-    enable = true;
-    nix-direnv.enable = true;
-  };
 
   nh.enable = true;
 }

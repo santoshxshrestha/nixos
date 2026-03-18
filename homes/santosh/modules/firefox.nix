@@ -93,10 +93,10 @@
           "default_area" = "menupanel";
         };
         # Unhook - Remove YouTube Recommended & Shorts
-        "83de0218-1541-41b8-aa80-20eac59173d9" = {
+        "myallychou@gmail.com" = {
           "installation_mode" = "force_installed";
           "install_url" =
-            "https://addons.mozilla.org/firefox/downloads/latest/unhook-remove-youtube-recommended-videos-and-shorts/latest.xpi";
+            "https://addons.mozilla.org/firefox/downloads/latest/youtube-recommended-videos/latest.xpi";
           "default_area" = "menupanel";
         };
       };

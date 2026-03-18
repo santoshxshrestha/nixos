@@ -363,7 +363,8 @@
         "qml-niri": "qml-niri",
         "quickshell": "quickshell",
         "sops-nix": "sops-nix",
-        "wallpaper-archive": "wallpaper-archive"
+        "wallpaper-archive": "wallpaper-archive",
+        "zen-browser": "zen-browser"
       }
     },
     "rust-analyzer-src": {
@@ -470,6 +471,29 @@
       "original": {
         "owner": "vimlinuz",
         "repo": "wall-archive",
+        "type": "github"
+      }
+    },
+    "zen-browser": {
+      "inputs": {
+        "home-manager": [
+          "home-manager"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1773737882,
+        "narHash": "sha256-P6k0BtT1/idYveVRdcwAZk8By9UjZW8XOMhSoS6wTBY=",
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
+        "rev": "a7f1db35d74faf04e5189b3a32f890186ace5c28",
+        "type": "github"
+      },
+      "original": {
+        "owner": "0xc000022070",
+        "repo": "zen-browser-flake",
         "type": "github"
       }
     }

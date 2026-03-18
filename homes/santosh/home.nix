@@ -25,7 +25,6 @@
     ./modules/zoxide.nix
     ./modules/btop.nix
     ./modules/bat.nix
-    ./modules/firefox.nix
     ./modules/rofi.nix
     ./modules/wlsunset.nix
     ./modules/nh.nix
@@ -85,6 +84,12 @@
     # │  Ricing                                        │
     # ╰───────────────────────────────────────────────╯
     ./modules/cursor.nix
+
+    # ╭───────────────────────────────────────────────╮
+    # │  Browsers                                     │
+    # ╰───────────────────────────────────────────────╯
+    ./modules/firefox.nix
+    ./modules/zen-browser.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

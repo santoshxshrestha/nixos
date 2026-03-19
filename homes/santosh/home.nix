@@ -32,6 +32,7 @@
 
     ./modules/git.nix
     ./modules/direnv.nix
+    ./modules/gh.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ Code editors                                  │

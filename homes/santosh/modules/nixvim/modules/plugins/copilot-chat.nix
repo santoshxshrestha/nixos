@@ -19,7 +19,7 @@
         highlight_selection = false;
         # model = "gpt-5.1-codex";
         # model = "gpt-5.3-codex";
-        model = "gpt-5-mini";
+        model = "gpt-4.1";
         window = {
           height = 1;
           width = 1;

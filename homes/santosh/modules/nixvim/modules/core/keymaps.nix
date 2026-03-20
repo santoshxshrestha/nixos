@@ -98,16 +98,16 @@
         options.desc = "Add tests for my code";
       }
       # using the api of terminal that I wrote
-      {
-        key = "<leader>t";
-        action = "<cmd>Terminal<CR>";
-        mode = [ "n" ];
-        options = {
-          silent = true;
-          noremap = true;
-          desc = "Opern floating terminal";
-        };
-      }
+      # {
+      #   key = "<leader>t";
+      #   action = "<cmd>Terminal<CR>";
+      #   mode = [ "n" ];
+      #   options = {
+      #     silent = true;
+      #     noremap = true;
+      #     desc = "Opern floating terminal";
+      #   };
+      # }
       {
         key = "<leader>f";
         action = "<cmd>Terminal code-runner<CR>";

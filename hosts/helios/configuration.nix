@@ -42,16 +42,16 @@
         efiSysMountPoint = "/boot";
       };
 
-      timeout = 0;
+      timeout = 5;
     };
 
-    consoleLogLevel = 3;
-    initrd.verbose = false;
-    kernelParams = [
-      "quiet"
-      "udev.log_level=3"
-      "systemd.show_status=auto"
-    ];
+    # consoleLogLevel = 3;
+    # initrd.verbose = false;
+    # kernelParams = [
+    #   "quiet"
+    #   "udev.log_level=3"
+    #   "systemd.show_status=auto"
+    # ];
   };
 
   networking.hostName = "helios"; # Define your hostname.

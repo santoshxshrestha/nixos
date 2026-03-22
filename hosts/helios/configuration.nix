@@ -21,6 +21,7 @@
     ./modules/logind.nix
     ./modules/keyd.nix
     ./modules/systemd.nix
+    ./modules/plymouth.nix
   ];
 
   sops.defaultSopsFile = ./sops.yaml;
@@ -28,19 +29,29 @@
   sops.age.keyFile = "${config.home.homeDirectory}/.config/sops/age/keys.txt";
 
   # Bootloader.
-  boot.loader = {
-    systemd-boot = {
-      enable = true;
-      configurationLimit = 20;
-      consoleMode = "auto";
+  boot = {
+    loader = {
+      systemd-boot = {
+        enable = true;
+        configurationLimit = 20;
+        consoleMode = "auto";
+      };
+
+      efi = {
+        canTouchEfiVariables = true;
+        efiSysMountPoint = "/boot";
+      };
+
+      timeout = 0;
     };
 
-    efi = {
-      canTouchEfiVariables = true;
-      efiSysMountPoint = "/boot";
-    };
-
-    timeout = 5;
+    consoleLogLevel = 3;
+    initrd.verbose = false;
+    kernelParams = [
+      "quiet"
+      "udev.log_level=3"
+      "systemd.show_status=auto"
+    ];
   };
 
   networking.hostName = "helios"; # Define your hostname.
@@ -143,6 +154,8 @@
 
   # Enable the systemd logind service to manage user logins.
   logind.enable = true;
+
+  plymouth.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

@@ -12,11 +12,11 @@
     boot = {
       plymouth = {
         enable = true;
-        # theme = "hud_3";
-        logo = pkgs.fetchurl {
-          url = "https://raw.githubusercontent.com/vimlinuz/nixos/refs/heads/main/.github/assets/nix-snowflake-colours.svg";
-          sha256 = "sha256-43taHBHoFJbp1GrwSQiVGtprq6pBbWcKquSTTM6RLrI=";
-        };
+        theme = "hud_3";
+        # logo = pkgs.fetchurl {
+        #   url = "https://raw.githubusercontent.com/vimlinuz/nixos/refs/heads/main/.github/assets/nix-snowflake-colours.svg";
+        #   sha256 = "sha256-43taHBHoFJbp1GrwSQiVGtprq6pBbWcKquSTTM6RLrI=";
+        # };
         themePackages = with pkgs; [
           # https://github.com/adi1090x/plymouth-themes?tab=readme-ov-file
           (adi1090x-plymouth-themes.override {

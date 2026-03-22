@@ -12,9 +12,9 @@
     boot = {
       plymouth = {
         enable = true;
-        theme = "cuts_alt";
+        theme = "hud_3";
         themePackages = with pkgs; [
-          # adi1090x-plymouth-themes
+          # https://github.com/adi1090x/plymouth-themes?tab=readme-ov-file
           (adi1090x-plymouth-themes.override {
             selected_themes = [
               "connect"
@@ -23,6 +23,7 @@
               "deus_ex"
               "double"
               "hexagon_dots"
+              "hexagon_dots_alt"
               "hud_3"
               "spinner_alt"
             ];

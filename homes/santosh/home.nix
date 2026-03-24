@@ -89,7 +89,7 @@
     # │  Browsers                                     │
     # ╰───────────────────────────────────────────────╯
     ./modules/firefox.nix
-    ./modules/zen-browser.nix
+    #./modules/zen-browser.nix
   ];
 
   # Home Manager needs a bit of information about you and the paths it should

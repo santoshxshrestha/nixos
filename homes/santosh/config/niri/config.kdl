@@ -393,7 +393,7 @@ binds {
     Super+V hotkey-overlay-title="Open a clipManager: " { spawn-sh "clipManager"; }
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Space hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -i -show drun"; }
-    Alt+Shift+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
+    Super+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
     Mod+B hotkey-overlay-title="Open the Web Browser: firefox" { spawn "firefox"; }
 
     // wallpaper selector binds

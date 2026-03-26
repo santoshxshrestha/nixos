@@ -5,7 +5,8 @@ with pkgs;
   brightnessctl
   playerctl
   ripgrep
-  vscode
+
+  # vscode
   gimp
   discord
   opencode

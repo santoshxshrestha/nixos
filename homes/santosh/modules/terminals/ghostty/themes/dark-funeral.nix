@@ -7,6 +7,8 @@
   # author: Andrea Schiavini (original code by Casey Miller)
 
   background = "#000000";
+  background-opacity = 0.8;
+
   # alternate, darker background #060f23
   foreground = "#c1c1c1";
   selection-background = "#333333";

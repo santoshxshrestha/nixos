@@ -3,6 +3,8 @@
   # Upstream: https://github.com/vague-theme/vague-ghostty/blob/main/vague
 
   background = "#141415";
+  background-opacity = 0.8;
+
   foreground = "#cdcdcd";
   cursor-color = "cell-foreground";
   cursor-text = "cell-background";

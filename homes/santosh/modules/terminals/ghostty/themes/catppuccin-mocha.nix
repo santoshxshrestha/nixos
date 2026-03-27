@@ -1,6 +1,7 @@
 {
 
-  background = "1e1e2e";
+  # background = "1e1e2e";
+  background = "#000000";
   foreground = "cdd6f4";
   background-opacity = 0.8;
 

@@ -2,7 +2,8 @@
   # Vague for Ghostty
   # Upstream: https://github.com/vague-theme/vague-ghostty/blob/main/vague
 
-  background = "#141415";
+  # background = "#141415";
+  background = "#000000";
   background-opacity = 0.8;
 
   foreground = "#cdcdcd";

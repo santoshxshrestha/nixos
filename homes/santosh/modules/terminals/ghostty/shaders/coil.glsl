@@ -145,23 +145,39 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     float progress = blend(clamp((iTime - iTimeCursorChange) / DURATION, 0.0, 1));
     float easedProgress = ease(progress);
 
+    // Determine movement length and skip coil effect for very small moves (e.g. moving a few letters)
     float lineLength = distance(centerCC, centerCP_new);
     float distanceToEnd = distance(vu.xy, centerCC);
-    float alphaModifier = distanceToEnd / (lineLength * easedProgress);
+
+    // Derive a movement threshold from cursor size (so it scales with font/cell size)
+    float cursorSize = length(currentCursor.zw);
+    float minMove = max(0.03, cursorSize * 1.25); // tune this value if you want more/less sensitivity
+
+    // Protect against division-by-zero when movement is near zero
+    float denom = max(lineLength * easedProgress, 1e-6);
+    float alphaModifier = distanceToEnd / denom;
     if (alphaModifier > 1.0) {
         alphaModifier = 1.0;
     }
 
-    // Enhanced tapering with smoothstep for smoother opacity falloff towards tail end
-    float trailOpacity = 1.0 - smoothstep(0.0, 1.0, alphaModifier);
+    // Default to no trail/arc
+    float trailOpacity = 0.0;
+    float arcAlpha = 0.0;
+    float glow = 0.0;
 
-    // Create electric arc effect
-    float arcThickness = 0.005 + 0.003 * sin(iTime * 30.0); // Pulsating thickness
-    float arc = electricArc(vu, centerCC, centerCP_new, iTime, easedProgress);
-    float arcAlpha = 1.0 - smoothstep(arcThickness * 0.5, arcThickness, arc);
+    // Only compute the coil/electric arc when the movement is large enough
+    if (lineLength >= minMove && easedProgress > 0.01) {
+        // Enhanced tapering with smoothstep for smoother opacity falloff towards tail end
+        trailOpacity = 1.0 - smoothstep(0.0, 1.0, alphaModifier);
 
-    // Add glow effect
-    float glow = 1.0 - smoothstep(arcThickness, arcThickness * 2.0, arc);
+        // Create electric arc effect
+        float arcThickness = 0.005 + 0.003 * sin(iTime * 30.0); // Pulsating thickness
+        float arc = electricArc(vu, centerCC, centerCP_new, iTime, easedProgress);
+        arcAlpha = 1.0 - smoothstep(arcThickness * 0.5, arcThickness, arc);
+
+        // Add glow effect
+        glow = 1.0 - smoothstep(arcThickness, arcThickness * 2.0, arc);
+    }
 
     vec4 newColor = fragColor;
 

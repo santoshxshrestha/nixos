@@ -32,5 +32,4 @@
     "14=#fbcb97"
     "15=#c1c1c1"
   ];
-  background-opacity = 0.8;
 }

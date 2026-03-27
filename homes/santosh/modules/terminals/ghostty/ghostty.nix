@@ -3,7 +3,8 @@
   programs.ghostty = {
     enable = true;
     settings = {
-      theme = "dark-funeral";
+      theme = "vague";
+
       command = "${pkgs.nushell}/bin/nu";
 
       font-family = "JetBrainsMono Nerd Font";
@@ -22,6 +23,8 @@
     };
     themes = {
       dark-funeral = import ./themes/dark-funeral.nix;
+      catppuccin-mocha = import ./themes/catppuccin-mocha.nix;
+      vague = import ./themes/vague.nix;
     };
   };
 }

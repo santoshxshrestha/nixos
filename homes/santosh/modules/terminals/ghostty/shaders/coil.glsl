@@ -149,6 +149,13 @@ void mainImage(out vec4 fragColor, in vec2 fragCoord) {
     float lineLength = distance(centerCC, centerCP_new);
     float distanceToEnd = distance(vu.xy, centerCC);
 
+   // - minMove — controls the minimum movement length that triggers the coil. Currently:
+   //       float minMove = max(0.03, cursorSize * 1.25);
+   //       Increase the 0.03 or the 1.25 multiplier to make the effect require larger moves. Example options:
+   //   - Mild: max(0.04, cursorSize * 1.5)
+   //   - Moderate: max(0.06, cursorSize * 2.0)
+   //   - Strict: max(0.10, cursorSize * 3.0)
+
     // Derive a movement threshold from cursor size (so it scales with font/cell size)
     float cursorSize = length(currentCursor.zw);
     float minMove = max(0.03, cursorSize * 1.25); // tune this value if you want more/less sensitivity

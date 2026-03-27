@@ -15,6 +15,7 @@
     ./modules/terminals/kitty.nix
     ./modules/terminals/alacritty/alacritty.nix
     ./modules/terminals/ghostty/ghostty.nix
+    ./modules/terminals/foot.nix
 
     # ╭───────────────────────────────────────────────╮
     # │ General Utility Modules                       │
@@ -68,7 +69,6 @@
     ./modules/scripts/sessionizer.nix
     ./modules/scripts/music-player.nix
     ./modules/scripts/cliphist-reset.nix
-
 
     ./modules/scripts/clipManager.nix
     ./modules/scripts/pomodoro.nix

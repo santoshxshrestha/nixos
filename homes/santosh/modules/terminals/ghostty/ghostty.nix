@@ -3,7 +3,7 @@
   programs.ghostty = {
     enable = true;
     settings = {
-      theme = "vague";
+      theme = "catppuccin-mocha";
 
       command = "${pkgs.nushell}/bin/nu";
 

@@ -114,7 +114,7 @@
         "toolkit.tabbox.switchByScrolling" = true;
 
         # Change browser homepage
-        # "browser.startup.homepage" = "https://santoshxshrestha.github.io/homerc/";
+        "browser.startup.homepage" = "https://vimlinuz.github.io/homerc";
 
         # Always restore session
         "browser.startup.page" = 3;

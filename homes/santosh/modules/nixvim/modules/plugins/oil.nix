@@ -20,7 +20,7 @@
           "<C-p>" = false;
 
           "<C-r>" = "actions.refresh";
-          "<C-o>" = "actions.select";
+          # "<C-o>" = "actions.select";
           "<C-v>" = "actions.select_vsplit";
         };
         skip_confirm_for_simple_edits = true;

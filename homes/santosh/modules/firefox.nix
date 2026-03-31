@@ -678,6 +678,49 @@
           margin-left: calc(4px * var(--show-margin)) !important;
         }
 
+        /* loading progress bar */
+        #navigator-toolbox {
+          position: relative !important;
+          overflow: visible !important;
+        }
+
+        #navigator-toolbox::after {
+          content: "" !important;
+          display: block !important;
+          position: absolute !important;
+          bottom: 0 !important;
+          left: 0 !important;
+          height: 3px !important;
+          width: var(--bar-pcent, 0%) !important;
+          background-color: var(--bar-colour, #5b8af0) !important;
+          border-radius: 0 2px 2px 0 !important;
+          z-index: 9999 !important;
+          transition: width 0.5s ease-in-out, background 0.2s ease !important;
+          pointer-events: none !important;
+        }
+        :root:has(.tabbrowser-tab[selected][busy]) {
+          --bar-colour: #e8e8e8;
+          --bar-pcent: 15%;
+        }
+        :root:has(.tabbrowser-tab[selected][busy][pendingicon]) {
+          --bar-colour: #e8e8e8;
+          --bar-pcent: 45%;
+        }
+        :root:has(.tabbrowser-tab[selected][busy][pendingicon][progress]) {
+          --bar-colour: #e8e8e8;
+          --bar-pcent: 85%;
+        }
+        :root:has(.tabbrowser-tab[selected][busy][progress]) {
+          --bar-colour: #e8e8e8;
+          --bar-pcent: 95%;
+        }
+        :root:has(.tabbrowser-tab[selected][muted]:not([busy])) {
+          --bar-colour: orangered;
+          --bar-pcent: 100%;
+        }
+        :root:has(.tabbrowser-tab[selected][muted]:not([busy])) #navigator-toolbox::after {
+          border-radius: 0 !important;
+        }
       '';
     };
   };

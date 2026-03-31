@@ -9,4 +9,5 @@ with pkgs;
   macchanger
   nmap
   burpsuite
+  wireshark
 ]

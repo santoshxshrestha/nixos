@@ -110,19 +110,19 @@
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
-  home.file.".config/kitty" = {
-    source = ./config/kitty;
-    recursive = true;
-  };
-
-  home.file.".config/rofi" = {
-    source = ./config/rofi;
-    recursive = true;
-  };
-
-  home.file.".local/scripts" = {
-    source = ./scripts;
-    recursive = true;
+  home.file = {
+    ".config/kitty" = {
+      source = ./config/kitty;
+      recursive = true;
+    };
+    ".local/scripts" = {
+      source = ./scripts;
+      recursive = true;
+    };
+    ".config/rofi" = {
+      source = ./config/rofi;
+      recursive = true;
+    };
   };
 
   home.file = {

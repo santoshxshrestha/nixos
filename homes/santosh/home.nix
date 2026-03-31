@@ -87,7 +87,7 @@
     # ╭───────────────────────────────────────────────╮
     # │  Browsers                                     │
     # ╰───────────────────────────────────────────────╯
-    ./modules/firefox.nix
+    ./modules/firefox/firefox.nix
     ./modules/zen-browser.nix
   ];
 

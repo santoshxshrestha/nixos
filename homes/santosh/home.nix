@@ -123,6 +123,10 @@
       source = ./config/rofi;
       recursive = true;
     };
+    ".config/niri" = {
+      source = ./config/niri;
+      recursive = true;
+    };
   };
 
   home.file = {

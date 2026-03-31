@@ -1,5 +1,4 @@
 {
-  config,
   pkgs,
   inputs,
   ...
@@ -9,9 +8,10 @@ let
   fontsPkgs = import ./fonts.nix { inherit pkgs; };
   utilsPkgs = import ./utils.nix { inherit pkgs inputs; };
   gamingPkgs = import ./gaming.nix { inherit pkgs; };
+  security_tools = import ./security_tools.nix { inherit pkgs; };
 in
 {
-  home.packages = waylandPkgs ++ fontsPkgs ++ utilsPkgs;
+  home.packages = waylandPkgs ++ fontsPkgs ++ utilsPkgs ++ security_tools;
   # # Adds the 'hello' command to your environment. It prints a friendly
   # # "Hello, world!" when run.
   # pkgs.hello

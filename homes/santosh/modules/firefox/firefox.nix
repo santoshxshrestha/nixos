@@ -59,7 +59,7 @@
         "browser.startup.page" = 3;
 
       };
-      userChrome = builtins.readFile ./userChrome.css;
+      userChrome = builtins.readFile ./nyx_fox.css;
     };
   };
 }

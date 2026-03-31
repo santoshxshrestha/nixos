@@ -8,4 +8,5 @@ with pkgs;
   # hcxtools
   macchanger
   nmap
+  burpsuite
 ]

@@ -11,9 +11,7 @@ let
     find ${config.home.homeDirectory} ${config.home.homeDirectory}/nixos -mindepth 1 -maxdepth 4 \
                 \( -name "node_modules" -o -name ".git" -o -name "target" \) -prune -o \
                 -type d -print | \
-                ${pkgs.fzf}/bin/fzf --reverse --prompt="✦ ❯ " --header="━━━━━━━━━━━━━━━ ✦ SESSIONIZER ✦ ━━━━━━━━━━━━━━━" \
-                --header-first \
-                --color="header:italic" \
+                ${pkgs.fzf}/bin/fzf --reverse --prompt="✦ ❯ " \
                 --ignore-case \
                 --wrap \
                 --info=hidden \

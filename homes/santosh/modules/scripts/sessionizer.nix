@@ -12,6 +12,7 @@ let
                 \( -name "node_modules" -o -name ".git" -o -name "target" \) -prune -o \
                 -type d -print | \
                 ${pkgs.fzf}/bin/fzf --reverse --prompt="✦ ❯ " \
+                --color="pointer:#ffffff,marker:#000000" \
                 --ignore-case \
                 --wrap \
                 --info=hidden \

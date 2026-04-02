@@ -19,44 +19,44 @@
         "pylsp"
       ];
     };
-    programs.nixvim.plugins.none-ls = {
-      enable = true;
-      enableLspFormat = true;
-      sources.formatting = {
-        prettier = {
-          enable = true;
-          settings.filetypes = [
-            "css"
-            "html"
-            "json"
-            "yaml"
-            "markdown"
-            "javascript"
-            "typescript"
-            "typescriptreact"
-          ];
-          # Disable the TypeScript Language Server's built-in formatter to avoid conflicts
-          disableTsServerFormatter = true;
-        };
-
-        stylua.enable = true;
-
-        shfmt = {
-          enable = true;
-          settings.extra_args = [
-            "-i"
-            "4"
-          ];
-        };
-
-        clang_format.enable = true;
-
-        nixfmt = {
-          enable = true;
-          package = pkgs.nixfmt;
-        };
-      };
-    };
+    # programs.nixvim.plugins.none-ls = {
+    #   enable = true;
+    #   enableLspFormat = true;
+    #   sources.formatting = {
+    #     # prettier = {
+    #     #   enable = true;
+    #     #   settings.filetypes = [
+    #     #     "css"
+    #     #     "html"
+    #     #     "json"
+    #     #     "yaml"
+    #     #     "markdown"
+    #     #     "javascript"
+    #     #     "typescript"
+    #     #     "typescriptreact"
+    #     #   ];
+    #     #   # Disable the TypeScript Language Server's built-in formatter to avoid conflicts
+    #     #   disableTsServerFormatter = true;
+    #     # };
+    #
+    #     stylua.enable = true;
+    #
+    #     shfmt = {
+    #       enable = true;
+    #       settings.extra_args = [
+    #         "-i"
+    #         "4"
+    #       ];
+    #     };
+    #
+    #     clang_format.enable = true;
+    #
+    #     nixfmt = {
+    #       enable = true;
+    #       package = pkgs.nixfmt;
+    #     };
+    #   };
+    # };
   };
 
   # programs.nixvim.autoCmd = [{

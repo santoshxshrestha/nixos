@@ -1,4 +1,4 @@
-{ pkgs, tmux-session-manager }:
+{ pkgs, ... }:
 with pkgs;
 [
   tmuxPlugins.sensible

@@ -1,16 +1,6 @@
 { pkgs, ... }:
 let
   colors = import ./modules/colors.nix;
-  tmux-session-manager = pkgs.tmuxPlugins.mkTmuxPlugin {
-    pluginName = "tmux-session-manager";
-    name = "tmux-session-manager";
-    src = pkgs.fetchFromGitHub {
-      owner = "vimlinuz";
-      repo = "tmux-session-manager";
-      rev = "07c0d4447a40248bea4f04ab9b61263512394500";
-      sha256 = "sha256-94s2I7NUKy0rTdNcI5105LPK/TNDdF2Cuegdxuz6qYA=";
-    };
-  };
 in
 {
   programs.tmux = {
@@ -23,7 +13,7 @@ in
     terminal = "xterm-256color";
     escapeTime = 0;
     baseIndex = 1;
-    plugins = import ./modules/plugins.nix { inherit pkgs colors tmux-session-manager; };
+    plugins = import ./modules/plugins.nix { inherit pkgs colors; };
 
     extraConfig = import ./modules/config.nix { inherit colors; };
   };

@@ -23,6 +23,9 @@
 
       # prevents the terminal from asking for confirmation when closing a surface with active processes
       confirm-close-surface = false;
+
+      # disables both keyboard copy and config reload notifications
+      app-notifications = false;
     };
     themes = {
       dark-funeral = import ./themes/dark-funeral.nix;

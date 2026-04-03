@@ -20,6 +20,9 @@
       cursor-style = "block";
       cursor-style-blink = false;
       # adjust-cursor-height = "-25%";
+
+      # prevents the terminal from asking for confirmation when closing a surface with active processes
+      confirm-close-surface = false;
     };
     themes = {
       dark-funeral = import ./themes/dark-funeral.nix;

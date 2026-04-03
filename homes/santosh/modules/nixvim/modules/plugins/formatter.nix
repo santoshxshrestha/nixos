@@ -24,6 +24,7 @@
       enableLspFormat = true;
       sources.formatting = {
         prettier = {
+          package = pkgs.prettier;
           enable = true;
           settings.filetypes = [
             "css"

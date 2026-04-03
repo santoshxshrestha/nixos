@@ -16,7 +16,7 @@ in
 {
   plugin = tmux-sm;
   extraConfig = ''
-    set -g @session_switcher_key 'J'
+    set -g @session_switcher_key 'j'
     # I will use the one that I alraedy use for creation of session
     set -g @session_create_key 'S'
     set -g @session_popup_width '80%'

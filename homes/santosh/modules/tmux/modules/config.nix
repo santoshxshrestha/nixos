@@ -13,10 +13,11 @@
 
   # Vim-Like Navigation
   bind-key ^ last-window
-  bind-key h select-pane -L
-  bind-key j select-pane -D
-  bind-key k select-pane -U
-  bind-key l select-pane -R
+  # bind-key h select-pane -L
+  # bind-key j select-pane -D
+  # bind-key k select-pane -U
+  # bind-key l select-pane -R
+
   # I'll thing of them later I am ok with pre n pre p
   # bind-key -r C-h select-window -t :-
   # bind-key -r C-l select-window -t :+
@@ -34,7 +35,7 @@
   #session management
   bind C command-prompt -p "New session name: " "new-session -d -s '%%'"  # Create new sessio
   # bind S command-prompt -p "Rename session:" "rename-session '%%'"
-  bind j choose-tree -Zs              # Interactive session chooser
+  # bind j choose-tree -Zs              # Interactive session chooser
 
   # For synchronize-panes mode
   bind = setw synchronize-panes

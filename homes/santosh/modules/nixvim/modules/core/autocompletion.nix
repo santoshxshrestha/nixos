@@ -1,4 +1,21 @@
-{ config, lib, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
+let
+  copilot-cmp = pkgs.vimUtils.buildVimPlugin {
+    pname = "copilot-cmp";
+    version = "bac5bc30a0fff90105344d9bc7e34113381ffad0";
+    src = pkgs.fetchFromGitHub {
+      owner = "vimlinuz";
+      repo = "copilot-cmp";
+      rev = "bac5bc30a0fff90105344d9bc7e34113381ffad0";
+      sha256 = "sha256-PEBrbfA6+zym64kG0n9W6lxHwCa6sWLaV2kT/+SBYyw=";
+    };
+  };
+in
 {
   options = {
     autocompletion.enable = lib.mkEnableOption "Enable/disable custom autocompletion setup";
@@ -36,6 +53,9 @@
     };
     programs.nixvim.plugins.copilot-cmp = {
       enable = true;
+      package = copilot-cmp.overrideAttrs {
+        dependencies = [ pkgs.vimPlugins.copilot-lua ];
+      };
     };
 
     programs.nixvim.plugins.lspkind = {

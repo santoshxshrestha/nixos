@@ -21,7 +21,7 @@ in
     set -g @session_create_key 'S'
     set -g @session_popup_width '80%'
     set -g @session_popup_height '60%'
-    set -g @session_switcher_header ""
-    set -g @session_creator_header ""
+    set -g @session_switcher_header ' '
+    set -g @session_creator_header ' '
   '';
 }

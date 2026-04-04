@@ -92,17 +92,7 @@
         (pkgs.vimPlugins.falcon)
         (pkgs.vimPlugins.kanso-nvim)
         (pkgs.vimPlugins.vague-nvim)
-        (pkgs.vimUtils.buildVimPlugin {
-          pname = "black-metal-theme-neovim";
-          version = "6d0207871387077f40d5396ab1ae90520e688d36";
-          src = pkgs.fetchFromGitHub {
-            owner = "metalelf0";
-            repo = "black-metal-theme-neovim";
-            rev = "6d0207871387077f40d5396ab1ae90520e688d36";
-            sha256 = "sha256-sRbXxekmQuL412AJKrSkI1EdcuYQkKm1qfcIyMNhLBA=";
-          };
-        })
-
+        (pkgs.vimPlugins."black-metal-theme-neovim")
       ];
 
       extraConfigLua = ''

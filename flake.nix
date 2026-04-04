@@ -57,6 +57,11 @@
         home-manager.follows = "home-manager";
       };
     };
+
+    black-metal-theme-neovim = {
+      url = "github:metalelf0/black-metal-theme-neovim";
+      flake = false;
+    };
   };
 
   outputs =
@@ -78,6 +83,7 @@
           inherit system;
           modules = [
             ./hosts/helios/configuration.nix
+            ./overlay.nix
             home-manager.nixosModules.home-manager
             {
               home-manager = {

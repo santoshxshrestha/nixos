@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "black-metal-theme-neovim": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1773416022,
+        "narHash": "sha256-rxCd60Xzs1+FPsViaG5cVuq60+r4RMY29D2Yl/q/z/8=",
+        "owner": "metalelf0",
+        "repo": "black-metal-theme-neovim",
+        "rev": "87e21420c449e414a00ab78e395debf48f372169",
+        "type": "github"
+      },
+      "original": {
+        "owner": "metalelf0",
+        "repo": "black-metal-theme-neovim",
+        "type": "github"
+      }
+    },
     "crane-rs": {
       "inputs": {
         "naersk": "naersk",
@@ -354,6 +370,7 @@
     },
     "root": {
       "inputs": {
+        "black-metal-theme-neovim": "black-metal-theme-neovim",
         "crane-rs": "crane-rs",
         "home-manager": "home-manager",
         "mdwatch": "mdwatch",

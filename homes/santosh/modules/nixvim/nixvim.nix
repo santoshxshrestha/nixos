@@ -15,9 +15,9 @@ rec {
   # ╭───────────────────────────────────────────────╮
   # │ AI and Automation Plugins                     │
   # ╰───────────────────────────────────────────────╯
-  avante.enable = false;
+  avante.enable = true;
 
-  copilot-lua.enable = true;
+  copilot-lua.enable = false;
   copilot-chat.enable = copilot-lua.enable;
   justu.enable = false;
 

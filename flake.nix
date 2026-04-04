@@ -62,6 +62,11 @@
       url = "github:metalelf0/black-metal-theme-neovim";
       flake = false;
     };
+
+    copilot-cmp = {
+      url = "github:vimlinuz/copilot-cmp";
+      flake = false;
+    };
   };
 
   outputs =

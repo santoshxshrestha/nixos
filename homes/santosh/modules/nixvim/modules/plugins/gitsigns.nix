@@ -9,10 +9,11 @@
       settings = {
         signs = {
           add = {
-            text = "┃";
+            text = "│";
+
           };
           change = {
-            text = "┃";
+            text = "│";
           };
           delete = {
             text = "_";
@@ -29,10 +30,10 @@
         };
         signs_staged = {
           add = {
-            text = "┃";
+            text = "│";
           };
           change = {
-            text = "┃";
+            text = "│";
           };
           delete = {
             text = "_";

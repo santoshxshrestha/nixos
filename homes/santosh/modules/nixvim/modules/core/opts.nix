@@ -98,10 +98,6 @@
       undofile = true;
       # Set completeopt to have a better completion experience (default: 'menu,preview')
       completeopt = "menuone,noselect";
-      # Hide end of buffer ~ characters (default: true)
-      fillchars = {
-        eob = " ";
-      };
       # Controls the visibility of the status line (0 = never, 1 = only if more than one window is open, 2 = always)
       laststatus = 0;
       # Highlight columns at 80 chars (default: '')
@@ -126,9 +122,23 @@
       # foldexpr = "nvim_treesitter#foldexpr()";
 
       fillchars = {
+        # Hide end of buffer ~ characters (default: true)
+        eob = " ";
         fold = "─";
+        # fold = "";
+
         foldopen = "▾";
+        # foldopen = "";
+
         foldclose = "▸";
+        # foldclose = "";
+
+        # fold separator
+        foldsep = "│";
+
+        # fillchars for open folds
+        foldinner = " ";
+
         wbr = "─";
         msgsep = "─";
         horiz = "─";
@@ -138,6 +148,7 @@
         vertleft = "│";
         verthoriz = "│";
       };
+
     };
 
     # Additional options that need special handling in NixVim

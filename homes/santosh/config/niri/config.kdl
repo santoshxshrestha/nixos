@@ -99,6 +99,8 @@ output "eDP-1" {
 
 // https://yalter.github.io/niri/Configuration:-Layout
 layout {
+
+    // place-within-backdrop is enabled for background so have to set this to true to get the background visible in the overview.
     background-color "transparent"
     // Set gaps around windows in logical pixels.
     gaps 10

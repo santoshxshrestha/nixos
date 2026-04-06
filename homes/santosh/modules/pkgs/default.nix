@@ -11,7 +11,7 @@ let
   security_tools = import ./security_tools.nix { inherit pkgs; };
 in
 {
-  home.packages = waylandPkgs ++ fontsPkgs ++ utilsPkgs ++ security_tools;
+  home.packages = waylandPkgs ++ fontsPkgs ++ utilsPkgs ++ security_tools ++ gamingPkgs;
   # # Adds the 'hello' command to your environment. It prints a friendly
   # # "Hello, world!" when run.
   # pkgs.hello

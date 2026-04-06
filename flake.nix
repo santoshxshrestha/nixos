@@ -36,7 +36,7 @@
     };
 
     crane-rs = {
-      url = "github:vimlinuz/crane-rs";
+      url = "github:vimlinuz/crane-rs/feture/mobile";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

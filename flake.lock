@@ -40,15 +40,16 @@
         ]
       },
       "locked": {
-        "lastModified": 1770709323,
-        "narHash": "sha256-KOnCqgiWl4j6VpEDi15K0idEEME6FEsvWcAjLUcbs0c=",
+        "lastModified": 1775502695,
+        "narHash": "sha256-qAm2z0Jp1sV4rDguZJzpjuQaqhm0AZ/rBVUXHHWPSFs=",
         "owner": "vimlinuz",
         "repo": "crane-rs",
-        "rev": "40cd0a55ff22bb2066734c3bf8e7896188aac953",
+        "rev": "8329e3e7828bbd41daae540762cfbb01a9f4d5e9",
         "type": "github"
       },
       "original": {
         "owner": "vimlinuz",
+        "ref": "feture/mobile",
         "repo": "crane-rs",
         "type": "github"
       }

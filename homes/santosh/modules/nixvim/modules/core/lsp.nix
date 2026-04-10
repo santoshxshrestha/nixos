@@ -67,7 +67,7 @@
 
         # htmx
         htmx = {
-          enable = true;
+          enable = false;
         };
 
         # python

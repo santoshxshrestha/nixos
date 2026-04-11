@@ -16,22 +16,6 @@
         "type": "github"
       }
     },
-    "copilot-cmp": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1775228294,
-        "narHash": "sha256-PEBrbfA6+zym64kG0n9W6lxHwCa6sWLaV2kT/+SBYyw=",
-        "owner": "vimlinuz",
-        "repo": "copilot-cmp",
-        "rev": "bac5bc30a0fff90105344d9bc7e34113381ffad0",
-        "type": "github"
-      },
-      "original": {
-        "owner": "vimlinuz",
-        "repo": "copilot-cmp",
-        "type": "github"
-      }
-    },
     "crane-rs": {
       "inputs": {
         "naersk": "naersk",
@@ -387,7 +371,6 @@
     "root": {
       "inputs": {
         "black-metal-theme-neovim": "black-metal-theme-neovim",
-        "copilot-cmp": "copilot-cmp",
         "crane-rs": "crane-rs",
         "home-manager": "home-manager",
         "mdwatch": "mdwatch",

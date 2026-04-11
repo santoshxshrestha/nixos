@@ -62,11 +62,6 @@
       url = "github:metalelf0/black-metal-theme-neovim";
       flake = false;
     };
-
-    copilot-cmp = {
-      url = "github:vimlinuz/copilot-cmp";
-      flake = false;
-    };
   };
 
   outputs =
@@ -88,7 +83,7 @@
           inherit system;
           modules = [
             ./hosts/helios/configuration.nix
-            ./overlay.nix
+            # ./overlay.nix
             home-manager.nixosModules.home-manager
             {
               home-manager = {

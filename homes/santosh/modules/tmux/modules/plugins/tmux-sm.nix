@@ -7,8 +7,8 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "vimlinuz";
       repo = "tmux-sm";
-      rev = "d821614efa75abc6d5246cf3a47608293c4b4a51";
-      hash = "sha256-kmVUFiDg8R9BHfhnkAuzIDX4RNHMm/f3EjgqfFux0rE=";
+      rev = "b4c3a5d79e329791976a5d51bdcad036e3861522";
+      hash = "sha256-VmTVeQcva0TCYncCHTybt4vsqh5hGURJ1DC1H7me5Rs=";
     };
   };
 
@@ -19,9 +19,7 @@ in
     set -g @session_switcher_key 'j'
     # I will use the one that I alraedy use for creation of session
     set -g @session_create_key 'S'
-    set -g @session_popup_width '80%'
-    set -g @session_popup_height '60%'
-    set -g @session_switcher_header ' '
-    set -g @session_creator_header ' '
+    set -g @session_popup_width '30%'
+    set -g @session_popup_height '20%'
   '';
 }

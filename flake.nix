@@ -83,7 +83,7 @@
           inherit system;
           modules = [
             ./hosts/helios/configuration.nix
-            # ./overlay.nix
+            ./overlay.nix
             home-manager.nixosModules.home-manager
             {
               home-manager = {

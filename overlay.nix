@@ -9,10 +9,10 @@
             src = inputs.black-metal-theme-neovim;
           };
 
-          copilot-cmp = prev.vimUtils.buildVimPlugin {
-            pname = "copilot-cmp";
-            src = inputs.copilot-cmp;
-          };
+          # copilot-cmp = prev.vimUtils.buildVimPlugin {
+          #   pname = "copilot-cmp";
+          #   src = inputs.copilot-cmp;
+          # };
         };
       })
     ];

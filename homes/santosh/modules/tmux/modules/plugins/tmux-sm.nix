@@ -7,8 +7,8 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "vimlinuz";
       repo = "tmux-sm";
-      rev = "b4c3a5d79e329791976a5d51bdcad036e3861522";
-      hash = "sha256-VmTVeQcva0TCYncCHTybt4vsqh5hGURJ1DC1H7me5Rs=";
+      rev = "8ed7878bb8c8e62e6e96ad7c9fb930e5f6c8c5ef";
+      hash = "sha256-ZOiTv3E4NdqztHpmdgLjmBZDkOUNwqkvBUhvq7zctkY=";
     };
   };
 

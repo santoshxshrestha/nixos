@@ -65,8 +65,7 @@ ColumnLayout {
                     for (var i = 0; i < windowRepeater.count; i++) {
                         var win = windowRepeater.itemAt(i);
                         if (win?.belongsHere)
-                                    // |   ┃   │   ▏   ▎   ▍   ▌
-                            icons += win.isFocused ? "│"  : "╵";
+                            icons += win.isFocused ? "│"  : "╷";
                         }
                         return icons;
                 }

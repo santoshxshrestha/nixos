@@ -30,21 +30,37 @@ ColumnLayout {
         model: Services.Niri.workspaces
 
         WidgetButton {
+            id: wsButton
             required property var model
-
             implicitWidth: 32
-            // active: model.isActive
+            label.font.pixelSize: 15
 
-            // Slightly smaller glyph for workspace indicator.
-            label.font.pixelSize: 20
+            // Renamed to thisWsId to avoid clash with window role "workspaceId"
+            property int thisWsId: model.id
+
+            Repeater {
+                id: windowRepeater
+                model: Services.Niri.windows
+                Item {
+                    visible: false
+                    // model.workspaceId = window's workspace
+                    // wsButton.thisWsId  = this workspace's id
+                    property bool belongsHere: model.workspaceId == wsButton.thisWsId
+                    property bool isFocused: model.isFocused
+                }
+            }
 
             text: {
-                const index = model.idx ?? model.index ?? model.id;
-                // const workspaceIcon = root.icons[index] ?? String(index);
-                const workspaceIcon = String("\udb82\udee5");
-
-                // Focused: mapped icon. Others: inactive marker only.
-                return model.isActive ? workspaceIcon : "\udb82\udee3";
+                if (!model.isActive) return "\udb82\udee3";
+                var icons = "";
+                for (var i = 0; i < windowRepeater.count; i++) {
+                    var win = windowRepeater.itemAt(i);
+                        if (win?.belongsHere){
+                                    // |   ┃   │   ▏   ▎   ▍   ▌
+                            icons += win.isFocused ? "│"  : "|";
+                        }
+                    }
+                return icons || "\udb82\udee3";
             }
 
             property real spinAngle: 0

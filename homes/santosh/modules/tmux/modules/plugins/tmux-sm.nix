@@ -7,8 +7,8 @@ let
     src = pkgs.fetchFromGitHub {
       owner = "vimlinuz";
       repo = "tmux-sm";
-      rev = "8ed7878bb8c8e62e6e96ad7c9fb930e5f6c8c5ef";
-      hash = "sha256-ZOiTv3E4NdqztHpmdgLjmBZDkOUNwqkvBUhvq7zctkY=";
+      rev = "97d411a11d124443c982d17fde03c1e09809d7b1";
+      hash = "sha256-7HW/TLP/yyQp4j0/utA0tibTv+suV1B2K56pUS3Z004=";
     };
   };
 
@@ -16,10 +16,9 @@ in
 {
   plugin = tmux-sm;
   extraConfig = ''
-    set -g @session_switcher_key 'j'
-    # I will use the one that I alraedy use for creation of session
-    set -g @session_create_key 'S'
-    set -g @session_popup_width '30%'
-    set -g @session_popup_height '20%'
+    set -g @sessionizer_key '-n M-i'
+    set -g @sessionizer_height '70%'
+    set -g @sessionizer_width '80%'
+    set -g @session_manager_width '35%'
   '';
 }

@@ -66,10 +66,10 @@
   # Session  mode style
   set -g mode-style fg="${colors.rose_base}",bg="${colors.rose_subtle}"
 
-  bind-key -r f run-shell "tmux neww sessionizer"
-  bind -n M-i run-shell "tmux neww sessionizer"
+  # bind-key -r f run-shell "tmux neww sessionizer"
+  # bind -n M-i run-shell "tmux neww sessionizer"
 
-  bind-key -r H run-shell "tmux neww sessionizer ~/nixos"
+  bind-key -r h run-shell "tmux neww sessionizer ~/nixos"
   bind-key -r k run-shell "tmux neww sessionizer ~/dev"
 
 ''

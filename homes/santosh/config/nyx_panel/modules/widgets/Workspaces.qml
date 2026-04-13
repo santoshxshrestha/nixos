@@ -33,7 +33,7 @@ ColumnLayout {
             id: wsButton
             required property var model
             implicitWidth: 32
-            label.font.pixelSize: 15
+            label.font.pixelSize: 20
 
             // Renamed to thisWsId to avoid clash with window role "workspaceId"
             property int thisWsId: model.id
@@ -49,18 +49,29 @@ ColumnLayout {
                     property bool isFocused: model.isFocused
                 }
             }
+            Text {
+                anchors.centerIn: parent
+                visible: !model.isActive
+                text: "\udb82\udee3"
+                font.pixelSize: 20  // big size for inactive icon
+                color: label.color
+            }
 
-            text: {
-                if (!model.isActive) return "\udb82\udee3";
-                var icons = "";
-                for (var i = 0; i < windowRepeater.count; i++) {
-                    var win = windowRepeater.itemAt(i);
-                        if (win?.belongsHere){
+            Text {
+                anchors.centerIn: parent
+                visible: model.isActive
+                text: {
+                    var icons = "";
+                    for (var i = 0; i < windowRepeater.count; i++) {
+                        var win = windowRepeater.itemAt(i);
+                        if (win?.belongsHere)
                                     // |   ┃   │   ▏   ▎   ▍   ▌
-                            icons += win.isFocused ? "│"  : "|";
+                            icons += win.isFocused ? "│"  : "╵";
                         }
-                    }
-                return icons || "\udb82\udee3";
+                        return icons;
+                }
+                font.pixelSize: 13  // smaller size for window dots
+                color: label.color
             }
 
             property real spinAngle: 0

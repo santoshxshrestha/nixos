@@ -67,6 +67,9 @@ ColumnLayout {
                         if (win?.belongsHere)
                             icons += win.isFocused ? "│"  : "╷";
                         }
+                        if (icons === ""){
+                            return "●"
+                        }
                         return icons;
                 }
                 font.pixelSize: 13  // smaller size for window dots

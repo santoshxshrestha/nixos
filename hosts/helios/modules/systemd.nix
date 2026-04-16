@@ -33,15 +33,15 @@ in
         HibernateDelaySec = "20min";
       };
 
-      services.capslock-blink = {
-        description = "Blink the capslock LED";
-        wantedBy = [ "multi-user.target" ];
-        serviceConfig = {
-          ExecStart = "${blink}";
-          Restart = "always";
-          User = "root";
-        };
-      };
+      # services.capslock-blink = {
+      #   description = "Blink the capslock LED";
+      #   wantedBy = [ "multi-user.target" ];
+      #   serviceConfig = {
+      #     ExecStart = "${blink}";
+      #     Restart = "always";
+      #     User = "root";
+      #   };
+      # };
 
     };
   };

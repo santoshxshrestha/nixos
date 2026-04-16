@@ -7,7 +7,7 @@
 let
   blink = pkgs.writeShellScript "blink" ''
     LED=/sys/class/leds/input10::capslock/brightness
-    echo "blink daemon started at $(date)"
+    echo "blink daemon started at"
 
     # Here int might not require but any way
     trap 'echo "blink daemon stopped"; exit 0' TERM INT

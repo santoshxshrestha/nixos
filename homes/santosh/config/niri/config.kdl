@@ -418,10 +418,10 @@ binds {
     // Mod+W hotkey-overlay-title="Toggle wallpaper switcher panel" { spawn-sh "qs ipc -p ~/nixos/homes/santosh/config/nyx_panel/main.qml call wallpaper toggle";}
 
     // Screenshot binds. (hyprshot)
-      Mod+Print hotkey-overlay-title="Screenshot a window: hyprshot" { spawn-sh "hyprshot -m window -o /home/santosh/Pictures/Screenshots";}
-      Print hotkey-overlay-title="Screenshot a monitor: hyprshot" { spawn-sh "hyprshot -m output -o /home/santosh/Pictures/Screenshots";}
-      Shift+Print hotkey-overlay-title="Screenshot a region: hyprshot" { spawn-sh "hyprshot -m region -o /home/santosh/Pictures/Screenshots";}
-      Mod+S hotkey-overlay-title="Screenshot a region to clipboard-only: hyprshot" {spawn-sh "hyprshot -m region -o /home/santosh/Pictures/Screenshots --clipboard-only"; }
+    // Mod+Print hotkey-overlay-title="Screenshot a window: hyprshot" { spawn-sh "hyprshot -m window -o /home/santosh/Pictures/Screenshots";}
+    // Print hotkey-overlay-title="Screenshot a monitor: hyprshot" { spawn-sh "hyprshot -m output -o /home/santosh/Pictures/Screenshots";}
+    // Shift+Print hotkey-overlay-title="Screenshot a region: hyprshot" { spawn-sh "hyprshot -m region -o /home/santosh/Pictures/Screenshots";}
+    // Mod+S hotkey-overlay-title="Screenshot a region to clipboard-only: hyprshot" {spawn-sh "hyprshot -m region -o /home/santosh/Pictures/Screenshots --clipboard-only"; }
 
 
 
@@ -670,9 +670,9 @@ binds {
     // Mod+Space       { switch-layout "next"; }
     // Mod+Shift+Space { switch-layout "prev"; }
 
-    // Shift+Print { screenshot; }
-    // Print { screenshot-screen; }
-    // Alt+Print { screenshot-window; }
+    Shift+Print { screenshot; }
+    Print { screenshot-screen; }
+    Mod+Print { screenshot-window; }
 
     // Applications such as remote-desktop clients and software KVM switches may
     // request that niri stops processing the keyboard shortcuts defined here

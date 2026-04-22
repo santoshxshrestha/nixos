@@ -51,6 +51,7 @@ configuration {
 
 window {
     width: 22%;
+    height: 47%;
     transparency: "real";
     blur: true;
     background-color: @base;

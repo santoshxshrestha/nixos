@@ -39,7 +39,7 @@
       enable = true;
     };
     programs.nixvim.plugins.copilot-cmp = {
-      enable = true;
+      enable = false;
     };
 
     programs.nixvim.plugins.lspkind = {
@@ -76,7 +76,7 @@
             { name = "git"; }
             { name = "latex_symbols"; }
             { name = "nvim_lsp_document_symbols"; }
-            { name = "copilot"; }
+            # { name = "copilot"; }
           ];
           snippet = {
             expand = "function(args) require('luasnip').lsp_expand(args.body) end";

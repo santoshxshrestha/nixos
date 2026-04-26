@@ -4,7 +4,6 @@
     enable = true;
     plugins = with pkgs.vimPlugins; [
       vim-airline
-      vim-nix
       ctrlp-vim
       vim-commentary
       vim-surround
@@ -13,6 +12,7 @@
       indentLine
       vim-unimpaired
       falcon
+      vim-tpipeline
     ];
     extraConfig = ''
       set expandtab
@@ -49,22 +49,15 @@
       colorscheme falcon
 
       let mapleader = " "
-
       " --- ctrlp keybindings to mimic telescope ---
       nnoremap <leader>sf :CtrlP<CR>
       nnoremap <leader><leader> :CtrlPBuffer<CR>
-      nnoremap <leader>sh :Helptags<CR>
-      nnoremap <leader>sc :CtrlPColorscheme<CR>
-      nnoremap <leader>/ :CtrlPCurFile<CR>
-      nnoremap <leader>sg :CtrlPMixed<CR>
-      nnoremap <leader>s/ :CtrlPMixed<CR>
-      " -------------------------------------------
 
       " --- commenting (vim-commentary) ---
-      nnoremap <leader>cc :Commentary<CR>
-      vnoremap <leader>cc :Commentary<CR>
-      " --- surround (vim-surround) ---
-      " (no extra mapping needed, uses s/ys/cs/ds)
+      nnoremap <C-c> :Commentary<CR>
+      vnoremap <C-c> :Commentary<CR>
+      nnoremap <C-/> :Commentary<CR>
+      vnoremap <C-/> :Commentary<CR>
 
       " --- splits ---
       nnoremap <leader>v :vsplit<CR>
@@ -106,6 +99,8 @@
       let g:airline#extensions#ale#enabled = 1
       let g:airline#extensions#coc#enabled = 1
       let g:airline#extensions#syntastic#enabled = 1
+
+      let g:tpipeline_autoembed = 0
     '';
 
   };

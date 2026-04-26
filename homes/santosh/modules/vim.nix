@@ -13,6 +13,7 @@
       vim-unimpaired
       falcon
       vim-tpipeline
+      vim-tmux-navigator
     ];
     extraConfig = ''
       set noswapfile
@@ -66,9 +67,16 @@
       nnoremap <leader>q :close<CR>
       nnoremap <leader>x :only<CR>
 
+      " --- open splits navigation (vim-tmux-navigator) ---
+      nnoremap <C-l> :TmuxNavigateRight<CR>
+      nnoremap <C-h> :TmuxNavigateLeft<CR>
+      nnoremap <C-j> :TmuxNavigateDown<CR>
+      nnoremap <C-k> :TmuxNavigateUp<CR>
+
       " --- buffer navigation (vim-unimpaired) ---
       nnoremap ]b :bnext<CR>
       nnoremap [b :bprevious<CR>
+
 
       " --- git (vim-fugitive) ---
       nnoremap <leader>gs :Git<CR>
@@ -109,6 +117,7 @@
       let g:airline#extensions#lsp#close_lnum_symbol = ')'
 
       let g:tpipeline_autoembed = 0
+
 
     '';
 

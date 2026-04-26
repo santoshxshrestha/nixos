@@ -411,7 +411,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal: kitty" { spawn "kitty"; }
     Mod+Space hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -i -show drun"; }
     Super+L hotkey-overlay-title="Lock the Screen: hyprlock" { spawn "hyprlock"; }
-    Mod+B hotkey-overlay-title="Open the Web Browser: firefox" { spawn "firefox"; }
+    Mod+B hotkey-overlay-title="Open the Web Browser: zen" { spawn "zen-beta"; }
 
     // wallpaper selector binds
     Mod+W hotkey-overlay-title="Open wallpaper change: rofi-wallpaper-selector" { spawn-sh "rofi-wallpaper-selector";}

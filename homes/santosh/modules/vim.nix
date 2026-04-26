@@ -15,6 +15,7 @@
       vim-tpipeline
     ];
     extraConfig = ''
+      set noswapfile
       set expandtab
       set whichwrap=bs<>[]hl
       set nobackup nowritebackup
@@ -100,7 +101,15 @@
       let g:airline#extensions#coc#enabled = 1
       let g:airline#extensions#syntastic#enabled = 1
 
+      let g:airline#extensions#lsp#enabled = 1
+      let g:airline#extensions#lsp#error_symbol = 'E:'
+      let g:airline#extensions#lsp#warning_symbol = 'W:'
+      let g:airline#extensions#lsp#show_line_numbers = 1
+      let g:airline#extensions#lsp#open_lnum_symbol = '(L'
+      let g:airline#extensions#lsp#close_lnum_symbol = ')'
+
       let g:tpipeline_autoembed = 0
+
     '';
 
   };

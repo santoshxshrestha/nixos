@@ -41,7 +41,6 @@
       set laststatus=2
       set fileencoding=utf-8
       set autoindent
-      set autocomplete
       set incsearch
       set breakindent
       set mouse=a
@@ -118,6 +117,12 @@
 
       let g:tpipeline_autoembed = 0
 
+      inoremap " ""<left>
+      inoremap ( ()<left>
+      inoremap [ []<left>
+      inoremap { {}<left>
+      inoremap {<CR> {<CR>}<ESC>O
+      inoremap {;<CR> {<CR>};<ESC>O
 
     '';
 

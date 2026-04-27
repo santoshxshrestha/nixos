@@ -41,7 +41,7 @@ rec {
   comment.enable = true;
   misc.enable = true;
   formatter.enable = true;
-  noice.enable = true;
+  noice.enable = false;
   oil.enable = true;
   surround.enable = true;
   telescope.enable = true;

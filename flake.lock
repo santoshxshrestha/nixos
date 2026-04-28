@@ -150,11 +150,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1776536259,
-        "narHash": "sha256-OY060yfUyS2evq35ZFn4uNNpB9hOTdHo+vtyzSeg5Xs=",
+        "lastModified": 1777306542,
+        "narHash": "sha256-Dy382YDJxjCjEsLjgBO7UdKlsJIlJRCvAEP6QTSOoZ8=",
         "owner": "vimlinuz",
         "repo": "mdwatch",
-        "rev": "3ff9f83561af92c5393f5f405314599039ece2bf",
+        "rev": "d314176506de2021b2d11ff6854728cf007eb740",
         "type": "github"
       },
       "original": {
@@ -355,11 +355,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1777019459,
-        "narHash": "sha256-/JPmIuzUuNjxgYEnm56KqDIMpQbPN4hzTlOsMTMahok=",
+        "lastModified": 1777341401,
+        "narHash": "sha256-QEAVYeXxvTamsYJVBq8+qSJV9ml2MxqRaZvkobfuPWA=",
         "ref": "refs/heads/master",
-        "rev": "e162429b6fa4443a0b45e19a867277dcc25d506b",
-        "revCount": 807,
+        "rev": "0baa81aa03559ca315668e5a306364cddf1a6f49",
+        "revCount": 812,
         "type": "git",
         "url": "https://git.outfoxxed.me/outfoxxed/quickshell"
       },

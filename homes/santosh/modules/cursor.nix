@@ -20,7 +20,7 @@
     gtk.enable = true;
     x11.enable = true;
     package = pkgs.callPackage ./nightdiamond-cursors.nix { };
-    name = "NightDiamond-OpalWhite";
+    name = "NightDiamond-Fusion";
     size = 20;
   };
 }

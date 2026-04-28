@@ -5,13 +5,13 @@
 }:
 stdenvNoCC.mkDerivation {
   pname = "NightDiamond-cursors";
-  version = "e13db9e75f74e42a68e32c53d96b53334c7b92b1";
+  version = "49650765c3396ccee9ffb796608845d4660d5692";
 
   src = fetchFromGitHub {
     owner = "vimlinuz";
     repo = "NightDiamond-cursors";
-    rev = "e13db9e75f74e42a68e32c53d96b53334c7b92b1";
-    hash = "sha256-4cxQCN5MXGowRi/tzBPL/gTbPXpsMiSZSQr/vLFkcVQ=";
+    rev = "49650765c3396ccee9ffb796608845d4660d5692";
+    hash = "sha256-Ue6dDvNMq1pGfzudt1O8h0pawfKj4FskTGLnpyEp0CM=";
   };
 
   installPhase = ''

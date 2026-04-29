@@ -7,4 +7,5 @@ with pkgs;
   jetbrains-mono
   fira-code
   font-awesome
+  open-dyslexic
 ]

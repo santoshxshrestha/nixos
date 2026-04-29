@@ -50,6 +50,11 @@
     programs.nixvim.plugins.lsp = {
       enable = true;
       servers = {
+        # glsl
+        glslls = {
+          enable = true;
+        };
+
         # rust
         rust_analyzer = {
           enable = true;

@@ -10,7 +10,7 @@ input {
             // For more information, see xkeyboard-config(7).
 
             // For example:
-             layout "us"
+            layout "us"
             // options "grp:win_space_toggle,compose:ralt,ctrl:nocaps"
 
             // If this section is empty, niri will fetch xkb settings
@@ -61,8 +61,8 @@ input {
 
     // Focus windows and outputs automatically when moving the mouse into them.
     // Setting max-scroll-amount="0%" makes it work only on windows already fully on screen.
-     focus-follows-mouse max-scroll-amount="0%"
-     mod-key "Alt"
+    focus-follows-mouse max-scroll-amount="0%"
+    mod-key "Alt"
 }
 
 // You can configure outputs by their name, which you can find
@@ -133,7 +133,7 @@ layout {
     // You can change the default width of the new windows.
     // default-column-width { proportion 0.5; }
     // If you leave the brackets empty, the windows themselves will decide their initial width.
-     default-column-width {}
+    default-column-width {}
 
     // By default focus ring and border are rendered as a solid background rectangle
     // behind windows. That is, they will show up through semitransparent windows.
@@ -206,7 +206,7 @@ layout {
     // You can enable drop shadows for windows.
     shadow {
         // Uncomment the next line to enable shadows.
-         on
+        on
 
         // By default, the shadow draws only around its window, and not behind it.
         // Uncomment this setting to make the shadow draw behind its window.
@@ -287,7 +287,7 @@ spawn-sh-at-startup "swaync"
 
 hotkey-overlay {
     // Uncomment this line to disable the "Important Hotkeys" pop-up at startup.
-     skip-at-startup
+    skip-at-startup
 }
 
 // Uncomment this line to ask the clients to omit their client-side decorations if possible.
@@ -312,15 +312,15 @@ animations {
         off
         spring damping-ratio=0.80 stiffness=523 epsilon=0.0001
     }
-window-open {
-    duration-ms 1400
-    curve "ease-out-expo"
-    custom-shader r"
-    float ease_curve(float x) {
+    window-open {
+        duration-ms 1400
+        curve "ease-out-expo"
+        custom-shader r"
+        float ease_curve(float x) {
         return x < 0.5 ? 4.0*x*x*x : 1.0 - pow(-2.0*x + 2.0, 3.0)/2.0;
-    }
+        }
 
-    vec4 open_color(vec3 coords_geo, vec3 size_geo) {
+        vec4 open_color(vec3 coords_geo, vec3 size_geo) {
         float t = niri_clamped_progress;
         float prog = ease_curve(t);
 
@@ -338,7 +338,7 @@ window-open {
 
         // pixels not yet reached by sweep are invisible
         if (norm_dist > prog) {
-            return vec4(0.0);
+        return vec4(0.0);
         }
 
         // sample normally
@@ -346,20 +346,20 @@ window-open {
         vec4 col = texture2D(niri_tex, coords_tex.xy);
 
         return col;
-    }"
-}
+        }"
+    }
 
 
     window-close {
-    duration-ms 1400
-    curve "ease-out-expo"
-    custom-shader r"
-    // ease-in-out cubic curve helper
-    float ease_curve(float x) {
+        duration-ms 1400
+        curve "ease-out-expo"
+        custom-shader r"
+        // ease-in-out cubic curve helper
+        float ease_curve(float x) {
         return x < 0.5 ? 4.0*x*x*x : 1.0 - pow(-2.0*x + 2.0, 3.0)/2.0;
-    }
+        }
 
-    vec4 close_color(vec3 coords_geo, vec3 size_geo) {
+        vec4 close_color(vec3 coords_geo, vec3 size_geo) {
         float t = niri_clamped_progress;
 
 
@@ -388,7 +388,7 @@ window-open {
         // If pixel is behind the sweeping line, make it invisible
 
         if (norm_dist <= prog) {
-            return vec4(0.0);
+        return vec4(0.0);
         }
 
         // sample normally
@@ -396,8 +396,8 @@ window-open {
         vec4 col = texture2D(niri_tex, coords_tex.xy);
 
         return col;
-    }"
-}
+        }"
+    }
 
 
     horizontal-view-movement {
@@ -408,11 +408,11 @@ window-open {
     }
     window-resize {
         custom-shader r"
-            vec4 resize_color(vec3 coords_curr_geo, vec3 size_curr_geo) {
-                vec3 coords_tex_next = niri_geo_to_tex_next * coords_curr_geo;
-                vec4 color = texture2D(niri_tex_next, coords_tex_next.st);
-                return color;
-            }
+        vec4 resize_color(vec3 coords_curr_geo, vec3 size_curr_geo) {
+        vec3 coords_tex_next = niri_geo_to_tex_next * coords_curr_geo;
+        vec4 color = texture2D(niri_tex_next, coords_tex_next.st);
+        return color;
+        }
         "
     }
     config-notification-open-close {

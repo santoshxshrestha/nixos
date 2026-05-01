@@ -18,6 +18,7 @@
     ./modules/bluetooth.nix
     inputs.sops-nix.nixosModules.sops
     ./modules/tlp.nix
+    ./modules/upower.nix
     ./modules/logind.nix
     ./modules/keyd.nix
     ./modules/systemd.nix
@@ -139,6 +140,9 @@
 
   # Enable TLP for power management
   tlp.enable = true;
+
+  # Enable upower for power actions
+  upower.enable = true;
 
   # remap
   keyd.enable = true;

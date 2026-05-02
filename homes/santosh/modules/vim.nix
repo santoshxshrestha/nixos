@@ -52,6 +52,7 @@
       nnoremap <leader>sf :Files<CR>
       nnoremap <leader><leader> :Buffers<CR>
       nnoremap <leader>sg :Rg<space>
+      nnoremap <leader>sc :Colors<space>
 
       " --- commenting (vim-commentary) ---
       nnoremap <C-c> :Commentary<CR>

@@ -9,7 +9,7 @@
       percentageAction = 2;
       percentageLow = 20;
       percentageCritical = 10;
-      criticalPowerAction = "HybridSleep";
+      criticalPowerAction = "Hibernate";
       allowRiskyCriticalPowerAction = true;
     };
   };

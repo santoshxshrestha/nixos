@@ -81,39 +81,39 @@
           snippet = {
             expand = "function(args) require('luasnip').lsp_expand(args.body) end";
           };
-          window = {
-            documentation = {
-              border = [
-                "╭"
-                "─"
-                "╮"
-                "│"
-                "╯"
-                "─"
-                "╰"
-                "│"
-              ];
-              winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CursorLine,Search:None";
-              max_width = 50;
-              max_height = 20;
-            };
-            completion = {
-              border = [
-                "╭"
-                "─"
-                "╮"
-                "│"
-                "╯"
-                "─"
-                "╰"
-                "│"
-              ];
-              winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CursorLine,Search:None";
-              scrollbar = false;
-              max_width = 50;
-              max_height = 20;
-            };
-          };
+          # window = {
+          #   documentation = {
+          #     border = [
+          #       "╭"
+          #       "─"
+          #       "╮"
+          #       "│"
+          #       "╯"
+          #       "─"
+          #       "╰"
+          #       "│"
+          #     ];
+          #     winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CursorLine,Search:None";
+          #     max_width = 50;
+          #     max_height = 20;
+          #   };
+          #   completion = {
+          #     border = [
+          #       "╭"
+          #       "─"
+          #       "╮"
+          #       "│"
+          #       "╯"
+          #       "─"
+          #       "╰"
+          #       "│"
+          #     ];
+          #     winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CursorLine,Search:None";
+          #     scrollbar = false;
+          #     max_width = 50;
+          #     max_height = 20;
+          #   };
+          # };
 
           mapping = {
             "<C-l>" =

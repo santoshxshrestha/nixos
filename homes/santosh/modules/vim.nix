@@ -3,7 +3,6 @@
   programs.vim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [
-      vim-airline
       ctrlp-vim
       vim-commentary
       vim-surround
@@ -12,7 +11,6 @@
       indentLine
       vim-unimpaired
       falcon
-      vim-tpipeline
       vim-tmux-navigator
     ];
     extraConfig = ''
@@ -92,30 +90,6 @@
       let g:indentLine_char = '│'
       let g:indentLine_enabled = 1
 
-      " --- airline ---
-      let g:airline_powerline_fonts = 1
-
-      " --- airline config: powerline symbols, no tabline ---
-      let g:airline#extensions#tabline#enabled = 0
-      let g:airline_section_a = airline#section#create_left(['mode'])
-      let g:airline_section_b = airline#section#create_left(['branch', 'hunks'])
-      let g:airline_section_c = airline#section#create_left(['readonly', 'filename', 'modified'])
-      let g:airline_section_x = airline#section#create_right(['filetype'])
-      let g:airline_section_y = airline#section#create_right(['fileencoding', 'fileformat'])
-      let g:airline_section_z = airline#section#create_right(['linenr', 'maxlinenr', 'column'])
-      " Diagnostics (if using ALE, coc, or syntastic)
-      let g:airline#extensions#ale#enabled = 1
-      let g:airline#extensions#coc#enabled = 1
-      let g:airline#extensions#syntastic#enabled = 1
-
-      let g:airline#extensions#lsp#enabled = 1
-      let g:airline#extensions#lsp#error_symbol = 'E:'
-      let g:airline#extensions#lsp#warning_symbol = 'W:'
-      let g:airline#extensions#lsp#show_line_numbers = 1
-      let g:airline#extensions#lsp#open_lnum_symbol = '(L'
-      let g:airline#extensions#lsp#close_lnum_symbol = ')'
-
-      let g:tpipeline_autoembed = 0
 
       inoremap " ""<left>
       inoremap ( ()<left>

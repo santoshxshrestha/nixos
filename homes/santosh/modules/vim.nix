@@ -3,7 +3,7 @@
   programs.vim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [
-      ctrlp-vim
+      fzf-vim
       vim-commentary
       vim-surround
       vim-fugitive
@@ -48,9 +48,10 @@
       colorscheme falcon
 
       let mapleader = " "
-      " --- ctrlp keybindings to mimic telescope ---
-      nnoremap <leader>sf :CtrlP<CR>
-      nnoremap <leader><leader> :CtrlPBuffer<CR>
+      " --- fzf vim keybindings to mimic telescope ---
+      nnoremap <leader>sf :Files<CR>
+      nnoremap <leader><leader> :Buffers<CR>
+      nnoremap <leader>sg :Rg<space>
 
       " --- commenting (vim-commentary) ---
       nnoremap <C-c> :Commentary<CR>
@@ -86,9 +87,13 @@
       nnoremap <leader>gf :Git fetch<CR>
       nnoremap <leader>gr :Gread<CR>
 
+      " --- filetree (netrw) ---
+      nnoremap <leader>e :Ex<CR>
+
       " --- indent guides (indentLine) ---
       let g:indentLine_char = '│'
       let g:indentLine_enabled = 1
+
 
 
       inoremap " ""<left>

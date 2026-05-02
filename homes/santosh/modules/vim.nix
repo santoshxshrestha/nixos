@@ -56,6 +56,10 @@
       nnoremap <leader>sg :Rg<space>
       nnoremap <leader>sc :Colors<CR>
 
+      nnoremap [d :LspPreviousError<CR>
+      nnoremap ]d :LspNextError<CR>
+      nnoremap K :LspHover<CR>
+
       " --- commenting (vim-commentary) ---
       nnoremap <C-c> :Commentary<CR>
       vnoremap <C-c> :Commentary<CR>

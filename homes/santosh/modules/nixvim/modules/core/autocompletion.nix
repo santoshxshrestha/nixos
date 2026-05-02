@@ -83,11 +83,35 @@
           };
           window = {
             documentation = {
+              border = [
+                "╭"
+                "─"
+                "╮"
+                "│"
+                "╯"
+                "─"
+                "╰"
+                "│"
+              ];
               winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CursorLine,Search:None";
+              max_width = 50;
+              max_height = 20;
             };
             completion = {
+              border = [
+                "╭"
+                "─"
+                "╮"
+                "│"
+                "╯"
+                "─"
+                "╰"
+                "│"
+              ];
               winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CursorLine,Search:None";
               scrollbar = false;
+              max_width = 50;
+              max_height = 20;
             };
           };
 

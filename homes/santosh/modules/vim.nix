@@ -36,7 +36,7 @@
       set scrolloff=10
       set numberwidth=4
       set linebreak
-      set laststatus=2
+      set laststatus=0
       set fileencoding=utf-8
       set autoindent
       set incsearch

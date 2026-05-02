@@ -3,6 +3,8 @@
   programs.vim = {
     enable = true;
     plugins = with pkgs.vimPlugins; [
+      vim-lsp
+      vim-lsp-settings
       fzf-vim
       vim-commentary
       vim-surround

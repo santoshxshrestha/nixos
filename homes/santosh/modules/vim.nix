@@ -16,6 +16,10 @@
       vim-tmux-navigator
     ];
     extraConfig = ''
+      " --- redirecting and piping content for nushell only ---
+      set shellredir=\|\ save\ -f
+      set shellpipe=\|\ save\ -f
+
       set noswapfile
       set expandtab
       set whichwrap=bs<>[]hl

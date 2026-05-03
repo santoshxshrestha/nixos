@@ -15,10 +15,6 @@ with pkgs;
   vlc
   mpv
   swaybg
-  # hashcat
-  aircrack-ng
-  # hcxtools
-  macchanger
   libreoffice
 
   # Provided via flake inputs (not nixpkgs).

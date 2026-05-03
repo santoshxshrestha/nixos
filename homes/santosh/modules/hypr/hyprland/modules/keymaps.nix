@@ -17,7 +17,7 @@
       # Clipboard history with rofi
       # ''SUPER_SHIFT,V,exec,cliphist list | rofi -dmenu -theme ~/.config/rofi/themes/clipboard.rasi | cliphist delete''
       # ''SUPER,V,exec,cliphist list | rofi -dmenu -theme ~/.config/rofi/themes/clipboard.rasi | cliphist decode | wl-copy''
-      ''SUPER,V,exec,clipManager''
+      "SUPER,V,exec,clipManager"
 
       # Window management - see https://wiki.hyprland.org/Configuring/Binds/ for more
       "$mainMod SHIFT,F,fullscreen"

@@ -142,7 +142,7 @@
   tlp.enable = true;
 
   # Enable upower for power actions
-  upower.enable = true;
+  upower.enable = false;
 
   # remap
   keyd.enable = true;

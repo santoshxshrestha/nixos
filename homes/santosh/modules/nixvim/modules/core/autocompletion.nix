@@ -108,7 +108,7 @@
               #   "╰"
               #   "│"
               # ];
-              winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CursorLine,Search:None";
+              winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:CurSearch,Search:None";
               scrollbar = false;
               # max_width = 50;
               # max_height = 20;

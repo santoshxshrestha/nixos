@@ -52,6 +52,7 @@ rec {
   keymaps.enable = true;
 
   programs.nixvim = {
+    nixpkgs.useGlobalPackages = true;
     enable = true;
     editorconfig = {
       enable = true;

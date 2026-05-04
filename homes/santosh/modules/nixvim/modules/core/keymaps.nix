@@ -109,7 +109,7 @@
       #   };
       # }
       {
-        key = "<leader>f";
+        key = "<leader>t";
         action = "<cmd>Terminal code-runner<CR>";
         mode = [ "n" ];
         options = {
@@ -184,7 +184,7 @@
 
       # toggle line wrapping
       {
-        action = "<cmd>set wrap!";
+        action = "<cmd>set wrap!<CR>";
         key = "<leader>lw";
         mode = [ "n" ];
         options = {
@@ -751,7 +751,7 @@
 
       {
         mode = "n";
-        key = "<leader>1";
+        key = "<leader>d";
         action.__raw = "function() require'harpoon':list():select(1) end";
         options = {
           desc = "Select 1 ih list of harpoon";
@@ -759,7 +759,7 @@
       }
       {
         mode = "n";
-        key = "<leader>2";
+        key = "<leader>f";
         action.__raw = "function() require'harpoon':list():select(2) end";
         options = {
           desc = "Select 2 in list of harpoon";
@@ -767,7 +767,7 @@
       }
       {
         mode = "n";
-        key = "<leader>3";
+        key = "<leader>j";
         action.__raw = "function() require'harpoon':list():select(3) end";
         options = {
           desc = "Select 3 in list of harpoon";
@@ -775,7 +775,7 @@
       }
       {
         mode = "n";
-        key = "<leader>4";
+        key = "<leader>k";
         action.__raw = "function() require'harpoon':list():select(4) end";
         options = {
           desc = "Select 4 in list of harpoon";
@@ -783,16 +783,7 @@
       }
       {
         mode = "n";
-        key = "<leader>5";
-        action.__raw = "function() require'harpoon':list():select(5) end";
-        options = {
-          desc = "Select 5 in list of harpoon";
-        };
-      }
-
-      {
-        mode = "n";
-        key = "<leader>j";
+        key = "<leader>>";
         action.__raw = "function() require('harpoon'):list():next() end";
         options = {
           desc = "Next harpoon buffer";
@@ -800,7 +791,7 @@
       }
       {
         mode = "n";
-        key = "<leader>k";
+        key = "<leader><";
         action.__raw = "function() require('harpoon'):list():prev() end";
         options = {
           desc = "Previous harpoon buffer";

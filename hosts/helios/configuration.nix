@@ -16,13 +16,14 @@
     ./modules/sddm.nix
     ./modules/packages.nix
     ./modules/bluetooth.nix
-    inputs.sops-nix.nixosModules.sops
     ./modules/tlp.nix
     ./modules/upower.nix
     ./modules/logind.nix
     ./modules/keyd.nix
     ./modules/systemd.nix
     ./modules/plymouth.nix
+
+    inputs.sops-nix.nixosModules.sops
   ];
 
   sops.defaultSopsFile = ./sops.yaml;

@@ -1,5 +1,11 @@
 {
+  inputs,
+  pkgs,
+  ...
+}:
+{
   imports = [
+    inputs.mnw.homeManagerModules.default
     # ╭───────────────────────────────────────────────╮
     # │ Hyprland Configuration Modules                │
     # ╰───────────────────────────────────────────────╯
@@ -37,7 +43,7 @@
     # ╭───────────────────────────────────────────────╮
     # │ Code editors                                  │
     # ╰───────────────────────────────────────────────╯
-    ./modules/nixvim/nixvim.nix
+    # ./modules/nixvim/nixvim.nix
     ./modules/vim.nix
     ./modules/zed.nix
     ./modules/helix.nix
@@ -161,6 +167,73 @@
   #
   home.sessionVariables = {
     EDITOR = "nvim";
+  };
+
+  programs.mnw = {
+    enable = true;
+    neovim = pkgs.neovim-unwrapped;
+    luaFiles = [ ./modes/mnw/init.lua ];
+    plugins = {
+      start = with pkgs.vimPlugins; [
+        alpha-nvim
+        catppuccin-nvim
+        cmp-async-path
+        cmp-buffer
+        cmp-calc
+        cmp-cmdline
+        cmp-emoji
+        cmp-git
+        cmp-latex-symbols
+        cmp-nvim-lsp
+        cmp-nvim-lsp-document-symbol
+        cmp-nvim-lsp-signature-help
+        cmp-spell
+        cmp_luasnip
+        comment-nvim
+        gitsigns-nvim
+        harpoon
+        indent-blankline-nvim
+        lsp-format-nvim
+        lspkind-nvim
+        lspsaga-nvim
+        lualine-nvim
+        luasnip
+        markdown-preview-nvim
+        none-ls-nvim
+        nvim-autopairs
+        nvim-cmp
+        nvim-colorizer-lua
+        nvim-lspconfig
+        nvim-surround
+        plenary-nvim
+        nvim-treesitter
+        nvim-treesitter-context
+        nvim-treesitter-textobjects
+        nvim-ufo
+        nvim-web-devicons
+        oil-nvim
+        promise-async
+        render-markdown-nvim
+        snacks-nvim
+        telescope-fzf-native-nvim
+        telescope-nvim
+        todo-comments-nvim
+        undotree
+        vague-nvim
+        vim-fugitive
+        vim-rhubarb
+        vim-tmux-navigator
+        vim-tpipeline
+        which-key-nvim
+        falcon
+        kanso-nvim
+        black-metal-theme-neovim
+      ];
+      dev.myconfig = {
+        pure = ./modes/mnw;
+        impure = "/home/santosh/nixos/homes/santosh/modes/mnw";
+      };
+    };
   };
 
   # Let Home Manager install and manage itself.

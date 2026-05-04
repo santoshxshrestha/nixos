@@ -20,9 +20,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    nixvim = {
-      url = "github:nix-community/nixvim";
-      inputs.nixpkgs.follows = "nixpkgs";
+    # nixvim = {
+    #   url = "github:nix-community/nixvim";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
+
+    mnw = {
+      url = "github:Gerg-L/mnw";
     };
 
     sops-nix = {
@@ -87,7 +91,7 @@
             home-manager.nixosModules.home-manager
             {
               home-manager = {
-                sharedModules = [ nixvim.homeModules.nixvim ];
+                # sharedModules = [ nixvim.homeModules.nixvim ];
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 users.santosh = import ./homes/santosh/home.nix;
@@ -98,6 +102,11 @@
           specialArgs = { inherit inputs; };
         };
 
+      };
+
+      packages.x86_64-linux = {
+        neovimDev = self.nixosConfigurations.hostname.config.programs.mnw.finalPackage.devMode;
+        neovim = self.nixosConfigurations.hostname.config.programs.mnw.finalPackage;
       };
       formatter.${system} = nixpkgs.legacyPackages.${system}.nixfmt;
     };

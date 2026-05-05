@@ -10,6 +10,8 @@
   };
   config = lib.mkIf config.upower.enable {
     environment.systemPackages = [
+      # https://github.com/omeid/upower-notify
+      # need to run this by the use of wm on startup
       pkgs.upower-notify
     ];
     services.upower = {

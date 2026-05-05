@@ -16,10 +16,8 @@
       vim-tmux-navigator
     ];
     extraConfig = ''
-      " --- redirecting and piping content for nushell only ---
-      set shellredir=\|\ save\ -f
-      set shellpipe=\|\ save\ -f
-
+      " --- [why noshelltemp](https://github.com/vim/vim/issues/20123) ---
+      set noshelltemp
       set noswapfile
       set expandtab
       set whichwrap=bs<>[]hl

@@ -31,15 +31,15 @@
         sections = {
           lualine_a = [
             {
-              __unkeyed-1 = "mode";
-              fmt.__raw = ''
-                function(str)
-                  return ' ' .. str
-                  -- return ' ' .. str:sub(1, 1) -- displays only the first character
+              __raw = ''
+                function()
+                  return ' '
                 end
               '';
-              section_separators = {
-                left = "";
+
+              padding = {
+                left = 1;
+                right = 0;
               };
             }
           ];

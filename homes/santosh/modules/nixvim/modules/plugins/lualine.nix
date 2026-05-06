@@ -11,8 +11,8 @@
           icons_enabled = true;
           theme = "auto";
           section_separators = {
-            left = "";
-            right = "";
+            left = "";
+            right = "";
           };
           component_separators = {
             left = " ";
@@ -33,7 +33,7 @@
             {
               __raw = ''
                 function()
-                  return ' '
+                  return '✦ '
                 end
               '';
 
@@ -116,8 +116,19 @@
             }
           ];
 
-          lualine_y = [ "location" ];
-          lualine_z = [ "progress" ];
+          lualine_y = [
+            "location"
+            "progress"
+          ];
+          lualine_z = [
+            {
+              __raw = ''
+                function()
+                  return '✦ '
+                end
+              '';
+            }
+          ];
         };
 
         inactive_sections = {

@@ -33,7 +33,7 @@
             {
               __raw = ''
                 function()
-                  return '✦ '
+                  return '󰫍'
                 end
               '';
 
@@ -124,7 +124,7 @@
             {
               __raw = ''
                 function()
-                  return '✦ '
+                  return ''
                 end
               '';
             }

@@ -512,6 +512,11 @@ animations {
 
 // for transparency effect.
 window-rule {
+    background-effect {
+        blur true
+    }
+}
+window-rule {
     match is-active=true
     opacity 1.0
 }

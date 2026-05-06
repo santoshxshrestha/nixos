@@ -36,6 +36,7 @@
     # setw -g window-status-current-format "#[fg=${colors.rose_text},bg=${colors.rose_base},italics]  #W "
     setw -g window-status-format "#[fg=${colors.rose_subtle},bg=default,italics] #W "
     setw -g window-status-current-format "#[fg=${colors.rose_text},bg=default,underscore,italics] #W "
+    setw -g window-status-activity-style "fg=${colors.rose_text},bg=default,bold,underscore"
     setw -g window-status-separator ""
   '';
 }

@@ -279,7 +279,7 @@ overview {
 
 // To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
 spawn-sh-at-startup "qs -p ~/nixos/homes/santosh/config/nyx_panel/main.qml"
-spawn-sh-at-startup "upower-notify"
+// spawn-sh-at-startup "upower-notify"
 spawn-sh-at-startup "swaybg -m fill -o* -i ~/.current_wallpaper"
 spawn-sh-at-startup "wl-paste --type text --watch cliphist store"
 spawn-sh-at-startup "wl-paste --type image --watch cliphist store"
